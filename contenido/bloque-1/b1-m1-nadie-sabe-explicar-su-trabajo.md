@@ -1,14 +1,19 @@
-# Por qué nadie sabe explicar su propio trabajo
+---
+id: b1-m1-nadie-sabe-explicar-su-trabajo
+bloque: 1
+titulo: "Por qué nadie sabe explicar su propio trabajo"
+tipo: concepto
+duracion_min: 35
+requisitos: [b0-m4-tu-bitacora]
+desbloquea: [b1-m2-diario-de-tareas]
+caduca: bajo
+objetivos:
+  - "Distinguir lo que sabes hacer de lo que sabes explicar"
+  - "Detectar tres decisiones que tomas a diario y no has escrito nunca"
+  - "Registrar una estimación a ciegas de tu semana para contrastarla después"
+conceptos: [conocimiento-tacito, descomposicion, trabajo-invisible]
+---
 
-<span class="ficha-nodo">Concepto · 35 min · <span class="caduca caduca-bajo" title="Esto va a seguir siendo cierto dentro de tres años.">Duradero</span></span>
-
-**Antes de esto:** [Abre tu bitácora](../bloque-0/b0-m4-tu-bitacora.md)
-
-!!! abstract "Al terminar sabrás"
-
-    - Distinguir lo que sabes hacer de lo que sabes explicar
-    - Detectar tres decisiones que tomas a diario y no has escrito nunca
-    - Registrar una estimación a ciegas de tu semana para contrastarla después
 Las dos próximas semanas no vas a tocar ninguna herramienta de IA. Es a propósito.
 Este es el bloque que más resistencia va a generar y el más importante del curso:
 todo lo que viene después se apoya en lo que salga de aquí. La parte difícil no es
@@ -139,9 +144,3 @@ reconoces como tuyas y no te sirven.
 - ¿Qué tres cosas faltaban en tus once líneas imaginarias? Escríbelas: son las
   primeras candidatas del bloque.
 - ¿Cuál de las tres estimaciones a ciegas crees que vas a fallar por más?
-
----
-
-**Siguiente:** [El diario de tareas: cinco días, quince minutos](../bloque-1/b1-m2-diario-de-tareas.md)
-
-<span class="conceptos-nodo">Conceptos: [conocimiento-tacito](../../glosario/README.md#conocimiento-tacito), [descomposicion](../../glosario/README.md#descomposicion), [trabajo-invisible](../../glosario/README.md#trabajo-invisible)</span>

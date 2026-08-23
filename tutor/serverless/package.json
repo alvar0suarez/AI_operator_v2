@@ -1,0 +1,14 @@
+{
+  "name": "cxia-tutor",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Funcion serverless que proxea la API para el tutor del curso CX + IA. La clave vive aqui y solo aqui.",
+  "scripts": {
+    "empaquetar": "python3 ../../scripts/empaquetar-tutor.py",
+    "pruebas": "node --test pruebas/"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.70.0"
+  }
+}

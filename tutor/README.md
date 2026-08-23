@@ -67,3 +67,42 @@ tres importan:
 2. Nosotros vemos dónde se atasca la gente. **Es el input directo para escribir el
    bloque 4**, que por eso está sin escribir.
 3. Las preguntas repetidas se promueven a nodos de profundización permanentes.
+
+---
+
+## Despliegue
+
+```bash
+python3 scripts/empaquetar-tutor.py    # construye serverless/curso.json
+cd tutor/serverless && npm install
+node --test "pruebas/*.test.mjs"       # 18 pruebas, incluida la crítica
+```
+
+El sitio estático y la función se despliegan juntos. Adaptadores incluidos:
+
+| Proveedor | Fichero | Ruta pública |
+|---|---|---|
+| Cloudflare Pages | `funciones/tutor.js` → `functions/api/tutor.js` | `/api/tutor` |
+| Netlify | `funciones/tutor-netlify.mjs` | `/api/tutor` |
+| Vercel | `funciones/tutor-vercel.mjs` | `/api/tutor` |
+
+Variables de entorno: `ANTHROPIC_API_KEY` (obligatoria) y `REGISTRO_PREGUNTAS`
+(opcional, almacén clave-valor para §7.4). Ver `serverless/.env.example`.
+
+## La prueba que no se puede saltar
+
+`pruebas/guardarrailes.test.mjs` empieza por dos comprobaciones que son la razón de
+ser del fichero:
+
+1. **El paquete del tutor no contiene ninguna solución.** Ni por ruta, ni por
+   centinela, ni por campo de frontmatter.
+2. **El prompt ensamblado no filtra soluciones por ninguna vía**, ni siquiera con un
+   estado hostil que intente colarlas por los artefactos o la bitácora.
+
+Si alguna de las dos falla, el curso ha perdido su corrector objetivo (§5.3) y el
+ejercicio central del bloque 4 deja de tener sentido. No se despliega así.
+
+Ese fichero ya ha cazado un fallo real: el empaquetado descartaba la cabecera de
+cada prompt de modo, que es justo donde vive la restricción dura ("nunca da la
+solución de un ejercicio", "señala, no reescribe"). El modelo estaba recibiendo el
+modo sin su límite.

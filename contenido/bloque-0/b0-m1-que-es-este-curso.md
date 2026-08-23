@@ -1,12 +1,19 @@
-# Qué es este curso y qué no es
+---
+id: b0-m1-que-es-este-curso
+bloque: 0
+titulo: "Qué es este curso y qué no es"
+tipo: concepto
+duracion_min: 20
+requisitos: []
+desbloquea: [b0-m2-como-usar-esto]
+caduca: bajo
+objetivos:
+  - "Decidir con información suficiente si este curso te sirve"
+  - "Distinguir lo que el curso promete de lo que no puede cumplir"
+  - "Escribir los cinco resultados contra los que vas a juzgarlo dentro de seis meses"
+conceptos: [doble-track, criterio, artefacto]
+---
 
-<span class="ficha-nodo">Concepto · 20 min · <span class="caduca caduca-bajo" title="Esto va a seguir siendo cierto dentro de tres años.">Duradero</span></span>
-
-!!! abstract "Al terminar sabrás"
-
-    - Decidir con información suficiente si este curso te sirve
-    - Distinguir lo que el curso promete de lo que no puede cumplir
-    - Escribir los cinco resultados contra los que vas a juzgarlo dentro de seis meses
 Esto no es un curso de herramientas de inteligencia artificial. Es un curso sobre tu
 trabajo: verlo como procesos, decidir qué se puede delegar a una máquina, comprobar si
 lo que devuelve sirve, y rediseñar cómo se hace. La IA es el instrumento; la materia es
@@ -146,9 +153,3 @@ nodos más adelante. Contesta esto en un papel y luego lo pasas allí.
 - ¿Cuál de los cinco resultados a seis meses te parece hoy más improbable, y por qué?
 - ¿Qué tarea tuya sospechas que no debería existir?
 - ¿Cuántos minutos a la semana puedes dedicarle a esto? Reales, no deseados.
-
----
-
-**Siguiente:** [Cómo se usa este repositorio](../bloque-0/b0-m2-como-usar-esto.md)
-
-<span class="conceptos-nodo">Conceptos: [doble-track](../../glosario/README.md#doble-track), [criterio](../../glosario/README.md#criterio), [artefacto](../../glosario/README.md#artefacto)</span>

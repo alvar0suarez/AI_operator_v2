@@ -2,7 +2,7 @@
 .DEFAULT_GOAL := ayuda
 PY := python3
 
-.PHONY: ayuda instalar dataset verificar validar glosario sitio sitio-build todo limpiar
+.PHONY: ayuda instalar dataset verificar validar glosario tutor sitio sitio-build todo limpiar
 
 ayuda:  ## Muestra esta ayuda
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) \
@@ -32,7 +32,11 @@ sitio-build:  ## Construye el sitio estático y comprueba que SOLUCIONES/ no ent
 	cd sitio && mkdocs build --strict
 	@$(PY) scripts/comprobar-build.py
 
-todo: validar verificar glosario sitio-build  ## Todas las comprobaciones
+tutor:  ## Reempaqueta el contexto del tutor y pasa sus pruebas
+	$(PY) scripts/empaquetar-tutor.py
+	cd tutor/serverless && node --test "pruebas/*.test.mjs"
+
+todo: validar verificar glosario tutor sitio-build  ## Todas las comprobaciones
 
 limpiar:  ## Borra artefactos de build
 	rm -rf sitio/build .cache

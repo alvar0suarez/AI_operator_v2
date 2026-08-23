@@ -44,6 +44,11 @@ theme:
 extra_css:
   - assets/curso.css
 
+# El widget del tutor. No lleva ninguna clave: habla solo con /api/tutor, que es
+# la función serverless (ESPECIFICACION.md §7.5).
+extra_javascript:
+  - assets/tutor.js
+
 markdown_extensions:
   - admonition
   - attr_list

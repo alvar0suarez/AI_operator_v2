@@ -1,14 +1,19 @@
-# Cómo se usa este repositorio
+---
+id: b0-m2-como-usar-esto
+bloque: 0
+titulo: "Cómo se usa este repositorio"
+tipo: concepto
+duracion_min: 15
+requisitos: [b0-m1-que-es-este-curso]
+desbloquea: [b0-m3-fallar-es-diagnostico]
+caduca: medio
+objetivos:
+  - "Montar tu carpeta de trabajo antes de la primera sesión"
+  - "Leer la etiqueta de caducidad de un nodo y decidir cuánta memoria le dedicas"
+  - "Usar el tutor sin que te resuelva el ejercicio"
+conceptos: [artefacto, bitacora, caducidad, tutor]
+---
 
-<span class="ficha-nodo">Concepto · 15 min · <span class="caduca caduca-medio" title="El fondo dura; los detalles concretos habrá que revisarlos.">Revisable</span></span>
-
-**Antes de esto:** [Qué es este curso y qué no es](../bloque-0/b0-m1-que-es-este-curso.md)
-
-!!! abstract "Al terminar sabrás"
-
-    - Montar tu carpeta de trabajo antes de la primera sesión
-    - Leer la etiqueta de caducidad de un nodo y decidir cuánta memoria le dedicas
-    - Usar el tutor sin que te resuelva el ejercicio
 Quince minutos de mecánica y no vuelves aquí. Sales con tu carpeta de trabajo creada,
 con tu hueco semanal decidido y sabiendo qué esperar del tutor. Si te saltas esta
 página, lo vas a pagar en el bloque 2 buscando dónde guardaste las cosas.
@@ -121,9 +126,3 @@ hazla observable: «cuando releo un párrafo dos veces», no «cuando me canse»
 - ¿Dónde has puesto tu carpeta de trabajo y cuál es tu hueco semanal?
 - ¿Qué es lo que te va a hacer abandonar esto? Escríbelo hoy, que aún se ve claro.
 - ¿Qué parte del temario te ha dado más pereza al leer el índice?
-
----
-
-**Siguiente:** [Fallar es diagnóstico, no fracaso](../bloque-0/b0-m3-fallar-es-diagnostico.md)
-
-<span class="conceptos-nodo">Conceptos: [artefacto](../../glosario/README.md#artefacto), [bitacora](../../glosario/README.md#bitacora), [caducidad](../../glosario/README.md#caducidad), [tutor](../../glosario/README.md#tutor)</span>

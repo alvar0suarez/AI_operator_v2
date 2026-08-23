@@ -1,19 +1,24 @@
-# El diario de tareas: cinco días, quince minutos
+---
+id: b1-m2-diario-de-tareas
+bloque: 1
+titulo: "El diario de tareas: cinco días, quince minutos"
+tipo: ejercicio
+duracion_min: 30
+bloqueante: true
+requisitos: [b1-m1-nadie-sabe-explicar-su-trabajo]
+desbloquea: [b1-m3-mapa-de-la-semana, b1-m9-primera-victoria]
+caduca: bajo
+objetivos:
+  - "Registrar cinco días laborables en bloques de quince minutos"
+  - "Marcar el trabajo que se come tu día sin figurar en ninguna lista de tareas"
+  - "Anotar el efecto de estar mirándote trabajar en vez de corregirlo"
+conceptos: [linea-base, granularidad, trabajo-invisible]
+artefacto: plantillas/diario-de-tareas.md
+profundizar:
+  - id: b1-p1-por-que-fallan-los-diarios
+    titulo: "Por qué casi todos los diarios de tiempo mienten"
+---
 
-<span class="ficha-nodo">Ejercicio · 30 min · <span class="caduca caduca-bajo" title="Esto va a seguir siendo cierto dentro de tres años.">Duradero</span></span>
-
-!!! warning "Este nodo es bloqueante"
-
-    El resto del curso se apoya en lo que salga de aquí. Si te lo saltas,
-    los bloques 5 y 6 no van a poder demostrarte nada.
-
-**Antes de esto:** [Por qué nadie sabe explicar su propio trabajo](../bloque-1/b1-m1-nadie-sabe-explicar-su-trabajo.md)
-
-!!! abstract "Al terminar sabrás"
-
-    - Registrar cinco días laborables en bloques de quince minutos
-    - Marcar el trabajo que se come tu día sin figurar en ninguna lista de tareas
-    - Anotar el efecto de estar mirándote trabajar en vez de corregirlo
 Cinco días laborables, en bloques de quince minutos. Este es el único nodo del curso
 que el grafo no te deja saltar, y conviene que sepas por qué antes de empezar. Sin
 este registro no tienes línea base, y sin línea base nada de lo que hagas en los
@@ -179,15 +184,3 @@ Cuando termines los cinco días, en la bitácora:
 - ¿Qué tarea aparece muchas más veces de las que habrías dicho?
 - ¿Qué escribiste en «La semana que me miré», y qué te dice eso de cómo trabajas el
   resto de las semanas?
-
----
-
-## Si quieres más
-
-Ramas opcionales. No hacen falta para seguir; están por si el tema te ha enganchado.
-
-- [Por qué casi todos los diarios de tiempo mienten](../bloque-1/profundizacion/b1-p1-por-que-fallan-los-diarios.md)
-
-**Siguiente:** [Mapa de la semana: frecuencia, duración, variabilidad](../bloque-1/b1-m3-mapa-de-la-semana.md) · [Anticipo: una victoria pequeña, medida](../bloque-1/b1-m9-primera-victoria.md)
-
-<span class="conceptos-nodo">Conceptos: [linea-base](../../glosario/README.md#linea-base), [granularidad](../../glosario/README.md#granularidad), [trabajo-invisible](../../glosario/README.md#trabajo-invisible)</span>

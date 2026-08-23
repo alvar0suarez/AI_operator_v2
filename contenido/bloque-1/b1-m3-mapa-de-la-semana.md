@@ -1,15 +1,20 @@
-# Mapa de la semana: frecuencia, duración, variabilidad
+---
+id: b1-m3-mapa-de-la-semana
+bloque: 1
+titulo: "Mapa de la semana: frecuencia, duración, variabilidad"
+tipo: ejercicio
+duracion_min: 45
+requisitos: [b1-m2-diario-de-tareas]
+desbloquea: [b1-m4-descomposicion]
+caduca: bajo
+objetivos:
+  - "Calcular los minutos al mes de cada tarea recurrente a partir del diario"
+  - "Usar la mediana en lugar de la media y justificar por qué"
+  - "Escribir por qué varía cada tarea, no solo cuánto"
+  - "Marcar al menos una tarea que quizá no debería existir"
+conceptos: [frecuencia, variabilidad, linea-base, coste-de-oportunidad]
+---
 
-<span class="ficha-nodo">Ejercicio · 45 min · <span class="caduca caduca-bajo" title="Esto va a seguir siendo cierto dentro de tres años.">Duradero</span></span>
-
-**Antes de esto:** [El diario de tareas: cinco días, quince minutos](../bloque-1/b1-m2-diario-de-tareas.md)
-
-!!! abstract "Al terminar sabrás"
-
-    - Calcular los minutos al mes de cada tarea recurrente a partir del diario
-    - Usar la mediana en lugar de la media y justificar por qué
-    - Escribir por qué varía cada tarea, no solo cuánto
-    - Marcar al menos una tarea que quizá no debería existir
 El diario en bruto no dice nada: son cien líneas sueltas. Aquí lo conviertes en tres
 números por tarea y una pregunta incómoda. Es la sesión más aritmética del curso y no
 necesita más que una tabla y quince minutos de sumar. Al final tendrás la primera
@@ -196,9 +201,3 @@ de medir.
 - ¿En cuántas filas has sido capaz de escribir la razón de la variabilidad, y en
   cuántas te has quedado en «depende»?
 - ¿Cuántas tareas has marcado como «no debería existir» o «no lo sé»?
-
----
-
-**Siguiente:** [Descomponer: entrada, decisiones, salida, criterio](../bloque-1/b1-m4-descomposicion.md)
-
-<span class="conceptos-nodo">Conceptos: [frecuencia](../../glosario/README.md#frecuencia), [variabilidad](../../glosario/README.md#variabilidad), [linea-base](../../glosario/README.md#linea-base), [coste-de-oportunidad](../../glosario/README.md#coste-de-oportunidad)</span>
