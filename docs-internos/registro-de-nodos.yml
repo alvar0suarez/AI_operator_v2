@@ -1,0 +1,1217 @@
+# Registro canónico de nodos — fuente de verdad del grafo.
+#
+# `scripts/validar-grafo.py` cruza este fichero contra los .md reales de /contenido
+# y falla si divergen. Para añadir un nodo: primero aquí, después el fichero.
+#
+# Campo `brief`: qué tiene que cubrir el nodo. Es el encargo para quien lo escribe,
+# no texto para la alumna. No se publica.
+# Campo `estado`: escrito | pendiente-piloto (bloques 4–6, ver ESPECIFICACION.md §3).
+
+meta:
+  curso: "CX + IA"
+  raiz: b0-m1-que-es-este-curso
+  bloques:
+    0: {titulo: "Antes de empezar", semanas: 0}
+    1: {titulo: "Ver el trabajo", semanas: 2}
+    2: {titulo: "Los seis verbos", semanas: 3}
+    3: {titulo: "Especificar y verificar", semanas: 3}
+    4: {titulo: "CX como disciplina", semanas: 4}
+    5: {titulo: "Construir", semanas: 3}
+    6: {titulo: "Mover la organización", semanas: 2}
+
+nodos:
+
+# ─────────────────────────── BLOQUE 0 — Antes de empezar ───────────────────────
+- id: b0-m1-que-es-este-curso
+  bloque: 0
+  titulo: "Qué es este curso y qué no es"
+  tipo: concepto
+  duracion_min: 20
+  caduca: bajo
+  requisitos: []
+  desbloquea: [b0-m2-como-usar-esto]
+  conceptos: [doble-track, criterio, artefacto]
+  estado: escrito
+  fuente_spec: "§0, §1, §10"
+  brief: >
+    Puerta de entrada. Dice la tesis sin adornos: esto no enseña herramientas de IA,
+    enseña a ver el trabajo como procesos, decidir qué delegar, verificar lo producido
+    y rediseñar cómo se trabaja. Explica el doble track (cada ejercicio enseña una
+    habilidad de IA y una idea de CX sobre el mismo dataset). Expectativas honestas
+    (§9): no le va a transformar la empresa; le va a dar criterio y un método para
+    ganarse el derecho a proponer. Dice que no hará falta subir ni un dato real, nunca.
+    Cierra con los 5 criterios de éxito a seis meses de §10, escritos como promesa
+    comprobable, no como marketing.
+
+- id: b0-m2-como-usar-esto
+  bloque: 0
+  titulo: "Cómo se usa este repositorio"
+  tipo: concepto
+  duracion_min: 15
+  caduca: medio
+  requisitos: [b0-m1-que-es-este-curso]
+  desbloquea: [b0-m3-fallar-es-diagnostico]
+  conceptos: [artefacto, bitacora, caducidad, tutor]
+  estado: escrito
+  fuente_spec: "§2.1, §5.4, §5.5, §6, §7"
+  brief: >
+    Mecánica: qué es un nodo, qué significa la etiqueta de caducidad y por qué es
+    visible, qué son las ramas de profundización, dónde viven sus artefactos y su
+    bitácora, qué hace y qué NO hace el tutor. Ritmo: sesiones de 45–60 min, el
+    orden importa, hay un nodo bloqueante (el diario) y se dice desde ya. Explica
+    que los bloques 1+2+3 ya son un curso completo por si para ahí (§9).
+
+- id: b0-m3-fallar-es-diagnostico
+  bloque: 0
+  titulo: "Fallar es diagnóstico, no fracaso"
+  tipo: concepto
+  duracion_min: 20
+  caduca: bajo
+  requisitos: [b0-m2-como-usar-esto]
+  desbloquea: [b0-m4-tu-bitacora]
+  conceptos: [diagnostico, especificacion-implicita, criterio]
+  estado: escrito
+  fuente_spec: "§2.5 — obligatorio ANTES del primer ejercicio"
+  brief: >
+    El principio 5 de §2, dicho antes de que toque nada. Si el modelo no hace la
+    tarea, casi siempre significa que ella no sabía explicar su propio proceso. El
+    fallo es información sobre su especificación, no sobre su capacidad ni sobre la
+    herramienta. Da el reflejo que se usará todo el curso: cuando salga mal, la
+    primera pregunta no es "¿qué modelo uso?" sino "¿qué me he dado por sabido?".
+    Tres instancias del mismo fenómeno fuera de la IA (explicar tu trabajo a alguien
+    nuevo, dictar una receta, dar indicaciones para llegar a tu casa).
+
+- id: b0-m4-tu-bitacora
+  bloque: 0
+  titulo: "Abre tu bitácora"
+  tipo: artefacto
+  duracion_min: 15
+  caduca: bajo
+  requisitos: [b0-m3-fallar-es-diagnostico]
+  desbloquea: [b1-m1-nadie-sabe-explicar-su-trabajo]
+  conceptos: [bitacora, linea-base]
+  artefacto: plantillas/bitacora.md
+  estado: escrito
+  fuente_spec: "§5.5"
+  brief: >
+    Crea `bitacora.md`. Por sesión: qué intentó, minutos, qué falló, qué aprendió.
+    Explica los tres usos (autoevaluación, material del bloque 6, sensación de avance
+    sin gamificación). Rúbrica de una entrada útil vs. una entrada inútil, con ejemplo
+    de cada una. Insiste en los minutos: sin ellos el bloque 5 no puede medir nada.
+
+# ───────────────────────── BLOQUE 1 — Ver el trabajo ───────────────────────────
+- id: b1-m1-nadie-sabe-explicar-su-trabajo
+  bloque: 1
+  titulo: "Por qué nadie sabe explicar su propio trabajo"
+  tipo: concepto
+  duracion_min: 35
+  caduca: bajo
+  requisitos: [b0-m4-tu-bitacora]
+  desbloquea: [b1-m2-diario-de-tareas]
+  conceptos: [conocimiento-tacito, descomposicion, trabajo-invisible]
+  estado: escrito
+  fuente_spec: "§3 bloque 1, contenido 1.1"
+  brief: >
+    Abre el bloque avisando de lo que va a pasar: dos semanas sin IA, a propósito, y
+    es el bloque que más va a costar y el que más rinde. El fenómeno central: la
+    competencia se vuelve invisible: cuanto mejor haces algo, menos capaz eres de
+    describir cómo lo haces. Consecuencia práctica: no puedes delegar (ni a una
+    persona ni a una máquina) lo que no sabes describir. Prepara el diario dando
+    la razón de por qué no vale con recordar la semana de memoria.
+
+- id: b1-m2-diario-de-tareas
+  bloque: 1
+  titulo: "El diario de tareas: cinco días, quince minutos"
+  tipo: ejercicio
+  duracion_min: 30
+  caduca: bajo
+  bloqueante: true
+  requisitos: [b1-m1-nadie-sabe-explicar-su-trabajo]
+  desbloquea: [b1-m3-mapa-de-la-semana, b1-m9-primera-victoria]
+  conceptos: [linea-base, granularidad, trabajo-invisible]
+  artefacto: plantillas/diario-de-tareas.md
+  estado: escrito
+  fuente_spec: "§3 bloque 1, contenido 1.2, ejercicio E1.1 (bloqueante)"
+  brief: >
+    E1.1. Cinco días laborables, granularidad de 15 minutos. Es BLOQUEANTE: sin
+    diario no hay línea base y sin línea base los bloques 5 y 6 no pueden demostrar
+    nada. La consigna debe resolver el problema real de registrar sin volverse loca:
+    registro por bloques al vuelo, tres momentos fijos al día como red de seguridad,
+    reglas para las interrupciones, y permiso explícito para que un día salga sucio.
+    Advierte del sesgo del observador (la semana que te miras trabajas distinto) y
+    dice qué hacer con él: no corregirlo, anotarlo.
+
+- id: b1-m3-mapa-de-la-semana
+  bloque: 1
+  titulo: "Mapa de la semana: frecuencia, duración, variabilidad"
+  tipo: ejercicio
+  duracion_min: 45
+  caduca: bajo
+  requisitos: [b1-m2-diario-de-tareas]
+  desbloquea: [b1-m4-descomposicion]
+  conceptos: [frecuencia, variabilidad, linea-base, coste-de-oportunidad]
+  estado: escrito
+  fuente_spec: "§3 bloque 1, contenido 1.3"
+  brief: >
+    Convierte el diario en tres números por tarea: cuántas veces (frecuencia),
+    cuánto tarda (duración mediana, no media, y decir por qué), y cuánto varía
+    (rango, y la pregunta ¿por qué varía?). La variabilidad es la columna que
+    todo el mundo se salta y la que decide el bloque 5. Introduce la aritmética
+    del ahorro: minutos/mes = frecuencia × duración, y el umbral de 2h/mes que
+    se usará en el filtro. Capa transversal: coste de oportunidad — la tarea más
+    cara puede ser una que no debería existir.
+
+- id: b1-m4-descomposicion
+  bloque: 1
+  titulo: "Descomponer: entrada, decisiones, salida, criterio"
+  tipo: ejercicio
+  duracion_min: 50
+  caduca: bajo
+  requisitos: [b1-m3-mapa-de-la-semana]
+  desbloquea: [b1-m5-filtro-automatizabilidad]
+  conceptos: [descomposicion, criterio, decision, conocimiento-tacito]
+  estado: escrito
+  fuente_spec: "§3 bloque 1, contenido 1.4, ejercicio E1.2"
+  brief: >
+    E1.2. El esquema de cuatro casillas: qué entra, qué decisiones tomas y con qué
+    información, qué sale, y cómo sabes que está bien hecho. La cuarta es la difícil
+    y la que más se salta. Prueba de suficiencia: un tercero podría ejecutarlo sin
+    preguntarte. Enseña a cazar las decisiones ocultas ("depende", "según el cliente",
+    "ya se ve") y a convertirlas en reglas explícitas o en excepciones declaradas.
+    Trabaja el ejemplo completo sobre una tarea CX concreta y deja el suyo abierto.
+
+- id: b1-m5-filtro-automatizabilidad
+  bloque: 1
+  titulo: "El filtro de automatizabilidad: cuatro preguntas"
+  tipo: ejercicio
+  duracion_min: 50
+  caduca: bajo
+  requisitos: [b1-m4-descomposicion]
+  desbloquea: [b1-m6-trabajo-visible-invisible]
+  conceptos: [volumen, explicabilidad, tolerancia-al-fallo, estabilidad-del-criterio, riesgo]
+  estado: escrito
+  fuente_spec: "§3 bloque 1, contenido 1.5, ejercicio E1.3 — las cuatro preguntas literales"
+  brief: >
+    Las cuatro preguntas de la especificación, literales, cada una con su umbral y
+    su ejemplo: volumen (frecuencia × minutos; por debajo de ~2h/mes se aparca),
+    explicabilidad (¿en 10 minutos a alguien nuevo? si no, no es un rechazo: es que
+    toca documentarlo primero), tolerancia al fallo (1 de cada 20; separa borrador
+    interno de correo al cliente) y estabilidad del criterio (¿"bien hecho" significa
+    lo mismo el lunes y el jueves?). Esta última lleva aviso destacado: es la que más
+    gente se salta y la que más automatizaciones mata. E1.3: aplicarlo a 10 tareas
+    del diario y ordenarlas. Da una escala de puntuación concreta y reproducible.
+
+- id: b1-m6-trabajo-visible-invisible
+  bloque: 1
+  titulo: "Trabajo visible y trabajo invisible"
+  tipo: concepto
+  duracion_min: 35
+  caduca: bajo
+  requisitos: [b1-m5-filtro-automatizabilidad]
+  desbloquea: [b1-m7-caso-cruzado-domestico]
+  conceptos: [trabajo-invisible, coste-de-coordinacion, interrupcion, sistema]
+  estado: escrito
+  fuente_spec: "§3 bloque 1, contenido 1.6"
+  brief: >
+    Lo que no aparece en el diario y decide la jornada: interrupciones, reconstruir
+    contexto, coordinación, esperar, saber a quién preguntar, absorber el enfado de
+    alguien. Por qué automatizar la parte visible de una tarea cuyo coste real es
+    invisible produce cero ahorro medible. Capa transversal: pensar en sistemas,
+    arreglar la causa y no el síntoma. Vuelve sobre el diario para que marque el
+    trabajo invisible que no anotó.
+
+- id: b1-m7-caso-cruzado-domestico
+  bloque: 1
+  titulo: "Caso cruzado: la misma lente en tu casa"
+  tipo: caso
+  duracion_min: 40
+  caduca: bajo
+  requisitos: [b1-m6-trabajo-visible-invisible]
+  desbloquea: [b1-m8-inventario-de-procesos]
+  conceptos: [descomposicion, transferencia, criterio]
+  estado: escrito
+  fuente_spec: "§3 bloque 1, ejercicio E1.4; §2.2 y §2.3"
+  brief: >
+    E1.4. Descomponer y filtrar una tarea doméstica recurrente (compra semanal o
+    gestión de facturas del hogar) con exactamente el mismo esquema. El objetivo real
+    no es la compra: es demostrar que el método es el método y no depende del dominio.
+    Trabaja el ejemplo de la compra semanal entero, incluida la trampa: la parte
+    difícil no es la lista, es el criterio ("qué se compra" cambia cada semana por
+    razones que nadie escribió). Cierra con la generalización escrita por ella.
+
+- id: b1-m8-inventario-de-procesos
+  bloque: 1
+  titulo: "Tu inventario de procesos"
+  tipo: artefacto
+  duracion_min: 45
+  caduca: bajo
+  requisitos: [b1-m7-caso-cruzado-domestico]
+  desbloquea: [b2-m1-mapa-de-lo-posible]
+  conceptos: [inventario, linea-base, riesgo, coste-de-oportunidad]
+  artefacto: plantillas/inventario-de-procesos.md
+  estado: escrito
+  fuente_spec: "§3 bloque 1, artefacto"
+  brief: >
+    Artefacto 1 de 6. Sus tareas priorizadas con las cuatro puntuaciones del filtro,
+    más frecuencia, duración mediana y variabilidad. Documento vivo: se reutiliza en
+    los bloques 5 y 6, así que se explica cómo mantenerlo. Rúbrica de tres niveles.
+    Incluye la columna que casi nadie pone: "¿debería existir esta tarea?".
+
+- id: b1-m9-primera-victoria
+  bloque: 1
+  titulo: "Anticipo: una victoria pequeña, medida"
+  tipo: ejercicio
+  duracion_min: 30
+  caduca: medio
+  requisitos: [b1-m2-diario-de-tareas]
+  desbloquea: []
+  conceptos: [linea-base, verificacion, riesgo]
+  estado: escrito
+  fuente_spec: "§9 — mitigación del riesgo de abandono en el bloque 1"
+  brief: >
+    Mitigación explícita del riesgo de abandono. Al final de la semana 1, una única
+    tarea con IA, de riesgo cero (borrador interno, nunca cara al cliente), elegida
+    de su diario, cronometrada contra el tiempo que anotó. Regla dura: se hace y se
+    mide, no se optimiza. El nodo dice claramente que esto es un anticipo y que el
+    método de verdad llega en el bloque 3, para que no confunda la victoria con el
+    método. Se anota en la bitácora con minutos antes y después.
+
+# ── Profundización bloque 1 ──
+- id: b1-p1-por-que-fallan-los-diarios
+  bloque: 1
+  titulo: "Por qué casi todos los diarios de tiempo mienten"
+  tipo: profundizacion
+  duracion_min: 20
+  caduca: bajo
+  requisitos: [b1-m2-diario-de-tareas]
+  desbloquea: []
+  conceptos: [linea-base, granularidad, trabajo-invisible]
+  estado: escrito
+  brief: >
+    Sesgos del autorregistro: efecto observador, redondeo hacia arriba de lo que
+    dignifica y hacia abajo de lo que avergüenza, desaparición de los tramos cortos,
+    el día "raro" que se descarta y resulta ser el día típico. Qué margen de error
+    es aceptable (±20% sirve; el diario no es contabilidad) y por qué exigir precisión
+    es la forma más común de que se abandone el registro al tercer día.
+
+- id: b1-p2-variabilidad-mata-automatizaciones
+  bloque: 1
+  titulo: "La variabilidad es la que mata automatizaciones"
+  tipo: profundizacion
+  duracion_min: 25
+  caduca: bajo
+  requisitos: [b1-m5-filtro-automatizabilidad]
+  desbloquea: []
+  conceptos: [variabilidad, estabilidad-del-criterio, excepcion, riesgo]
+  estado: escrito
+  brief: >
+    Distingue tres variabilidades que se confunden: de entrada (llega distinto), de
+    criterio (lo que está bien cambia) y de contexto (la misma entrada exige salida
+    distinta según algo que no está escrito). Solo la primera se absorbe fácil. La
+    segunda obliga a documentar antes de automatizar. La tercera es la que produce
+    automatizaciones que funcionan un mes y luego hacen daño en silencio.
+
+- id: b1-p3-coste-de-cambio-de-contexto
+  bloque: 1
+  titulo: "Lo que cuesta volver a donde estabas"
+  tipo: profundizacion
+  duracion_min: 20
+  caduca: bajo
+  requisitos: [b1-m6-trabajo-visible-invisible]
+  desbloquea: []
+  conceptos: [interrupcion, coste-de-coordinacion, trabajo-invisible]
+  estado: escrito
+  brief: >
+    Por qué diez tareas de cinco minutos no son cincuenta minutos. Coste de
+    reanudación, cola mental de asuntos abiertos, y por qué la métrica útil no es
+    "minutos por tarea" sino "veces que cambio de asunto al día". Consecuencia
+    práctica: agrupar es a menudo un ahorro mayor que automatizar, y no cuesta nada.
+
+# ───────────────────────── BLOQUE 2 — Los seis verbos ──────────────────────────
+- id: b2-m1-mapa-de-lo-posible
+  bloque: 2
+  titulo: "El mapa de lo posible"
+  tipo: concepto
+  duracion_min: 30
+  caduca: bajo
+  requisitos: [b1-m8-inventario-de-procesos]
+  desbloquea: [b2-m2-clasificar]
+  conceptos: [patron, imaginacion-informada, verbo]
+  estado: escrito
+  fuente_spec: "§3 bloque 2, párrafo de apertura"
+  brief: >
+    Diagnóstico del problema que resuelve el bloque: la gente no automatiza lo que no
+    sabe que es automatizable. No es falta de pensamiento crítico, es falta de
+    imaginación informada. Por eso el mapa se da en patrones y no en productos: los
+    productos cambian cada seis meses, los seis verbos llevan décadas. Presenta los
+    seis, dice que la mayoría del trabajo de oficina es una combinación de ellos, y
+    monta la mecánica del bloque: cada verbo con sus tres instancias, sus límites y
+    un ejercicio sobre el dataset.
+
+- id: b2-m2-clasificar
+  bloque: 2
+  titulo: "Verbo 1: clasificar"
+  tipo: ejercicio
+  duracion_min: 45
+  caduca: bajo
+  requisitos: [b2-m1-mapa-de-lo-posible]
+  desbloquea: [b2-m3-extraer]
+  conceptos: [clasificar, taxonomia, criterio, verbo]
+  dataset: [dataset/ficheros/tickets.xlsx]
+  estado: escrito
+  fuente_spec: "§3 bloque 2, verbo 1"
+  brief: >
+    Meter cosas en categorías. Cuándo brilla: categorías pocas, excluyentes y
+    definidas. Cuándo falla: categorías solapadas, categoría "otros" que engorda,
+    casos que pertenecen a dos, y el fallo silencioso de clasificar bien según una
+    taxonomía que está mal. Tres instancias (tickets por tipo en CX / facturas por
+    régimen fiscal en una gestoría / correo personal por "requiere respuesta"). El
+    ejercicio usa las categorías inconsistentes plantadas en tickets.xlsx y termina
+    con ella descubriendo que el problema no era clasificar, era la taxonomía. Eso
+    engancha con el bloque 4.
+
+- id: b2-m3-extraer
+  bloque: 2
+  titulo: "Verbo 2: extraer"
+  tipo: ejercicio
+  duracion_min: 45
+  caduca: bajo
+  requisitos: [b2-m2-clasificar]
+  desbloquea: [b2-m4-transformar]
+  conceptos: [extraer, dato-estructurado, verificacion, verbo]
+  dataset: [dataset/ficheros/correos/]
+  estado: escrito
+  fuente_spec: "§3 bloque 2, verbo 2"
+  brief: >
+    Sacar datos estructurados de texto desordenado. Es el verbo con mejor relación
+    esfuerzo/ahorro en una PyME. Cuándo falla: el dato no está y se rellena igual, el
+    dato está dos veces y contradictorio, unidades y formatos (fechas, importes,
+    teléfonos), y la extracción "casi bien" que nadie comprueba. Tres instancias
+    (dirección y referencia de pedido de un correo / datos de una factura en una
+    gestoría / ingredientes de una receta a lista de la compra). Ejercicio sobre los
+    correos sucios: extraer a tabla y contar cuántos campos quedan vacíos, que es el
+    número que de verdad importa.
+
+- id: b2-m4-transformar
+  bloque: 2
+  titulo: "Verbo 3: transformar"
+  tipo: ejercicio
+  duracion_min: 40
+  caduca: bajo
+  requisitos: [b2-m3-extraer]
+  desbloquea: [b2-m5-redactar-borrador]
+  conceptos: [transformar, formato, perdida-de-informacion, verbo]
+  dataset: [dataset/ficheros/tickets.xlsx]
+  estado: escrito
+  fuente_spec: "§3 bloque 2, verbo 3"
+  brief: >
+    Cambiar de formato manteniendo el contenido. Parece el verbo tonto y es el que
+    más silenciosamente pierde información: resumir es transformar con pérdida, y
+    casi nadie declara qué está dispuesto a perder. Cuándo falla: pérdida no
+    declarada, reordenación que cambia el sentido, tablas a prosa y vuelta. Tres
+    instancias (hilo de correo a parte de incidencia / acta de reunión a lista de
+    acuerdos / receta larga a tarjeta de nevera). Ejercicio: mismo contenido en tres
+    formatos con criterio explícito de qué se puede perder en cada uno.
+
+- id: b2-m5-redactar-borrador
+  bloque: 2
+  titulo: "Verbo 4: redactar borrador"
+  tipo: ejercicio
+  duracion_min: 45
+  caduca: bajo
+  requisitos: [b2-m4-transformar]
+  desbloquea: [b2-m6-comparar-contra-criterio]
+  conceptos: [borrador, tono, verificacion, verbo, riesgo]
+  dataset: [dataset/ficheros/correos/]
+  estado: escrito
+  fuente_spec: "§3 bloque 2, verbo 4"
+  brief: >
+    Producir un primer texto que ella corrige. Insistir en "que ella corrige": el
+    valor está en eliminar el folio en blanco, no en publicar lo que salga. Cuándo
+    falla: tono liso o excesivamente disculpón, compromisos inventados (plazos,
+    devoluciones, descuentos que nadie ha autorizado), y el peor — que quede tan bien
+    escrito que ella deje de leerlo. Tres instancias (respuesta a reclamación /
+    comunicación de subida de tarifas en una tienda / carta a la comunidad de vecinos).
+    Capa transversal: aquí aparece por primera vez la lectura de riesgo cara al cliente.
+
+- id: b2-m6-comparar-contra-criterio
+  bloque: 2
+  titulo: "Verbo 5: comparar contra criterio"
+  tipo: ejercicio
+  duracion_min: 45
+  caduca: bajo
+  requisitos: [b2-m5-redactar-borrador]
+  desbloquea: [b2-m7-detectar-anomalias]
+  conceptos: [comparar, criterio, rubrica, verbo]
+  dataset: [dataset/ficheros/procedimientos.docx, dataset/ficheros/correos/]
+  estado: escrito
+  fuente_spec: "§3 bloque 2, verbo 5"
+  brief: >
+    Evaluar algo frente a una norma explícita. La palabra clave es explícita: sin
+    criterio escrito esto degenera en opinión con aire de autoridad. Cuándo falla:
+    criterio vago, criterio con más de un eje mezclado, y la complacencia (tiende a
+    aprobar). Tres instancias (respuestas contra el manual de tono / presupuesto
+    contra la plantilla oficial / contrato de alquiler contra lo que te dijeron).
+    Ejercicio: comparar respuestas reales del dataset contra el procedimiento oficial
+    — y descubrir de paso que el procedimiento está desactualizado, que es la semilla
+    de la verdad escondida V5.
+
+- id: b2-m7-detectar-anomalias
+  bloque: 2
+  titulo: "Verbo 6: detectar anomalías"
+  tipo: ejercicio
+  duracion_min: 45
+  caduca: bajo
+  requisitos: [b2-m6-comparar-contra-criterio]
+  desbloquea: [b2-m8-verbos-compuestos]
+  conceptos: [anomalia, patron, normalidad, verbo]
+  dataset: [dataset/ficheros/pedidos.xlsx]
+  estado: escrito
+  fuente_spec: "§3 bloque 2, verbo 6"
+  brief: >
+    Encontrar lo raro en un conjunto. Precondición que casi nadie declara: para saber
+    qué es raro hay que haber definido qué es normal. Cuándo falla: no hay normalidad
+    definida, lo raro es raro pero irrelevante, y lo importante no es raro (el fallo
+    sistemático no destaca porque está en todas partes — aviso que prepara V1).
+    Tres instancias (pedidos negativos sin documentar / movimiento fuera de patrón en
+    una cuenta / factura de la luz que se dispara). Ejercicio sobre pedidos.xlsx con
+    las devoluciones registradas como negativos.
+
+- id: b2-m8-verbos-compuestos
+  bloque: 2
+  titulo: "Verbos compuestos: encadenar sin perder el hilo"
+  tipo: ejercicio
+  duracion_min: 50
+  caduca: bajo
+  requisitos: [b2-m7-detectar-anomalias]
+  desbloquea: [b2-m9-que-no-es-ninguno]
+  conceptos: [verbo, cadena, punto-de-control, verificacion]
+  dataset: [dataset/ficheros/correos/, dataset/ficheros/tickets.xlsx]
+  estado: escrito
+  fuente_spec: "§3 bloque 2, contenido 2.7"
+  brief: >
+    Extraer → clasificar → detectar anomalía, sobre los correos. Enseña que el error
+    se acumula: 90% de acierto en tres pasos encadenados no es 90%. De ahí sale la
+    necesidad de puntos de control intermedios, que es el nodo 5.4. Regla práctica:
+    verifica al final de cada eslabón que produzca algo que puedas mirar en 30
+    segundos. Prepara el nivel 4 de la escalera sin nombrarlo todavía.
+
+- id: b2-m9-que-no-es-ninguno
+  bloque: 2
+  titulo: "Lo que no es ninguno de los seis"
+  tipo: concepto
+  duracion_min: 35
+  caduca: bajo
+  requisitos: [b2-m8-verbos-compuestos]
+  desbloquea: [b2-m10-catalogo-de-patrones]
+  conceptos: [no-delegar, responsabilidad, juicio, relacion]
+  estado: escrito
+  fuente_spec: "§3 bloque 2, contenido 2.8; capa transversal"
+  brief: >
+    Juicio con consecuencias, decisiones con responsabilidad legal, relación humana.
+    El nodo más importante del bloque para la capa transversal "qué NO delegar".
+    Da una prueba operativa en lugar de una lista cerrada: ¿quién responde si sale
+    mal?, ¿el valor de esto está en el resultado o en que lo hiciste tú?, ¿hay
+    alguien al otro lado que notaría la diferencia y le importaría? Casos límite
+    reales de CX: cancelar un contrato, reconocer un error de la empresa, dar el
+    pésame a un cliente de veinte años, decidir una excepción comercial.
+
+- id: b2-m10-catalogo-de-patrones
+  bloque: 2
+  titulo: "Tu catálogo de patrones"
+  tipo: artefacto
+  duracion_min: 45
+  caduca: bajo
+  requisitos: [b2-m9-que-no-es-ninguno]
+  desbloquea: [b3-m1-anatomia-encargo]
+  conceptos: [patron, verbo, inventario, catalogo]
+  artefacto: plantillas/catalogo-de-patrones.md
+  estado: escrito
+  fuente_spec: "§3 bloque 2, artefacto"
+  brief: >
+    Artefacto 2 de 6. Los seis verbos con ejemplos de su trabajo real escritos por
+    ella, cruzados contra el inventario del bloque 1: qué tarea del inventario es
+    qué verbo o qué cadena. Rúbrica de tres niveles. La celda vacía es información:
+    un verbo sin ningún ejemplo suyo suele significar que no lo ha entendido, no que
+    no lo use.
+
+# ── Profundización bloque 2 ──
+- id: b2-p1-clasificar-vs-buscar
+  bloque: 2
+  titulo: "Clasificar no es buscar"
+  tipo: profundizacion
+  duracion_min: 15
+  caduca: bajo
+  requisitos: [b2-m2-clasificar]
+  desbloquea: []
+  conceptos: [clasificar, taxonomia, criterio]
+  estado: escrito
+  brief: >
+    Diferencia operativa entre buscar (traer lo que cumple una condición) y
+    clasificar (asignar a todos una categoría de un conjunto cerrado), y por qué
+    confundirlos produce el "otros" del 40%. Reglas de una taxonomía sana: excluyente,
+    exhaustiva, con un solo eje, y con tamaños de categoría comparables.
+
+- id: b2-p2-limites-de-la-extraccion
+  bloque: 2
+  titulo: "Dónde se rompe la extracción"
+  tipo: profundizacion
+  duracion_min: 20
+  caduca: medio
+  requisitos: [b2-m3-extraer]
+  desbloquea: []
+  conceptos: [extraer, dato-estructurado, verificacion]
+  estado: escrito
+  brief: >
+    Casos duros: tablas dentro de PDF, escaneos, documentos con dos columnas, el
+    mismo dato en dos sitios con valores distintos, y el campo ausente que se rellena
+    con algo plausible. Técnica de defensa: pedir siempre una columna "no consta" y
+    contar cuántas veces aparece. Si nunca aparece, sospecha.
+
+- id: b2-p3-el-borrador-cero
+  bloque: 2
+  titulo: "Por qué el valor está en el borrador cero"
+  tipo: profundizacion
+  duracion_min: 15
+  caduca: bajo
+  requisitos: [b2-m5-redactar-borrador]
+  desbloquea: []
+  conceptos: [borrador, coste-de-arranque, verificacion]
+  estado: escrito
+  brief: >
+    El coste real de escribir no está en teclear, está en arrancar. De ahí que el
+    ahorro medible del verbo 4 sea grande incluso cuando reescribe el 60% del texto.
+    Y el reverso: si el borrador es tan bueno que deja de leerlo, el verbo ha pasado
+    de ahorrar tiempo a producir riesgo.
+
+- id: b2-p4-anomalia-no-es-error
+  bloque: 2
+  titulo: "Una anomalía no es un error"
+  tipo: profundizacion
+  duracion_min: 15
+  caduca: bajo
+  requisitos: [b2-m7-detectar-anomalias]
+  desbloquea: []
+  conceptos: [anomalia, normalidad, causa-raiz]
+  estado: escrito
+  brief: >
+    Tres desenlaces de una anomalía: es un error, es un caso legítimo que tu
+    definición de normalidad no contemplaba, o es la punta de un patrón. Se resuelve
+    con una pregunta: ¿cuántas veces más pasa esto? Prepara el bloque 4.
+
+- id: b2-p5-herramientas-hoy
+  bloque: 2
+  titulo: "Apéndice desechable: cómo está el panorama ahora mismo"
+  tipo: profundizacion
+  duracion_min: 20
+  caduca: alto
+  requisitos: [b2-m10-catalogo-de-patrones]
+  desbloquea: []
+  conceptos: [herramienta, caducidad, patron]
+  estado: escrito
+  brief: >
+    Único nodo de caducidad alta del bloque, y va al final a propósito (§0). Traduce
+    los seis verbos a categorías de herramienta actuales sin casarse con ninguna, con
+    fecha de revisión visible en cabecera y aviso de que este nodo se sustituye entero
+    sin tocar el resto del curso. Enseña la habilidad que sí dura: evaluar una
+    herramienta nueva en diez minutos preguntando qué verbo hace y cómo se verifica.
+
+# ─────────────────── BLOQUE 3 — Especificar y verificar ────────────────────────
+- id: b3-m1-anatomia-encargo
+  bloque: 3
+  titulo: "Anatomía de un encargo"
+  tipo: concepto
+  duracion_min: 50
+  caduca: bajo
+  requisitos: [b2-m10-catalogo-de-patrones]
+  desbloquea: [b3-m2-especificacion-implicita]
+  conceptos: [encargo, objetivo, restriccion, formato, criterio-de-aceptacion]
+  estado: escrito
+  fuente_spec: "§3 bloque 3, contenido 3.1"
+  brief: >
+    Las cinco piezas: objetivo, contexto, restricciones, formato, criterio de
+    aceptación. La prueba de calidad no es que el modelo lo entienda: es que un
+    tercero podría ejecutarlo sin preguntar. Enseña con un encargo malo real que se
+    va reescribiendo pieza a pieza, enseñando el output que produce cada versión.
+    El criterio de aceptación se lleva la mitad del nodo porque es el que falta
+    siempre. Deja claro que esto es lo mismo que el bloque 1 llamaba descomponer,
+    escrito para otro destinatario.
+
+- id: b3-m2-especificacion-implicita
+  bloque: 3
+  titulo: "Todo lo que en tu oficina se da por hecho"
+  tipo: ejercicio
+  duracion_min: 45
+  caduca: bajo
+  requisitos: [b3-m1-anatomia-encargo]
+  desbloquea: [b3-m3-ficheros-de-contexto]
+  conceptos: [especificacion-implicita, conocimiento-tacito, contexto, excepcion]
+  estado: escrito
+  fuente_spec: "§3 bloque 3, contenido 3.2"
+  brief: >
+    El error más caro. Todo lo que "se sabe" en su oficina y no está escrito: qué
+    cliente es especial y por qué, qué se hace en agosto, quién firma qué, qué
+    significa "urgente" aquí, qué frase no se usa jamás. Ejercicio del intermediario:
+    escribe el encargo, se lo da a alguien sin contexto (o al modelo sin contexto),
+    y anota cada pregunta que le hacen. Cada pregunta es una línea que le falta a su
+    fichero de contexto. Conecta directamente con b0-m3.
+
+- id: b3-m3-ficheros-de-contexto
+  bloque: 3
+  titulo: "Ficheros de contexto: glosario, tono, plantillas, casuística"
+  tipo: ejercicio
+  duracion_min: 50
+  caduca: medio
+  requisitos: [b3-m2-especificacion-implicita]
+  desbloquea: [b3-m4-sabotaje, b3-m5-modos-de-fallo]
+  conceptos: [contexto, glosario, tono, plantilla, casuistica, reutilizacion]
+  estado: escrito
+  fuente_spec: "§3 bloque 3, contenido 3.3"
+  brief: >
+    Construir contexto reutilizable en lugar de reexplicarlo cada vez. Las cuatro
+    piezas: glosario propio (sus palabras: qué es aquí un "abono", un "cliente de
+    ruta", un "aviso"), criterios de tono con ejemplos a favor y en contra,
+    plantillas, y casuística (los casos raros con su tratamiento). Regla de
+    mantenimiento: el fichero crece cuando algo sale mal, no cuando se te ocurre algo.
+    Enlaza con RGPD: el contexto se escribe anonimizado desde el minuto uno.
+
+- id: b3-m4-sabotaje
+  bloque: 3
+  titulo: "Ejercicios de sabotaje"
+  tipo: ejercicio
+  duracion_min: 45
+  caduca: bajo
+  requisitos: [b3-m3-ficheros-de-contexto, b2-m2-clasificar]
+  desbloquea: [b3-m5-modos-de-fallo, b3-m6-verificacion-proporcional]
+  conceptos: [verificacion, alucinacion, riesgo, omision, tono]
+  estado: escrito
+  fuente_spec: "§3 bloque 3, contenido 3.4; §5.1 — seis niveles"
+  brief: >
+    Nodo eje del curso. Explica el problema que resuelve: el texto malo parece bien,
+    y por eso una principiante no puede autoevaluarse sin este mecanismo. Presenta
+    los seis niveles de §5.1 y manda a /ejercicios/sabotaje. Reglas de la casa: se
+    intenta antes de destapar, se marca dónde está el fallo y de qué tipo es, y el
+    nivel 6 (output impecable) existe para enseñarle que marcar errores inexistentes
+    también cuesta dinero. Método de barrido en tres pasadas: números contra la
+    fuente, afirmaciones contra lo que sabes, y qué falta.
+
+- id: b3-m5-modos-de-fallo
+  bloque: 3
+  titulo: "Los cinco modos de fallo típicos"
+  tipo: concepto
+  duracion_min: 45
+  caduca: medio
+  requisitos: [b3-m3-ficheros-de-contexto, b3-m4-sabotaje]
+  desbloquea: [b3-m6-verificacion-proporcional]
+  conceptos: [alucinacion, tono, generalizacion-falsa, omision, seguridad-excesiva]
+  estado: escrito
+  fuente_spec: "§3 bloque 3, contenido 3.5"
+  brief: >
+    Debrief de los sabotajes, en este orden a propósito: primero falla, después la
+    taxonomía. Los cinco: dato inventado, tono inadecuado, generalización falsa,
+    omisión silenciosa y seguridad excesiva (el "por supuesto" que no tiene fuente).
+    Cada uno con su señal de detección barata y su ejemplo del dataset. La omisión
+    silenciosa lleva aviso: es el único que no se ve leyendo el output, solo
+    comparándolo con la fuente.
+
+- id: b3-m6-verificacion-proporcional
+  bloque: 3
+  titulo: "Verificación proporcional al riesgo"
+  tipo: concepto
+  duracion_min: 45
+  caduca: bajo
+  requisitos: [b3-m4-sabotaje, b3-m5-modos-de-fallo]
+  desbloquea: [b3-m7-datos-y-rgpd]
+  conceptos: [riesgo, verificacion, reversibilidad, alcance, coste-de-verificar]
+  estado: escrito
+  fuente_spec: "§3 bloque 3, contenido 3.6; capa transversal (lectura de riesgo)"
+  brief: >
+    No todo se revisa igual, y revisar todo al máximo es la forma más común de que
+    el ahorro se evapore. Tres ejes de riesgo: ¿se puede deshacer?, ¿a cuánta gente
+    llega?, ¿qué pasa si falla 1 de cada 20? De ahí tres niveles de verificación:
+    vistazo, muestra, línea a línea. Tabla de decisión con casos de CX. Dice
+    explícitamente que verificar de más es un error, no una virtud.
+
+- id: b3-m7-datos-y-rgpd
+  bloque: 3
+  titulo: "Datos y RGPD: qué no se pega jamás"
+  tipo: concepto
+  duracion_min: 45
+  caduca: alto
+  requisitos: [b3-m6-verificacion-proporcional]
+  desbloquea: [b3-m8-plantilla-de-verificacion]
+  conceptos: [rgpd, dato-personal, anonimizar, responsable-del-tratamiento, riesgo]
+  estado: escrito
+  fuente_spec: "§3 bloque 3, contenido 3.7; capa transversal"
+  brief: >
+    RGPD aplicado, no teórico, y con la escala de una PyME: por qué esto es un marrón
+    real y no una formalidad, quién responde (la empresa, no ella, pero le cae a ella
+    igual), y qué hacer cuando nadie en la empresa ha decidido nada al respecto.
+    Regla operativa de tres líneas antes que la teoría. Cómo anonimizar antes de
+    pegar: sustituir identificadores, quitar el cruce que reidentifica, y por qué
+    quitar el nombre no basta si queda la dirección. Caducidad alta declarada: el
+    marco cambia; el reflejo de anonimizar no.
+
+- id: b3-m8-plantilla-de-verificacion
+  bloque: 3
+  titulo: "Tu plantilla de verificación"
+  tipo: artefacto
+  duracion_min: 45
+  caduca: bajo
+  requisitos: [b3-m7-datos-y-rgpd]
+  desbloquea: [b3-m9-contexto-trabajo]
+  conceptos: [verificacion, riesgo, rubrica, checklist]
+  artefacto: plantillas/plantilla-de-verificacion.md
+  estado: escrito
+  fuente_spec: "§3 bloque 3, artefacto"
+  brief: >
+    Artefacto 3 de 6. Su checklist por tipo de tarea, calibrado por riesgo: para cada
+    familia de tareas de su inventario, qué se comprueba, cuánto, y contra qué fuente.
+    Debe caber en una pantalla o no se usa. Rúbrica de tres niveles. Incluye la
+    comprobación que casi nadie escribe: "¿qué debería estar y no está?".
+
+- id: b3-m9-contexto-trabajo
+  bloque: 3
+  titulo: "Tu primer fichero de contexto de trabajo"
+  tipo: artefacto
+  duracion_min: 50
+  caduca: bajo
+  requisitos: [b3-m8-plantilla-de-verificacion]
+  desbloquea: [b4-m1-taxonomias]
+  conceptos: [contexto, glosario, tono, casuistica, rgpd]
+  artefacto: plantillas/contexto-trabajo.md
+  estado: escrito
+  fuente_spec: "§3 bloque 3, artefacto"
+  brief: >
+    Artefacto 4 de 6. `contexto-trabajo.md` con las cuatro secciones de b3-m3,
+    rellenado con lo que salió del ejercicio del intermediario. Anonimizado por
+    construcción. Rúbrica de tres niveles y regla de mantenimiento. Es la pieza que
+    el bloque 5 convierte en nivel 3 de la escalera.
+
+# ── Profundización bloque 3 ──
+- id: b3-p1-por-que-alucinan
+  bloque: 3
+  titulo: "Por qué los modelos inventan datos"
+  tipo: profundizacion
+  duracion_min: 25
+  caduca: medio
+  requisitos: [b3-m4-sabotaje]
+  desbloquea: []
+  conceptos: [alucinacion, verificacion, plausibilidad]
+  estado: escrito
+  brief: >
+    Explicación honesta y sin matemáticas: el sistema produce continuaciones
+    plausibles, y "plausible" y "cierto" coinciden casi siempre, que es justo lo que
+    lo hace peligroso. Por qué inventa más cuando el dato no está en el material que
+    le diste, cuando la pregunta presupone algo falso, y cuando le pides seguridad.
+    Consecuencia práctica: el dato que más hay que comprobar es el que más cómodo te
+    viene. Sin promesas de que esto "se arreglará en la próxima versión".
+
+- id: b3-p2-verificacion-numerica
+  bloque: 3
+  titulo: "Técnicas de verificación numérica rápida"
+  tipo: profundizacion
+  duracion_min: 25
+  caduca: bajo
+  requisitos: [b3-m4-sabotaje]
+  desbloquea: []
+  conceptos: [verificacion, orden-de-magnitud, cuadre, coste-de-verificar]
+  estado: escrito
+  brief: >
+    Cinco comprobaciones de diez segundos: ¿suman las partes el total?, ¿el
+    porcentaje va sobre la base que crees?, ¿el orden de magnitud es razonable?,
+    ¿coinciden los extremos (máximo, mínimo, primera y última fila)?, ¿cuadra el
+    número de filas? Con ejemplos sobre el dataset. Regla: comprobar tres números
+    elegidos bien detecta casi todo lo que comprobar treinta al azar.
+
+- id: b3-p3-criterio-de-aceptacion
+  bloque: 3
+  titulo: "Escribir un criterio de aceptación que sirva"
+  tipo: profundizacion
+  duracion_min: 20
+  caduca: bajo
+  requisitos: [b3-m1-anatomia-encargo]
+  desbloquea: []
+  conceptos: [criterio-de-aceptacion, encargo, rubrica]
+  estado: escrito
+  brief: >
+    Un criterio sirve si dos personas distintas lo aplican y coinciden. Cómo pasar
+    de "que quede profesional" a algo comprobable, con la técnica de escribir primero
+    el ejemplo aceptado y el ejemplo rechazado y deducir la regla de la diferencia.
+    Los criterios de cantidad son fáciles y los de tono no: se resuelven con pares.
+
+- id: b3-p4-anonimizar-en-la-practica
+  bloque: 3
+  titulo: "Anonimizar de verdad, en dos minutos"
+  tipo: profundizacion
+  duracion_min: 20
+  caduca: medio
+  requisitos: [b3-m7-datos-y-rgpd]
+  desbloquea: []
+  conceptos: [anonimizar, dato-personal, reidentificacion, rgpd]
+  estado: escrito
+  brief: >
+    Procedimiento repetible: sustituir identificadores directos por etiquetas
+    estables (CLIENTE_01), eliminar cuasi-identificadores que reidentifican por
+    cruce (dirección exacta, matrícula, importe único), y conservar solo lo que la
+    tarea necesita. El caso que engaña: un texto sin ningún nombre que identifica a
+    una persona porque solo hay un bar en ese pueblo con terraza y dos empleados.
+
+- id: b3-p5-coste-de-verificar-de-mas
+  bloque: 3
+  titulo: "Verificar de más también es un error"
+  tipo: profundizacion
+  duracion_min: 15
+  caduca: bajo
+  requisitos: [b3-m6-verificacion-proporcional]
+  desbloquea: []
+  conceptos: [coste-de-verificar, riesgo, coste-de-oportunidad]
+  estado: escrito
+  brief: >
+    Si revisar línea a línea cuesta más que hacerlo a mano, la automatización es una
+    pérdida disfrazada de modernidad. Aritmética simple para decidirlo. Y el efecto
+    perverso: quien revisa todo al máximo acaba revisando mal, porque la atención no
+    se sostiene. Es más seguro revisar bien lo importante que revisar todo regular.
+
+# ══════════════════════════════════════════════════════════════════════════════
+# BLOQUES 4–6 — esqueleto. ESPECIFICACION.md §3 y §8 son explícitos: los bloques
+# 1–3 se escriben, se publican y se pilotan ANTES de escribir el 4, porque el 4 se
+# diseña mucho mejor sabiendo dónde se atascó de verdad. Estos nodos existen para
+# que el grafo esté completo, validado y navegable, y llevan `estado:
+# pendiente-piloto`. El sitio los publica como índice con su temario, no como
+# contenido terminado.
+# ══════════════════════════════════════════════════════════════════════════════
+
+# ─────────────────── BLOQUE 4 — CX como disciplina ─────────────────────────────
+- id: b4-m1-taxonomias
+  bloque: 4
+  titulo: "Taxonomías de incidencia"
+  tipo: concepto
+  duracion_min: 50
+  caduca: bajo
+  requisitos: [b3-m9-contexto-trabajo]
+  desbloquea: [b4-m2-causa-raiz]
+  conceptos: [taxonomia, clasificar, criterio]
+  estado: pendiente-piloto
+  fuente_spec: "§3 bloque 4, contenido 4.1"
+  brief: "Cómo se construye una taxonomía y por qué la mayoría están mal. Verdad escondida asociada: la taxonomía sucia de tickets.xlsx."
+
+- id: b4-m2-causa-raiz
+  bloque: 4
+  titulo: "Análisis de causa raíz"
+  tipo: concepto
+  duracion_min: 50
+  caduca: bajo
+  requisitos: [b4-m1-taxonomias]
+  desbloquea: [b4-m3-contacto-evitable]
+  conceptos: [causa-raiz, sistema, anomalia]
+  estado: pendiente-piloto
+  fuente_spec: "§3 bloque 4, contenido 4.2"
+  brief: "Causa raíz sobre volumen real de tickets. Verdad escondida asociada: V1, el fallo de redondeo."
+
+- id: b4-m3-contacto-evitable
+  bloque: 4
+  titulo: "Contacto evitable"
+  tipo: concepto
+  duracion_min: 50
+  caduca: bajo
+  requisitos: [b4-m2-causa-raiz]
+  desbloquea: [b4-m4-coste-de-un-contacto]
+  conceptos: [contacto-evitable, causa-raiz, sistema]
+  estado: pendiente-piloto
+  fuente_spec: "§3 bloque 4, contenido 4.3"
+  brief: "El concepto más rentable del sector: cada ticket que no debería haber existido."
+
+- id: b4-m4-coste-de-un-contacto
+  bloque: 4
+  titulo: "El coste real de un contacto"
+  tipo: concepto
+  duracion_min: 45
+  caduca: bajo
+  requisitos: [b4-m3-contacto-evitable]
+  desbloquea: [b4-m5-metricas]
+  conceptos: [coste-de-contacto, coste-de-oportunidad, insatisfaccion]
+  estado: pendiente-piloto
+  fuente_spec: "§3 bloque 4, contenido 4.4"
+  brief: "Directo, indirecto y coste de la insatisfacción. Alimenta la cuenta de V4."
+
+- id: b4-m5-metricas
+  bloque: 4
+  titulo: "Métricas que dicen algo"
+  tipo: concepto
+  duracion_min: 50
+  caduca: medio
+  requisitos: [b4-m4-coste-de-un-contacto]
+  desbloquea: [b4-m6-respuesta-bajo-carga-emocional]
+  conceptos: [nps, ces, resolucion-primer-contacto, tiempo-de-ciclo]
+  estado: pendiente-piloto
+  fuente_spec: "§3 bloque 4, contenido 4.5"
+  brief: "Por qué el NPS a solas es casi inútil; CES, FCR, tiempo de ciclo."
+
+- id: b4-m6-respuesta-bajo-carga-emocional
+  bloque: 4
+  titulo: "Responder bajo carga emocional"
+  tipo: concepto
+  duracion_min: 45
+  caduca: bajo
+  requisitos: [b4-m5-metricas]
+  desbloquea: [b4-m7-escalado-y-excepciones]
+  conceptos: [tono, reconocimiento, claridad, siguiente-paso]
+  estado: pendiente-piloto
+  fuente_spec: "§3 bloque 4, contenido 4.6"
+  brief: "Reconocimiento, claridad, siguiente paso. Enlaza con el verbo 4 y con qué no delegar."
+
+- id: b4-m7-escalado-y-excepciones
+  bloque: 4
+  titulo: "Escalado y excepciones"
+  tipo: concepto
+  duracion_min: 45
+  caduca: bajo
+  requisitos: [b4-m6-respuesta-bajo-carga-emocional]
+  desbloquea: [b4-m8-del-sintoma-al-sistema]
+  conceptos: [escalado, excepcion, criterio]
+  estado: pendiente-piloto
+  fuente_spec: "§3 bloque 4, contenido 4.7"
+  brief: "Diseñar el camino del caso raro. Verdad escondida asociada: V5, el procedimiento que nadie sigue."
+
+- id: b4-m8-del-sintoma-al-sistema
+  bloque: 4
+  titulo: "Del síntoma al sistema"
+  tipo: concepto
+  duracion_min: 50
+  caduca: bajo
+  requisitos: [b4-m7-escalado-y-excepciones]
+  desbloquea: [b4-m9-voz-del-cliente]
+  conceptos: [sistema, causa-raiz, contacto-evitable]
+  estado: pendiente-piloto
+  fuente_spec: "§3 bloque 4, contenido 4.8"
+  brief: "Cómo un patrón de tickets se convierte en un cambio de proceso."
+
+- id: b4-m9-voz-del-cliente
+  bloque: 4
+  titulo: "Voz del cliente: de texto libre a decisión"
+  tipo: concepto
+  duracion_min: 50
+  caduca: bajo
+  requisitos: [b4-m8-del-sintoma-al-sistema]
+  desbloquea: [b4-m10-analisis-completo]
+  conceptos: [voz-del-cliente, extraer, clasificar, decision]
+  estado: pendiente-piloto
+  fuente_spec: "§3 bloque 4, contenido 4.9"
+  brief: "Convertir texto libre en decisión. Usa los verbos 2, 1 y 6 encadenados."
+
+- id: b4-m10-analisis-completo
+  bloque: 4
+  titulo: "Análisis completo de los 800 tickets"
+  tipo: ejercicio
+  duracion_min: 90
+  caduca: bajo
+  requisitos: [b4-m9-voz-del-cliente]
+  desbloquea: [b4-m11-informe-causa-raiz]
+  conceptos: [causa-raiz, contacto-evitable, anomalia, coste-de-contacto]
+  dataset: [dataset/ficheros/tickets.xlsx, dataset/ficheros/pedidos.xlsx, dataset/ficheros/clientes.xlsx, dataset/ficheros/procedimientos.docx]
+  solucion: dataset/SOLUCIONES/verdades-escondidas.md
+  estado: pendiente-piloto
+  fuente_spec: "§3 bloque 4, ejercicio central"
+  brief: "Ejercicio central del curso. Ella debe llegar sola a la concentración de causa raíz plantada en los datos. Rúbrica de tres niveles de §5.3."
+
+- id: b4-m11-informe-causa-raiz
+  bloque: 4
+  titulo: "Tu informe de causa raíz"
+  tipo: artefacto
+  duracion_min: 60
+  caduca: bajo
+  requisitos: [b4-m10-analisis-completo]
+  desbloquea: [b5-m1-la-escalera]
+  conceptos: [causa-raiz, coste-de-contacto, caso-de-negocio]
+  artefacto: plantillas/informe-causa-raiz.md
+  estado: pendiente-piloto
+  fuente_spec: "§3 bloque 4, artefacto"
+  brief: "Artefacto 5 de 6. Informe ejecutivo de una página: hallazgo, evidencia, coste estimado, recomendación. Es la pieza que enseñará en el bloque 6."
+
+# ───────────────────────── BLOQUE 5 — Construir ────────────────────────────────
+- id: b5-m1-la-escalera
+  bloque: 5
+  titulo: "La escalera de implementación y la regla de parada"
+  tipo: concepto
+  duracion_min: 50
+  caduca: bajo
+  requisitos: [b4-m11-informe-causa-raiz]
+  desbloquea: [b5-m2-del-encargo-al-proceso]
+  conceptos: [escalera, regla-de-parada, nivel, riesgo]
+  estado: pendiente-piloto
+  fuente_spec: "§3 bloque 5, contenido 5.1 — la tabla de 5 niveles es literal"
+  brief: "Los cinco niveles y cuándo parar en cada uno. El nivel 3 es el final normal y es un éxito. Regla de parada: no se sube hasta que el nivel anterior funcione tres veces seguidas sin retoques."
+
+- id: b5-m2-del-encargo-al-proceso
+  bloque: 5
+  titulo: "Del encargo al proceso documentado"
+  tipo: concepto
+  duracion_min: 45
+  caduca: bajo
+  requisitos: [b5-m1-la-escalera]
+  desbloquea: [b5-m3-contexto-de-trabajo]
+  conceptos: [proceso, documentacion, reutilizacion]
+  estado: pendiente-piloto
+  fuente_spec: "§3 bloque 5, contenido 5.2"
+
+- id: b5-m3-contexto-de-trabajo
+  bloque: 5
+  titulo: "Construir tu fichero de contexto de trabajo"
+  tipo: ejercicio
+  duracion_min: 50
+  caduca: medio
+  requisitos: [b5-m2-del-encargo-al-proceso]
+  desbloquea: [b5-m4-encadenar-y-controles]
+  conceptos: [contexto, glosario, casuistica]
+  estado: pendiente-piloto
+  fuente_spec: "§3 bloque 5, contenido 5.3"
+
+- id: b5-m4-encadenar-y-controles
+  bloque: 5
+  titulo: "Encadenar pasos y poner los controles humanos"
+  tipo: concepto
+  duracion_min: 50
+  caduca: medio
+  requisitos: [b5-m3-contexto-de-trabajo]
+  desbloquea: [b5-m5-mantenimiento]
+  conceptos: [cadena, punto-de-control, verificacion, riesgo]
+  estado: pendiente-piloto
+  fuente_spec: "§3 bloque 5, contenido 5.4"
+
+- id: b5-m5-mantenimiento
+  bloque: 5
+  titulo: "Qué se rompe con el tiempo y cómo enterarte"
+  tipo: concepto
+  duracion_min: 45
+  caduca: bajo
+  requisitos: [b5-m4-encadenar-y-controles]
+  desbloquea: [b5-m6-cuando-desmontar]
+  conceptos: [mantenimiento, deriva, verificacion]
+  estado: pendiente-piloto
+  fuente_spec: "§3 bloque 5, contenido 5.5"
+
+- id: b5-m6-cuando-desmontar
+  bloque: 5
+  titulo: "Cuándo desmontar una automatización"
+  tipo: concepto
+  duracion_min: 40
+  caduca: bajo
+  requisitos: [b5-m5-mantenimiento]
+  desbloquea: [b5-m7-procesos-medidos]
+  conceptos: [regla-de-parada, coste-de-oportunidad, mantenimiento]
+  estado: pendiente-piloto
+  fuente_spec: "§3 bloque 5, contenido 5.6"
+
+- id: b5-m7-procesos-medidos
+  bloque: 5
+  titulo: "Tus procesos, funcionando y medidos"
+  tipo: artefacto
+  duracion_min: 60
+  caduca: bajo
+  requisitos: [b5-m6-cuando-desmontar]
+  desbloquea: [b6-m1-nadie-te-lo-ha-pedido]
+  conceptos: [linea-base, proceso, documentacion]
+  artefacto: plantillas/proceso-documentado.md
+  estado: pendiente-piloto
+  fuente_spec: "§3 bloque 5, artefacto"
+  brief: "Dos o tres procesos suyos funcionando de verdad, documentados y medidos contra la línea base del bloque 1."
+
+# ──────────────────── BLOQUE 6 — Mover la organización ─────────────────────────
+- id: b6-m1-nadie-te-lo-ha-pedido
+  bloque: 6
+  titulo: "Nadie te ha pedido que rediseñes nada"
+  tipo: concepto
+  duracion_min: 40
+  caduca: bajo
+  requisitos: [b5-m7-procesos-medidos]
+  desbloquea: [b6-m2-ganarse-el-derecho]
+  conceptos: [autoridad, politica-organizativa, evidencia]
+  estado: pendiente-piloto
+  fuente_spec: "§3 bloque 6, contenido 6.1"
+
+- id: b6-m2-ganarse-el-derecho
+  bloque: 6
+  titulo: "Ganarse el derecho: evidencia, piloto, propuesta"
+  tipo: concepto
+  duracion_min: 45
+  caduca: bajo
+  requisitos: [b6-m1-nadie-te-lo-ha-pedido]
+  desbloquea: [b6-m3-caso-de-negocio]
+  conceptos: [evidencia, piloto, propuesta]
+  estado: pendiente-piloto
+  fuente_spec: "§3 bloque 6, contenido 6.2"
+
+- id: b6-m3-caso-de-negocio
+  bloque: 6
+  titulo: "El caso de negocio en una página"
+  tipo: concepto
+  duracion_min: 50
+  caduca: bajo
+  requisitos: [b6-m2-ganarse-el-derecho]
+  desbloquea: [b6-m4-ensenar-sin-amenazar]
+  conceptos: [caso-de-negocio, coste-de-contacto, evidencia]
+  estado: pendiente-piloto
+  fuente_spec: "§3 bloque 6, contenido 6.3"
+
+- id: b6-m4-ensenar-sin-amenazar
+  bloque: 6
+  titulo: "Enseñar una mejora sin que parezca que sobra alguien"
+  tipo: concepto
+  duracion_min: 40
+  caduca: bajo
+  requisitos: [b6-m3-caso-de-negocio]
+  desbloquea: [b6-m5-el-miedo-del-companero]
+  conceptos: [politica-organizativa, resistencia, propuesta]
+  estado: pendiente-piloto
+  fuente_spec: "§3 bloque 6, contenido 6.4"
+
+- id: b6-m5-el-miedo-del-companero
+  bloque: 6
+  titulo: "El miedo del compañero"
+  tipo: concepto
+  duracion_min: 40
+  caduca: bajo
+  requisitos: [b6-m4-ensenar-sin-amenazar]
+  desbloquea: [b6-m6-cuando-el-jefe-dice-que-no]
+  conceptos: [resistencia, politica-organizativa]
+  estado: pendiente-piloto
+  fuente_spec: "§3 bloque 6, contenido 6.5"
+
+- id: b6-m6-cuando-el-jefe-dice-que-no
+  bloque: 6
+  titulo: "Cuando el jefe dice que no (y a veces tiene razón)"
+  tipo: concepto
+  duracion_min: 40
+  caduca: bajo
+  requisitos: [b6-m5-el-miedo-del-companero]
+  desbloquea: [b6-m7-documentar-para-que-sobreviva]
+  conceptos: [politica-organizativa, riesgo, coste-de-oportunidad]
+  estado: pendiente-piloto
+  fuente_spec: "§3 bloque 6, contenido 6.6"
+
+- id: b6-m7-documentar-para-que-sobreviva
+  bloque: 6
+  titulo: "Documentar para que sobreviva sin ti"
+  tipo: concepto
+  duracion_min: 45
+  caduca: bajo
+  requisitos: [b6-m6-cuando-el-jefe-dice-que-no]
+  desbloquea: [b6-m8-propuesta-de-una-pagina]
+  conceptos: [documentacion, mantenimiento, proceso]
+  estado: pendiente-piloto
+  fuente_spec: "§3 bloque 6, contenido 6.7"
+
+- id: b6-m8-propuesta-de-una-pagina
+  bloque: 6
+  titulo: "Tu propuesta de una página"
+  tipo: artefacto
+  duracion_min: 60
+  caduca: bajo
+  requisitos: [b6-m7-documentar-para-que-sobreviva]
+  desbloquea: []
+  conceptos: [propuesta, caso-de-negocio, evidencia]
+  artefacto: plantillas/propuesta-una-pagina.md
+  estado: pendiente-piloto
+  fuente_spec: "§3 bloque 6, artefacto"
+  brief: "Artefacto 6 de 6. Su propuesta real de una página, lista para presentar cuando llegue el momento."

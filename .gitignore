@@ -1,0 +1,23 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+
+# Build del sitio. Se regenera; no se versiona.
+sitio/build/
+site/
+.cache/
+
+# Dependencias del tutor
+tutor/serverless/node_modules/
+
+# NO se ignora dataset/SOLUCIONES/: tiene que estar versionado para que la
+# corrección objetiva de ESPECIFICACION.md §5.3 funcione. Lo que se hace es
+# excluirlo del build público del sitio, no del repositorio.
+
+# Directorios de trabajo temporales
+**/_auditoria/
+*.tmp

@@ -1,0 +1,9 @@
+# Curso CX + IA — dependencias de construcción.
+# Nada de esto lo necesita la alumna: son las herramientas que generan el dataset,
+# validan el grafo y construyen el sitio.
+
+PyYAML>=6.0            # frontmatter y registro de nodos
+openpyxl>=3.1          # generación de los .xlsx del gemelo sintético
+python-docx>=1.1       # generación de procedimientos.docx
+mkdocs-material>=9.5   # sitio estático (ESPECIFICACION.md §8)
+pymdown-extensions>=10 # admoniciones, detalles colapsables, pestañas
