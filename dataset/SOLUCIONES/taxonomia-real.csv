@@ -1,801 +1,801 @@
 id_ticket,categoria_sucia,categoria_real
-TCK-0001,Consulta,entrega-sin-aviso
-TCK-0002,Otros,informacion-producto
-TCK-0003,Info,otros
-TCK-0004,Entrega,entrega-sin-aviso
-TCK-0005,Info,cambio-datos
-TCK-0006,Reparto,entrega-sin-aviso
-TCK-0007,Info,informacion-producto
-TCK-0008,Consulta,informacion-producto
+TCK-0001,Producto,producto-defectuoso
+TCK-0002,Otros,otros
+TCK-0003,facturacion,pedido-erroneo
+TCK-0004,Consulta,otros
+TCK-0005,,informacion-producto
+TCK-0006,Pedidos,pedido-erroneo
+TCK-0007,Info,otros
+TCK-0008,Entrega,entrega-retraso
 TCK-0009,Consulta,cambio-datos
-TCK-0010,Reparto,entrega-retraso
-TCK-0011,Entrega,otros
-TCK-0012,Datos cliente,cambio-datos
-TCK-0013,Entrega,entrega-sin-aviso
-TCK-0014,Datos cliente,cambio-datos
-TCK-0015,Producto,producto-defectuoso
-TCK-0016,Calidad producto,producto-defectuoso
-TCK-0017,entregas,entrega-sin-aviso
-TCK-0018,Producto,producto-defectuoso
-TCK-0019,Otros,entrega-sin-aviso
-TCK-0020,Entrega,producto-defectuoso
-TCK-0021,Producto,producto-defectuoso
-TCK-0022,Entrega,entrega-retraso
-TCK-0023,Facturación,pedido-erroneo
-TCK-0024,Consulta,pedido-erroneo
-TCK-0025,Entrega,entrega-retraso
-TCK-0026,Entrega,entrega-retraso
-TCK-0027,Entrega,entrega-sin-aviso
-TCK-0028,Consulta,informacion-producto
-TCK-0029,Reparto,entrega-sin-aviso
-TCK-0030,entregas,entrega-retraso
-TCK-0031,,entrega-sin-aviso
-TCK-0032,Entrega,pedido-erroneo
-TCK-0033,Otros,producto-defectuoso
-TCK-0034,entregas,entrega-sin-aviso
-TCK-0035,Consulta,otros
+TCK-0010,Pedidos,pedido-erroneo
+TCK-0011,,otros
+TCK-0012,Entrega,pedido-erroneo
+TCK-0013,Entrega,entrega-retraso
+TCK-0014,Reparto,entrega-sin-aviso
+TCK-0015,Info,informacion-producto
+TCK-0016,Reparto,entrega-sin-aviso
+TCK-0017,Entrega,entrega-retraso
+TCK-0018,Otros,pedido-erroneo
+TCK-0019,Consulta,cambio-datos
+TCK-0020,Facturación,pedido-erroneo
+TCK-0021,Reparto,entrega-sin-aviso
+TCK-0022,Datos cliente,cambio-datos
+TCK-0023,Entrega,entrega-sin-aviso
+TCK-0024,Reparto,entrega-sin-aviso
+TCK-0025,Consulta,entrega-sin-aviso
+TCK-0026,Otros,pedido-erroneo
+TCK-0027,Otros,entrega-sin-aviso
+TCK-0028,Entrega,entrega-retraso
+TCK-0029,Pedidos,pedido-erroneo
+TCK-0030,Reparto,entrega-sin-aviso
+TCK-0031,Otros,pedido-erroneo
+TCK-0032,Facturas,pedido-erroneo
+TCK-0033,Consulta,entrega-retraso
+TCK-0034,Consulta,informacion-producto
+TCK-0035,Otros,cambio-datos
 TCK-0036,Producto,producto-defectuoso
-TCK-0037,Entrega,entrega-sin-aviso
-TCK-0038,Consulta,pedido-erroneo
+TCK-0037,Calidad producto,producto-defectuoso
+TCK-0038,facturacion,facturacion-redondeo
 TCK-0039,Pedidos,pedido-erroneo
-TCK-0040,Entrega,entrega-retraso
-TCK-0041,Reparto,entrega-retraso
-TCK-0042,Entrega,pedido-erroneo
-TCK-0043,Pedidos,pedido-erroneo
+TCK-0040,Entrega,entrega-sin-aviso
+TCK-0041,Otros,otros
+TCK-0042,Datos cliente,cambio-datos
+TCK-0043,Facturación,pedido-erroneo
 TCK-0044,entregas,entrega-retraso
-TCK-0045,Facturación,informacion-producto
-TCK-0046,Consulta,informacion-producto
+TCK-0045,Info,otros
+TCK-0046,,cambio-datos
 TCK-0047,Pedidos,pedido-erroneo
-TCK-0048,Consulta,informacion-producto
-TCK-0049,Entrega,pedido-erroneo
-TCK-0050,Datos cliente,cambio-datos
-TCK-0051,Otros,cambio-datos
+TCK-0048,Datos cliente,cambio-datos
+TCK-0049,Otros,entrega-retraso
+TCK-0050,Consulta,cambio-datos
+TCK-0051,Consulta,pedido-erroneo
 TCK-0052,Consulta,informacion-producto
-TCK-0053,Otros,pedido-erroneo
-TCK-0054,Consulta,informacion-producto
-TCK-0055,Consulta,entrega-retraso
-TCK-0056,Reparto,entrega-retraso
-TCK-0057,Info,informacion-producto
-TCK-0058,Info,informacion-producto
-TCK-0059,Consulta,pedido-erroneo
-TCK-0060,Incidencia facturación,pedido-erroneo
-TCK-0061,Entrega,pedido-erroneo
-TCK-0062,Entrega,entrega-retraso
-TCK-0063,Calidad producto,producto-defectuoso
-TCK-0064,Facturación,entrega-retraso
-TCK-0065,Consulta,cambio-datos
-TCK-0066,Pedidos,pedido-erroneo
-TCK-0067,Info,informacion-producto
-TCK-0068,Facturación,facturacion-redondeo
-TCK-0069,Consulta,entrega-sin-aviso
-TCK-0070,Producto,informacion-producto
-TCK-0071,Pedidos,pedido-erroneo
-TCK-0072,Incidencia facturación,pedido-erroneo
-TCK-0073,Info,informacion-producto
-TCK-0074,Pedidos,pedido-erroneo
-TCK-0075,Otros,entrega-retraso
+TCK-0053,Info,informacion-producto
+TCK-0054,entregas,entrega-retraso
+TCK-0055,Facturación,pedido-erroneo
+TCK-0056,Consulta,entrega-retraso
+TCK-0057,Otros,entrega-sin-aviso
+TCK-0058,entregas,entrega-sin-aviso
+TCK-0059,Calidad producto,producto-defectuoso
+TCK-0060,Entrega,entrega-retraso
+TCK-0061,Producto,producto-defectuoso
+TCK-0062,Reparto,entrega-retraso
+TCK-0063,Info,informacion-producto
+TCK-0064,Facturación,pedido-erroneo
+TCK-0065,Pedidos,pedido-erroneo
+TCK-0066,entregas,entrega-retraso
+TCK-0067,Entrega,entrega-retraso
+TCK-0068,Entrega,otros
+TCK-0069,Datos cliente,cambio-datos
+TCK-0070,Consulta,entrega-sin-aviso
+TCK-0071,Consulta,informacion-producto
+TCK-0072,Info,otros
+TCK-0073,entregas,entrega-retraso
+TCK-0074,Consulta,informacion-producto
+TCK-0075,entregas,entrega-retraso
 TCK-0076,Consulta,informacion-producto
 TCK-0077,Consulta,informacion-producto
-TCK-0078,Datos cliente,cambio-datos
-TCK-0079,Consulta,entrega-retraso
-TCK-0080,Consulta,informacion-producto
-TCK-0081,Reparto,entrega-sin-aviso
-TCK-0082,,informacion-producto
-TCK-0083,Reparto,entrega-sin-aviso
-TCK-0084,Datos cliente,cambio-datos
-TCK-0085,FACTURACION,facturacion-redondeo
-TCK-0086,Consulta,informacion-producto
-TCK-0087,Consulta,facturacion-redondeo
-TCK-0088,Facturación,facturacion-redondeo
-TCK-0089,Facturación,facturacion-redondeo
-TCK-0090,entregas,entrega-sin-aviso
-TCK-0091,Pedidos,facturacion-redondeo
+TCK-0078,Consulta,otros
+TCK-0079,Reparto,entrega-retraso
+TCK-0080,entregas,entrega-retraso
+TCK-0081,Incidencia facturación,pedido-erroneo
+TCK-0082,Entrega,entrega-retraso
+TCK-0083,Pedidos,pedido-erroneo
+TCK-0084,Consulta,cambio-datos
+TCK-0085,Datos cliente,cambio-datos
+TCK-0086,Pedidos,pedido-erroneo
+TCK-0087,Calidad producto,producto-defectuoso
+TCK-0088,Reparto,entrega-retraso
+TCK-0089,Info,informacion-producto
+TCK-0090,Consulta,informacion-producto
+TCK-0091,Facturas,facturacion-redondeo
 TCK-0092,Facturación,facturacion-redondeo
-TCK-0093,entregas,entrega-sin-aviso
-TCK-0094,Consulta,entrega-sin-aviso
-TCK-0095,Facturación,facturacion-redondeo
-TCK-0096,Facturas,facturacion-redondeo
-TCK-0097,Consulta,entrega-retraso
-TCK-0098,Facturación,facturacion-redondeo
-TCK-0099,Calidad producto,producto-defectuoso
-TCK-0100,Consulta,informacion-producto
-TCK-0101,Otros,facturacion-redondeo
-TCK-0102,Producto,informacion-producto
-TCK-0103,Facturación,facturacion-redondeo
-TCK-0104,Pedidos,facturacion-redondeo
-TCK-0105,Entrega,entrega-retraso
-TCK-0106,Otros,informacion-producto
-TCK-0107,Pedidos,facturacion-redondeo
-TCK-0108,entregas,entrega-retraso
-TCK-0109,Entrega,entrega-sin-aviso
-TCK-0110,Datos cliente,cambio-datos
-TCK-0111,FACTURACION,facturacion-redondeo
-TCK-0112,Incidencia facturación,facturacion-redondeo
-TCK-0113,Consulta,cambio-datos
-TCK-0114,Datos cliente,cambio-datos
-TCK-0115,facturacion,facturacion-redondeo
-TCK-0116,FACTURACION,facturacion-redondeo
+TCK-0093,Reparto,entrega-sin-aviso
+TCK-0094,Facturación,facturacion-redondeo
+TCK-0095,Pedidos,facturacion-redondeo
+TCK-0096,Info,otros
+TCK-0097,Pedidos,pedido-erroneo
+TCK-0098,,producto-defectuoso
+TCK-0099,Entrega,entrega-sin-aviso
+TCK-0100,Entrega,facturacion-redondeo
+TCK-0101,Consulta,facturacion-redondeo
+TCK-0102,,facturacion-redondeo
+TCK-0103,Info,informacion-producto
+TCK-0104,Otros,entrega-retraso
+TCK-0105,Facturación,facturacion-redondeo
+TCK-0106,Facturas,facturacion-redondeo
+TCK-0107,Consulta,entrega-sin-aviso
+TCK-0108,Pedidos,facturacion-redondeo
+TCK-0109,Incidencia facturación,facturacion-redondeo
+TCK-0110,Consulta,cambio-datos
+TCK-0111,Reparto,entrega-sin-aviso
+TCK-0112,Pedidos,facturacion-redondeo
+TCK-0113,Facturas,facturacion-redondeo
+TCK-0114,,entrega-retraso
+TCK-0115,,facturacion-redondeo
+TCK-0116,Entrega,facturacion-redondeo
 TCK-0117,facturacion,facturacion-redondeo
 TCK-0118,Otros,facturacion-redondeo
-TCK-0119,FACTURACION,facturacion-redondeo
-TCK-0120,Facturas,facturacion-redondeo
-TCK-0121,,facturacion-redondeo
-TCK-0122,Facturas,facturacion-redondeo
-TCK-0123,FACTURACION,facturacion-redondeo
-TCK-0124,Consulta,informacion-producto
-TCK-0125,Entrega,pedido-erroneo
-TCK-0126,Entrega,entrega-retraso
-TCK-0127,Incidencia facturación,facturacion-redondeo
-TCK-0128,Pedidos,pedido-erroneo
-TCK-0129,Incidencia facturación,facturacion-redondeo
-TCK-0130,Calidad producto,producto-defectuoso
-TCK-0131,Facturas,facturacion-redondeo
-TCK-0132,Facturas,facturacion-redondeo
-TCK-0133,Pedidos,pedido-erroneo
-TCK-0134,Pedidos,pedido-erroneo
-TCK-0135,Facturación,facturacion-redondeo
-TCK-0136,Facturas,pedido-erroneo
-TCK-0137,Entrega,facturacion-redondeo
-TCK-0138,Pedidos,facturacion-redondeo
-TCK-0139,Otros,facturacion-redondeo
-TCK-0140,Incidencia facturación,facturacion-redondeo
-TCK-0141,Otros,facturacion-redondeo
-TCK-0142,Facturación,facturacion-redondeo
-TCK-0143,Facturas,facturacion-redondeo
-TCK-0144,Facturación,facturacion-redondeo
-TCK-0145,Entrega,entrega-sin-aviso
-TCK-0146,Otros,otros
-TCK-0147,Datos cliente,cambio-datos
-TCK-0148,Facturas,facturacion-redondeo
-TCK-0149,Incidencia facturación,facturacion-redondeo
-TCK-0150,,informacion-producto
-TCK-0151,Entrega,entrega-retraso
-TCK-0152,Incidencia facturación,facturacion-redondeo
+TCK-0119,facturacion,facturacion-redondeo
+TCK-0120,Facturación,facturacion-redondeo
+TCK-0121,facturacion,facturacion-redondeo
+TCK-0122,Incidencia facturación,facturacion-redondeo
+TCK-0123,Otros,facturacion-redondeo
+TCK-0124,Facturación,facturacion-redondeo
+TCK-0125,,facturacion-redondeo
+TCK-0126,Incidencia facturación,facturacion-redondeo
+TCK-0127,,facturacion-redondeo
+TCK-0128,Otros,facturacion-redondeo
+TCK-0129,facturacion,facturacion-redondeo
+TCK-0130,Otros,facturacion-redondeo
+TCK-0131,Pedidos,pedido-erroneo
+TCK-0132,Consulta,facturacion-redondeo
+TCK-0133,Otros,pedido-erroneo
+TCK-0134,Entrega,entrega-sin-aviso
+TCK-0135,Producto,informacion-producto
+TCK-0136,Facturas,facturacion-redondeo
+TCK-0137,FACTURACION,facturacion-redondeo
+TCK-0138,Facturas,facturacion-redondeo
+TCK-0139,Pedidos,facturacion-redondeo
+TCK-0140,Otros,informacion-producto
+TCK-0141,Consulta,pedido-erroneo
+TCK-0142,Pedidos,facturacion-redondeo
+TCK-0143,Entrega,otros
+TCK-0144,Entrega,entrega-retraso
+TCK-0145,Info,informacion-producto
+TCK-0146,Entrega,entrega-retraso
+TCK-0147,Facturación,facturacion-redondeo
+TCK-0148,Consulta,facturacion-redondeo
+TCK-0149,Otros,otros
+TCK-0150,Consulta,facturacion-redondeo
+TCK-0151,Datos cliente,cambio-datos
+TCK-0152,facturacion,facturacion-redondeo
 TCK-0153,Consulta,otros
-TCK-0154,Datos cliente,cambio-datos
-TCK-0155,Otros,facturacion-redondeo
-TCK-0156,Pedidos,facturacion-redondeo
-TCK-0157,Facturación,facturacion-redondeo
-TCK-0158,Consulta,cambio-datos
-TCK-0159,Consulta,facturacion-redondeo
-TCK-0160,Datos cliente,cambio-datos
-TCK-0161,,producto-defectuoso
-TCK-0162,Otros,facturacion-redondeo
-TCK-0163,Facturas,facturacion-redondeo
-TCK-0164,Entrega,facturacion-redondeo
-TCK-0165,Facturas,facturacion-redondeo
-TCK-0166,Reparto,entrega-sin-aviso
-TCK-0167,Producto,producto-defectuoso
-TCK-0168,Consulta,facturacion-redondeo
-TCK-0169,Pedidos,facturacion-redondeo
-TCK-0170,Entrega,facturacion-redondeo
-TCK-0171,Facturas,facturacion-redondeo
-TCK-0172,Facturas,facturacion-redondeo
-TCK-0173,Facturación,facturacion-redondeo
-TCK-0174,Entrega,facturacion-redondeo
-TCK-0175,Reparto,entrega-sin-aviso
-TCK-0176,Facturación,facturacion-redondeo
-TCK-0177,Incidencia facturación,facturacion-redondeo
+TCK-0154,Pedidos,facturacion-redondeo
+TCK-0155,Facturación,facturacion-redondeo
+TCK-0156,Otros,cambio-datos
+TCK-0157,Incidencia facturación,facturacion-redondeo
+TCK-0158,entregas,entrega-sin-aviso
+TCK-0159,Incidencia facturación,facturacion-redondeo
+TCK-0160,Calidad producto,producto-defectuoso
+TCK-0161,Facturación,facturacion-redondeo
+TCK-0162,facturacion,facturacion-redondeo
+TCK-0163,Entrega,facturacion-redondeo
+TCK-0164,Pedidos,facturacion-redondeo
+TCK-0165,Pedidos,facturacion-redondeo
+TCK-0166,FACTURACION,facturacion-redondeo
+TCK-0167,Reparto,entrega-sin-aviso
+TCK-0168,Facturación,facturacion-redondeo
+TCK-0169,Entrega,entrega-retraso
+TCK-0170,Entrega,producto-defectuoso
+TCK-0171,Incidencia facturación,facturacion-redondeo
+TCK-0172,FACTURACION,facturacion-redondeo
+TCK-0173,Otros,facturacion-redondeo
+TCK-0174,Pedidos,facturacion-redondeo
+TCK-0175,Consulta,informacion-producto
+TCK-0176,Incidencia facturación,pedido-erroneo
+TCK-0177,entregas,entrega-retraso
 TCK-0178,Reparto,entrega-retraso
-TCK-0179,Reparto,entrega-retraso
-TCK-0180,Incidencia facturación,facturacion-redondeo
-TCK-0181,Otros,informacion-producto
-TCK-0182,Producto,producto-defectuoso
-TCK-0183,Entrega,entrega-sin-aviso
-TCK-0184,Datos cliente,cambio-datos
-TCK-0185,Calidad producto,producto-defectuoso
-TCK-0186,Datos cliente,cambio-datos
-TCK-0187,Consulta,otros
-TCK-0188,Entrega,pedido-erroneo
-TCK-0189,Consulta,informacion-producto
-TCK-0190,Producto,producto-defectuoso
-TCK-0191,Pedidos,pedido-erroneo
-TCK-0192,Facturación,informacion-producto
-TCK-0193,Entrega,entrega-sin-aviso
-TCK-0194,Facturas,pedido-erroneo
-TCK-0195,Entrega,entrega-retraso
-TCK-0196,Otros,pedido-erroneo
-TCK-0197,Producto,producto-defectuoso
-TCK-0198,Entrega,producto-defectuoso
-TCK-0199,Consulta,otros
-TCK-0200,Consulta,otros
-TCK-0201,Entrega,producto-defectuoso
-TCK-0202,Consulta,informacion-producto
-TCK-0203,Entrega,entrega-retraso
+TCK-0179,,facturacion-redondeo
+TCK-0180,Entrega,producto-defectuoso
+TCK-0181,,informacion-producto
+TCK-0182,Entrega,entrega-retraso
+TCK-0183,Entrega,entrega-retraso
+TCK-0184,Reparto,entrega-retraso
+TCK-0185,Facturas,pedido-erroneo
+TCK-0186,Info,informacion-producto
+TCK-0187,Info,informacion-producto
+TCK-0188,Datos cliente,cambio-datos
+TCK-0189,Datos cliente,cambio-datos
+TCK-0190,Consulta,entrega-sin-aviso
+TCK-0191,Info,otros
+TCK-0192,Pedidos,pedido-erroneo
+TCK-0193,Reparto,entrega-retraso
+TCK-0194,Entrega,pedido-erroneo
+TCK-0195,Otros,informacion-producto
+TCK-0196,Consulta,entrega-retraso
+TCK-0197,Reparto,entrega-sin-aviso
+TCK-0198,Reparto,entrega-sin-aviso
+TCK-0199,Info,informacion-producto
+TCK-0200,Producto,producto-defectuoso
+TCK-0201,Pedidos,pedido-erroneo
+TCK-0202,Facturas,pedido-erroneo
+TCK-0203,Otros,informacion-producto
 TCK-0204,Info,informacion-producto
-TCK-0205,Reparto,entrega-sin-aviso
-TCK-0206,,pedido-erroneo
-TCK-0207,Calidad producto,producto-defectuoso
-TCK-0208,Otros,informacion-producto
-TCK-0209,Facturación,pedido-erroneo
+TCK-0205,Calidad producto,producto-defectuoso
+TCK-0206,entregas,entrega-sin-aviso
+TCK-0207,Otros,otros
+TCK-0208,Entrega,entrega-sin-aviso
+TCK-0209,Pedidos,entrega-sin-aviso
 TCK-0210,Datos cliente,cambio-datos
-TCK-0211,Info,informacion-producto
-TCK-0212,Otros,otros
-TCK-0213,Reparto,entrega-retraso
-TCK-0214,Reparto,entrega-sin-aviso
-TCK-0215,Reparto,entrega-retraso
-TCK-0216,entregas,entrega-sin-aviso
-TCK-0217,Consulta,informacion-producto
-TCK-0218,Facturas,pedido-erroneo
-TCK-0219,Otros,cambio-datos
-TCK-0220,Calidad producto,producto-defectuoso
-TCK-0221,Reparto,entrega-retraso
-TCK-0222,Info,informacion-producto
-TCK-0223,Otros,pedido-erroneo
-TCK-0224,Entrega,pedido-erroneo
-TCK-0225,Entrega,producto-defectuoso
-TCK-0226,Facturación,informacion-producto
-TCK-0227,Consulta,producto-defectuoso
-TCK-0228,entregas,entrega-sin-aviso
-TCK-0229,Producto,producto-defectuoso
-TCK-0230,facturacion,facturacion-redondeo
-TCK-0231,Consulta,facturacion-redondeo
-TCK-0232,Pedidos,facturacion-redondeo
-TCK-0233,Incidencia facturación,facturacion-redondeo
-TCK-0234,Facturación,facturacion-redondeo
-TCK-0235,Entrega,facturacion-redondeo
-TCK-0236,Entrega,pedido-erroneo
-TCK-0237,Otros,informacion-producto
-TCK-0238,,facturacion-redondeo
-TCK-0239,Facturas,facturacion-redondeo
-TCK-0240,Otros,producto-defectuoso
-TCK-0241,Otros,facturacion-redondeo
-TCK-0242,Datos cliente,cambio-datos
-TCK-0243,,facturacion-redondeo
-TCK-0244,Consulta,facturacion-redondeo
-TCK-0245,Otros,producto-defectuoso
-TCK-0246,Pedidos,facturacion-redondeo
+TCK-0211,Entrega,entrega-retraso
+TCK-0212,Datos cliente,cambio-datos
+TCK-0213,Consulta,otros
+TCK-0214,Otros,cambio-datos
+TCK-0215,Entrega,entrega-sin-aviso
+TCK-0216,Info,otros
+TCK-0217,Facturas,pedido-erroneo
+TCK-0218,Producto,producto-defectuoso
+TCK-0219,Consulta,producto-defectuoso
+TCK-0220,Consulta,otros
+TCK-0221,Reparto,entrega-sin-aviso
+TCK-0222,Producto,producto-defectuoso
+TCK-0223,Entrega,producto-defectuoso
+TCK-0224,entregas,entrega-retraso
+TCK-0225,Pedidos,pedido-erroneo
+TCK-0226,Consulta,informacion-producto
+TCK-0227,Entrega,entrega-retraso
+TCK-0228,Entrega,entrega-retraso
+TCK-0229,Consulta,informacion-producto
+TCK-0230,Calidad producto,producto-defectuoso
+TCK-0231,Datos cliente,cambio-datos
+TCK-0232,Consulta,otros
+TCK-0233,Pedidos,facturacion-redondeo
+TCK-0234,Facturas,pedido-erroneo
+TCK-0235,Calidad producto,producto-defectuoso
+TCK-0236,Otros,facturacion-redondeo
+TCK-0237,Facturación,facturacion-redondeo
+TCK-0238,entregas,entrega-sin-aviso
+TCK-0239,Consulta,facturacion-redondeo
+TCK-0240,Facturas,facturacion-redondeo
+TCK-0241,Facturación,facturacion-redondeo
+TCK-0242,Entrega,facturacion-redondeo
+TCK-0243,Entrega,facturacion-redondeo
+TCK-0244,Pedidos,pedido-erroneo
+TCK-0245,Facturación,facturacion-redondeo
+TCK-0246,Incidencia facturación,facturacion-redondeo
 TCK-0247,Facturación,facturacion-redondeo
-TCK-0248,Consulta,facturacion-redondeo
+TCK-0248,Entrega,entrega-retraso
 TCK-0249,Facturación,facturacion-redondeo
-TCK-0250,Producto,producto-defectuoso
-TCK-0251,facturacion,facturacion-redondeo
+TCK-0250,Consulta,facturacion-redondeo
+TCK-0251,entregas,entrega-retraso
 TCK-0252,Entrega,facturacion-redondeo
-TCK-0253,Info,otros
-TCK-0254,Pedidos,pedido-erroneo
-TCK-0255,Pedidos,pedido-erroneo
-TCK-0256,Pedidos,facturacion-redondeo
-TCK-0257,entregas,entrega-retraso
-TCK-0258,Datos cliente,cambio-datos
-TCK-0259,FACTURACION,facturacion-redondeo
-TCK-0260,entregas,entrega-sin-aviso
-TCK-0261,Entrega,facturacion-redondeo
-TCK-0262,Calidad producto,producto-defectuoso
-TCK-0263,Entrega,facturacion-redondeo
-TCK-0264,Facturación,facturacion-redondeo
-TCK-0265,facturacion,facturacion-redondeo
-TCK-0266,,facturacion-redondeo
-TCK-0267,Consulta,facturacion-redondeo
-TCK-0268,FACTURACION,facturacion-redondeo
-TCK-0269,facturacion,facturacion-redondeo
-TCK-0270,Facturación,facturacion-redondeo
-TCK-0271,Otros,facturacion-redondeo
-TCK-0272,Otros,facturacion-redondeo
-TCK-0273,Facturas,facturacion-redondeo
-TCK-0274,Incidencia facturación,facturacion-redondeo
-TCK-0275,Consulta,producto-defectuoso
-TCK-0276,Facturación,facturacion-redondeo
-TCK-0277,Consulta,informacion-producto
-TCK-0278,Facturación,facturacion-redondeo
-TCK-0279,Reparto,entrega-sin-aviso
-TCK-0280,Otros,otros
-TCK-0281,Entrega,entrega-sin-aviso
-TCK-0282,Consulta,entrega-retraso
-TCK-0283,Facturación,facturacion-redondeo
-TCK-0284,Otros,facturacion-redondeo
-TCK-0285,Facturas,facturacion-redondeo
-TCK-0286,Incidencia facturación,facturacion-redondeo
-TCK-0287,Entrega,facturacion-redondeo
-TCK-0288,Facturación,facturacion-redondeo
-TCK-0289,Pedidos,pedido-erroneo
-TCK-0290,Entrega,facturacion-redondeo
-TCK-0291,entregas,entrega-retraso
-TCK-0292,Pedidos,facturacion-redondeo
-TCK-0293,facturacion,facturacion-redondeo
-TCK-0294,Facturas,facturacion-redondeo
-TCK-0295,Entrega,entrega-retraso
-TCK-0296,Calidad producto,producto-defectuoso
-TCK-0297,Consulta,facturacion-redondeo
-TCK-0298,Entrega,facturacion-redondeo
-TCK-0299,entregas,entrega-sin-aviso
-TCK-0300,Incidencia facturación,facturacion-redondeo
-TCK-0301,Facturas,facturacion-redondeo
-TCK-0302,Facturas,facturacion-redondeo
-TCK-0303,Consulta,informacion-producto
-TCK-0304,Incidencia facturación,facturacion-redondeo
-TCK-0305,Consulta,informacion-producto
-TCK-0306,Otros,facturacion-redondeo
-TCK-0307,Consulta,facturacion-redondeo
-TCK-0308,facturacion,facturacion-redondeo
-TCK-0309,Otros,informacion-producto
-TCK-0310,Datos cliente,cambio-datos
-TCK-0311,Consulta,cambio-datos
-TCK-0312,Consulta,facturacion-redondeo
-TCK-0313,facturacion,facturacion-redondeo
-TCK-0314,Entrega,entrega-sin-aviso
-TCK-0315,Entrega,entrega-sin-aviso
-TCK-0316,Datos cliente,cambio-datos
-TCK-0317,Entrega,pedido-erroneo
-TCK-0318,Consulta,informacion-producto
-TCK-0319,Producto,informacion-producto
-TCK-0320,Entrega,entrega-sin-aviso
-TCK-0321,Entrega,entrega-sin-aviso
-TCK-0322,Otros,producto-defectuoso
-TCK-0323,Consulta,pedido-erroneo
+TCK-0253,Otros,facturacion-redondeo
+TCK-0254,Entrega,facturacion-redondeo
+TCK-0255,Facturación,pedido-erroneo
+TCK-0256,Entrega,facturacion-redondeo
+TCK-0257,Pedidos,facturacion-redondeo
+TCK-0258,Pedidos,facturacion-redondeo
+TCK-0259,Entrega,facturacion-redondeo
+TCK-0260,Entrega,entrega-sin-aviso
+TCK-0261,,facturacion-redondeo
+TCK-0262,Pedidos,facturacion-redondeo
+TCK-0263,entregas,entrega-sin-aviso
+TCK-0264,Producto,producto-defectuoso
+TCK-0265,Info,informacion-producto
+TCK-0266,Consulta,facturacion-redondeo
+TCK-0267,Incidencia facturación,facturacion-redondeo
+TCK-0268,Entrega,facturacion-redondeo
+TCK-0269,entregas,entrega-retraso
+TCK-0270,Pedidos,facturacion-redondeo
+TCK-0271,,facturacion-redondeo
+TCK-0272,Consulta,informacion-producto
+TCK-0273,Consulta,facturacion-redondeo
+TCK-0274,,facturacion-redondeo
+TCK-0275,Info,informacion-producto
+TCK-0276,Entrega,entrega-retraso
+TCK-0277,FACTURACION,facturacion-redondeo
+TCK-0278,Consulta,facturacion-redondeo
+TCK-0279,,facturacion-redondeo
+TCK-0280,Incidencia facturación,facturacion-redondeo
+TCK-0281,,facturacion-redondeo
+TCK-0282,Consulta,facturacion-redondeo
+TCK-0283,Reparto,entrega-sin-aviso
+TCK-0284,Calidad producto,producto-defectuoso
+TCK-0285,entregas,entrega-sin-aviso
+TCK-0286,facturacion,facturacion-redondeo
+TCK-0287,,facturacion-redondeo
+TCK-0288,Otros,facturacion-redondeo
+TCK-0289,Facturación,facturacion-redondeo
+TCK-0290,Otros,facturacion-redondeo
+TCK-0291,Consulta,producto-defectuoso
+TCK-0292,Calidad producto,producto-defectuoso
+TCK-0293,Facturas,facturacion-redondeo
+TCK-0294,Pedidos,facturacion-redondeo
+TCK-0295,Entrega,facturacion-redondeo
+TCK-0296,Facturas,facturacion-redondeo
+TCK-0297,Facturación,facturacion-redondeo
+TCK-0298,Calidad producto,producto-defectuoso
+TCK-0299,facturacion,facturacion-redondeo
+TCK-0300,Entrega,entrega-retraso
+TCK-0301,Facturación,facturacion-redondeo
+TCK-0302,Consulta,facturacion-redondeo
+TCK-0303,Entrega,entrega-retraso
+TCK-0304,Pedidos,facturacion-redondeo
+TCK-0305,Facturas,facturacion-redondeo
+TCK-0306,Incidencia facturación,facturacion-redondeo
+TCK-0307,Incidencia facturación,facturacion-redondeo
+TCK-0308,Reparto,entrega-retraso
+TCK-0309,,entrega-retraso
+TCK-0310,Consulta,entrega-sin-aviso
+TCK-0311,Facturas,pedido-erroneo
+TCK-0312,facturacion,facturacion-redondeo
+TCK-0313,Info,informacion-producto
+TCK-0314,Pedidos,facturacion-redondeo
+TCK-0315,Entrega,facturacion-redondeo
+TCK-0316,Facturas,facturacion-redondeo
+TCK-0317,Entrega,entrega-sin-aviso
+TCK-0318,facturacion,facturacion-redondeo
+TCK-0319,Facturas,facturacion-redondeo
+TCK-0320,Pedidos,facturacion-redondeo
+TCK-0321,FACTURACION,facturacion-redondeo
+TCK-0322,Producto,informacion-producto
+TCK-0323,facturacion,pedido-erroneo
 TCK-0324,entregas,entrega-retraso
-TCK-0325,Consulta,entrega-sin-aviso
-TCK-0326,Entrega,entrega-retraso
-TCK-0327,Otros,entrega-retraso
-TCK-0328,Pedidos,pedido-erroneo
-TCK-0329,Producto,informacion-producto
-TCK-0330,Info,otros
-TCK-0331,Producto,producto-defectuoso
-TCK-0332,Entrega,entrega-sin-aviso
-TCK-0333,Entrega,entrega-sin-aviso
-TCK-0334,Consulta,otros
-TCK-0335,Otros,entrega-sin-aviso
-TCK-0336,Reparto,entrega-sin-aviso
+TCK-0325,Info,informacion-producto
+TCK-0326,Entrega,pedido-erroneo
+TCK-0327,Producto,producto-defectuoso
+TCK-0328,Entrega,entrega-sin-aviso
+TCK-0329,Datos cliente,cambio-datos
+TCK-0330,Consulta,pedido-erroneo
+TCK-0331,Otros,cambio-datos
+TCK-0332,Otros,cambio-datos
+TCK-0333,Datos cliente,cambio-datos
+TCK-0334,Consulta,informacion-producto
+TCK-0335,Pedidos,pedido-erroneo
+TCK-0336,Consulta,informacion-producto
 TCK-0337,Entrega,entrega-retraso
-TCK-0338,,otros
-TCK-0339,Consulta,otros
-TCK-0340,Info,otros
-TCK-0341,Info,informacion-producto
-TCK-0342,Consulta,otros
-TCK-0343,Calidad producto,producto-defectuoso
-TCK-0344,Pedidos,pedido-erroneo
-TCK-0345,Info,informacion-producto
-TCK-0346,Calidad producto,producto-defectuoso
-TCK-0347,Pedidos,pedido-erroneo
-TCK-0348,Entrega,entrega-sin-aviso
-TCK-0349,Info,informacion-producto
+TCK-0338,entregas,entrega-retraso
+TCK-0339,,otros
+TCK-0340,Entrega,producto-defectuoso
+TCK-0341,Facturación,pedido-erroneo
+TCK-0342,Producto,producto-defectuoso
+TCK-0343,Consulta,entrega-sin-aviso
+TCK-0344,Consulta,informacion-producto
+TCK-0345,Pedidos,entrega-sin-aviso
+TCK-0346,Consulta,informacion-producto
+TCK-0347,Consulta,otros
+TCK-0348,Datos cliente,cambio-datos
+TCK-0349,Info,cambio-datos
 TCK-0350,entregas,entrega-retraso
-TCK-0351,Consulta,producto-defectuoso
-TCK-0352,entregas,entrega-sin-aviso
-TCK-0353,Otros,pedido-erroneo
-TCK-0354,entregas,entrega-retraso
-TCK-0355,Otros,entrega-sin-aviso
-TCK-0356,Pedidos,pedido-erroneo
-TCK-0357,Otros,otros
-TCK-0358,Reparto,entrega-retraso
-TCK-0359,entregas,entrega-retraso
+TCK-0351,Producto,producto-defectuoso
+TCK-0352,Consulta,informacion-producto
+TCK-0353,Consulta,cambio-datos
+TCK-0354,Otros,cambio-datos
+TCK-0355,Datos cliente,cambio-datos
+TCK-0356,Datos cliente,cambio-datos
+TCK-0357,Reparto,entrega-sin-aviso
+TCK-0358,Pedidos,pedido-erroneo
+TCK-0359,Consulta,otros
 TCK-0360,Consulta,pedido-erroneo
-TCK-0361,,otros
-TCK-0362,Consulta,informacion-producto
-TCK-0363,Otros,producto-defectuoso
-TCK-0364,Datos cliente,cambio-datos
-TCK-0365,Incidencia facturación,facturacion-redondeo
-TCK-0366,Pedidos,facturacion-redondeo
-TCK-0367,Otros,facturacion-redondeo
-TCK-0368,Otros,facturacion-redondeo
-TCK-0369,Pedidos,facturacion-redondeo
-TCK-0370,Pedidos,facturacion-redondeo
-TCK-0371,facturacion,facturacion-redondeo
-TCK-0372,Pedidos,facturacion-redondeo
-TCK-0373,Otros,otros
-TCK-0374,Consulta,cambio-datos
-TCK-0375,Otros,cambio-datos
-TCK-0376,Incidencia facturación,facturacion-redondeo
-TCK-0377,Consulta,cambio-datos
-TCK-0378,Otros,otros
-TCK-0379,Incidencia facturación,facturacion-redondeo
-TCK-0380,Facturas,facturacion-redondeo
-TCK-0381,Consulta,facturacion-redondeo
-TCK-0382,Datos cliente,cambio-datos
-TCK-0383,Info,informacion-producto
-TCK-0384,FACTURACION,facturacion-redondeo
-TCK-0385,Entrega,entrega-retraso
-TCK-0386,Incidencia facturación,facturacion-redondeo
-TCK-0387,Facturación,pedido-erroneo
-TCK-0388,,facturacion-redondeo
-TCK-0389,Pedidos,facturacion-redondeo
-TCK-0390,Entrega,otros
-TCK-0391,,facturacion-redondeo
-TCK-0392,entregas,entrega-sin-aviso
-TCK-0393,Entrega,facturacion-redondeo
-TCK-0394,entregas,entrega-sin-aviso
-TCK-0395,Facturas,facturacion-redondeo
-TCK-0396,Facturación,facturacion-redondeo
-TCK-0397,Reparto,entrega-retraso
-TCK-0398,Entrega,facturacion-redondeo
-TCK-0399,Consulta,entrega-sin-aviso
-TCK-0400,Pedidos,facturacion-redondeo
-TCK-0401,Facturación,facturacion-redondeo
-TCK-0402,,otros
-TCK-0403,Info,informacion-producto
-TCK-0404,Facturas,facturacion-redondeo
-TCK-0405,Facturación,pedido-erroneo
-TCK-0406,FACTURACION,facturacion-redondeo
-TCK-0407,Otros,producto-defectuoso
-TCK-0408,FACTURACION,facturacion-redondeo
-TCK-0409,Pedidos,facturacion-redondeo
+TCK-0361,entregas,entrega-retraso
+TCK-0362,Info,informacion-producto
+TCK-0363,Entrega,entrega-retraso
+TCK-0364,Consulta,informacion-producto
+TCK-0365,Facturas,facturacion-redondeo
+TCK-0366,Otros,pedido-erroneo
+TCK-0367,Entrega,entrega-sin-aviso
+TCK-0368,Facturación,facturacion-redondeo
+TCK-0369,Consulta,facturacion-redondeo
+TCK-0370,Incidencia facturación,facturacion-redondeo
+TCK-0371,Pedidos,facturacion-redondeo
+TCK-0372,Facturación,facturacion-redondeo
+TCK-0373,facturacion,pedido-erroneo
+TCK-0374,facturacion,facturacion-redondeo
+TCK-0375,Pedidos,facturacion-redondeo
+TCK-0376,Pedidos,facturacion-redondeo
+TCK-0377,Consulta,informacion-producto
+TCK-0378,Facturación,facturacion-redondeo
+TCK-0379,,facturacion-redondeo
+TCK-0380,Otros,informacion-producto
+TCK-0381,,facturacion-redondeo
+TCK-0382,Otros,cambio-datos
+TCK-0383,facturacion,facturacion-redondeo
+TCK-0384,Facturas,facturacion-redondeo
+TCK-0385,,facturacion-redondeo
+TCK-0386,Consulta,cambio-datos
+TCK-0387,Pedidos,facturacion-redondeo
+TCK-0388,Incidencia facturación,facturacion-redondeo
+TCK-0389,facturacion,facturacion-redondeo
+TCK-0390,Facturas,facturacion-redondeo
+TCK-0391,Consulta,pedido-erroneo
+TCK-0392,entregas,entrega-retraso
+TCK-0393,Producto,informacion-producto
+TCK-0394,Reparto,entrega-sin-aviso
+TCK-0395,FACTURACION,facturacion-redondeo
+TCK-0396,Pedidos,facturacion-redondeo
+TCK-0397,Consulta,facturacion-redondeo
+TCK-0398,FACTURACION,facturacion-redondeo
+TCK-0399,Producto,informacion-producto
+TCK-0400,Info,informacion-producto
+TCK-0401,Info,informacion-producto
+TCK-0402,Consulta,facturacion-redondeo
+TCK-0403,Incidencia facturación,facturacion-redondeo
+TCK-0404,Entrega,facturacion-redondeo
+TCK-0405,,otros
+TCK-0406,Facturación,facturacion-redondeo
+TCK-0407,Entrega,pedido-erroneo
+TCK-0408,Facturación,facturacion-redondeo
+TCK-0409,entregas,entrega-sin-aviso
 TCK-0410,Facturas,facturacion-redondeo
 TCK-0411,Facturación,facturacion-redondeo
-TCK-0412,Facturación,facturacion-redondeo
-TCK-0413,Facturas,facturacion-redondeo
-TCK-0414,Facturación,facturacion-redondeo
+TCK-0412,Entrega,facturacion-redondeo
+TCK-0413,Incidencia facturación,facturacion-redondeo
+TCK-0414,Entrega,entrega-retraso
 TCK-0415,Reparto,entrega-retraso
-TCK-0416,Pedidos,facturacion-redondeo
-TCK-0417,Pedidos,facturacion-redondeo
-TCK-0418,Datos cliente,cambio-datos
-TCK-0419,Consulta,facturacion-redondeo
-TCK-0420,Pedidos,pedido-erroneo
-TCK-0421,Entrega,facturacion-redondeo
-TCK-0422,Facturas,facturacion-redondeo
-TCK-0423,entregas,entrega-retraso
-TCK-0424,Info,informacion-producto
-TCK-0425,Facturación,facturacion-redondeo
-TCK-0426,Facturación,facturacion-redondeo
-TCK-0427,Pedidos,facturacion-redondeo
-TCK-0428,Facturas,facturacion-redondeo
-TCK-0429,Otros,facturacion-redondeo
-TCK-0430,Consulta,cambio-datos
-TCK-0431,Entrega,entrega-retraso
-TCK-0432,entregas,entrega-retraso
-TCK-0433,Entrega,facturacion-redondeo
-TCK-0434,Consulta,informacion-producto
-TCK-0435,Consulta,informacion-producto
-TCK-0436,Datos cliente,cambio-datos
-TCK-0437,Consulta,informacion-producto
-TCK-0438,Facturas,facturacion-redondeo
-TCK-0439,Entrega,entrega-retraso
-TCK-0440,Facturas,facturacion-redondeo
-TCK-0441,Consulta,producto-defectuoso
-TCK-0442,Calidad producto,producto-defectuoso
-TCK-0443,Facturación,facturacion-redondeo
-TCK-0444,Entrega,entrega-retraso
-TCK-0445,Consulta,informacion-producto
-TCK-0446,Facturas,facturacion-redondeo
-TCK-0447,,cambio-datos
-TCK-0448,facturacion,facturacion-redondeo
-TCK-0449,Facturación,pedido-erroneo
-TCK-0450,Pedidos,facturacion-redondeo
-TCK-0451,Facturación,facturacion-redondeo
-TCK-0452,Facturación,pedido-erroneo
-TCK-0453,Otros,otros
-TCK-0454,facturacion,facturacion-redondeo
-TCK-0455,Producto,producto-defectuoso
-TCK-0456,Otros,otros
-TCK-0457,facturacion,facturacion-redondeo
-TCK-0458,Facturas,facturacion-redondeo
-TCK-0459,Pedidos,pedido-erroneo
-TCK-0460,Pedidos,pedido-erroneo
-TCK-0461,facturacion,facturacion-redondeo
+TCK-0416,Facturación,facturacion-redondeo
+TCK-0417,Entrega,entrega-retraso
+TCK-0418,Facturación,facturacion-redondeo
+TCK-0419,Consulta,informacion-producto
+TCK-0420,Pedidos,facturacion-redondeo
+TCK-0421,Entrega,entrega-retraso
+TCK-0422,Pedidos,facturacion-redondeo
+TCK-0423,facturacion,pedido-erroneo
+TCK-0424,facturacion,pedido-erroneo
+TCK-0425,Entrega,entrega-sin-aviso
+TCK-0426,Info,cambio-datos
+TCK-0427,Entrega,entrega-sin-aviso
+TCK-0428,Otros,pedido-erroneo
+TCK-0429,Facturas,pedido-erroneo
+TCK-0430,Facturación,facturacion-redondeo
+TCK-0431,Facturas,facturacion-redondeo
+TCK-0432,Producto,producto-defectuoso
+TCK-0433,Calidad producto,producto-defectuoso
+TCK-0434,Producto,producto-defectuoso
+TCK-0435,Facturación,pedido-erroneo
+TCK-0436,Facturación,facturacion-redondeo
+TCK-0437,Info,otros
+TCK-0438,Entrega,entrega-retraso
+TCK-0439,,facturacion-redondeo
+TCK-0440,Reparto,entrega-retraso
+TCK-0441,Datos cliente,cambio-datos
+TCK-0442,Pedidos,facturacion-redondeo
+TCK-0443,Entrega,facturacion-redondeo
+TCK-0444,Facturación,facturacion-redondeo
+TCK-0445,FACTURACION,facturacion-redondeo
+TCK-0446,Otros,otros
+TCK-0447,Entrega,facturacion-redondeo
+TCK-0448,Reparto,entrega-sin-aviso
+TCK-0449,Consulta,facturacion-redondeo
+TCK-0450,Facturas,facturacion-redondeo
+TCK-0451,Calidad producto,producto-defectuoso
+TCK-0452,Producto,producto-defectuoso
+TCK-0453,Facturación,pedido-erroneo
+TCK-0454,Entrega,facturacion-redondeo
+TCK-0455,,informacion-producto
+TCK-0456,FACTURACION,facturacion-redondeo
+TCK-0457,Otros,otros
+TCK-0458,Consulta,otros
+TCK-0459,facturacion,facturacion-redondeo
+TCK-0460,Facturas,facturacion-redondeo
+TCK-0461,Otros,otros
 TCK-0462,Entrega,entrega-retraso
-TCK-0463,Pedidos,pedido-erroneo
-TCK-0464,Otros,facturacion-redondeo
-TCK-0465,Entrega,entrega-retraso
-TCK-0466,Entrega,entrega-sin-aviso
-TCK-0467,Incidencia facturación,facturacion-redondeo
-TCK-0468,Entrega,facturacion-redondeo
-TCK-0469,Datos cliente,cambio-datos
-TCK-0470,,informacion-producto
-TCK-0471,Otros,cambio-datos
-TCK-0472,,informacion-producto
-TCK-0473,Facturación,otros
-TCK-0474,Incidencia facturación,pedido-erroneo
-TCK-0475,Entrega,producto-defectuoso
-TCK-0476,Consulta,cambio-datos
-TCK-0477,Entrega,entrega-retraso
-TCK-0478,Otros,cambio-datos
-TCK-0479,Consulta,informacion-producto
-TCK-0480,Facturas,pedido-erroneo
-TCK-0481,Datos cliente,cambio-datos
-TCK-0482,Producto,producto-defectuoso
-TCK-0483,entregas,entrega-retraso
-TCK-0484,Consulta,cambio-datos
-TCK-0485,Reparto,entrega-sin-aviso
-TCK-0486,Datos cliente,cambio-datos
-TCK-0487,Consulta,producto-defectuoso
-TCK-0488,Facturación,pedido-erroneo
-TCK-0489,Entrega,entrega-retraso
-TCK-0490,Entrega,pedido-erroneo
-TCK-0491,Facturación,pedido-erroneo
-TCK-0492,Entrega,entrega-sin-aviso
-TCK-0493,Entrega,entrega-retraso
-TCK-0494,Calidad producto,producto-defectuoso
-TCK-0495,Consulta,entrega-retraso
-TCK-0496,entregas,entrega-sin-aviso
-TCK-0497,Otros,otros
-TCK-0498,Datos cliente,cambio-datos
-TCK-0499,,entrega-sin-aviso
+TCK-0463,facturacion,facturacion-redondeo
+TCK-0464,Pedidos,facturacion-redondeo
+TCK-0465,Consulta,informacion-producto
+TCK-0466,Pedidos,facturacion-redondeo
+TCK-0467,Consulta,informacion-producto
+TCK-0468,Facturas,facturacion-redondeo
+TCK-0469,,facturacion-redondeo
+TCK-0470,Otros,otros
+TCK-0471,Otros,facturacion-redondeo
+TCK-0472,Info,informacion-producto
+TCK-0473,Calidad producto,producto-defectuoso
+TCK-0474,Entrega,entrega-retraso
+TCK-0475,Consulta,entrega-retraso
+TCK-0476,Info,informacion-producto
+TCK-0477,Consulta,otros
+TCK-0478,,informacion-producto
+TCK-0479,Info,informacion-producto
+TCK-0480,Producto,producto-defectuoso
+TCK-0481,Info,cambio-datos
+TCK-0482,Facturación,otros
+TCK-0483,Entrega,entrega-retraso
+TCK-0484,Consulta,producto-defectuoso
+TCK-0485,Pedidos,pedido-erroneo
+TCK-0486,Entrega,entrega-retraso
+TCK-0487,entregas,entrega-sin-aviso
+TCK-0488,Entrega,entrega-retraso
+TCK-0489,Consulta,otros
+TCK-0490,entregas,entrega-sin-aviso
+TCK-0491,Datos cliente,cambio-datos
+TCK-0492,Entrega,pedido-erroneo
+TCK-0493,Consulta,pedido-erroneo
+TCK-0494,entregas,entrega-retraso
+TCK-0495,Reparto,entrega-sin-aviso
+TCK-0496,Info,cambio-datos
+TCK-0497,Consulta,informacion-producto
+TCK-0498,entregas,entrega-retraso
+TCK-0499,Consulta,informacion-producto
 TCK-0500,Reparto,entrega-retraso
-TCK-0501,Datos cliente,cambio-datos
-TCK-0502,Entrega,entrega-sin-aviso
-TCK-0503,Reparto,entrega-retraso
-TCK-0504,Otros,otros
-TCK-0505,entregas,entrega-sin-aviso
-TCK-0506,Entrega,facturacion-redondeo
-TCK-0507,facturacion,facturacion-redondeo
-TCK-0508,Pedidos,facturacion-redondeo
-TCK-0509,Pedidos,facturacion-redondeo
-TCK-0510,entregas,entrega-retraso
-TCK-0511,Pedidos,facturacion-redondeo
-TCK-0512,Pedidos,facturacion-redondeo
-TCK-0513,Facturación,facturacion-redondeo
-TCK-0514,Facturación,facturacion-redondeo
-TCK-0515,Otros,otros
-TCK-0516,Otros,entrega-retraso
-TCK-0517,Facturación,facturacion-redondeo
-TCK-0518,Otros,producto-defectuoso
-TCK-0519,Consulta,facturacion-redondeo
-TCK-0520,Otros,otros
-TCK-0521,facturacion,facturacion-redondeo
-TCK-0522,Facturas,facturacion-redondeo
-TCK-0523,Facturación,facturacion-redondeo
-TCK-0524,Pedidos,facturacion-redondeo
-TCK-0525,Consulta,facturacion-redondeo
-TCK-0526,Entrega,producto-defectuoso
-TCK-0527,Facturas,facturacion-redondeo
-TCK-0528,Consulta,informacion-producto
-TCK-0529,,facturacion-redondeo
-TCK-0530,facturacion,facturacion-redondeo
-TCK-0531,Incidencia facturación,facturacion-redondeo
-TCK-0532,Incidencia facturación,facturacion-redondeo
-TCK-0533,facturacion,facturacion-redondeo
-TCK-0534,Pedidos,facturacion-redondeo
-TCK-0535,Otros,otros
+TCK-0501,Calidad producto,producto-defectuoso
+TCK-0502,Producto,informacion-producto
+TCK-0503,Entrega,entrega-sin-aviso
+TCK-0504,Entrega,pedido-erroneo
+TCK-0505,Consulta,entrega-sin-aviso
+TCK-0506,entregas,entrega-retraso
+TCK-0507,Consulta,informacion-producto
+TCK-0508,Producto,producto-defectuoso
+TCK-0509,entregas,entrega-retraso
+TCK-0510,Consulta,informacion-producto
+TCK-0511,Consulta,cambio-datos
+TCK-0512,,otros
+TCK-0513,facturacion,facturacion-redondeo
+TCK-0514,Pedidos,pedido-erroneo
+TCK-0515,Consulta,entrega-retraso
+TCK-0516,Entrega,facturacion-redondeo
+TCK-0517,Calidad producto,producto-defectuoso
+TCK-0518,Otros,cambio-datos
+TCK-0519,,facturacion-redondeo
+TCK-0520,Facturación,facturacion-redondeo
+TCK-0521,Reparto,entrega-sin-aviso
+TCK-0522,Consulta,facturacion-redondeo
+TCK-0523,,facturacion-redondeo
+TCK-0524,Otros,facturacion-redondeo
+TCK-0525,FACTURACION,facturacion-redondeo
+TCK-0526,Consulta,entrega-sin-aviso
+TCK-0527,Otros,facturacion-redondeo
+TCK-0528,FACTURACION,facturacion-redondeo
+TCK-0529,Entrega,producto-defectuoso
+TCK-0530,Pedidos,facturacion-redondeo
+TCK-0531,Otros,facturacion-redondeo
+TCK-0532,Otros,entrega-retraso
+TCK-0533,Otros,otros
+TCK-0534,Otros,cambio-datos
+TCK-0535,,facturacion-redondeo
 TCK-0536,Pedidos,facturacion-redondeo
-TCK-0537,Consulta,facturacion-redondeo
-TCK-0538,Facturación,facturacion-redondeo
-TCK-0539,facturacion,facturacion-redondeo
-TCK-0540,Facturación,facturacion-redondeo
-TCK-0541,Pedidos,facturacion-redondeo
-TCK-0542,facturacion,pedido-erroneo
-TCK-0543,FACTURACION,facturacion-redondeo
-TCK-0544,Otros,facturacion-redondeo
-TCK-0545,,facturacion-redondeo
+TCK-0537,Otros,facturacion-redondeo
+TCK-0538,Incidencia facturación,facturacion-redondeo
+TCK-0539,Consulta,facturacion-redondeo
+TCK-0540,Consulta,producto-defectuoso
+TCK-0541,Facturas,facturacion-redondeo
+TCK-0542,Otros,facturacion-redondeo
+TCK-0543,Consulta,informacion-producto
+TCK-0544,Incidencia facturación,facturacion-redondeo
+TCK-0545,facturacion,pedido-erroneo
 TCK-0546,Facturación,facturacion-redondeo
-TCK-0547,Entrega,facturacion-redondeo
-TCK-0548,Consulta,facturacion-redondeo
-TCK-0549,Otros,facturacion-redondeo
+TCK-0547,,facturacion-redondeo
+TCK-0548,Info,informacion-producto
+TCK-0549,Facturación,facturacion-redondeo
 TCK-0550,,facturacion-redondeo
-TCK-0551,Datos cliente,cambio-datos
-TCK-0552,Otros,facturacion-redondeo
-TCK-0553,facturacion,facturacion-redondeo
-TCK-0554,Entrega,facturacion-redondeo
-TCK-0555,Consulta,facturacion-redondeo
-TCK-0556,Pedidos,facturacion-redondeo
-TCK-0557,Entrega,facturacion-redondeo
-TCK-0558,Facturación,facturacion-redondeo
-TCK-0559,Entrega,entrega-sin-aviso
-TCK-0560,Otros,facturacion-redondeo
+TCK-0551,Facturas,facturacion-redondeo
+TCK-0552,Consulta,cambio-datos
+TCK-0553,Facturación,facturacion-redondeo
+TCK-0554,Otros,facturacion-redondeo
+TCK-0555,Otros,cambio-datos
+TCK-0556,Facturación,facturacion-redondeo
+TCK-0557,FACTURACION,facturacion-redondeo
+TCK-0558,Otros,entrega-retraso
+TCK-0559,Consulta,facturacion-redondeo
+TCK-0560,Facturación,facturacion-redondeo
 TCK-0561,facturacion,facturacion-redondeo
-TCK-0562,Consulta,entrega-retraso
-TCK-0563,Consulta,facturacion-redondeo
-TCK-0564,Entrega,entrega-sin-aviso
-TCK-0565,Consulta,facturacion-redondeo
-TCK-0566,Consulta,facturacion-redondeo
-TCK-0567,Consulta,facturacion-redondeo
-TCK-0568,Otros,pedido-erroneo
-TCK-0569,Facturas,facturacion-redondeo
-TCK-0570,,facturacion-redondeo
-TCK-0571,FACTURACION,facturacion-redondeo
-TCK-0572,Otros,entrega-retraso
-TCK-0573,Entrega,entrega-retraso
-TCK-0574,,informacion-producto
-TCK-0575,Facturación,facturacion-redondeo
-TCK-0576,,entrega-retraso
-TCK-0577,Pedidos,facturacion-redondeo
-TCK-0578,Reparto,entrega-retraso
-TCK-0579,Incidencia facturación,facturacion-redondeo
-TCK-0580,Entrega,entrega-retraso
+TCK-0562,Reparto,entrega-sin-aviso
+TCK-0563,Otros,facturacion-redondeo
+TCK-0564,Entrega,facturacion-redondeo
+TCK-0565,Pedidos,pedido-erroneo
+TCK-0566,Facturas,facturacion-redondeo
+TCK-0567,Facturas,facturacion-redondeo
+TCK-0568,Datos cliente,cambio-datos
+TCK-0569,Pedidos,facturacion-redondeo
+TCK-0570,Facturación,facturacion-redondeo
+TCK-0571,Info,informacion-producto
+TCK-0572,Facturación,facturacion-redondeo
+TCK-0573,Facturas,facturacion-redondeo
+TCK-0574,Producto,producto-defectuoso
+TCK-0575,,entrega-retraso
+TCK-0576,Pedidos,facturacion-redondeo
+TCK-0577,Facturas,facturacion-redondeo
+TCK-0578,Producto,informacion-producto
+TCK-0579,Reparto,entrega-sin-aviso
+TCK-0580,Facturas,pedido-erroneo
 TCK-0581,Pedidos,facturacion-redondeo
-TCK-0582,,facturacion-redondeo
-TCK-0583,Facturación,facturacion-redondeo
-TCK-0584,facturacion,facturacion-redondeo
-TCK-0585,facturacion,facturacion-redondeo
-TCK-0586,Facturas,pedido-erroneo
-TCK-0587,Pedidos,facturacion-redondeo
-TCK-0588,Otros,facturacion-redondeo
-TCK-0589,entregas,entrega-sin-aviso
-TCK-0590,Pedidos,pedido-erroneo
-TCK-0591,Producto,informacion-producto
-TCK-0592,facturacion,facturacion-redondeo
-TCK-0593,Consulta,informacion-producto
-TCK-0594,Calidad producto,producto-defectuoso
-TCK-0595,Pedidos,entrega-sin-aviso
-TCK-0596,FACTURACION,facturacion-redondeo
-TCK-0597,facturacion,facturacion-redondeo
-TCK-0598,Consulta,facturacion-redondeo
-TCK-0599,Info,informacion-producto
-TCK-0600,Entrega,entrega-retraso
-TCK-0601,Entrega,facturacion-redondeo
-TCK-0602,Pedidos,facturacion-redondeo
-TCK-0603,Info,cambio-datos
-TCK-0604,,cambio-datos
-TCK-0605,Info,cambio-datos
-TCK-0606,Reparto,entrega-retraso
-TCK-0607,Info,informacion-producto
-TCK-0608,Otros,otros
-TCK-0609,Pedidos,entrega-sin-aviso
-TCK-0610,Reparto,entrega-sin-aviso
-TCK-0611,Info,informacion-producto
-TCK-0612,Reparto,entrega-sin-aviso
-TCK-0613,Calidad producto,producto-defectuoso
-TCK-0614,Producto,producto-defectuoso
+TCK-0582,Otros,facturacion-redondeo
+TCK-0583,Facturas,facturacion-redondeo
+TCK-0584,,facturacion-redondeo
+TCK-0585,Facturación,facturacion-redondeo
+TCK-0586,,facturacion-redondeo
+TCK-0587,Otros,otros
+TCK-0588,Facturas,facturacion-redondeo
+TCK-0589,Consulta,informacion-producto
+TCK-0590,Consulta,facturacion-redondeo
+TCK-0591,Entrega,facturacion-redondeo
+TCK-0592,Facturas,facturacion-redondeo
+TCK-0593,Pedidos,facturacion-redondeo
+TCK-0594,Pedidos,facturacion-redondeo
+TCK-0595,Facturas,facturacion-redondeo
+TCK-0596,Otros,producto-defectuoso
+TCK-0597,Otros,facturacion-redondeo
+TCK-0598,Entrega,facturacion-redondeo
+TCK-0599,Info,otros
+TCK-0600,Facturación,facturacion-redondeo
+TCK-0601,Facturación,pedido-erroneo
+TCK-0602,Facturas,facturacion-redondeo
+TCK-0603,Pedidos,facturacion-redondeo
+TCK-0604,Producto,informacion-producto
+TCK-0605,Incidencia facturación,facturacion-redondeo
+TCK-0606,Entrega,facturacion-redondeo
+TCK-0607,Reparto,entrega-retraso
+TCK-0608,Entrega,entrega-retraso
+TCK-0609,,facturacion-redondeo
+TCK-0610,Reparto,entrega-retraso
+TCK-0611,Consulta,otros
+TCK-0612,Facturas,facturacion-redondeo
+TCK-0613,Facturación,facturacion-redondeo
+TCK-0614,facturacion,facturacion-redondeo
 TCK-0615,Entrega,entrega-sin-aviso
-TCK-0616,Calidad producto,producto-defectuoso
-TCK-0617,Info,informacion-producto
-TCK-0618,Pedidos,pedido-erroneo
-TCK-0619,,entrega-retraso
-TCK-0620,Otros,entrega-retraso
-TCK-0621,Entrega,entrega-retraso
-TCK-0622,Reparto,entrega-retraso
-TCK-0623,Entrega,entrega-retraso
-TCK-0624,Consulta,informacion-producto
-TCK-0625,Consulta,cambio-datos
-TCK-0626,Info,informacion-producto
+TCK-0616,facturacion,facturacion-redondeo
+TCK-0617,Datos cliente,cambio-datos
+TCK-0618,Facturas,facturacion-redondeo
+TCK-0619,Consulta,informacion-producto
+TCK-0620,Calidad producto,producto-defectuoso
+TCK-0621,Otros,otros
+TCK-0622,Consulta,entrega-sin-aviso
+TCK-0623,Entrega,entrega-sin-aviso
+TCK-0624,,informacion-producto
+TCK-0625,Pedidos,pedido-erroneo
+TCK-0626,Entrega,entrega-retraso
 TCK-0627,Consulta,informacion-producto
-TCK-0628,Consulta,cambio-datos
-TCK-0629,Consulta,pedido-erroneo
-TCK-0630,Datos cliente,cambio-datos
-TCK-0631,,cambio-datos
-TCK-0632,Consulta,cambio-datos
+TCK-0628,Consulta,informacion-producto
+TCK-0629,Consulta,otros
+TCK-0630,Consulta,informacion-producto
+TCK-0631,Calidad producto,producto-defectuoso
+TCK-0632,Calidad producto,producto-defectuoso
 TCK-0633,Consulta,informacion-producto
-TCK-0634,Otros,informacion-producto
-TCK-0635,,otros
-TCK-0636,Otros,otros
-TCK-0637,Reparto,entrega-retraso
-TCK-0638,entregas,entrega-retraso
-TCK-0639,Producto,informacion-producto
-TCK-0640,Facturación,entrega-retraso
-TCK-0641,Consulta,entrega-retraso
-TCK-0642,Consulta,otros
-TCK-0643,Entrega,entrega-retraso
-TCK-0644,Entrega,entrega-retraso
-TCK-0645,Datos cliente,cambio-datos
-TCK-0646,Info,informacion-producto
-TCK-0647,Reparto,entrega-sin-aviso
-TCK-0648,Reparto,entrega-retraso
-TCK-0649,Facturación,otros
-TCK-0650,Entrega,entrega-retraso
-TCK-0651,Datos cliente,cambio-datos
-TCK-0652,Otros,informacion-producto
-TCK-0653,entregas,entrega-retraso
-TCK-0654,Entrega,entrega-retraso
-TCK-0655,Reparto,entrega-retraso
-TCK-0656,Producto,informacion-producto
-TCK-0657,Reparto,entrega-retraso
-TCK-0658,Otros,otros
-TCK-0659,Entrega,entrega-retraso
-TCK-0660,Datos cliente,cambio-datos
-TCK-0661,Info,informacion-producto
-TCK-0662,Otros,entrega-retraso
-TCK-0663,Consulta,informacion-producto
-TCK-0664,Producto,producto-defectuoso
-TCK-0665,Incidencia facturación,facturacion-redondeo
-TCK-0666,Pedidos,entrega-sin-aviso
-TCK-0667,Otros,facturacion-redondeo
-TCK-0668,Otros,facturacion-redondeo
-TCK-0669,Pedidos,facturacion-redondeo
-TCK-0670,facturacion,facturacion-redondeo
-TCK-0671,Consulta,facturacion-redondeo
+TCK-0634,Entrega,entrega-sin-aviso
+TCK-0635,Facturación,entrega-retraso
+TCK-0636,Otros,informacion-producto
+TCK-0637,Reparto,entrega-sin-aviso
+TCK-0638,,cambio-datos
+TCK-0639,Info,informacion-producto
+TCK-0640,entregas,entrega-retraso
+TCK-0641,Datos cliente,cambio-datos
+TCK-0642,Pedidos,pedido-erroneo
+TCK-0643,Reparto,entrega-sin-aviso
+TCK-0644,Datos cliente,cambio-datos
+TCK-0645,Entrega,producto-defectuoso
+TCK-0646,Consulta,cambio-datos
+TCK-0647,Otros,otros
+TCK-0648,Otros,entrega-sin-aviso
+TCK-0649,Otros,cambio-datos
+TCK-0650,Info,informacion-producto
+TCK-0651,,otros
+TCK-0652,Entrega,entrega-retraso
+TCK-0653,entregas,entrega-sin-aviso
+TCK-0654,Consulta,cambio-datos
+TCK-0655,Consulta,informacion-producto
+TCK-0656,Pedidos,facturacion-redondeo
+TCK-0657,Otros,facturacion-redondeo
+TCK-0658,Consulta,facturacion-redondeo
+TCK-0659,Incidencia facturación,facturacion-redondeo
+TCK-0660,Otros,otros
+TCK-0661,,producto-defectuoso
+TCK-0662,Consulta,entrega-sin-aviso
+TCK-0663,Entrega,facturacion-redondeo
+TCK-0664,Consulta,facturacion-redondeo
+TCK-0665,Facturación,facturacion-redondeo
+TCK-0666,Entrega,entrega-retraso
+TCK-0667,Consulta,facturacion-redondeo
+TCK-0668,Consulta,facturacion-redondeo
+TCK-0669,Info,informacion-producto
+TCK-0670,Calidad producto,producto-defectuoso
+TCK-0671,Consulta,pedido-erroneo
 TCK-0672,Incidencia facturación,facturacion-redondeo
-TCK-0673,Facturación,facturacion-redondeo
-TCK-0674,Consulta,facturacion-redondeo
-TCK-0675,facturacion,facturacion-redondeo
-TCK-0676,Consulta,facturacion-redondeo
-TCK-0677,Otros,facturacion-redondeo
-TCK-0678,Pedidos,facturacion-redondeo
-TCK-0679,Otros,otros
-TCK-0680,Facturas,facturacion-redondeo
-TCK-0681,Consulta,pedido-erroneo
-TCK-0682,Facturas,facturacion-redondeo
-TCK-0683,Incidencia facturación,facturacion-redondeo
-TCK-0684,entregas,entrega-sin-aviso
-TCK-0685,Entrega,facturacion-redondeo
-TCK-0686,Otros,producto-defectuoso
-TCK-0687,facturacion,facturacion-redondeo
-TCK-0688,Info,informacion-producto
+TCK-0673,Consulta,facturacion-redondeo
+TCK-0674,Facturas,pedido-erroneo
+TCK-0675,Entrega,pedido-erroneo
+TCK-0676,facturacion,facturacion-redondeo
+TCK-0677,Pedidos,facturacion-redondeo
+TCK-0678,Otros,entrega-sin-aviso
+TCK-0679,Incidencia facturación,facturacion-redondeo
+TCK-0680,Entrega,facturacion-redondeo
+TCK-0681,Producto,producto-defectuoso
+TCK-0682,Otros,facturacion-redondeo
+TCK-0683,facturacion,facturacion-redondeo
+TCK-0684,Entrega,facturacion-redondeo
+TCK-0685,Consulta,facturacion-redondeo
+TCK-0686,Entrega,facturacion-redondeo
+TCK-0687,Consulta,facturacion-redondeo
+TCK-0688,Incidencia facturación,facturacion-redondeo
 TCK-0689,Incidencia facturación,facturacion-redondeo
-TCK-0690,FACTURACION,facturacion-redondeo
-TCK-0691,Pedidos,pedido-erroneo
-TCK-0692,Pedidos,facturacion-redondeo
-TCK-0693,,facturacion-redondeo
+TCK-0690,Info,informacion-producto
+TCK-0691,Pedidos,facturacion-redondeo
+TCK-0692,Facturación,facturacion-redondeo
+TCK-0693,Info,cambio-datos
 TCK-0694,FACTURACION,facturacion-redondeo
-TCK-0695,Entrega,facturacion-redondeo
-TCK-0696,Entrega,entrega-sin-aviso
-TCK-0697,Facturas,facturacion-redondeo
-TCK-0698,Facturación,facturacion-redondeo
-TCK-0699,Otros,facturacion-redondeo
-TCK-0700,Facturas,facturacion-redondeo
-TCK-0701,entregas,entrega-retraso
-TCK-0702,FACTURACION,facturacion-redondeo
-TCK-0703,Pedidos,facturacion-redondeo
-TCK-0704,Info,informacion-producto
-TCK-0705,facturacion,facturacion-redondeo
-TCK-0706,Calidad producto,producto-defectuoso
-TCK-0707,Pedidos,facturacion-redondeo
-TCK-0708,facturacion,facturacion-redondeo
-TCK-0709,Entrega,entrega-sin-aviso
-TCK-0710,Entrega,pedido-erroneo
-TCK-0711,Facturas,facturacion-redondeo
-TCK-0712,Facturas,facturacion-redondeo
-TCK-0713,Incidencia facturación,facturacion-redondeo
-TCK-0714,Facturación,facturacion-redondeo
-TCK-0715,Pedidos,facturacion-redondeo
-TCK-0716,Reparto,entrega-retraso
-TCK-0717,Facturación,facturacion-redondeo
-TCK-0718,Facturas,facturacion-redondeo
-TCK-0719,Entrega,facturacion-redondeo
-TCK-0720,Otros,facturacion-redondeo
-TCK-0721,Facturas,facturacion-redondeo
-TCK-0722,Consulta,facturacion-redondeo
-TCK-0723,Pedidos,facturacion-redondeo
-TCK-0724,Producto,producto-defectuoso
+TCK-0695,Entrega,entrega-sin-aviso
+TCK-0696,Otros,entrega-sin-aviso
+TCK-0697,facturacion,facturacion-redondeo
+TCK-0698,Otros,otros
+TCK-0699,,informacion-producto
+TCK-0700,Otros,entrega-sin-aviso
+TCK-0701,Consulta,informacion-producto
+TCK-0702,Facturación,facturacion-redondeo
+TCK-0703,Entrega,entrega-retraso
+TCK-0704,Consulta,informacion-producto
+TCK-0705,Consulta,informacion-producto
+TCK-0706,entregas,entrega-sin-aviso
+TCK-0707,Datos cliente,cambio-datos
+TCK-0708,Consulta,producto-defectuoso
+TCK-0709,facturacion,facturacion-redondeo
+TCK-0710,Producto,producto-defectuoso
+TCK-0711,facturacion,facturacion-redondeo
+TCK-0712,Entrega,producto-defectuoso
+TCK-0713,Facturación,facturacion-redondeo
+TCK-0714,facturacion,facturacion-redondeo
+TCK-0715,Facturas,pedido-erroneo
+TCK-0716,Otros,facturacion-redondeo
+TCK-0717,Pedidos,facturacion-redondeo
+TCK-0718,Consulta,facturacion-redondeo
+TCK-0719,Consulta,facturacion-redondeo
+TCK-0720,Facturas,facturacion-redondeo
+TCK-0721,FACTURACION,facturacion-redondeo
+TCK-0722,Entrega,facturacion-redondeo
+TCK-0723,Incidencia facturación,facturacion-redondeo
+TCK-0724,Facturación,facturacion-redondeo
 TCK-0725,Facturación,facturacion-redondeo
-TCK-0726,Consulta,facturacion-redondeo
-TCK-0727,Incidencia facturación,pedido-erroneo
-TCK-0728,Entrega,entrega-retraso
-TCK-0729,Pedidos,facturacion-redondeo
-TCK-0730,Entrega,facturacion-redondeo
-TCK-0731,Info,informacion-producto
-TCK-0732,Facturación,facturacion-redondeo
-TCK-0733,facturacion,facturacion-redondeo
-TCK-0734,Consulta,pedido-erroneo
-TCK-0735,Pedidos,facturacion-redondeo
-TCK-0736,facturacion,facturacion-redondeo
-TCK-0737,Entrega,facturacion-redondeo
+TCK-0726,Consulta,cambio-datos
+TCK-0727,Datos cliente,cambio-datos
+TCK-0728,,facturacion-redondeo
+TCK-0729,FACTURACION,facturacion-redondeo
+TCK-0730,Facturación,facturacion-redondeo
+TCK-0731,Pedidos,facturacion-redondeo
+TCK-0732,Facturas,facturacion-redondeo
+TCK-0733,Entrega,producto-defectuoso
+TCK-0734,Facturas,pedido-erroneo
+TCK-0735,Consulta,informacion-producto
+TCK-0736,Entrega,facturacion-redondeo
+TCK-0737,facturacion,facturacion-redondeo
 TCK-0738,Entrega,facturacion-redondeo
-TCK-0739,Facturación,facturacion-redondeo
-TCK-0740,Otros,facturacion-redondeo
-TCK-0741,Entrega,otros
-TCK-0742,Facturación,facturacion-redondeo
-TCK-0743,Facturación,facturacion-redondeo
-TCK-0744,Consulta,otros
-TCK-0745,facturacion,facturacion-redondeo
-TCK-0746,Entrega,entrega-retraso
-TCK-0747,Incidencia facturación,facturacion-redondeo
-TCK-0748,Facturas,pedido-erroneo
-TCK-0749,Datos cliente,cambio-datos
-TCK-0750,Consulta,facturacion-redondeo
-TCK-0751,Reparto,entrega-sin-aviso
-TCK-0752,facturacion,facturacion-redondeo
-TCK-0753,FACTURACION,facturacion-redondeo
-TCK-0754,Consulta,facturacion-redondeo
-TCK-0755,Otros,informacion-producto
-TCK-0756,Otros,otros
-TCK-0757,entregas,entrega-retraso
-TCK-0758,Facturas,pedido-erroneo
-TCK-0759,Entrega,pedido-erroneo
-TCK-0760,,cambio-datos
-TCK-0761,entregas,entrega-retraso
-TCK-0762,Pedidos,pedido-erroneo
-TCK-0763,entregas,entrega-sin-aviso
-TCK-0764,facturacion,pedido-erroneo
-TCK-0765,Otros,cambio-datos
-TCK-0766,Reparto,entrega-sin-aviso
+TCK-0739,Pedidos,facturacion-redondeo
+TCK-0740,Entrega,facturacion-redondeo
+TCK-0741,Entrega,entrega-retraso
+TCK-0742,Entrega,entrega-retraso
+TCK-0743,Entrega,entrega-retraso
+TCK-0744,Otros,facturacion-redondeo
+TCK-0745,Info,cambio-datos
+TCK-0746,Consulta,facturacion-redondeo
+TCK-0747,Facturación,entrega-retraso
+TCK-0748,Info,cambio-datos
+TCK-0749,Consulta,informacion-producto
+TCK-0750,Facturas,facturacion-redondeo
+TCK-0751,Producto,informacion-producto
+TCK-0752,Facturación,facturacion-redondeo
+TCK-0753,Consulta,facturacion-redondeo
+TCK-0754,Facturación,facturacion-redondeo
+TCK-0755,Producto,producto-defectuoso
+TCK-0756,Pedidos,facturacion-redondeo
+TCK-0757,Entrega,otros
+TCK-0758,Facturas,facturacion-redondeo
+TCK-0759,Consulta,facturacion-redondeo
+TCK-0760,Pedidos,facturacion-redondeo
+TCK-0761,Datos cliente,cambio-datos
+TCK-0762,Otros,facturacion-redondeo
+TCK-0763,Entrega,entrega-sin-aviso
+TCK-0764,Producto,producto-defectuoso
+TCK-0765,Facturas,pedido-erroneo
+TCK-0766,entregas,entrega-sin-aviso
 TCK-0767,Datos cliente,cambio-datos
-TCK-0768,Entrega,entrega-retraso
-TCK-0769,Otros,producto-defectuoso
+TCK-0768,Datos cliente,cambio-datos
+TCK-0769,facturacion,pedido-erroneo
 TCK-0770,Consulta,informacion-producto
-TCK-0771,entregas,entrega-sin-aviso
-TCK-0772,Info,informacion-producto
-TCK-0773,Producto,informacion-producto
-TCK-0774,,otros
-TCK-0775,Info,informacion-producto
-TCK-0776,Producto,informacion-producto
-TCK-0777,Entrega,entrega-retraso
-TCK-0778,Otros,otros
-TCK-0779,Consulta,cambio-datos
-TCK-0780,Producto,producto-defectuoso
-TCK-0781,entregas,entrega-retraso
-TCK-0782,Entrega,entrega-sin-aviso
-TCK-0783,Incidencia facturación,pedido-erroneo
-TCK-0784,Consulta,informacion-producto
-TCK-0785,Entrega,entrega-sin-aviso
-TCK-0786,Entrega,entrega-retraso
-TCK-0787,,entrega-retraso
-TCK-0788,Facturación,otros
-TCK-0789,Producto,producto-defectuoso
-TCK-0790,Datos cliente,cambio-datos
-TCK-0791,Otros,cambio-datos
-TCK-0792,Datos cliente,cambio-datos
-TCK-0793,Info,informacion-producto
-TCK-0794,Entrega,entrega-retraso
-TCK-0795,Info,informacion-producto
-TCK-0796,Otros,producto-defectuoso
-TCK-0797,Facturas,pedido-erroneo
-TCK-0798,Info,informacion-producto
-TCK-0799,,producto-defectuoso
-TCK-0800,Otros,informacion-producto
+TCK-0771,Info,cambio-datos
+TCK-0772,Producto,informacion-producto
+TCK-0773,Facturación,entrega-retraso
+TCK-0774,Entrega,entrega-retraso
+TCK-0775,Reparto,entrega-sin-aviso
+TCK-0776,Consulta,entrega-retraso
+TCK-0777,Otros,informacion-producto
+TCK-0778,entregas,entrega-retraso
+TCK-0779,Entrega,entrega-retraso
+TCK-0780,Otros,producto-defectuoso
+TCK-0781,Otros,informacion-producto
+TCK-0782,Consulta,informacion-producto
+TCK-0783,Otros,entrega-retraso
+TCK-0784,Entrega,producto-defectuoso
+TCK-0785,entregas,entrega-retraso
+TCK-0786,Consulta,informacion-producto
+TCK-0787,Entrega,entrega-retraso
+TCK-0788,Otros,entrega-sin-aviso
+TCK-0789,Otros,pedido-erroneo
+TCK-0790,Reparto,entrega-retraso
+TCK-0791,facturacion,pedido-erroneo
+TCK-0792,Reparto,entrega-sin-aviso
+TCK-0793,Reparto,entrega-retraso
+TCK-0794,Reparto,entrega-retraso
+TCK-0795,Entrega,pedido-erroneo
+TCK-0796,Datos cliente,cambio-datos
+TCK-0797,Entrega,entrega-retraso
+TCK-0798,Datos cliente,cambio-datos
+TCK-0799,Calidad producto,producto-defectuoso
+TCK-0800,Consulta,cambio-datos

@@ -286,12 +286,28 @@ SUBCATEGORIAS = (
 # al bloque 4. Quien escribe con prisa suele comer tildes y comerse letras en
 # los conectores, no en el sustantivo por el que llama.
 RAICES_PROTEGIDAS = (
-    "factur", "albaran", "cuadr", "descuent", "cobr", "cobrad", "diferenc",
-    "avis", "cerrad", "retras", "tard", "lleg", "esper", "rot", "caducad",
-    "cambi", "direccion", "telefon", "cuenta", "precio", "iva", "duplicad",
-    "garrafa", "agua", "fuente", "alquiler", "catalog", "baja", "certificad",
-    "pedido", "falta", "incomplet", "gas", "entrega", "reparto", "reparte",
-    "importe", "total", "abono", "devol", "estropead", "sabe", "sucia",
+    # facturación
+    "factur", "albaran", "cuadr", "descuadr", "descuent", "cobr", "diferenc",
+    "importe", "total", "coincid", "suma", "sumad", "sumar", "caro", "toca",
+    "calculadora", "arriba", "aplicais", "gestor", "iva", "duplicad", "acordamos",
+    # entrega
+    "avis", "cerrad", "sabia", "perdido", "retras", "tard", "lleg", "esper",
+    "entrega", "reparto", "reparte", "repartidor",
+    # producto
+    "rot", "caducad", "estropead", "sucia", "sabe", "aplastad", "precinto",
+    "pierde", "mojad", "estado",
+    # pedido
+    "pedido", "falta", "incomplet", "sobran", "corresponde", "doble", "abono",
+    "devol",
+    # datos de cliente
+    "cambi", "actualiz", "domicili", "fiscal", "apuntad", "direccion", "telefon",
+    "cuenta", "banco",
+    # información y otros
+    "precio", "cuesta", "teneis", "retornable", "hariais", "servis", "tardais",
+    "pasais", "formato", "catalog", "baja", "certificad", "vacaciones",
+    "contrato", "horario", "amable", "traigais",
+    # producto y genéricos del negocio
+    "garrafa", "agua", "fuente", "alquiler", "gas", "zumo", "cerveza",
 )
 
 
@@ -526,21 +542,21 @@ PLANTILLAS = {
         "no sabia q veniais hoy y he perdido la entrega",
         "otra vez pasasteis sin avisar y no habia nadie en el local",
         "el repartidor dice que vino ayer, yo no sabia nada",
-        "si me llamarais antes de venir no pasaria esto",
-        "he estado toda la mañana fuera y justo vinisteis vosotros",
+        "si me avisarais antes de venir no pasaria esto",
+        "he estado toda la mañana fuera y justo vinisteis vosotros, nadie me aviso",
         "me lo habeis dejado en la puerta porq no estaba, nadie me avisa",
-        "no puedo estar aqui las 24 horas, decidme el dia que venis",
+        "no puedo estar aqui las 24 horas, si nadie me avisa no puedo recibirlo",
         "otra vez la misma historia, pasais y esta cerrado",
-        "vine a abrir a las once y el repartidor ya se habia ido",
+        "vine a abrir a las once y el repartidor ya se habia ido, nadie me aviso",
         "nadie me avisa de cuando toca reparto y asi es imposible",
         "he perdido la entrega otra vez porque no sabia q era hoy",
-        "estamos de descanso los martes y justo venis los martes",
-        "el chico del reparto se fue sin dejar nada y sin llamar",
+        "estamos de descanso los martes y venis los martes sin avisar",
+        "el chico del reparto se fue sin dejar nada y sin avisar",
     ),
     "entrega-retraso": (
         "llevo esperando el pedido desde el {dia} y no llega",
         "el reparto viene tardisimo, ayer aparecio a las {hora}",
-        "me dijisteis lunes y estamos a {dia} sin nada",
+        "me dijisteis lunes y estamos a {dia} y el pedido sin llegar",
         "el pedido lleva {n} dias de retraso",
         "sigo esperando las garrafas, se me ha acabado el agua",
         "otra vez llega tarde el reparto y tengo el bar sin bebida",
@@ -549,7 +565,7 @@ PLANTILLAS = {
         "no ha llegado el pedido y ya es el {dia}",
         "el reparto de esta semana viene con retraso otra vez",
         "llevo dos dias sin agua con gas porque no llega el pedido",
-        "me prometisteis que llegaba antes del finde y nada",
+        "me prometisteis que llegaba antes del finde y sigo esperando",
     ),
     "producto-defectuoso": (
         "las garrafas venian rotas, dos perdiendo agua",
@@ -570,7 +586,7 @@ PLANTILLAS = {
         "faltan {n} cajas del pedido de ayer",
         "el pedido viene incompleto, falta la mitad",
         "me han dejado el doble de lo que pedi",
-        "he pedido {n} garrafas y me han dejado {n2}",
+        "he pedido {n} garrafas y me han dejado {n2}, falta el resto",
         "me han traido el pedido de otro cliente",
         "en el albaran pone una cosa y en las cajas hay otra",
         "falta el {prod} en el pedido de esta semana",
@@ -617,7 +633,7 @@ PLANTILLAS = {
         "que horario teneis en oficina",
         "el local cierra un mes, no me traigais nada",
         "queria felicitaros, el chico del reparto es muy amable",
-        "cambiamos de horario, ahora abrimos por la tarde",
+        "ahora abrimos por la tarde, os lo digo por el reparto",
         "me podeis dar de alta otro punto de entrega",
     ),
 }

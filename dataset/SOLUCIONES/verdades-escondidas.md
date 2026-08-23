@@ -32,20 +32,20 @@ más frecuentes:
 
 | Etiqueta | Tickets | % |
 |---|---:|---:|
-| `Entrega` | 112 | 14,00 % |
-| `Consulta` | 111 | 13,88 % |
-| `Otros` | 86 | 10,75 % |
-| `Pedidos` | 71 | 8,88 % |
-| `Facturación` | 66 | 8,25 % |
-| `Facturas` | 47 | 5,88 % |
-| `Reparto` | 37 | 4,62 % |
-| `Info` | 36 | 4,50 % |
+| `Consulta` | 126 | 15,75 % |
+| `Entrega` | 110 | 13,75 % |
+| `Otros` | 77 | 9,62 % |
+| `Pedidos` | 67 | 8,38 % |
+| `Facturación` | 61 | 7,62 % |
+| `Facturas` | 48 | 6,00 % |
+| `(vacío)` | 43 | 5,38 % |
+| `Info` | 42 | 5,25 % |
 
 Quien agrupe por esa columna y sume las etiquetas de facturación obtiene
-**198 tickets = 24,75 %**, de los
-cuales solo el 84,34 % son de verdad del fallo de facturación. La
+**185 tickets = 23,12 %**, de los
+cuales solo el 81,08 % son de verdad del fallo de facturación. La
 respuesta correcta es 38,00 %. **Fiarse de la columna
-cuesta 13,25 % de error**, en
+cuesta 14,88 % de error**, en
 la dirección peligrosa: infravalora el problema.
 
 Ése es el puente del verbo 1 (clasificar) al bloque 4: hay que reclasificar
@@ -113,7 +113,7 @@ totalidad.
 
 ### 4. Errores típicos
 
-- **Fiarse de la columna `categoria`.** Da 24,75 % en
+- **Fiarse de la columna `categoria`.** Da 23,12 % en
   vez de 38,00 %. Es el error más frecuente y el más caro.
 - **Quedarse en el dinero mal facturado.** 615,51 € en seis
   meses no mueve a nadie. El argumento está en el coste de los contactos.

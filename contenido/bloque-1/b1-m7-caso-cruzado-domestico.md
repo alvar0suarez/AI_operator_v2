@@ -20,19 +20,19 @@ anteriores es un método o son cinco fichas sobre tu oficina. La forma de compro
 aplicarlo entero donde no hay procedimiento, ni jefe, ni CRM. Si el esquema aguanta en
 tu casa, es que nunca dependió del trabajo.
 
-## Por qué en tu casa y no en otra tarea de la oficina
+## Por qué en tu casa
 
-En el trabajo existe una versión oficial de cómo se hace cada cosa, aunque nadie la
-siga, y esa versión te contamina la descripción sin que te des cuenta. En tu casa no
-hay versión oficial: lo que salga es tu proceso y nada más. Y hay una segunda razón,
-peor: en tu casa el criterio de «bien hecho» lo pones tú, sin gerencia ni cliente de
-por medio, y aun así no vas a saber escribirlo. Ahí es donde va este nodo.
+En el trabajo hay una versión oficial de cómo se hace cada cosa, aunque nadie la siga,
+y te contamina la descripción sin que te des cuenta. En tu casa no la hay: lo que salga
+es tu proceso y nada más. Y hay una segunda razón, peor: en tu casa el criterio de
+«bien hecho» lo pones tú, sin gerencia ni cliente de por medio, y aun así no vas a
+saber escribirlo.
 
 ## La compra semanal, descompuesta entera
 
 Datos de partida, de la semana inventada del mapa: 4 veces al mes, 75 minutos de
-mediana, rango de 45 a 120. Son 300 minutos al mes. Guárdalo, porque al final va a
-resultar que no significa lo que parece.
+mediana, rango de 45 a 120. Son 300 minutos al mes. Guarda ese número: al final no va a
+significar lo que parece.
 
 **Entrada.** Llega lo que se ha acabado, lo que alguien te dice de pasada y lo que hace
 falta para algo planeado. Por cinco canales: tu cabeza, una nota en el móvil, un papel
@@ -83,8 +83,8 @@ Ninguna está escrita. Todas se aplican. Bájalas con la pregunta de
 > haya ido la semana» → nada observable, y el sábado por la mañana no lo sabes.
 > **Excepción declarada: la comida del sábado no forma parte de esta tarea.**
 
-Es el mismo procedimiento que con las reclamaciones, con las mismas tres preguntas y el
-mismo tope de tres. No se parece: es el mismo.
+Mismo procedimiento que con las reclamaciones, mismas preguntas, mismo tope de tres.
+No se parece: es el mismo.
 
 ## Antes de puntuar: ¿qué tarea estás puntuando?
 
@@ -123,7 +123,7 @@ Las mismas cuatro casillas, tres dominios, y la casilla difícil siempre es la m
 | **Otro trabajo** | En una tienda de barrio, el pedido semanal al proveedor | «Que no falte y que no caduque» tiran en contra. Por eso el pedido lo hace siempre la misma persona y nadie sabe sustituirla |
 | **Tu casa** | Decidir qué entra en la lista de la compra | Qué se compra cambia cada semana por cuatro razones que nadie ha escrito |
 
-Tres dominios que no se parecen en nada: cambia la entrada, cambian las decisiones,
+Tres dominios que no se parecen en nada: cambia la entrada, cambian las decisiones y
 cambia la salida. La casilla que falla es la cuarta en los tres.
 
 ## Cuándo esto falla
@@ -139,18 +139,16 @@ cambia la salida. La casilla que falla es la cuarta en los tres.
 - **Descomponer algo que es relación y no proceso.** Quién llama a tu madre los domingos
   no tiene criterio de «bien hecho». Esa distinción vuelve entera en el bloque 2, en
   `b2-m9-que-no-es-ninguno`, «Lo que no es ninguno de los seis».
-- **Buscar que salga que sí.** Si empiezas queriendo la conclusión «esto se puede
-  automatizar», la consigues subiendo dos casillas. Y entonces el filtro ya no sirve.
+- **Buscar que salga que sí.** Si empiezas queriendo la conclusión «esto se automatiza»,
+  la consigues subiendo dos casillas. Y entonces el filtro ya no sirve.
 
 ## Ejercicio
 
-**Qué:** una tarea doméstica recurrente, descompuesta y filtrada entera. Elige una:
-
-- la compra semanal —decidir qué entra en la lista, no ir al súper—, o
-- las facturas del hogar: revisar recibos, detectar el que viene mal, reclamarlo.
-
-Si haces la compra en piloto automático desde hace años, coge las facturas: ahí hay
-decisiones que no has escrito nunca.
+**Qué:** una tarea doméstica recurrente, descompuesta y filtrada entera. Elige entre la
+compra semanal —decidir qué entra en la lista, no ir al súper— y las facturas del hogar
+—revisar recibos, detectar el que viene mal, reclamarlo—. Si haces la compra en piloto
+automático desde hace años, coge las facturas: ahí hay decisiones que no has escrito
+nunca.
 
 **Los pasos**, en veinte minutos:
 
