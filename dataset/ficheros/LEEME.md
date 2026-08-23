@@ -5,9 +5,9 @@ empresa en ningún momento, ni ahora ni después.
 
 ## De qué empresa son
 
-**Aguas del Norte, S.L.** es una distribuidora de agua envasada y bebidas. Reparte a bares,
-restaurantes y hoteles, y también a particulares, en Cantabria y el oriente de
-Asturias. Tiene unos 300 clientes en el maestro, seis empleados y cuatro rutas
+**Aguas del Norte, S.L.** es una distribuidora de agua envasada y bebidas.
+Reparte a bares, restaurantes y hoteles, y también a particulares, en Cantabria
+y el oriente de Asturias. Tiene unos 300 clientes en el maestro, seis empleados y cuatro rutas
 de reparto. No existe: es una empresa inventada, con datos inventados, generada
 por un script. Por eso puedes trastear con ella sin ningún problema de
 privacidad.

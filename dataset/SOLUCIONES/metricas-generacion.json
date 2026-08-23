@@ -12,32 +12,32 @@
     "hosteleria": 110,
     "particular": 190,
     "sin_email": 54,
-    "email_invalido": 7,
-    "tipo_vacio": 10,
-    "cp_numerico": 14,
-    "ruta_vacia": 7,
-    "descuento_vacio": 10,
-    "observaciones_vacias": 204
+    "email_invalido": 6,
+    "tipo_vacio": 9,
+    "cp_numerico": 15,
+    "ruta_vacia": 6,
+    "descuento_vacio": 12,
+    "observaciones_vacias": 210
   },
   "pedidos": {
-    "pedidos_totales": 1899,
-    "pedidos_reales": 1837,
+    "pedidos_totales": 1877,
+    "pedidos_reales": 1815,
     "pedidos_fantasma": 62,
     "lineas_totales": 5400,
     "filas_xlsx": 5400,
     "devoluciones": 45,
-    "facturado_total": "137545.65",
-    "lineas_con_descuento": 3282,
-    "lineas_sin_descuento": 2118
+    "facturado_total": "137421.56",
+    "lineas_con_descuento": 3422,
+    "lineas_sin_descuento": 1978
   },
   "v1": {
-    "desviacion_total_reales": "615.51",
-    "desviacion_fantasma": "34.72",
+    "desviacion_total_reales": "623.74",
+    "desviacion_fantasma": "32.77",
     "desviacion_maxima_linea": "1.14",
-    "pedidos_afectados": 1139,
-    "lineas_con_descuento": 3282,
-    "lineas_con_descuento_y_desviacion": 3120,
-    "pct_lineas_dto_con_desviacion": 0.9506398537477148,
+    "pedidos_afectados": 1155,
+    "lineas_con_descuento": 3422,
+    "lineas_con_descuento_y_desviacion": 3259,
+    "pct_lineas_dto_con_desviacion": 0.9523670368205728,
     "tickets": 304,
     "tickets_pct": 0.38,
     "tickets_con_id_pedido": 261,
@@ -48,12 +48,12 @@
   "v2": {
     "pares": 12,
     "pares_con_descuento_distinto": 5,
-    "ambos_con_pedidos": 11
+    "ambos_con_pedidos": 12
   },
   "v3": {
     "pedidos_fantasma": 62,
     "lineas_fantasma": 244,
-    "importe_fantasma": "6970.29",
+    "importe_fantasma": "6620.06",
     "ventana": [
       "2024-12-09",
       "2024-12-13"
@@ -75,26 +75,26 @@
       "2025-02": 796
     },
     "pedidos_por_mes_real": {
-      "2024-09": 304,
-      "2024-10": 309,
-      "2024-11": 305,
-      "2024-12": 347,
-      "2025-01": 294,
-      "2025-02": 278
+      "2024-09": 306,
+      "2024-10": 318,
+      "2024-11": 301,
+      "2024-12": 332,
+      "2025-01": 278,
+      "2025-02": 280
     },
     "pedidos_por_mes_registrado": {
-      "2024-09": 304,
-      "2024-10": 309,
-      "2024-11": 305,
-      "2024-12": 409,
-      "2025-01": 294,
-      "2025-02": 278
+      "2024-09": 306,
+      "2024-10": 318,
+      "2024-11": 301,
+      "2024-12": 394,
+      "2025-01": 278,
+      "2025-02": 280
     },
     "base_lineas_otros_meses": 842.4,
     "subida_diciembre_real_lineas": 0.1206,
     "subida_diciembre_registrada_lineas": 0.4103,
-    "subida_diciembre_real_pedidos": 0.1644,
-    "subida_diciembre_registrada_pedidos": 0.3725
+    "subida_diciembre_real_pedidos": 0.1194,
+    "subida_diciembre_registrada_pedidos": 0.3284
   },
   "v4": {
     "clientes": [
@@ -105,9 +105,9 @@
     "tickets": 176,
     "tickets_pct": 0.22,
     "coste_total": "1936.00",
-    "margen_total": "259.79",
-    "resultado_total": "-1676.21",
-    "facturacion_media_hosteleria": "1045.30",
+    "margen_total": "282.27",
+    "resultado_total": "-1653.73",
+    "facturacion_media_hosteleria": "1032.25",
     "detalle": [
       {
         "id_cliente": "CLI-0042",
@@ -115,12 +115,12 @@
         "poblacion": "Laredo",
         "descuento_pct": 12,
         "pedidos": 44,
-        "lineas": 71,
-        "facturado": "805.32",
-        "margen_bruto": "94.88",
+        "lineas": 65,
+        "facturado": "790.26",
+        "margen_bruto": "90.72",
         "tickets": 62,
         "coste_contactos": "682.00",
-        "resultado": "-587.12"
+        "resultado": "-591.28"
       },
       {
         "id_cliente": "CLI-0118",
@@ -128,12 +128,12 @@
         "poblacion": "Santoña",
         "descuento_pct": 10,
         "pedidos": 40,
-        "lineas": 56,
-        "facturado": "695.76",
-        "margen_bruto": "91.68",
+        "lineas": 62,
+        "facturado": "767.13",
+        "margen_bruto": "127.05",
         "tickets": 58,
         "coste_contactos": "638.00",
-        "resultado": "-546.32"
+        "resultado": "-510.95"
       },
       {
         "id_cliente": "CLI-0233",
@@ -141,12 +141,12 @@
         "poblacion": "Los Corrales de Buelna",
         "descuento_pct": 12,
         "pedidos": 38,
-        "lineas": 59,
-        "facturado": "694.72",
-        "margen_bruto": "73.23",
+        "lineas": 56,
+        "facturado": "637.98",
+        "margen_bruto": "64.50",
         "tickets": 56,
         "coste_contactos": "616.00",
-        "resultado": "-542.77"
+        "resultado": "-551.50"
       }
     ]
   },
@@ -171,34 +171,34 @@
       "otros": 44
     },
     "etiquetas_sucias": {
-      "(vacío)": 43,
-      "Calidad producto": 20,
-      "Consulta": 126,
-      "Datos cliente": 29,
-      "Entrega": 110,
-      "FACTURACION": 15,
-      "Facturación": 61,
+      "(vacío)": 39,
+      "Calidad producto": 14,
+      "Consulta": 95,
+      "Datos cliente": 37,
+      "Entrega": 106,
+      "FACTURACION": 21,
+      "Facturación": 49,
       "Facturas": 48,
-      "Incidencia facturación": 26,
-      "Info": 42,
-      "Otros": 77,
-      "Pedidos": 67,
-      "Producto": 29,
-      "Reparto": 38,
-      "entregas": 34,
-      "facturacion": 35
+      "Incidencia facturación": 33,
+      "Info": 49,
+      "Otros": 82,
+      "Pedidos": 70,
+      "Producto": 43,
+      "Reparto": 41,
+      "entregas": 30,
+      "facturacion": 43
     },
     "etiquetas_distintas": 15,
-    "bucket_facturacion": 185,
-    "bucket_facturacion_pct": 0.23125,
-    "bucket_facturacion_pureza": 0.8108108108108109,
-    "error_de_fiarse_de_categoria": 0.14875,
+    "bucket_facturacion": 194,
+    "bucket_facturacion_pct": 0.2425,
+    "bucket_facturacion_pureza": 0.8762886597938144,
+    "error_de_fiarse_de_categoria": 0.1375,
     "sin_id_cliente": 32,
     "con_id_pedido": 384,
     "con_id_pedido_pct": 0.48,
-    "sin_subcategoria": 646,
-    "sin_agente": 42,
-    "sin_tiempo": 171,
+    "sin_subcategoria": 639,
+    "sin_agente": 48,
+    "sin_tiempo": 176,
     "cierre_anterior_a_apertura": 9
   },
   "correos": {

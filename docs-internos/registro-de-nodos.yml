@@ -243,7 +243,7 @@ nodos:
   bloque: 1
   titulo: "Tu inventario de procesos"
   tipo: artefacto
-  duracion_min: 45
+  duracion_min: 30
   caduca: bajo
   requisitos: [b1-m7-caso-cruzado-domestico]
   desbloquea: [b2-m1-mapa-de-lo-posible]

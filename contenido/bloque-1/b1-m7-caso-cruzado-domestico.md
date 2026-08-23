@@ -15,10 +15,10 @@ objetivos:
 conceptos: [descomposicion, transferencia, criterio]
 ---
 
-Esto no va de la compra. Va de comprobar si lo que has hecho en los cinco nodos
-anteriores es un método o son cinco fichas sobre tu oficina. La forma de comprobarlo es
-aplicarlo entero donde no hay procedimiento, ni jefe, ni CRM. Si el esquema aguanta en
-tu casa, es que nunca dependió del trabajo.
+Esto no va de la compra. Va de comprobar si lo que llevas hecho en este bloque es un
+método o son seis fichas sobre tu oficina. La forma de comprobarlo es aplicarlo entero
+donde no hay procedimiento, ni jefe, ni CRM. Si el esquema aguanta en tu casa, es que
+nunca dependió del trabajo.
 
 ## Por qué en tu casa
 
@@ -84,7 +84,6 @@ Ninguna está escrita. Todas se aplican. Bájalas con la pregunta de
 > **Excepción declarada: la comida del sábado no forma parte de esta tarea.**
 
 Mismo procedimiento que con las reclamaciones, mismas preguntas, mismo tope de tres.
-No se parece: es el mismo.
 
 ## Antes de puntuar: ¿qué tarea estás puntuando?
 
@@ -113,19 +112,6 @@ ella se mueve y no está escrito.
 > filtra. Uno que dijera que sí a todo no sería un filtro, sería un permiso. Si tu
 > tarea doméstica también sale `aparcar`, lo has hecho bien.
 
-## Las tres instancias
-
-Las mismas cuatro casillas, tres dominios, y la casilla difícil siempre es la misma:
-
-| Dónde | La tarea | Dónde está la dificultad |
-|---|---|---|
-| **Tu sector (CX)** | Contestar una reclamación de factura | Cuándo se abona sin preguntar y cuándo pasa a gerencia. No estaba escrito |
-| **Otro trabajo** | En una tienda de barrio, el pedido semanal al proveedor | «Que no falte y que no caduque» tiran en contra. Por eso el pedido lo hace siempre la misma persona y nadie sabe sustituirla |
-| **Tu casa** | Decidir qué entra en la lista de la compra | Qué se compra cambia cada semana por cuatro razones que nadie ha escrito |
-
-Tres dominios que no se parecen en nada: cambia la entrada, cambian las decisiones y
-cambia la salida. La casilla que falla es la cuarta en los tres.
-
 ## Cuándo esto falla
 
 - **Usarlo para reorganizar a tu familia.** Descomponer la compra no te da autoridad en
@@ -141,6 +127,19 @@ cambia la salida. La casilla que falla es la cuarta en los tres.
   `b2-m9-que-no-es-ninguno`, «Lo que no es ninguno de los seis».
 - **Buscar que salga que sí.** Si empiezas queriendo la conclusión «esto se automatiza»,
   la consigues subiendo dos casillas. Y entonces el filtro ya no sirve.
+
+## Las tres instancias
+
+Las mismas cuatro casillas, tres dominios:
+
+| Dónde | La tarea | Dónde está la dificultad |
+|---|---|---|
+| **Tu sector (CX)** | Contestar una reclamación de factura | Cuándo se abona sin preguntar y cuándo pasa a gerencia. No estaba escrito |
+| **Otro trabajo** | En una tienda de barrio, el pedido semanal al proveedor | «Que no falte y que no caduque» tiran en contra. Por eso el pedido lo hace siempre la misma persona y nadie sabe sustituirla |
+| **Tu casa** | Decidir qué entra en la lista de la compra | Qué se compra cambia cada semana por cuatro razones que nadie ha escrito |
+
+Tres dominios que no se parecen en nada: cambia la entrada, cambian las decisiones y
+cambia la salida.
 
 ## Ejercicio
 
@@ -176,8 +175,8 @@ En la bitácora, con tus palabras:
   porque \_\_\_.»
 - «Lo que tienen en común una reclamación de factura y la compra del sábado es \_\_\_.»
 
-La tercera es la que llevamos buscando desde el primer nodo del bloque. Escríbela
-aunque te parezca obvia: si te sale en una frase, el método ya es tuyo.
+La tercera, en una frase. Si no te sale, vuelve a las tres filas de arriba y
+compáralas columna a columna.
 
 ## Para la bitácora
 

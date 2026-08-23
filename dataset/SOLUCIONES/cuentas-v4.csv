@@ -1,4 +1,4 @@
 id_cliente,nombre,poblacion,descuento_pct,pedidos,lineas,facturado_6m,margen_bruto_6m,tickets,coste_contactos,resultado
-CLI-0042,Cafetería El Cantábrico,Laredo,12,44,71,805.32,94.88,62,682.00,-587.12
-CLI-0118,Hotel La Ría,Santoña,10,40,56,695.76,91.68,58,638.00,-546.32
-CLI-0233,Mesón Casa Ramón,Los Corrales de Buelna,12,38,59,694.72,73.23,56,616.00,-542.77
+CLI-0042,Cafetería El Cantábrico,Laredo,12,44,65,790.26,90.72,62,682.00,-591.28
+CLI-0118,Hotel La Ría,Santoña,10,40,62,767.13,127.05,58,638.00,-510.95
+CLI-0233,Mesón Casa Ramón,Los Corrales de Buelna,12,38,56,637.98,64.50,56,616.00,-551.50

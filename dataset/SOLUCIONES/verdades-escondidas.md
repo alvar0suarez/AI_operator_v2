@@ -26,27 +26,28 @@ puede enseñar con ella y no sin ella.
 
 ## Antes de las verdades: por qué `categoria` no sirve
 
-La columna `categoria` de `tickets.xlsx` trae 15
-etiquetas distintas (más los vacíos) para 8 categorías reales. El reparto de las
-más frecuentes:
+La columna `categoria` de `tickets.xlsx` trae
+14 etiquetas distintas más un cajón de
+`Otros` y un puñado de celdas vacías, para 8 categorías reales. El reparto de
+las más frecuentes:
 
 | Etiqueta | Tickets | % |
 |---|---:|---:|
-| `Consulta` | 126 | 15,75 % |
-| `Entrega` | 110 | 13,75 % |
-| `Otros` | 77 | 9,62 % |
-| `Pedidos` | 67 | 8,38 % |
-| `Facturación` | 61 | 7,62 % |
+| `Entrega` | 106 | 13,25 % |
+| `Consulta` | 95 | 11,88 % |
+| `Otros` | 82 | 10,25 % |
+| `Pedidos` | 70 | 8,75 % |
+| `Facturación` | 49 | 6,12 % |
+| `Info` | 49 | 6,12 % |
 | `Facturas` | 48 | 6,00 % |
-| `(vacío)` | 43 | 5,38 % |
-| `Info` | 42 | 5,25 % |
+| `Producto` | 43 | 5,38 % |
 
 Quien agrupe por esa columna y sume las etiquetas de facturación obtiene
-**185 tickets = 23,12 %**, de los
-cuales solo el 81,08 % son de verdad del fallo de facturación. La
+**194 tickets = 24,25 %**, de los
+cuales solo el 87,63 % son de verdad del fallo de facturación. La
 respuesta correcta es 38,00 %. **Fiarse de la columna
-cuesta 14,88 % de error**, en
-la dirección peligrosa: infravalora el problema.
+cuesta 13.8 puntos de
+error**, en la dirección peligrosa: infravalora el problema.
 
 Ése es el puente del verbo 1 (clasificar) al bloque 4: hay que reclasificar
 desde `descripcion`, no desde `categoria`.
@@ -68,19 +69,19 @@ tickets** son un cliente diciendo que su factura no cuadra.
 
 | Dato | Valor |
 |---|---|
-| Líneas de pedido con descuento | 3282 |
-| De ellas, con sobrecoste | 3120 (95,06 %) |
+| Líneas de pedido con descuento | 3422 |
+| De ellas, con sobrecoste | 3259 (95,24 %) |
 | Líneas sin descuento con sobrecoste | 0 (invariante dura) |
-| Pedidos afectados | 1139 |
-| **Sobrefacturación acumulada en 6 meses** | **615,51 €** |
-| Proyección a 12 meses | 1.231,02 € |
+| Pedidos afectados | 1155 |
+| **Sobrefacturación acumulada en 6 meses** | **623,74 €** |
+| Proyección a 12 meses | 1.247,48 € |
 | Sobrecoste máximo en una sola línea | 1,14 € |
-| Facturación total del periodo | 137.545,65 € |
+| Facturación total del periodo | 137.421,56 € |
 | Tickets de la causa | 304 = 38,00 % |
 | De ellos, con `id_pedido` informado | 261 (85,86 %) |
 | Coste de atender esos tickets a 11,00 €/contacto | 3.344,00 € |
 
-> El dinero mal facturado (615,51 €) es **calderilla** al lado
+> El dinero mal facturado (623,74 €) es **calderilla** al lado
 > del coste de atender las llamadas que provoca
 > (3.344,00 €). Ése es el hallazgo de verdad, y es
 > el que hay que llevar a Gerencia.
@@ -113,9 +114,10 @@ totalidad.
 
 ### 4. Errores típicos
 
-- **Fiarse de la columna `categoria`.** Da 23,12 % en
-  vez de 38,00 %. Es el error más frecuente y el más caro.
-- **Quedarse en el dinero mal facturado.** 615,51 € en seis
+- **Fiarse de la columna `categoria`.** Da 24,25 % en
+  vez de 38,00 %: 13.8
+  puntos por debajo. Es el error más frecuente y el más caro.
+- **Quedarse en el dinero mal facturado.** 623,74 € en seis
   meses no mueve a nadie. El argumento está en el coste de los contactos.
 - **Decir "el 100 % de facturación es este fallo"** e ignorar los
   17 tickets que no lo son.
@@ -124,7 +126,7 @@ totalidad.
 - **Redondear al comparar.** Si se recalcula con dos decimales desde el
   principio, se reproduce el propio fallo y sale que todo cuadra.
 - **Concluir "se equivocó alguien al teclear".** Es sistemático: afecta al
-  95,06 % de las líneas con descuento y
+  95,24 % de las líneas con descuento y
   a ninguna sin él.
 
 ### 5. Principio de CX al que engancha
@@ -156,22 +158,22 @@ un cambio de titular. Ninguno de los dos se cumple.
 | Clientes reales | 288 |
 | Pares duplicados | 12 |
 | Pares en los que **el descuento difiere** | 5 |
-| Pares en los que **ambas fichas tienen pedidos** | 11 de 12 |
+| Pares en los que **ambas fichas tienen pedidos** | 12 de 12 |
 
 | Original | Nombre original | Duplicado | Nombre duplicado | Teléfono normalizado | Dto. orig. / dup. |
 |---|---|---|---|---|---|
-| CLI-0036 | Antonio Villar | CLI-0155 | ANTONIO VILLAR | 942172767 | 0 / 0 |
-| CLI-0023 | Francisco Herrera | CLI-0169 | FRANCISCO HERRERA | 942168404 | 0 / 0 |
-| CLI-0033 | Laura Corral | CLI-0178 | LAURA CORRAL S.L. | 985440746 | 0 / 12 |
-| CLI-0095 | Antonio Gómez | CLI-0185 | Antonio Gómez S.L. | 681332477 | 0 / 8 |
-| CLI-0031 | Patricia Salces | CLI-0238 | Patricia Salces S.L. | 942176695 | 0 / 0 |
-| CLI-0120 | Pensión Casa Pepe | CLI-0249 | PENSIÓN CASA PEPE | 637664533 | 12 / 12 |
-| CLI-0101 | Pizzería La Terraza | CLI-0258 | PIZZERÍA LA TERRAZA | 722758866 | 12 / 10 |
-| CLI-0094 | Pilar Corral | CLI-0265 | PILAR CORRAL S.L. | 942648257 | 0 / 12 |
-| CLI-0081 | Bar Restaurante La Herradura | CLI-0277 | Bar Restaurante La Herradura S.L. | 651053873 | 0 / 10 |
-| CLI-0001 | Cafetería El Molino | CLI-0294 | El Molino, Cafetería | 722765182 | 3 / 3 |
-| CLI-0013 | Marta Villegas | CLI-0296 | MARTA VILLEGAS | 942689258 | 0 / 0 |
-| CLI-0046 | Pizzería Casa Julián | CLI-0300 | Casa Julián, Pizzería | 690511282 | 10 / 10 |
+| CLI-0036 | Antonio Villar | CLI-0155 | Villar, Antonio | 942172767 | 0 / 0 |
+| CLI-0023 | Francisco Herrera | CLI-0169 | F. Herrera | 942168404 | 0 / 0 |
+| CLI-0033 | Laura Corral | CLI-0178 | LAURA CORRAL | 985440746 | 0 / 3 |
+| CLI-0095 | Antonio Gómez | CLI-0185 | A. GÃ³mez | 681332477 | 0 / 5 |
+| CLI-0031 | Patricia Salces | CLI-0238 | PATRICIA SALCES | 942176695 | 0 / 0 |
+| CLI-0120 | PensiÃ³n Casa Pepe | CLI-0249 | PENSIÓN CASA PEPE | 637664533 | 12 / 12 |
+| CLI-0101 | PizzerÃ­a La Terraza | CLI-0258 | La Terraza, Pizzería | 722758866 | 12 / 10 |
+| CLI-0094 | Pilar Corral | CLI-0265 | Corral, Pilar | 942648257 | 0 / 5 |
+| CLI-0081 | Bar Restaurante La Herradura | CLI-0277 | BAR RESTAURANTE LA HERRADURA S.L. | 651053873 | 0 / 8 |
+| CLI-0001 | Cafetería El Molino | CLI-0294 | CAFETERÍA EL MOLINO | 722765182 | 3 / 3 |
+| CLI-0013 | Marta Villegas | CLI-0296 | VILLEGAS, Marta | 942689258 | 0 / 0 |
+| CLI-0046 | PizzerÃ­a Casa JuliÃ¡n | CLI-0300 | PIZZERÍA CASA JULIÁN SL | 690511282 | 10 / 10 |
 
 ### 3. Camino de detección esperado
 
@@ -239,9 +241,9 @@ generan ni un solo ticket**: nunca se sirvieron.
 | Diciembre registrado | 1188 líneas → **41,03 %** |
 | Pedidos fantasma | 62 |
 | Líneas fantasma | 244 |
-| Importe fantasma (ventas que nunca existieron) | 6.970,29 € |
+| Importe fantasma (ventas que nunca existieron) | 6.620,06 € |
 | Ventana de la doble importación | 2024-12-09 → 2024-12-13 |
-| Mismo cálculo contando pedidos en vez de líneas | real 16,44 % / registrado 37,25 % |
+| Mismo cálculo contando pedidos en vez de líneas | real 11,94 % / registrado 32,84 % |
 
 ### 3. Camino de detección esperado
 
@@ -291,17 +293,17 @@ margen bruto de seis meses **no paga ni de lejos** lo que cuesta atenderlos.
 
 | Cliente | Nombre | Dto. | Pedidos | Facturado 6 m | Margen bruto 6 m | Tickets | Coste contactos | Resultado |
 |---|---|---:|---:|---:|---:|---:|---:|---:|
-| CLI-0042 | Cafetería El Cantábrico | 12 % | 44 | 805,32 € | 94,88 € | 62 | 682,00 € | **-587,12 €** |
-| CLI-0118 | Hotel La Ría | 10 % | 40 | 695,76 € | 91,68 € | 58 | 638,00 € | **-546,32 €** |
-| CLI-0233 | Mesón Casa Ramón | 12 % | 38 | 694,72 € | 73,23 € | 56 | 616,00 € | **-542,77 €** |
+| CLI-0042 | Cafetería El Cantábrico | 12 % | 44 | 790,26 € | 90,72 € | 62 | 682,00 € | **-591,28 €** |
+| CLI-0118 | Hotel La Ría | 10 % | 40 | 767,13 € | 127,05 € | 58 | 638,00 € | **-510,95 €** |
+| CLI-0233 | Mesón Casa Ramón | 12 % | 38 | 637,98 € | 64,50 € | 56 | 616,00 € | **-551,50 €** |
 
 | Dato | Valor |
 |---|---|
 | Tickets de los tres | 176 de 800 = 22,00 % |
-| Margen bruto conjunto | 259,79 € |
+| Margen bruto conjunto | 282,27 € |
 | Coste de sus contactos | 1.936,00 € |
-| **Resultado conjunto** | **-1.676,21 €** |
-| Facturación media de un cliente de hostelería (6 m) | 1.045,30 € |
+| **Resultado conjunto** | **-1.653,73 €** |
+| Facturación media de un cliente de hostelería (6 m) | 1.032,25 € |
 
 ### 3. Camino de detección esperado
 
@@ -330,7 +332,7 @@ margen bruto de seis meses **no paga ni de lejos** lo que cuesta atenderlos.
 - **Contar tickets sin normalizar el cliente.** Si además hay duplicados (V2),
   la cuenta de tickets por cliente puede estar partida en dos fichas.
 - **Dar la cifra sin el coste unitario.** "22 % de las incidencias" no es un
-  argumento; "-1.676,21 € de pérdida en seis meses"
+  argumento; "-1.653,73 € de pérdida en seis meses"
   sí.
 
 ### 5. Principio de CX al que engancha
@@ -409,12 +411,12 @@ donde vive la mayor parte del trabajo de CX.
 | Verdad | Cifra que tiene que salir | Tolerancia razonable |
 |---|---|---|
 | V1 | 38,00 % de los tickets | ±2 puntos |
-| V1 | 615,51 € sobrefacturados en 6 meses | ±5 % |
+| V1 | 623,74 € sobrefacturados en 6 meses | ±5 % |
 | V2 | 12 pares duplicados | exacto |
 | V3 | 62 pedidos fantasma | exacto |
 | V3 | diciembre real 12,06 % frente a 41,03 % registrado | ±3 puntos |
 | V4 | 22,00 % de las incidencias en 3 clientes | ±1,5 puntos |
-| V4 | resultado conjunto -1.676,21 € | ±10 % |
+| V4 | resultado conjunto -1.653,73 € | ±10 % |
 | V5 | 9,00 % de los tickets | ±1,5 puntos |
 
 `scripts/verificar-verdades.py` reconstruye estas cinco verdades **sin leer este

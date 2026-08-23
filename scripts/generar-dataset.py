@@ -147,12 +147,26 @@ LINEAS_FANTASMA = 244
 VENTANA_FANTASMA_INI = date(2024, 12, 9)
 VENTANA_FANTASMA_FIN = date(2024, 12, 13)
 
+# Presupuesto de pedidos, proporcional al de líneas (≈2,84 líneas por pedido).
+# Se fija igual que el de líneas para que diciembre suba lo mismo se mida como se
+# mida —en pedidos o en líneas— y el hallazgo de V3 no dependa de qué unidad
+# elija ella. Total: 1.815 pedidos reales + 62 fantasma ≈ 1.900.
+PRESUPUESTO_PEDIDOS = {
+    (2024, 9): 306,
+    (2024, 10): 318,
+    (2024, 11): 301,
+    (2024, 12): 332,      # +12,0 % sobre la media de los otros cinco (296,6)
+    (2025, 1): 278,
+    (2025, 2): 280,
+}
+PEDIDOS_FANTASMA_LOTE = 62
+
 # Tamaño de pedido en líneas. Distribuciones distintas según el tramo, para que
 # los totales de línea y de pedido cuadren a la vez con la especificación
 # (~1.900 pedidos y ~5.400 líneas) sin dejar de respetar los porcentajes de V3.
 TAMANOS = (1, 2, 3, 4, 5, 6, 7)
-PESOS_TAMANO_NORMAL = (0.19, 0.26, 0.23, 0.14, 0.09, 0.06, 0.03)      # media 2,98
-PESOS_TAMANO_DICIEMBRE = (0.25, 0.28, 0.22, 0.13, 0.07, 0.04, 0.01)   # media 2,65
+PESOS_TAMANO_NORMAL = (0.21, 0.26, 0.23, 0.12, 0.09, 0.06, 0.03)      # media 2,92
+PESOS_TAMANO_DICIEMBRE = (0.22, 0.27, 0.23, 0.14, 0.08, 0.05, 0.01)   # media 2,78
 PESOS_TAMANO_LOTE = (0.02, 0.08, 0.20, 0.28, 0.22, 0.14, 0.06)        # media ~4,0
 
 # 14 etiquetas sucias de `categoria` para 8 categorías reales, más Otros y vacío.
@@ -268,6 +282,7 @@ DOMINIOS_CORREO = (
 
 OBSERVACIONES = (
     "Llamar antes de ir", "Cerrado los lunes", "Paga a 30 días",
+    "El reparto pasa sobre las 7 y media", "No hay nadie antes de las 9",
     "Entrar por la parte de atrás", "No hay nadie por la tarde",
     "Cliente antiguo", "Ojo con la factura", "Cambió de dueño en 2023",
     "Solo garrafas", "Tiene fuente en alquiler", "Pide albarán siempre",
@@ -403,6 +418,40 @@ def dias_laborables(inicio: date, fin: date) -> list[date]:
 def elegir_pesado(az: random.Random, opciones: tuple, pesos: tuple) -> object:
     """Elección ponderada sobre secuencias ordenadas. Determinista."""
     return az.choices(list(opciones), weights=list(pesos), k=1)[0]
+
+
+def ajustar_tamanos(tamanos: list[int], objetivo: int) -> list[int]:
+    """
+    Retoca ±1 los tamaños de pedido hasta que sumen exactamente `objetivo`,
+    respetando el rango 1–7 líneas. Recorre en orden, así que es determinista.
+    """
+    salida = list(tamanos)
+    indice = 0
+    vueltas = 0
+    while sum(salida) != objetivo and vueltas < 200 * max(len(salida), 1):
+        paso = 1 if sum(salida) < objetivo else -1
+        posicion = indice % len(salida)
+        nuevo = salida[posicion] + paso
+        if 1 <= nuevo <= 7:
+            salida[posicion] = nuevo
+        indice += 1
+        vueltas += 1
+    if sum(salida) != objetivo:  # pragma: no cover
+        raise AssertionError(
+            f"No se pueden repartir {objetivo} líneas en {len(salida)} pedidos")
+    return salida
+
+
+def muestra_exacta(az: random.Random, poblacion, cuantos: int) -> set:
+    """
+    Subconjunto de tamaño exacto sobre una población ordenada. Las cuotas de
+    suciedad de la especificación son cifras, no probabilidades: si se tiran
+    dados por fila, el 18 % sale a veces 21 % y el contrato deja de cumplirse.
+    El conjunto devuelto solo se usa para preguntar si algo está dentro, nunca
+    para iterar, así que no introduce dependencia del orden de un `set`.
+    """
+    ordenada = sorted(poblacion)
+    return set(az.sample(ordenada, min(cuantos, len(ordenada))))
 
 
 def formatear_telefono(digitos: str, formato: int) -> str:
@@ -552,10 +601,12 @@ PLANTILLAS = {
         "he perdido la entrega otra vez porque no sabia q era hoy",
         "estamos de descanso los martes y venis los martes sin avisar",
         "el chico del reparto se fue sin dejar nada y sin avisar",
+        "vinisteis a las 7 y media y yo abro a las diez, nadie me aviso",
+        "pasais a primera hora y a esa hora esta cerrado, avisad antes",
     ),
     "entrega-retraso": (
         "llevo esperando el pedido desde el {dia} y no llega",
-        "el reparto viene tardisimo, ayer aparecio a las {hora}",
+        "el reparto viene tardisimo, ayer aparecio a {hora}",
         "me dijisteis lunes y estamos a {dia} y el pedido sin llegar",
         "el pedido lleva {n} dias de retraso",
         "sigo esperando las garrafas, se me ha acabado el agua",
@@ -566,6 +617,8 @@ PLANTILLAS = {
         "el reparto de esta semana viene con retraso otra vez",
         "llevo dos dias sin agua con gas porque no llega el pedido",
         "me prometisteis que llegaba antes del finde y sigo esperando",
+        "el reparto entra a las 7 y hoy a las 3 no habia venido nadie",
+        "acabais la ruta a las 3 y hoy me quede sin pedido otra vez",
     ),
     "producto-defectuoso": (
         "las garrafas venian rotas, dos perdiendo agua",
@@ -640,8 +693,8 @@ PLANTILLAS = {
 
 RELLENOS_DIF = ("0,43", "1,12", "0,87", "2,05", "0,29", "1,68", "3,40", "0,76",
                 "1,95", "0,52", "2,31", "0,64", "4,10", "1,27")
-RELLENOS_HORA = ("las 8", "las 9 y media", "las 13:30", "las 14", "las 15:20",
-                 "ultima hora", "media mañana")
+RELLENOS_HORA = ("las 7 y cuarto", "las 7 y media", "las 8", "las 9 y media",
+                 "las 13:30", "las 14", "las 14:40", "media mañana")
 RELLENOS_PROD = ("agua de litro y medio", "agua de medio", "cola", "naranja",
                  "cerveza", "zumo", "agua con gas", "garrafas", "el agua chica")
 
@@ -893,27 +946,35 @@ def generar_clientes(az: random.Random) -> tuple[list[Cliente], list[tuple[str, 
         c_dup.direccion = az.choice(variantes)
 
         # Nombre: forma jurídica, abreviatura, mayúsculas, mojibake o inversión.
+        # Un particular no lleva forma jurídica: a él se le abrevia el nombre o
+        # se le invierte con el apellido, que es como lo teclea otra persona.
         base = c_orig.nombre_real
-        transformacion = az.randrange(5)
-        if transformacion == 0:
-            c_dup.nombre_real = base.upper() + az.choice((" S.L.", " SL", " S.L."))
-        elif transformacion == 1:
-            c_dup.nombre_real = (base.replace("Restaurante", "Rest.")
-                                     .replace("Cafetería", "Cafet.")
-                                     .replace("Bar Restaurante", "Bar Rest.")
-                                     .replace("Marisquería", "Marisq.")
-                                     .replace("Cervecería", "Cervec."))
-            if c_dup.nombre_real == base:
-                c_dup.nombre_real = base.upper()
-        elif transformacion == 2:
-            c_dup.nombre_real = base.upper()
-        elif transformacion == 3:
+        if c_orig.tipo_real == "hosteleria":
+            variantes_nombre = [
+                base.upper() + az.choice((" S.L.", " SL")),
+                (base.replace("Bar Restaurante", "Bar Rest.")
+                     .replace("Restaurante", "Rest.")
+                     .replace("Cafetería", "Cafet.")
+                     .replace("Marisquería", "Marisq.")
+                     .replace("Cervecería", "Cervec.")
+                     .replace("Chiringuito", "Chiring.")),
+                base.upper(),
+                base + " S.L.",
+            ]
             partes = base.split(" ", 1)
-            c_dup.nombre_real = f"{partes[1]}, {partes[0]}" if len(partes) == 2 else base.upper()
+            if len(partes) == 2:
+                variantes_nombre.append(f"{partes[1]}, {partes[0]}")
         else:
-            c_dup.nombre_real = base + " S.L."
-        if c_dup.nombre_real == base:
-            c_dup.nombre_real = base + " SL"
+            partes = base.split(" ", 1)
+            variantes_nombre = [base.upper()]
+            if len(partes) == 2:
+                variantes_nombre += [
+                    f"{partes[1]}, {partes[0]}",
+                    f"{partes[0][0]}. {partes[1]}",
+                    f"{partes[1].upper()}, {partes[0]}",
+                ]
+        variantes_nombre = [v for v in variantes_nombre if v != base]
+        c_dup.nombre_real = az.choice(variantes_nombre)
 
         c_dup.fecha_alta = min(
             c_orig.fecha_alta + timedelta(days=az.randint(400, 2400)), date(2024, 8, 20))
@@ -921,34 +982,63 @@ def generar_clientes(az: random.Random) -> tuple[list[Cliente], list[tuple[str, 
         c_dup.es_duplicado_de = c_orig.id_cliente
 
         if dup in dup_con_dto_distinto:
-            opciones = [d for d in (0, 3, 5, 8, 10, 12) if d != c_orig.descuento_pct]
+            # El segundo alta se dio con otras condiciones. Para un particular
+            # las condiciones posibles son las de un particular, no las de un bar.
+            posibles = ((0, 3, 5, 8, 10, 12) if c_orig.tipo_real == "hosteleria"
+                        else (0, 3, 5))
+            opciones = [d for d in posibles if d != c_orig.descuento_pct]
             c_dup.descuento_pct = az.choice(opciones)
         else:
             c_dup.descuento_pct = c_orig.descuento_pct
         c_dup.descuento_celda = c_dup.descuento_pct
         pares.append((c_orig.id_cliente, c_dup.id_cliente))
 
-    # ── Suciedad de presentación, ya con las identidades cerradas.
+    # ── Suciedad de presentación, ya con las identidades cerradas, y con las
+    #    cuotas exactas que fija la especificación.
     grafias_host = ("Hostelería", "HOSTELERIA", "hosteleria")
     grafias_part = ("Particular", "part.", "Particular")
     indices_dup = set(duplicados)
+    fichas_pareja = indices_dup | set(originales.values())
+
+    def con_acentos(indice: int, texto: str) -> bool:
+        return any(ord(caracter) > 127 for caracter in texto)
+
+    mojibake_nombre = muestra_exacta(
+        az, [c.indice for c in clientes if con_acentos(c.indice, c.nombre_real)],
+        round(0.08 * N_CLIENTES))
+    # La dirección de las fichas emparejadas se deja limpia: la codificación rota
+    # es otra suciedad y no debe estorbar a la normalización que revela V2.
+    mojibake_direccion = muestra_exacta(
+        az, [c.indice for c in clientes
+             if c.indice not in fichas_pareja and con_acentos(c.indice, c.direccion)],
+        round(0.08 * N_CLIENTES))
+    tipo_vacio = muestra_exacta(az, range(N_CLIENTES), round(0.03 * N_CLIENTES))
+    cp_numerico = muestra_exacta(az, range(N_CLIENTES), round(0.05 * N_CLIENTES))
+    ruta_vacia = muestra_exacta(az, range(N_CLIENTES), round(0.02 * N_CLIENTES))
+    con_observaciones = muestra_exacta(az, range(N_CLIENTES), round(0.30 * N_CLIENTES))
+
+    indices_v4_set = {int(c.split("-")[1]) - 1 for c in CLIENTES_V4}
+    candidatos_email = [c.indice for c in clientes if c.indice not in indices_v4_set]
+    sin_email = muestra_exacta(az, candidatos_email, round(0.18 * N_CLIENTES))
+    email_roto = muestra_exacta(az, [i for i in candidatos_email if i not in sin_email],
+                                round(0.02 * N_CLIENTES))
+    dto_vacio = muestra_exacta(az, [c.indice for c in clientes if c.descuento_pct == 0],
+                               round(0.04 * N_CLIENTES))
 
     for c in clientes:
-        c.nombre = c.nombre_real
-        # Mojibake ~8 % en nombre y dirección. La dirección de los pares de V2 se
-        # deja limpia: la codificación rota es otra suciedad, no la de este par.
-        if az.random() < 0.08:
-            c.nombre = romper_codificacion(c.nombre_real)
-        if az.random() < 0.08 and c.indice not in indices_dup and not c.es_duplicado_de:
+        c.nombre = (romper_codificacion(c.nombre_real) if c.indice in mojibake_nombre
+                    else c.nombre_real)
+        if c.indice in mojibake_direccion:
             c.direccion = romper_codificacion(c.direccion)
 
-        if az.random() < 0.03:
+        if c.indice in tipo_vacio:
             c.tipo = ""
         else:
             c.tipo = az.choice(grafias_host if c.tipo_real == "hosteleria" else grafias_part)
 
-        c.cp_como_numero = az.random() < 0.05
-        c.ruta = "" if az.random() < 0.02 else c.ruta
+        c.cp_como_numero = c.indice in cp_numerico
+        if c.indice in ruta_vacia:
+            c.ruta = ""
 
         base_email = quitar_acentos(c.nombre_real).lower()
         base_email = re.sub(r"[^a-z0-9]+", "", base_email)[:22]
@@ -957,18 +1047,20 @@ def generar_clientes(az: random.Random) -> tuple[list[Cliente], list[tuple[str, 
             direccion_email = f"info@{dominio}"
         else:
             direccion_email = f"{base_email}{c.indice + 1}@{az.choice(DOMINIOS_CORREO)}"
-        sorteo = az.random()
-        if sorteo < 0.18:
+        if c.indice in sin_email:
             c.email, c.email_valido = "", False
-        elif sorteo < 0.20:
+        elif c.indice in email_roto:
             c.email, c.email_valido = direccion_email.replace("@", "."), False
         else:
+            # Los tres de V4 caen siempre aquí: están sobrerrepresentados en el
+            # buzón y sin correo válido no podrían escribir.
             c.email, c.email_valido = direccion_email, True
 
         # `descuento_pct` vacío equivale a 0: solo se vacía donde de verdad es 0.
-        if c.descuento_pct == 0 and az.random() < 0.05:
+        if c.indice in dto_vacio:
             c.descuento_celda = ""
-        c.observaciones = az.choice(OBSERVACIONES) if az.random() < 0.30 else ""
+        c.observaciones = (az.choice(OBSERVACIONES) if c.indice in con_observaciones
+                           else "")
 
     return clientes, pares
 
@@ -1049,13 +1141,19 @@ def generar_pedidos(az: random.Random,
     ventana = [d for d in dias if VENTANA_FANTASMA_INI <= d <= VENTANA_FANTASMA_FIN]
     assert len(ventana) == 5
 
-    # ── Reparto del presupuesto de líneas por día ─────────────────────────────
+    # ── Reparto de los presupuestos de pedidos y de líneas, mes a mes ─────────
+    # Los dos son cifras fijas: así diciembre sube exactamente lo mismo se cuente
+    # en pedidos o en líneas, y la doble importación de V3 se ve igual de clara
+    # con cualquiera de las dos medidas.
     huecos: list[tuple[date, int, bool]] = []   # (día, nº líneas, es del lote)
 
     for (anio, mes), presupuesto in sorted(PRESUPUESTO_LINEAS.items()):
         dias_mes = [d for d in dias if d.year == anio and d.month == mes]
         es_diciembre = (anio, mes) == (2024, 12)
-        presupuesto_libre = presupuesto - LINEAS_FANTASMA if es_diciembre else presupuesto
+        lineas_libres = presupuesto - LINEAS_FANTASMA if es_diciembre else presupuesto
+        pedidos_libres = PRESUPUESTO_PEDIDOS[(anio, mes)]
+        if es_diciembre:
+            pedidos_libres -= PEDIDOS_FANTASMA_LOTE
 
         pesos = []
         for d in dias_mes:
@@ -1065,27 +1163,23 @@ def generar_pedidos(az: random.Random,
             if es_diciembre and VENTANA_FANTASMA_INI <= d <= VENTANA_FANTASMA_FIN:
                 peso *= 0.40
             pesos.append(peso)
-        lineas_por_dia = repartir_entero(presupuesto_libre, pesos)
+        pedidos_por_dia = repartir_entero(pedidos_libres, pesos)
 
         pesos_tam = PESOS_TAMANO_DICIEMBRE if es_diciembre else PESOS_TAMANO_NORMAL
-        for d, cupo in zip(dias_mes, lineas_por_dia):
-            restante = cupo
-            while restante > 0:
-                tam = min(elegir_pesado(az, TAMANOS, pesos_tam), restante)
-                huecos.append((d, tam, False))
-                restante -= tam
+        tamanos_mes: list[int] = []
+        dias_de_cada = []
+        for d, cuantos in zip(dias_mes, pedidos_por_dia):
+            for _ in range(cuantos):
+                tamanos_mes.append(elegir_pesado(az, TAMANOS, pesos_tam))
+                dias_de_cada.append(d)
+        tamanos_mes = ajustar_tamanos(tamanos_mes, lineas_libres)
+        for d, tam in zip(dias_de_cada, tamanos_mes):
+            huecos.append((d, tam, False))
 
     # ── El lote del 9 al 13 de diciembre: 62 pedidos, 244 líneas exactas ──────
-    tamanos_lote = [elegir_pesado(az, TAMANOS, PESOS_TAMANO_LOTE) for _ in range(N_FANTASMA)]
-    i = 0
-    while sum(tamanos_lote) != LINEAS_FANTASMA:
-        objetivo = LINEAS_FANTASMA - sum(tamanos_lote)
-        paso = 1 if objetivo > 0 else -1
-        indice = i % N_FANTASMA
-        nuevo = tamanos_lote[indice] + paso
-        if 1 <= nuevo <= 7:
-            tamanos_lote[indice] = nuevo
-        i += 1
+    tamanos_lote = ajustar_tamanos(
+        [elegir_pesado(az, TAMANOS, PESOS_TAMANO_LOTE) for _ in range(N_FANTASMA)],
+        LINEAS_FANTASMA)
     reparto_lote = repartir_entero(N_FANTASMA, [1.15, 1.10, 1.00, 0.95, 0.80])
     cursor = 0
     for d, cuantos in zip(ventana, reparto_lote):
@@ -1117,6 +1211,25 @@ def generar_pedidos(az: random.Random,
             asignado[k] = id_cliente
             usados_dia[dia].add(id_cliente)
             puestos += 1
+
+    # Las 24 fichas implicadas en los 12 pares duplicados (V2) tienen que tener
+    # pedidos las dos: si una estuviera vacía, el duplicado se detectaría por ahí
+    # y el ejercicio perdería la gracia. La especificación lo exige.
+    fichas_duplicadas: list[str] = []
+    for c in clientes:
+        if c.es_duplicado_de:
+            fichas_duplicadas.append(c.id_cliente)
+            fichas_duplicadas.append(c.es_duplicado_de)
+    for id_cliente in sorted(set(fichas_duplicadas)):
+        libres = [k for k, _ in enumerate(huecos) if not asignado[k]]
+        az.shuffle(libres)
+        for k in libres:
+            dia = huecos[k][0]
+            if id_cliente in usados_dia.setdefault(dia, set()):
+                continue
+            asignado[k] = id_cliente
+            usados_dia[dia].add(id_cliente)
+            break
 
     pool = [c.id_cliente for c in clientes if c.id_cliente not in CLIENTES_V4]
     pesos_pool = [5.0 if por_id[i].tipo_real == "hosteleria" else 1.0 for i in pool]
@@ -1293,7 +1406,6 @@ def generar_tickets(az: random.Random, clientes: list[Cliente],
                 encargos.append((categoria, id_cliente))
                 pendientes[categoria] -= 1
 
-    pesos_host = [3.0 if c in CLIENTES_V4 else 1.0 for c in hosteleria]
     for categoria, restantes in sorted(pendientes.items()):
         for _ in range(restantes):
             if categoria == "facturacion-redondeo":
@@ -1387,24 +1499,14 @@ def generar_tickets(az: random.Random, clientes: list[Cliente],
         else:
             cierre = ""
 
-        if az.random() < 0.06:
-            agente = ""
-        else:
-            agente = az.choice(az.choice(PLANTILLA)[2])
-
-        if az.random() < 0.22:
-            tiempo = ""
-        else:
-            tiempo = elegir_pesado(az, (3, 5, 8, 10, 12, 15, 20, 25, 30, 45),
-                                   (0.06, 0.12, 0.16, 0.16, 0.12, 0.12, 0.10, 0.07,
-                                    0.06, 0.03))
-
-        subcategoria = az.choice(SUBCATEGORIAS) if az.random() < 0.22 else ""
+        agente = az.choice(az.choice(PLANTILLA)[2])
+        tiempo = elegir_pesado(az, (3, 5, 8, 10, 12, 15, 20, 25, 30, 45),
+                               (0.06, 0.12, 0.16, 0.16, 0.12, 0.12, 0.10, 0.07,
+                                0.06, 0.03))
+        subcategoria = az.choice(SUBCATEGORIAS)
 
         tickets.append(Ticket(
-            id_ticket="", fecha_apertura=fecha,
-            formato_fecha=elegir_pesado(az, (0, 1, 2), (0.55, 0.30, 0.15)),
-            canal=canal, id_cliente=id_cliente, id_cliente_visible=id_cliente,
+            id_ticket="", fecha_apertura=fecha, formato_fecha=0, canal=canal, id_cliente=id_cliente, id_cliente_visible=id_cliente,
             categoria_real=categoria, subtipo=subtipo, categoria_sucia=categoria_sucia,
             subcategoria=subcategoria, descripcion=descripcion, id_pedido=id_pedido,
             estado=estado, fecha_cierre=cierre, agente=agente, tiempo=tiempo,
@@ -1413,6 +1515,26 @@ def generar_tickets(az: random.Random, clientes: list[Cliente],
     tickets.sort(key=lambda t: (t.fecha_apertura, t.id_cliente))
     for n, t in enumerate(tickets, start=1):
         t.id_ticket = f"TCK-{n:04d}"
+
+    # ── Suciedad final, con las cuotas exactas de la especificación ───────────
+    # Tres formatos de fecha conviviendo en la misma columna: 55 / 30 / 15 %.
+    posiciones = list(range(N_TICKETS))
+    en_barras = muestra_exacta(az, posiciones, round(0.30 * N_TICKETS))
+    resto = [p for p in posiciones if p not in en_barras]
+    con_mes = muestra_exacta(az, resto, round(0.15 * N_TICKETS))
+    for p in posiciones:
+        tickets[p].formato_fecha = 1 if p in en_barras else (2 if p in con_mes else 0)
+
+    sin_agente = muestra_exacta(az, posiciones, round(0.06 * N_TICKETS))
+    sin_tiempo = muestra_exacta(az, posiciones, round(0.22 * N_TICKETS))
+    con_subcategoria = muestra_exacta(az, posiciones, round(0.22 * N_TICKETS))
+    for p in posiciones:
+        if p in sin_agente:
+            tickets[p].agente = ""
+        if p in sin_tiempo:
+            tickets[p].tiempo = ""
+        if p not in con_subcategoria:
+            tickets[p].subcategoria = ""
 
     # ── Suciedad final ────────────────────────────────────────────────────────
     # 9 filas con cierre anterior a la apertura.
@@ -1540,6 +1662,14 @@ def generar_correos(az: random.Random, clientes: list[Cliente],
 
         # Coherencia: los sin-aviso son siempre de hostelería.
         if categoria == "entrega-sin-aviso" and cliente.tipo_real != "hosteleria":
+            cliente = az.choice(hosteleria_email)
+            id_cliente = cliente.id_cliente
+        if not cliente.email_valido:
+            cliente = az.choice(con_email)
+            id_cliente = cliente.id_cliente
+        # La firma que no coincide con el remitente solo tiene sentido en un
+        # negocio: el correo sale de la cuenta del bar y lo firma el encargado.
+        if patologia == "firma-ajena" and cliente.tipo_real != "hosteleria":
             cliente = az.choice(hosteleria_email)
             id_cliente = cliente.id_cliente
 
@@ -2411,9 +2541,10 @@ puede enseñar con ella y no sin ella.
 
 ## Antes de las verdades: por qué `categoria` no sirve
 
-La columna `categoria` de `tickets.xlsx` trae {m['tickets']['etiquetas_distintas']}
-etiquetas distintas (más los vacíos) para 8 categorías reales. El reparto de las
-más frecuentes:
+La columna `categoria` de `tickets.xlsx` trae
+{m['tickets']['etiquetas_distintas'] - 1} etiquetas distintas más un cajón de
+`Otros` y un puñado de celdas vacías, para 8 categorías reales. El reparto de
+las más frecuentes:
 
 | Etiqueta | Tickets | % |
 |---|---:|---:|
@@ -2423,8 +2554,8 @@ Quien agrupe por esa columna y sume las etiquetas de facturación obtiene
 **{len(bucket_facturacion)} tickets = {pct(100 * estimacion_ingenua)}**, de los
 cuales solo el {pct(100 * pureza)} son de verdad del fallo de facturación. La
 respuesta correcta es {pct(100 * v1['tickets_pct'])}. **Fiarse de la columna
-cuesta {pct(100 * m['tickets']['error_de_fiarse_de_categoria'])} de error**, en
-la dirección peligrosa: infravalora el problema.
+cuesta {100 * m['tickets']['error_de_fiarse_de_categoria']:.1f} puntos de
+error**, en la dirección peligrosa: infravalora el problema.
 
 Ése es el puente del verbo 1 (clasificar) al bloque 4: hay que reclasificar
 desde `descripcion`, no desde `categoria`.
@@ -2492,7 +2623,8 @@ totalidad.
 ### 4. Errores típicos
 
 - **Fiarse de la columna `categoria`.** Da {pct(100 * estimacion_ingenua)} en
-  vez de {pct(100 * v1['tickets_pct'])}. Es el error más frecuente y el más caro.
+  vez de {pct(100 * v1['tickets_pct'])}: {100 * m['tickets']['error_de_fiarse_de_categoria']:.1f}
+  puntos por debajo. Es el error más frecuente y el más caro.
 - **Quedarse en el dinero mal facturado.** {euros(desviacion_total)} en seis
   meses no mueve a nadie. El argumento está en el coste de los contactos.
 - **Decir "el 100 % de facturación es este fallo"** e ignorar los
@@ -2794,9 +2926,9 @@ empresa en ningún momento, ni ahora ni después.
 
 ## De qué empresa son
 
-**{EMPRESA}** es una distribuidora de agua envasada y bebidas. Reparte a bares,
-restaurantes y hoteles, y también a particulares, en Cantabria y el oriente de
-Asturias. Tiene unos 300 clientes en el maestro, seis empleados y cuatro rutas
+**{EMPRESA}** es una distribuidora de agua envasada y bebidas.
+Reparte a bares, restaurantes y hoteles, y también a particulares, en Cantabria
+y el oriente de Asturias. Tiene unos 300 clientes en el maestro, seis empleados y cuatro rutas
 de reparto. No existe: es una empresa inventada, con datos inventados, generada
 por un script. Por eso puedes trastear con ella sin ningún problema de
 privacidad.

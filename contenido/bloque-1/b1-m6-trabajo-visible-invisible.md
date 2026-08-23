@@ -9,7 +9,7 @@ desbloquea: [b1-m7-caso-cruzado-domestico]
 caduca: bajo
 objetivos:
   - "Calcular la diferencia entre las horas registradas y las horas trabajadas de un día"
-  - "Separar en una tarea los minutos de hacer de los de esperar, buscar o preguntar"
+  - "Separar en una tarea los minutos de hacer de los de buscar, y estimar los que no llegaron al diario"
   - "Marcar en el mapa las tareas cuyo coste real no aparece en el diario"
 conceptos: [trabajo-invisible, coste-de-coordinacion, interrupcion, sistema]
 profundizar:
@@ -17,24 +17,24 @@ profundizar:
     titulo: "Lo que cuesta volver a donde estabas"
 ---
 
-Tu diario suma seis horas y cuarto. Estuviste ocho. Ese hora y tres cuartos no se ha
+Tu diario suma seis horas y cuarto. Estuviste ocho. Esa hora y tres cuartos no se ha
 perdido en ninguna parte: es trabajo, y es el que decide cómo te sale el día. Aquí se
 le pone nombre, se cuenta con un número, y se ve por qué hacer más rápida la parte que
 sí aparece a veces no ahorra ni un minuto.
 
-## Tres minutos que fueron una mañana
+## Los tres minutos que no eran tres minutos
 
 Un cliente pregunta si su pedido salió el jueves. Miras y no consta. Escribes a
 reparto. Sigues con otra cosa. Veinte minutos después te contestan, vuelves al correo,
 lees otra vez qué preguntaba y le respondes.
 
-En tu diario esa línea pone:
+En tu diario esa consulta ni siquiera tiene línea propia: va agrupada con otras dos.
 
 ```
-11:00 | consulta estado de pedido | 15 |
+11:00 | 3 consultas de estado de pedido | 15 |
 ```
 
-Lo que ocupó esa tarea, en cambio:
+Lo que ocupó una sola de las tres, en cambio:
 
 | Trozo | Minutos | ¿Está en el diario? |
 |---|---|---|
@@ -45,8 +45,8 @@ Lo que ocupó esa tarea, en cambio:
 | Escribir la respuesta | 1 | sí, dentro de los 3 |
 | El asunto abierto hasta cerrarlo | — | no, y es el que más pesa |
 
-Tres minutos de trabajo. Dos cambios de asunto y un tema abierto durante veinte
-minutos. Las dos cosas son ciertas a la vez, y solo una está escrita.
+Tres minutos de trabajo, dos cambios de asunto y un tema abierto durante veinte
+minutos. Las dos cosas son ciertas y solo una está escrita.
 
 ## Las seis familias
 
@@ -138,7 +138,7 @@ El mismo hueco entre lo que figura y lo que cuesta, en tres sitios:
 | Dónde | Lo que figura | Lo que cuesta |
 |---|---|---|
 | **Tu sector (CX)** | «Consulta estado de pedido: 3 min» | 3 minutos de trabajo, 20 de espera y dos cambios de asunto, en 25 de cada 60 casos |
-| **Otro trabajo** | En un taller, la hoja pone «sustitución de pieza: 40 min» | Más tres días esperando la pieza y cuatro llamadas al cliente para decirle que sigue sin llegar. Nada de eso está en la hoja, y es lo que decide si el cliente vuelve |
+| **Otro trabajo** | En un taller, la hoja pone «sustitución de pieza: 40 min» | Más tres días esperando la pieza y cuatro llamadas al cliente para decirle que sigue sin llegar. Nada de eso está en la hoja, y decide si el cliente vuelve |
 | **Tu casa** | «Cenar: 25 minutos de cocina» | Más mirar qué hay, decidir, ver que falta un ingrediente y cambiar de plan. Decidir qué se cena no está en la lista de nadie y es la parte que pesa |
 
 ## Ejercicio
@@ -148,19 +148,20 @@ Veinte minutos, con tu diario y tu mapa delante.
 1. **La resta**, en dos días distintos. Minutos registrados contra horas que estuviste.
    Anota las dos diferencias y qué había en el hueco: tres líneas por día, en el
    apartado «Lo que no cabía en la tabla» de la plantilla del diario.
-2. **Parte los minutos de tus tres tareas principales.** De los minutos que le
-   apuntaste a cada una, ¿cuántos son de hacer y cuántos de esperar, buscar o
-   preguntar? A ojo y en porcentaje. No hace falta más precisión.
+2. **Parte los minutos de tus tres tareas principales.** Dos preguntas por tarea. De
+   los minutos que sí apuntaste, ¿qué porcentaje era hacer y qué porcentaje era
+   buscar? Y aparte: ¿cuántos minutos de esperar o preguntar no llegaron a la tabla?
+   A ojo. No hace falta más precisión.
 3. **Marca en el mapa** las tareas cuyo coste real es invisible, con una nota de una
    línea diciendo dónde está ese coste.
 
 **Entregable:** tu mapa con esa marca y esa nota, y los dos días del diario con su
 resta y sus tres líneas.
 
-**Regla de parada:** no reorganices nada todavía y no cambies tu forma de trabajar esta
-semana. Agrupar tareas es tentador, a veces es el mayor ahorro del curso y no cuesta
-nada; está en la rama `b1-p3-coste-de-cambio-de-contexto`, «Lo que cuesta volver a
-donde estabas», si quieres verlo ahora.
+**Regla de parada:** no reorganices nada esta semana. Agrupar tareas es tentador y a
+veces es el mayor ahorro del curso; está en la rama
+`b1-p3-coste-de-cambio-de-contexto`, «Lo que cuesta volver a donde estabas», si quieres
+verlo ahora.
 
 ## Escribe tú la regla
 

@@ -188,7 +188,7 @@ Las cuatro preguntas no son de tu oficina. Puntúan cualquier tarea repetida:
 |---|---|
 | **Tu sector (CX)** | La tabla de arriba: gana la tarea pequeña y frecuente, no la que amarga la mañana. |
 | **Otro trabajo** | En una gestoría, reclamar documentación cada trimestre: Vol 3, Exp 5, Tol 4, Est 5. Total 17 y nadie la mira, porque son llamadas de dos minutos que no parecen trabajo. |
-| **Tu casa** | La lista de la compra: Vol 2, Exp 3, Tol 5, Est 2 —lo que se compra cambia cada semana por razones que nadie ha escrito—. Dos frenos: se aparca. De paso ya sabes por qué las listas de la compra automáticas se abandonan a las tres semanas. |
+| **Tu casa** | La colada. Las cuatro preguntas se hacen igual: cuántas veces al mes por cuántos minutos, si sabrías explicarle a alguien que acaba de llegar qué va a 30 grados y qué no, qué pasa si sale mal una de cada veinte, y si «bien hecho» significa lo mismo en enero que en julio. Puntuar una tarea de casa entera es lo que toca en `b1-m7-caso-cruzado-domestico`, «Caso cruzado: la misma lente en tu casa». |
 
 ## Ejercicio
 

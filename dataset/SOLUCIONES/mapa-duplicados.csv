@@ -1,13 +1,13 @@
 id_original,nombre_original,id_duplicado,nombre_duplicado,telefono_original,telefono_duplicado,telefono_normalizado,direccion_original,direccion_duplicado,direccion_normalizada,dto_original,dto_duplicado,dto_distinto,pedidos_original,pedidos_duplicado
-CLI-0036,Antonio Villar,CLI-0155,ANTONIO VILLAR,942172767,942-17-27-67,942172767,C/ Mayor 19,"Calle Mayor, 19",calle mayor 19,0,0,no,2,5
-CLI-0023,Francisco Herrera,CLI-0169,FRANCISCO HERRERA,942 16 84 04,942-16-84-04,942168404,C/ del Sol 21,"C/ del Sol, 21",calle del sol 21,0,0,no,4,5
-CLI-0033,Laura Corral,CLI-0178,LAURA CORRAL S.L.,985-44-07-46,985 44 07 46,985440746,Avda. de los Castros 78,"Avda. de los Castros, 78",avenida de los castros 78,0,12,si,0,0
-CLI-0095,Antonio Gómez,CLI-0185,Antonio Gómez S.L.,681332477,681 33 24 77,681332477,C/ Peña Herbosa 76,"Calle Peña Herbosa, 76",calle pena herbosa 76,0,8,si,1,1
-CLI-0031,Patricia Salces,CLI-0238,Patricia Salces S.L.,942176695,942-17-66-95,942176695,C/ Ruamayor 50,C/ RUAMAYOR 50,calle ruamayor 50,0,0,no,3,2
-CLI-0120,Pensión Casa Pepe,CLI-0249,PENSIÓN CASA PEPE,637 66 45 33,637664533,637664533,Plaza del Ayuntamiento 51,"Plaza del Ayuntamiento, 51",plaza del ayuntamiento 51,12,12,no,8,20
-CLI-0101,Pizzería La Terraza,CLI-0258,PIZZERÍA LA TERRAZA,722758866,722 75 88 66,722758866,C/ Cervantes 41,"C/ Cervantes, 41",calle cervantes 41,12,10,si,6,8
-CLI-0094,Pilar Corral,CLI-0265,PILAR CORRAL S.L.,942 64 82 57,942-64-82-57,942648257,C/ Alta 13,Calle Alta 13,calle alta 13,0,12,si,8,4
-CLI-0081,Bar Restaurante La Herradura,CLI-0277,Bar Restaurante La Herradura S.L.,651 05 38 73,651-05-38-73,651053873,C/ Vargas 27,"C/ Vargas, 27",calle vargas 27,0,10,si,15,10
-CLI-0001,Cafetería El Molino,CLI-0294,"El Molino, Cafetería",722-76-51-82,+34722765182,722765182,C/ Ruamayor 5,C/ RUAMAYOR 5,calle ruamayor 5,3,3,no,11,18
-CLI-0013,Marta Villegas,CLI-0296,MARTA VILLEGAS,942689258,942-68-92-58,942689258,C/ Santa Lucía 5,Calle Santa Lucía 5,calle santa lucia 5,0,0,no,4,4
-CLI-0046,Pizzería Casa Julián,CLI-0300,"Casa Julián, Pizzería",690-51-12-82,+34690511282,690511282,C/ San Fernando 16,"C/ San Fernando, 16",calle san fernando 16,10,10,no,9,14
+CLI-0036,Antonio Villar,CLI-0155,"Villar, Antonio",942172767,942-17-27-67,942172767,C/ Mayor 19,"Calle Mayor, 19",calle mayor 19,0,0,no,3,4
+CLI-0023,Francisco Herrera,CLI-0169,F. Herrera,942 16 84 04,942-16-84-04,942168404,C/ del Sol 21,"C/ del Sol, 21",calle del sol 21,0,0,no,3,3
+CLI-0033,Laura Corral,CLI-0178,LAURA CORRAL,985-44-07-46,985 44 07 46,985440746,Avda. de los Castros 78,"Avda. de los Castros, 78",avenida de los castros 78,0,3,si,4,1
+CLI-0095,Antonio Gómez,CLI-0185,A. GÃ³mez,681332477,+34681332477,681332477,C/ Peña Herbosa 76,C/ PEÑA HERBOSA 76,calle pena herbosa 76,0,5,si,4,3
+CLI-0031,Patricia Salces,CLI-0238,PATRICIA SALCES,942176695,942 17 66 95,942176695,C/ Ruamayor 50,Calle Ruamayor 50,calle ruamayor 50,0,0,no,4,8
+CLI-0120,PensiÃ³n Casa Pepe,CLI-0249,PENSIÓN CASA PEPE,637 66 45 33,+34637664533,637664533,Plaza del Ayuntamiento 51,"Plaza del Ayuntamiento, 51",plaza del ayuntamiento 51,12,12,no,17,7
+CLI-0101,PizzerÃ­a La Terraza,CLI-0258,"La Terraza, Pizzería",722758866,722-75-88-66,722758866,C/ Cervantes 41,C/ CERVANTES 41,calle cervantes 41,12,10,si,10,6
+CLI-0094,Pilar Corral,CLI-0265,"Corral, Pilar",942 64 82 57,942648257,942648257,C/ Alta 13,C/ Alta nº 13,calle alta 13,0,5,si,2,3
+CLI-0081,Bar Restaurante La Herradura,CLI-0277,BAR RESTAURANTE LA HERRADURA S.L.,651 05 38 73,+34651053873,651053873,C/ Vargas 27,C/ Vargas nº 27,calle vargas 27,0,8,si,8,15
+CLI-0001,Cafetería El Molino,CLI-0294,CAFETERÍA EL MOLINO,722-76-51-82,722765182,722765182,C/ Ruamayor 5,Calle Ruamayor 5,calle ruamayor 5,3,3,no,6,12
+CLI-0013,Marta Villegas,CLI-0296,"VILLEGAS, Marta",942689258,942-68-92-58,942689258,C/ Santa Lucía 5,C/ Santa Lucía nº 5,calle santa lucia 5,0,0,no,5,3
+CLI-0046,PizzerÃ­a Casa JuliÃ¡n,CLI-0300,PIZZERÍA CASA JULIÁN SL,690-51-12-82,+34690511282,690511282,C/ San Fernando 16,C/ SAN FERNANDO 16,calle san fernando 16,10,10,no,9,11
