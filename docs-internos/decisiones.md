@@ -109,3 +109,21 @@ reconstruye las cinco verdades escondidas **sin leer `SOLUCIONES/`**. Si una ver
 deja de ser derivable desde los ficheros publicados, el ejercicio central del bloque
 4 sería irresoluble y el script falla. Es la garantía de que el corrector automático
 del curso sigue teniendo respuesta correcta.
+
+### D11 — Los bloques 4–6 no tienen fichero `.md`, y es deliberado
+
+Podría haberse creado un `.md` de esqueleto por cada nodo de los bloques 4, 5 y 6. No
+se ha hecho, por dos razones:
+
+1. **Un fichero vacío miente.** Un `.md` con frontmatter y sin cuerpo pasa el validador
+   y aparenta que el nodo existe. Al mes siguiente nadie recuerda cuáles estaban de
+   verdad escritos.
+2. **El registro ya es la fuente de verdad.** `scripts/construir-sitio.py` genera la
+   página de un nodo `pendiente-piloto` a partir de su entrada del registro: título,
+   duración prevista, lo que va a cubrir, y **por qué todavía no está escrito**. Es una
+   página útil para la alumna, no un hueco.
+
+Consecuencia en las herramientas: `validar-grafo.py` trata "nodo `escrito` sin fichero"
+como **error** y "nodo `pendiente-piloto` sin fichero" como **aviso**. Escribir uno de
+esos nodos consiste en crear su `.md` y cambiar su `estado` en el registro; el
+validador empieza a exigirlo automáticamente.

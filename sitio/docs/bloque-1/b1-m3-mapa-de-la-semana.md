@@ -13,8 +13,8 @@
 
 El diario en bruto no dice nada: son cien líneas sueltas. Aquí lo conviertes en tres
 números por tarea y una pregunta incómoda. Es la sesión más aritmética del curso y no
-necesita más que una tabla y quince minutos de sumar. Al final tendrás la primera
-cifra de tu vida laboral que puedes poner encima de una mesa.
+necesita más que una tabla y quince minutos de sumar. Al final tendrás números
+tuyos, medidos, que se pueden poner encima de una mesa.
 
 ## Un mapa terminado, antes de explicar cómo se hace
 
@@ -103,7 +103,8 @@ Dos avisos sobre esta columna:
 
 - **No toda variabilidad es igual.** A veces cambia lo que entra, a veces cambia lo
   que se considera bien hecho, y a veces cambia el contexto. La primera se absorbe
-  fácil; las otras dos no. Se separan en `b1-m5-filtro-automatizabilidad`.
+  fácil; las otras dos no. Se separan en `b1-m5-filtro-automatizabilidad`, «El filtro
+  de automatizabilidad: cuatro preguntas».
 - **Con dos o tres observaciones no hay mediana, hay anécdota.** Si una tarea solo
   aparece dos veces en tu diario, pon el número con un interrogante al lado y no
   decidas nada con él.
@@ -133,7 +134,7 @@ instalada para siempre, y con manual. Por eso el mapa lleva una columna más:
 Ojo con la conclusión fácil: tú no puedes arreglar la facturación desde tu silla, y
 esto no va de que la arregles mañana. Va de que la columna quede escrita con su número
 al lado, que es lo único que se puede defender después. Se recoge en
-`b1-m8-inventario-de-procesos`.
+`b1-m8-inventario-de-procesos`, «Tu inventario de procesos».
 
 ## Cuándo esto falla
 
@@ -144,9 +145,10 @@ al lado, que es lo único que se puede defender después. Se recoge en
 - **Ordenar por minutos y ponerte con la primera.** El ranking no dice «empieza por
   aquí», dice «mira por aquí». Quien decide es el filtro, en el nodo siguiente.
 - **Confundir tu estimación con la medida.** Ahora es buen momento para abrir la
-  estimación a ciegas que dejaste escrita en `b1-m1-nadie-sabe-explicar-su-trabajo` y
-  compararla. Si acertaste, enhorabuena y sigue midiendo igual. Si fallaste por más
-  del 30%, ya sabes cuánto vale tu intuición en minutos.
+  estimación a ciegas que dejaste escrita en `b1-m1-nadie-sabe-explicar-su-trabajo`,
+  «Por qué nadie sabe explicar su propio trabajo», y compararla. Si acertaste, sigue
+  midiendo igual. Si fallaste por más del 30%, ya sabes lo que vale tu intuición
+  medida en minutos.
 
 ## Las tres instancias
 
