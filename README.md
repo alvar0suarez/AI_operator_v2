@@ -45,9 +45,14 @@ docs-internos/      Contratos de construcción. No se publican.
 | 5 — Bloque 4 (CX), diseñado con lo aprendido en el piloto | esqueleto |
 | 6 — Bloques 5–6 | esqueleto |
 
+En números: **45 nodos escritos** de 71 (los otros 26 son los bloques 4–6, a propósito),
+**106 conceptos** en el glosario, **9 plantillas** de artefacto, **6 ejercicios de
+sabotaje** (uno por nivel de §5.1), y un dataset de 300 clientes, 5.400 líneas de pedido,
+800 tickets y 200 correos con sus cinco verdades escondidas verificables.
+
 Los bloques 4–6 existen en el grafo con su temario y `estado: pendiente-piloto`,
 sin contenido escrito. Es deliberado: §3 dice que el bloque 4 *"se diseña mucho
-mejor sabiendo dónde se atascó de verdad"*. Ver `docs-internos/decisiones.md` (D1).
+mejor sabiendo dónde se atascó de verdad"*. Ver `docs-internos/decisiones.md` (D1 y D11).
 
 Los bloques 1+2+3 ya son un curso completo por sí solos (§9).
 
