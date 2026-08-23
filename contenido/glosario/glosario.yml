@@ -1,0 +1,1337 @@
+# Glosario global del curso "CX + IA" — fuente de verdad de los conceptos.
+#
+# ESPECIFICACION.md §6: "Los conceptos alimentan un glosario global autogenerado y
+# la navegación lateral". Este fichero es esa fuente.
+#
+# Contrato (docs-internos/esquema-frontmatter.md): todo slug que aparezca en el
+# campo `conceptos` de un nodo del registro tiene que tener aquí su entrada, y
+# ninguna entrada de aquí puede sobrar.
+#
+# Campos de cada término:
+#   slug          identificador kebab-case, sin acentos. Coincide con el registro.
+#   termino       cómo se escribe de cara a la alumna.
+#   definicion    una o dos frases, lenguaje llano. Nunca empieza por "Es cuando"
+#                 ni repite el término de forma circular.
+#   ejemplo       obligatorio y concreto. Del mundo de Aguas del Norte (la
+#                 distribuidora ficticia del dataset) o de la vida de una
+#                 administrativa de PyME.
+#   ver_tambien   entre 1 y 4 slugs, todos existentes en este mismo fichero.
+#   bloque_origen el bloque más bajo del registro que usa el concepto.
+#
+# Se regenera el markdown navegable con: python3 scripts/generar-glosario.py
+
+terminos:
+
+  - slug: alcance
+    termino: "Alcance"
+    definicion: >
+      Cuánta gente y cuántos casos toca lo que has producido. Un borrador que lee
+      una persona y una circular que sale a 300 clientes no merecen la misma
+      revisión.
+    ejemplo: >
+      La misma plantilla de respuesta sirve para contestar a un cliente concreto o
+      para el correo mensual de Aguas del Norte a sus 300 clientes. En el segundo
+      caso se lee palabra por palabra, aunque sea el mismo texto.
+    ver_tambien: [riesgo, reversibilidad, verificacion]
+    bloque_origen: 3
+
+  - slug: alucinacion
+    termino: "Alucinación"
+    definicion: >
+      Un dato inventado que el sistema presenta con la misma seguridad que uno
+      correcto. No hay señal de aviso: el texto sale igual de bien escrito con el
+      dato cierto que con el falso.
+    ejemplo: >
+      Le pides las condiciones de devolución de Aguas del Norte y te contesta que
+      el plazo es de 14 días naturales. Ese plazo no está en ningún procedimiento
+      de la empresa: lo ha rellenado porque encajaba.
+    ver_tambien: [plausibilidad, verificacion, omision]
+    bloque_origen: 3
+
+  - slug: anomalia
+    termino: "Anomalía"
+    definicion: >
+      Un caso que se sale de lo que habías definido como normal. Sin definición
+      previa de normalidad no hay anomalías, solo cosas que te llaman la atención.
+    ejemplo: >
+      En `pedidos.xlsx` aparecen líneas con cantidad negativa. Son devoluciones que
+      nadie marcó como tales, y rompen cualquier suma hecha a la ligera.
+    ver_tambien: [normalidad, causa-raiz, patron]
+    bloque_origen: 2
+
+  - slug: anonimizar
+    termino: "Anonimizar"
+    definicion: >
+      Quitar de un texto lo que permite saber de quién habla, antes de pegarlo en
+      ninguna herramienta. Sustituir el nombre no basta: hay que quitar también lo
+      que identifica por cruce.
+    ejemplo: >
+      Antes de pedir ayuda con una reclamación cambias "Bar Manolo, C/ Alta 14,
+      Santoña" por "CLIENTE_01" y borras el importe exacto, que por sí solo señala
+      a un único pedido.
+    ver_tambien: [dato-personal, reidentificacion, rgpd]
+    bloque_origen: 3
+
+  - slug: artefacto
+    termino: "Artefacto"
+    definicion: >
+      El fichero, plantilla o proceso que te queda al terminar un módulo y que
+      sigues usando después. Es la prueba de que el módulo sirvió para algo.
+    ejemplo: >
+      El inventario de procesos del bloque 1: tus tareas con frecuencia, duración y
+      las cuatro puntuaciones del filtro. Lo vuelves a abrir en el bloque 5 para
+      medir cuánto has ahorrado de verdad.
+    ver_tambien: [inventario, catalogo, bitacora]
+    bloque_origen: 0
+
+  - slug: autoridad
+    termino: "Autoridad"
+    definicion: >
+      El permiso, formal o tácito, para cambiar cómo se trabaja. Tu forma de
+      trabajar la cambias mañana; la de los demás requiere que alguien te lo
+      conceda.
+    ejemplo: >
+      Puedes reorganizar hoy mismo cómo contestas tú los correos de facturación.
+      Cambiar el procedimiento de facturación de la empresa pasa por gerencia, y
+      por eso el bloque 6 va de evidencia y no de tener razón.
+    ver_tambien: [politica-organizativa, evidencia, propuesta]
+    bloque_origen: 6
+
+  - slug: bitacora
+    termino: "Bitácora"
+    definicion: >
+      Tu registro por sesión: qué intentaste, cuántos minutos, qué falló y qué
+      aprendiste. Convierte una sensación de avance en un dato que se puede
+      enseñar.
+    ejemplo: >
+      "Martes: borrador de respuesta a una reclamación por garrafas rotas. 9 min
+      contra los 20 que tenía anotados en el diario. Se inventó un plazo de
+      devolución; lo corregí antes de enviar."
+    ver_tambien: [linea-base, artefacto, diagnostico]
+    bloque_origen: 0
+
+  - slug: borrador
+    termino: "Borrador"
+    definicion: >
+      Un primer texto que existe para que tú lo corrijas, no para enviarse. Su
+      valor está en quitarte el folio en blanco, no en acertar a la primera.
+    ejemplo: >
+      Pides un primer texto de respuesta al bar que se queja del cuarto retraso en
+      su ruta. Reescribes la mitad, pero has tardado 6 minutos en lugar de 18.
+    ver_tambien: [coste-de-arranque, tono, verificacion]
+    bloque_origen: 2
+
+  - slug: cadena
+    termino: "Cadena"
+    definicion: >
+      Varios verbos ejecutados uno detrás de otro, donde la salida de cada paso es
+      la entrada del siguiente. El error no se queda quieto: se arrastra y se
+      multiplica.
+    ejemplo: >
+      Extraer los datos de 200 correos, clasificarlos por tipo de incidencia y
+      buscar lo raro. Si cada paso acierta el 90%, al final del tercero no te queda
+      un 90%.
+    ver_tambien: [punto-de-control, verbo, verificacion]
+    bloque_origen: 2
+
+  - slug: caducidad
+    termino: "Caducidad"
+    definicion: >
+      Cuánto va a durar lo que estás aprendiendo en un nodo, declarado en tres
+      niveles: bajo, medio y alto. Está a la vista para que sepas a qué merece la
+      pena dedicarle memoria.
+    ejemplo: >
+      "Descomponer una tarea en entrada, decisiones, salida y criterio" es
+      caducidad baja. "Qué herramientas hay ahora mismo en el mercado" es alta, y
+      por eso va al final del bloque y no al principio.
+    ver_tambien: [herramienta, patron, verbo]
+    bloque_origen: 0
+
+  - slug: caso-de-negocio
+    termino: "Caso de negocio"
+    definicion: >
+      Una página que dice qué pasa hoy, cuánto cuesta, qué propones y qué se
+      ahorra, con los números a la vista. No es una presentación: es un argumento
+      que cualquiera puede comprobar.
+    ejemplo: >
+      "304 de los 800 tickets del semestre salen de un fallo de redondeo. A 11 €
+      por contacto son 3.344 €. Corregir el cálculo es media mañana de trabajo del
+      informático."
+    ver_tambien: [evidencia, coste-de-contacto, propuesta]
+    bloque_origen: 4
+
+  - slug: casuistica
+    termino: "Casuística"
+    definicion: >
+      La lista de los casos raros de tu trabajo con el tratamiento que le das a
+      cada uno. Es la parte del contexto que nadie escribe y que decide la mitad de
+      las respuestas.
+    ejemplo: >
+      "Si el cliente es de la ruta 4 y pide entrega en martes, no se puede: se le
+      ofrece el jueves." Eso vive en tu cabeza; en un fichero de contexto vive por
+      escrito y deja de depender de que estés tú.
+    ver_tambien: [contexto, excepcion, especificacion-implicita]
+    bloque_origen: 3
+
+  - slug: catalogo
+    termino: "Catálogo de patrones"
+    definicion: >
+      Tu colección de los seis verbos con ejemplos sacados de tu propio trabajo.
+      Sirve para reconocer, cuando llega una tarea nueva, de qué tipo es en
+      realidad.
+    ejemplo: >
+      En la fila "comparar contra criterio" escribes "revisar que los presupuestos
+      que manda Rubén lleven las condiciones de pago". Hasta ese momento eso era
+      "revisar cosas".
+    ver_tambien: [verbo, inventario, artefacto]
+    bloque_origen: 2
+
+  - slug: causa-raiz
+    termino: "Causa raíz"
+    definicion: >
+      El fallo de fondo que produce muchos síntomas distintos. Se reconoce por una
+      prueba: si lo arreglas, desaparece un montón de trabajo de golpe.
+    ejemplo: >
+      304 tickets de Aguas del Norte hablan de facturas que no cuadran. La causa
+      raíz no son 304 clientes quisquillosos: es un redondeo al alza del precio
+      unitario en los pedidos con descuento.
+    ver_tambien: [sistema, contacto-evitable, anomalia]
+    bloque_origen: 2
+
+  - slug: ces
+    termino: "CES (esfuerzo del cliente)"
+    definicion: >
+      Una medida del esfuerzo que le ha costado al cliente resolver su asunto,
+      preguntada justo al cerrarlo. Predice si va a volver a contactar mejor que la
+      satisfacción declarada, aunque solo habla del episodio y no de la relación.
+    ejemplo: >
+      Al cerrar una incidencia de facturación preguntas: "¿cuánto esfuerzo le ha
+      costado resolver esto?". Si contesta que mucho, volverá a llamar el mes que
+      viene aunque diga que está satisfecho.
+    ver_tambien: [nps, resolucion-primer-contacto, contacto-evitable]
+    bloque_origen: 4
+
+  - slug: checklist
+    termino: "Checklist"
+    definicion: >
+      La lista corta de comprobaciones que aplicas a un tipo de tarea, siempre las
+      mismas y en el mismo orden. Si no cabe en una pantalla, no la vas a usar.
+    ejemplo: >
+      Para una tabla extraída de correos: ¿cuadra el número de filas?, ¿cuántos
+      campos han quedado vacíos?, ¿coinciden la primera y la última fila con el
+      correo original?
+    ver_tambien: [verificacion, rubrica, criterio-de-aceptacion]
+    bloque_origen: 3
+
+  - slug: claridad
+    termino: "Claridad"
+    definicion: >
+      Que el cliente entienda a la primera qué ha pasado y qué va a pasar ahora. Se
+      mide en si vuelve a preguntar lo mismo, no en lo bien escrito que quedó el
+      correo.
+    ejemplo: >
+      "Estamos revisando su incidencia" no aclara nada. "Le hemos cobrado 4,30 € de
+      más en la factura de enero y se los abonamos en la de febrero" sí.
+    ver_tambien: [reconocimiento, siguiente-paso, tono]
+    bloque_origen: 4
+
+  - slug: clasificar
+    termino: "Clasificar"
+    definicion: >
+      Asignar a cada elemento de un conjunto una categoría de una lista cerrada.
+      Todos reciben una, y solo una.
+    ejemplo: >
+      Repartir los 800 tickets entre las ocho categorías reales de incidencia. Es
+      distinto de buscar: buscar te trae los de facturación y deja el resto del
+      montón sin tocar.
+    ver_tambien: [taxonomia, verbo, criterio]
+    bloque_origen: 2
+
+  - slug: comparar
+    termino: "Comparar contra criterio"
+    definicion: >
+      Evaluar algo frente a una norma escrita. La palabra que sostiene el verbo es
+      "escrita": sin criterio explícito esto degenera en opinión con aire de
+      autoridad.
+    ejemplo: >
+      Contrastas veinte respuestas enviadas a clientes contra el procedimiento
+      PR-08 de reclamaciones. De paso descubres que el procedimiento es de 2019 y
+      ya no describe lo que hacéis.
+    ver_tambien: [criterio, rubrica, verbo]
+    bloque_origen: 2
+
+  - slug: conocimiento-tacito
+    termino: "Conocimiento tácito"
+    definicion: >
+      Lo que sabes hacer y no sabes explicar. Cuanto mejor haces una tarea, más
+      automática se te ha vuelto y menos capaz eres de describirla.
+    ejemplo: >
+      Sabes en dos segundos qué reclamación pasa a gerencia y cuál no. Cuando
+      intentas escribir la regla te salen tres "depende" seguidos.
+    ver_tambien: [descomposicion, especificacion-implicita, explicabilidad]
+    bloque_origen: 1
+
+  - slug: contacto-evitable
+    termino: "Contacto evitable"
+    definicion: >
+      Un contacto que no debería haber existido porque algo falló antes: una
+      factura mal calculada, un aviso que no se dio, una información que no estaba
+      donde tocaba. Es el concepto más rentable del sector porque cada uno que
+      eliminas no vuelve.
+    ejemplo: >
+      Los 72 tickets de "vinisteis y estaba cerrado" de Aguas del Norte. El
+      procedimiento PR-07 obliga a avisar la víspera y nadie avisa: ninguna de esas
+      72 llamadas tenía que haberse producido.
+    ver_tambien: [causa-raiz, coste-de-contacto, sistema]
+    bloque_origen: 4
+
+  - slug: contexto
+    termino: "Contexto"
+    definicion: >
+      La información de fondo que hace falta para ejecutar bien un encargo y que en
+      tu oficina se da por sabida. Escrita una vez en un fichero, deja de
+      reexplicarse cada vez.
+    ejemplo: >
+      Que aquí "abono" significa nota de crédito y no un pago; que en agosto se
+      reparte con media plantilla; que a un bar de toda la vida no se le escribe
+      "estimado cliente".
+    ver_tambien: [especificacion-implicita, glosario, casuistica]
+    bloque_origen: 3
+
+  - slug: coste-de-arranque
+    termino: "Coste de arranque"
+    definicion: >
+      Lo que cuesta empezar algo, separado de lo que cuesta hacerlo. En redactar es
+      la mayor parte del coste, y por eso un borrador imperfecto ahorra tiempo de
+      verdad.
+    ejemplo: >
+      Contestar una reclamación te lleva 18 minutos, de los cuales 11 son mirar la
+      pantalla decidiendo por dónde empezar.
+    ver_tambien: [borrador, linea-base, coste-de-oportunidad]
+    bloque_origen: 2
+
+  - slug: coste-de-contacto
+    termino: "Coste de un contacto"
+    definicion: >
+      Lo que le cuesta a la empresa cada interacción de atención: el tiempo de
+      quien la atiende, la parte proporcional de estructura y lo que se pierde por
+      el cliente descontento. Sin este número no hay conversación de negocio
+      posible.
+    ejemplo: >
+      En Aguas del Norte sale a 11 € por contacto. Los 176 tickets de tres clientes
+      de hostelería suman 1.936 € en seis meses, más de lo que esos tres dejan de
+      margen bruto.
+    ver_tambien: [contacto-evitable, insatisfaccion, caso-de-negocio]
+    bloque_origen: 4
+
+  - slug: coste-de-coordinacion
+    termino: "Coste de coordinación"
+    definicion: >
+      El tiempo que se va en ponerse de acuerdo: preguntar, esperar respuesta,
+      avisar, confirmar. No figura en ninguna tarea y se lleva un trozo grande del
+      día.
+    ejemplo: >
+      Para saber si el pedido del hotel salió el jueves escribes a Chema, esperas
+      veinte minutos y luego contestas al cliente. En tu diario esa tarea pone
+      "consultar estado de pedido: 3 minutos".
+    ver_tambien: [trabajo-invisible, interrupcion, sistema]
+    bloque_origen: 1
+
+  - slug: coste-de-oportunidad
+    termino: "Coste de oportunidad"
+    definicion: >
+      Lo que dejas de hacer por hacer otra cosa. Aplicado aquí: automatizar una
+      tarea que no debería existir es peor que no automatizarla, porque la deja
+      instalada para siempre.
+    ejemplo: >
+      Puedes bajar de 20 a 6 minutos el tiempo de contestar a las quejas de
+      facturación. O puedes arreglar el redondeo y quedarte sin las quejas.
+    ver_tambien: [contacto-evitable, causa-raiz, coste-de-verificar]
+    bloque_origen: 1
+
+  - slug: coste-de-verificar
+    termino: "Coste de verificar"
+    definicion: >
+      El tiempo que cuesta comprobar lo producido. Cuenta dentro del ahorro: si
+      revisar línea a línea te lleva más que hacerlo a mano, la automatización es
+      una pérdida disfrazada de modernidad.
+    ejemplo: >
+      Extraer los datos de 40 correos te lleva 5 minutos y comprobarlos uno a uno,
+      35. A mano eran 30. Has perdido diez minutos y has añadido un riesgo.
+    ver_tambien: [verificacion, riesgo, coste-de-oportunidad]
+    bloque_origen: 3
+
+  - slug: criterio
+    termino: "Criterio"
+    definicion: >
+      La regla que dice cuándo algo está bien hecho. Es la casilla que más se salta
+      al describir una tarea y la que decide si se puede delegar o no.
+    ejemplo: >
+      "Contestar bien una reclamación" no es un criterio. "Menciona el importe
+      exacto, da una fecha concreta y no promete nada que no esté en el
+      procedimiento" sí lo es.
+    ver_tambien: [criterio-de-aceptacion, estabilidad-del-criterio, descomposicion]
+    bloque_origen: 0
+
+  - slug: criterio-de-aceptacion
+    termino: "Criterio de aceptación"
+    definicion: >
+      La parte del encargo que dice cómo se comprueba que el resultado sirve. Un
+      criterio útil es el que dos personas distintas aplican por separado y
+      coinciden.
+    ejemplo: >
+      "Que quede profesional" no se puede comprobar. "Máximo 120 palabras, con el
+      número de pedido, sin disculparse dos veces y sin ofrecer compensación" sí.
+    ver_tambien: [encargo, criterio, rubrica]
+    bloque_origen: 3
+
+  - slug: cuadre
+    termino: "Cuadre"
+    definicion: >
+      Comprobar que las partes suman el total y que las cuentas encajan entre sí.
+      Es la verificación numérica más barata que existe y caza la mayoría de los
+      desastres.
+    ejemplo: >
+      El resumen dice 800 tickets; las categorías suman 786. Todavía no sabes dónde
+      están los 14 que faltan, pero ya sabes que el resumen no vale.
+    ver_tambien: [verificacion, orden-de-magnitud, omision]
+    bloque_origen: 3
+
+  - slug: dato-estructurado
+    termino: "Dato estructurado"
+    definicion: >
+      Información colocada en campos con nombre, de forma que se pueda contar,
+      ordenar y cruzar. Es lo que convierte 200 correos en una tabla sobre la que
+      se puede pensar.
+    ejemplo: >
+      De "os escribo porque el pedido del martes llegó con dos garrafas menos"
+      salen tres campos: fecha, referencia de pedido y tipo de incidencia.
+    ver_tambien: [extraer, formato, transformar]
+    bloque_origen: 2
+
+  - slug: dato-personal
+    termino: "Dato personal"
+    definicion: >
+      Cualquier información que permita identificar a una persona física,
+      directamente o cruzándola con otra. Incluye correo, teléfono y dirección, y
+      también el conjunto de detalles que señala a una sola persona sin nombrarla.
+    ejemplo: >
+      "El bar de la plaza de Ruiloba que solo abre los fines de semana" no lleva
+      ningún nombre y es un dato personal, porque solo hay uno.
+    ver_tambien: [rgpd, anonimizar, reidentificacion]
+    bloque_origen: 3
+
+  - slug: decision
+    termino: "Decisión"
+    definicion: >
+      Cada punto de una tarea en el que eliges entre dos caminos, junto con la
+      información que usas para elegir. Es la casilla del medio de la
+      descomposición y donde se esconde el trabajo de verdad.
+    ejemplo: >
+      Al leer un ticket decides si es facturación o pedido erróneo. Lo que usas
+      para decidirlo (si el importe cuadra con el albarán) es la decisión; el resto
+      es teclear.
+    ver_tambien: [descomposicion, criterio, juicio]
+    bloque_origen: 1
+
+  - slug: deriva
+    termino: "Deriva"
+    definicion: >
+      El deterioro lento de algo que funcionaba, sin que nada se rompa de golpe.
+      Cambia el formato de un fichero, cambia una condición comercial, y tu proceso
+      empieza a fallar en silencio.
+    ejemplo: >
+      Tu clasificación de tickets funciona seis meses. Alguien añade una categoría
+      nueva y a partir de ahí todo lo nuevo cae en "otros" sin que salte ningún
+      aviso.
+    ver_tambien: [mantenimiento, punto-de-control, verificacion]
+    bloque_origen: 5
+
+  - slug: descomposicion
+    termino: "Descomposición"
+    definicion: >
+      Partir una tarea en entrada, decisiones, salida y criterio de "bien hecho".
+      La prueba de que está bien hecha: un tercero podría ejecutarla sin
+      preguntarte nada.
+    ejemplo: >
+      "Gestionar reclamaciones" no es una tarea, es una etiqueta. Descompuesta son
+      siete pasos, dos decisiones y un criterio que hasta ahora no estaba escrito
+      en ninguna parte.
+    ver_tambien: [decision, criterio, conocimiento-tacito]
+    bloque_origen: 1
+
+  - slug: diagnostico
+    termino: "Diagnóstico"
+    definicion: >
+      Leer un fallo como información sobre tu especificación y no sobre tu
+      capacidad. Cuando el resultado no sirve, la primera pregunta es qué has dado
+      por sabido.
+    ejemplo: >
+      Pides que clasifique tickets y te devuelve un cajón de sastre enorme. No es
+      que no sepa: es que no le has dicho qué separa "pedido erróneo" de
+      "facturación".
+    ver_tambien: [especificacion-implicita, encargo, conocimiento-tacito]
+    bloque_origen: 0
+
+  - slug: doble-track
+    termino: "Doble track"
+    definicion: >
+      El diseño de este curso: cada ejercicio enseña a la vez una habilidad de
+      trabajo con IA y una idea de atención al cliente, sobre el mismo material.
+    ejemplo: >
+      Clasificar los 800 tickets te enseña el verbo clasificar y, de paso, que la
+      taxonomía de incidencias de tu empresa probablemente esté mal construida.
+    ver_tambien: [verbo, taxonomia, patron]
+    bloque_origen: 0
+
+  - slug: documentacion
+    termino: "Documentación"
+    definicion: >
+      Dejar escrito un proceso con el detalle suficiente para que otra persona lo
+      ejecute igual. Es también el paso previo obligatorio cuando una tarea todavía
+      no se puede delegar.
+    ejemplo: >
+      Escribes los siete pasos de la respuesta a una incidencia de facturación, con
+      sus dos excepciones. Ahora Rubén puede hacerlo la semana que tú estás de
+      vacaciones.
+    ver_tambien: [proceso, explicabilidad, mantenimiento]
+    bloque_origen: 5
+
+  - slug: encargo
+    termino: "Encargo"
+    definicion: >
+      La petición escrita completa: objetivo, contexto, restricciones, formato y
+      criterio de aceptación. Se juzga por si un tercero podría ejecutarla sin
+      preguntar, no por si la máquina la entiende.
+    ejemplo: >
+      "Resume estos correos" es un deseo. "De estos 40 correos saca una tabla con
+      fecha, cliente, tipo de incidencia y si menciona un pedido; pon 'no consta'
+      donde no lo diga" es un encargo.
+    ver_tambien: [objetivo, restriccion, criterio-de-aceptacion]
+    bloque_origen: 3
+
+  - slug: escalado
+    termino: "Escalado"
+    definicion: >
+      El camino que sigue un caso cuando se sale de lo previsto: a quién pasa, con
+      qué información y en cuánto tiempo. Diseñarlo es lo que evita que el caso
+      raro se quede tres días parado.
+    ejemplo: >
+      Un cliente de hostelería amenaza con darse de baja por el cuarto descuadre.
+      La regla dice: pasa a gerencia el mismo día, con el histórico de las cuatro
+      facturas adjunto.
+    ver_tambien: [excepcion, siguiente-paso, proceso]
+    bloque_origen: 4
+
+  - slug: escalera
+    termino: "Escalera de implementación"
+    definicion: >
+      Los cinco niveles que van de una conversación suelta a un proceso que corre
+      sin ti. Sirve sobre todo para saber en qué escalón hay que quedarse.
+    ejemplo: >
+      Tu respuesta a incidencias de facturación empieza como conversación, pasa a
+      encargo guardado y se queda en encargo más fichero de contexto. Ahí funciona
+      y ahí se queda.
+    ver_tambien: [nivel, regla-de-parada, proceso]
+    bloque_origen: 5
+
+  - slug: especificacion-implicita
+    termino: "Especificación implícita"
+    definicion: >
+      Todo lo que en tu oficina se da por hecho y no está escrito en ninguna parte.
+      Es la causa más frecuente de que un encargo salga mal y no se ve hasta que
+      alguien de fuera pregunta.
+    ejemplo: >
+      Que a los clientes de la ruta 3 se les factura a 30 días aunque el resto sea
+      a 15. Nadie lo escribió nunca; lo sabéis los cinco que lleváis aquí tiempo.
+    ver_tambien: [conocimiento-tacito, contexto, encargo]
+    bloque_origen: 0
+
+  - slug: estabilidad-del-criterio
+    termino: "Estabilidad del criterio"
+    definicion: >
+      Si "bien hecho" significa lo mismo el lunes y el jueves. Es la cuarta pregunta
+      del filtro de automatizabilidad, la que más gente se salta y la que más
+      automatizaciones mata.
+    ejemplo: >
+      Qué reclamación merece un detalle comercial depende de cómo vaya el mes, de
+      quién sea el cliente y de con qué ánimo esté gerencia. Ese criterio no está
+      listo para delegarse.
+    ver_tambien: [criterio, variabilidad, explicabilidad]
+    bloque_origen: 1
+
+  - slug: evidencia
+    termino: "Evidencia"
+    definicion: >
+      Un dato comprobable sobre lo que pasa de verdad, medido por ti. Es lo que te
+      da derecho a proponer un cambio cuando nadie te ha pedido opinión.
+    ejemplo: >
+      No "creo que perdemos tiempo con las facturas", sino "en seis meses hemos
+      atendido 304 incidencias del mismo origen; aquí está el listado y aquí el
+      cálculo".
+    ver_tambien: [caso-de-negocio, piloto, linea-base]
+    bloque_origen: 6
+
+  - slug: excepcion
+    termino: "Excepción"
+    definicion: >
+      El caso que no sigue la regla y que sí tiene un tratamiento propio.
+      Declararla por escrito es lo que distingue un proceso de un proceso que
+      funciona a medias.
+    ejemplo: >
+      Los pedidos entran hasta las 17:00. Menos el del hotel de Comillas, que entra
+      hasta las 19:00 porque lo pactó gerencia en 2021 y nadie lo ha escrito.
+    ver_tambien: [casuistica, escalado, variabilidad]
+    bloque_origen: 1
+
+  - slug: explicabilidad
+    termino: "Explicabilidad"
+    definicion: >
+      Si podrías enseñar la tarea a alguien nuevo en diez minutos. Cuando la
+      respuesta es no, no significa que no se pueda delegar: significa que primero
+      toca documentarla.
+    ejemplo: >
+      Explicar cómo se registra un pedido: cuatro minutos. Explicar cómo decides el
+      tono de una respuesta a un cliente enfadado: no lo consigues, y ahí tienes tu
+      siguiente tarea.
+    ver_tambien: [documentacion, conocimiento-tacito, descomposicion]
+    bloque_origen: 1
+
+  - slug: extraer
+    termino: "Extraer"
+    definicion: >
+      Sacar datos concretos de un texto desordenado y ponerlos en campos. Es el
+      verbo con mejor relación entre esfuerzo y ahorro en una empresa pequeña.
+    ejemplo: >
+      De 200 correos con hilos rotos y asuntos que ponen "Consulta" sacas una tabla
+      con cliente, fecha, referencia de pedido y tipo de incidencia.
+    ver_tambien: [dato-estructurado, verbo, verificacion]
+    bloque_origen: 2
+
+  - slug: formato
+    termino: "Formato"
+    definicion: >
+      La forma en la que pides que salga el resultado: tabla con estas columnas,
+      lista de cinco puntos, correo de 100 palabras. Es la pieza más barata del
+      encargo y la que más retrabajo evita.
+    ejemplo: >
+      Pides "un resumen de los tickets de diciembre" y recibes tres párrafos. Pides
+      "una tabla con categoría, número de tickets y minutos totales" y ya puedes
+      sumar.
+    ver_tambien: [encargo, transformar, dato-estructurado]
+    bloque_origen: 2
+
+  - slug: frecuencia
+    termino: "Frecuencia"
+    definicion: >
+      Cuántas veces a la semana o al mes haces una tarea. Multiplicada por la
+      duración da los minutos al mes, que es el único número que decide si merece
+      la pena tocarla.
+    ejemplo: >
+      Contestar consultas de estado de pedido: 14 veces por semana, 4 minutos cada
+      una. Son 224 minutos al mes, casi cuatro horas.
+    ver_tambien: [volumen, linea-base, variabilidad]
+    bloque_origen: 1
+
+  - slug: generalizacion-falsa
+    termino: "Generalización falsa"
+    definicion: >
+      Una conclusión que suena razonable pero se apoya en menos casos de los que
+      necesitaría. Aparece cuando "he visto tres" se convierte en "los clientes".
+    ejemplo: >
+      Un resumen de veinte tickets concluye que "los clientes de hostelería están
+      descontentos con el reparto". Los veinte tickets eran de dos bares de la
+      misma ruta.
+    ver_tambien: [alucinacion, verificacion, causa-raiz]
+    bloque_origen: 3
+
+  - slug: glosario
+    termino: "Glosario propio"
+    definicion: >
+      La lista de tus palabras con lo que significan aquí. En atención al cliente
+      casi todo el vocabulario es local: lo que en tu empresa es un abono, en la de
+      al lado es un vale.
+    ejemplo: >
+      "Aviso" en Aguas del Norte es la llamada de la víspera para confirmar la
+      entrega, no una notificación del sistema. Sin esa línea escrita, medio
+      encargo se malinterpreta.
+    ver_tambien: [contexto, casuistica, plantilla]
+    bloque_origen: 3
+
+  - slug: granularidad
+    termino: "Granularidad"
+    definicion: >
+      El tamaño del trozo con el que registras o describes algo. Demasiado fino y
+      lo abandonas al tercer día; demasiado grueso y no se ve nada.
+    ejemplo: >
+      El diario de tareas va en bloques de 15 minutos. En bloques de un minuto no
+      lo terminas; en bloques de una hora te sale "correo: 4 horas" y no has
+      aprendido nada.
+    ver_tambien: [linea-base, trabajo-invisible, descomposicion]
+    bloque_origen: 1
+
+  - slug: herramienta
+    termino: "Herramienta"
+    definicion: >
+      El producto concreto con el que ejecutas un verbo hoy. Cambia cada pocos
+      meses, así que se aprende al final y se evalúa preguntando qué verbo hace y
+      cómo se verifica.
+    ejemplo: >
+      Da igual con qué programa clasifiques los tickets. Lo que no cambia es que
+      necesitas una taxonomía cerrada y una forma de comprobar una muestra.
+    ver_tambien: [caducidad, verbo, patron]
+    bloque_origen: 2
+
+  - slug: imaginacion-informada
+    termino: "Imaginación informada"
+    definicion: >
+      Saber qué es posible delegar, que es distinto de tener criterio para
+      decidirlo. Casi nadie deja de automatizar por falta de juicio: no automatiza
+      porque no se le ocurre que se pueda.
+    ejemplo: >
+      Llevas tres años pasando a mano los datos de los correos a una hoja de Excel.
+      No es que hayas decidido que no se puede: es que nadie te ha dicho nunca que
+      eso tenga nombre.
+    ver_tambien: [verbo, patron, catalogo]
+    bloque_origen: 2
+
+  - slug: insatisfaccion
+    termino: "Coste de la insatisfacción"
+    definicion: >
+      Lo que cuesta un cliente descontento y no aparece en ninguna factura: compra
+      menos, se va, y lo cuenta. Es la parte del coste de contacto que todo el
+      mundo omite porque es la difícil de estimar.
+    ejemplo: >
+      El bar que se cansó de reclamar la misma factura tres meses seguidos no puso
+      ninguna hoja de reclamaciones. Redujo el pedido semanal a la mitad y no dijo
+      nada.
+    ver_tambien: [coste-de-contacto, contacto-evitable, voz-del-cliente]
+    bloque_origen: 4
+
+  - slug: interrupcion
+    termino: "Interrupción"
+    definicion: >
+      Cada vez que dejas lo que estabas haciendo para atender otra cosa. Lo caro no
+      es la interrupción: es volver a donde estabas.
+    ejemplo: >
+      Diez llamadas de cinco minutos no son cincuenta minutos. Son cincuenta
+      minutos más diez regresos al informe que estabas escribiendo, y el informe no
+      sale.
+    ver_tambien: [coste-de-coordinacion, trabajo-invisible, granularidad]
+    bloque_origen: 1
+
+  - slug: inventario
+    termino: "Inventario de procesos"
+    definicion: >
+      La lista de tus tareas con sus números: frecuencia, duración, variabilidad y
+      las cuatro puntuaciones del filtro. Es un documento vivo, no un ejercicio que
+      se entrega y se olvida.
+    ejemplo: >
+      Dieciocho tareas ordenadas por minutos al mes. Las tres primeras se llevan el
+      40% de tu semana, y una de ellas no debería existir.
+    ver_tambien: [artefacto, linea-base, coste-de-oportunidad]
+    bloque_origen: 1
+
+  - slug: juicio
+    termino: "Juicio"
+    definicion: >
+      Valorar algo cuando la respuesta correcta no está escrita en ninguna parte y
+      alguien va a responder por ella. No es ninguno de los seis verbos y no se
+      delega.
+    ejemplo: >
+      Decidir si al bar que lleva quince años comprando se le perdona el descuadre
+      de 40 € o se le reclama. No hay procedimiento: hay una relación y una cuenta.
+    ver_tambien: [no-delegar, responsabilidad, relacion]
+    bloque_origen: 2
+
+  - slug: linea-base
+    termino: "Línea base"
+    definicion: >
+      La medida de cómo están las cosas antes de cambiar nada. Sin ella cualquier
+      mejora es una impresión, y las impresiones no se defienden delante de un
+      jefe.
+    ejemplo: >
+      "Antes tardaba 20 minutos por reclamación y atendía 14 a la semana." Ese par
+      de números es lo que hace demostrable todo lo que venga después.
+    ver_tambien: [bitacora, frecuencia, evidencia]
+    bloque_origen: 0
+
+  - slug: mantenimiento
+    termino: "Mantenimiento"
+    definicion: >
+      El trabajo de mantener vivo un proceso que ya funciona: comprobar cada cierto
+      tiempo que sigue haciendo lo que crees. Un proceso sin mantenimiento no se
+      para, se estropea callado.
+    ejemplo: >
+      Una vez al mes coges cinco casos al azar de los que salieron solos y los
+      revisas a fondo. Cinco minutos que evitan enterarte en marzo de que falla
+      desde diciembre.
+    ver_tambien: [deriva, punto-de-control, proceso]
+    bloque_origen: 5
+
+  - slug: nivel
+    termino: "Nivel de implementación"
+    definicion: >
+      Cada escalón de la escalera, del 1 (conversación suelta) al 5 (funciona sin
+      ti en el bucle). El 3 es donde termina la mayoría del trabajo de oficina, y
+      terminar ahí es un éxito.
+    ejemplo: >
+      Tu respuesta a incidencias vive en el nivel 3: un encargo guardado más el
+      fichero de contexto. Subirla al 4 costaría dos tardes y ahorraría cuatro
+      minutos al mes.
+    ver_tambien: [escalera, regla-de-parada, coste-de-oportunidad]
+    bloque_origen: 5
+
+  - slug: no-delegar
+    termino: "Qué no delegar"
+    definicion: >
+      El conjunto de tareas que no se pasan a una máquina, no por dificultad
+      técnica sino por quién responde y por lo que se rompe si sale mal. Se decide
+      con tres preguntas, no con una lista cerrada.
+    ejemplo: >
+      Reconocer por escrito un error de la empresa, dar el pésame a un cliente de
+      veinte años, cancelar un contrato. Sale rápido y sale mal.
+    ver_tambien: [juicio, responsabilidad, relacion]
+    bloque_origen: 2
+
+  - slug: normalidad
+    termino: "Normalidad"
+    definicion: >
+      La descripción explícita de lo que es habitual en un conjunto. Se escribe
+      antes de buscar rarezas, o cada cosa que te llame la atención parecerá un
+      hallazgo.
+    ejemplo: >
+      "Un pedido normal en Aguas del Norte va de 30 a 400 €, con cantidades
+      positivas y en día laborable." Con eso escrito, las 45 líneas negativas
+      saltan solas.
+    ver_tambien: [anomalia, patron, criterio]
+    bloque_origen: 2
+
+  - slug: nps
+    termino: "NPS"
+    definicion: >
+      La pregunta de si recomendarías la empresa del 0 al 10, resumida en un único
+      número. A solas es casi inútil: se mueve por cosas que no controlas, tarda
+      meses en reaccionar y no te dice qué arreglar.
+    ejemplo: >
+      El NPS de Aguas del Norte baja cuatro puntos en enero. Eso no te dice nada.
+      Los 304 tickets de facturación sí te dicen qué hacer el lunes por la mañana.
+    ver_tambien: [ces, resolucion-primer-contacto, voz-del-cliente]
+    bloque_origen: 4
+
+  - slug: objetivo
+    termino: "Objetivo"
+    definicion: >
+      Qué quieres conseguir con el encargo, dicho en una frase y sin ambigüedad. Es
+      la primera pieza, y mucha gente la escribe como si fuera un tema en vez de un
+      resultado.
+    ejemplo: >
+      "Tickets de diciembre" es un tema. "Saber qué tres categorías concentran más
+      minutos de atención en diciembre" es un objetivo.
+    ver_tambien: [encargo, criterio-de-aceptacion, formato]
+    bloque_origen: 3
+
+  - slug: omision
+    termino: "Omisión silenciosa"
+    definicion: >
+      Lo que falta en un resultado y no se ve leyéndolo, porque un texto al que le
+      falta algo se sigue leyendo bien. Solo aparece comparando con la fuente.
+    ejemplo: >
+      El resumen de los procedimientos de entrega recoge ocho de los nueve y se
+      salta el PR-07, el del aviso previo. Justo el que explica el 9% de vuestros
+      tickets.
+    ver_tambien: [verificacion, cuadre, alucinacion]
+    bloque_origen: 3
+
+  - slug: orden-de-magnitud
+    termino: "Orden de magnitud"
+    definicion: >
+      Comprobar si un número es del tamaño que debería ser, sin calcularlo exacto.
+      Es la verificación más rápida que existe y descarta la mitad de los errores
+      graves.
+    ejemplo: >
+      Un informe dice que las incidencias de facturación cuestan 340.000 € al año
+      en una empresa de seis personas. No hace falta revisar el cálculo: está mal.
+    ver_tambien: [cuadre, verificacion, coste-de-verificar]
+    bloque_origen: 3
+
+  - slug: patron
+    termino: "Patrón"
+    definicion: >
+      Una forma de hacer las cosas que se repite en dominios que no se parecen
+      entre sí. Se aprende una vez y se reconoce en todas partes, que es justo lo
+      que no hacen los productos.
+    ejemplo: >
+      Clasificar tickets, clasificar facturas por régimen fiscal en una gestoría y
+      clasificar el correo personal por "requiere respuesta" son la misma operación
+      con distinta ropa.
+    ver_tambien: [verbo, transferencia, imaginacion-informada]
+    bloque_origen: 2
+
+  - slug: perdida-de-informacion
+    termino: "Pérdida de información"
+    definicion: >
+      Lo que se queda por el camino al cambiar algo de formato. Resumir es
+      transformar con pérdida, y el error no está en perder: está en no haber
+      declarado qué estabas dispuesta a perder.
+    ejemplo: >
+      Conviertes un hilo de cuatro correos en un parte de incidencia de cinco
+      líneas. Se pierde que el cliente ya había reclamado en noviembre, que era lo
+      importante.
+    ver_tambien: [transformar, formato, omision]
+    bloque_origen: 2
+
+  - slug: piloto
+    termino: "Piloto"
+    definicion: >
+      Probar un cambio en pequeño, con fecha de inicio y de final, para tener datos
+      antes de pedir nada. Es el paso intermedio entre tener razón y que te dejen
+      aplicarla.
+    ejemplo: >
+      Durante tres semanas avisas tú la víspera a los doce clientes de la ruta 2 y
+      cuentas las entregas fallidas antes y después. Eso ya no es una opinión.
+    ver_tambien: [evidencia, propuesta, linea-base]
+    bloque_origen: 6
+
+  - slug: plantilla
+    termino: "Plantilla"
+    definicion: >
+      Un texto base con los huecos marcados, para no reescribir desde cero lo que
+      se repite. Es la forma más barata de estabilizar el tono y de que nadie
+      improvise compromisos.
+    ejemplo: >
+      La respuesta a "no me cuadra la factura": tres párrafos fijos y tres huecos
+      (importe, número de factura, fecha de abono). Quien la rellena no promete
+      nada nuevo.
+    ver_tambien: [contexto, tono, reutilizacion]
+    bloque_origen: 3
+
+  - slug: plausibilidad
+    termino: "Plausibilidad"
+    definicion: >
+      Que algo suene bien y encaje con lo que esperabas, sin que eso tenga nada que
+      ver con que sea cierto. Un sistema que produce continuaciones plausibles
+      acierta casi siempre, y eso es justo lo que hace peligroso el resto.
+    ejemplo: >
+      Te dice que el plazo para reclamar una entrega son 48 horas. Es una cifra
+      razonable, del tamaño correcto y del estilo del sector, y no está escrita en
+      ninguno de vuestros nueve procedimientos.
+    ver_tambien: [alucinacion, verificacion, seguridad-excesiva]
+    bloque_origen: 3
+
+  - slug: politica-organizativa
+    termino: "Política organizativa"
+    definicion: >
+      Cómo se decide de verdad en tu empresa: quién manda, a quién escucha, qué se
+      intentó antes y a quién le salió caro. El cuello de botella para cambiar un
+      proceso rara vez es analítico.
+    ejemplo: >
+      Tu propuesta de arreglar la facturación toca el sistema que eligió gerencia
+      hace cuatro años. El argumento técnico es correcto y por sí solo no va a
+      bastar.
+    ver_tambien: [autoridad, resistencia, propuesta]
+    bloque_origen: 6
+
+  - slug: proceso
+    termino: "Proceso"
+    definicion: >
+      Una secuencia de pasos escrita, con sus entradas, sus controles y su criterio
+      de salida. Se diferencia de un encargo en que sobrevive a que tú te pongas
+      mala.
+    ejemplo: >
+      "Incidencias de facturación": cinco pasos, dos puntos de control, una
+      excepción declarada y el nombre de quién lo hace si tú no estás.
+    ver_tambien: [documentacion, punto-de-control, escalera]
+    bloque_origen: 5
+
+  - slug: propuesta
+    termino: "Propuesta"
+    definicion: >
+      Lo que le llevas a quien decide: una página con el problema, la evidencia, lo
+      que propones y qué hace falta. No es pedir permiso para tener razón, es
+      ponerle fácil la decisión a otra persona.
+    ejemplo: >
+      Una hoja con el fallo de redondeo, los 304 tickets, el coste de seis meses,
+      las tres semanas de piloto y lo único que pides: media mañana del
+      informático.
+    ver_tambien: [caso-de-negocio, evidencia, piloto]
+    bloque_origen: 6
+
+  - slug: punto-de-control
+    termino: "Punto de control"
+    definicion: >
+      El sitio de una cadena donde te paras a mirar antes de seguir. Regla
+      práctica: que cada eslabón produzca algo que puedas revisar en treinta
+      segundos.
+    ejemplo: >
+      Después de extraer los datos de los correos y antes de clasificarlos, miras
+      cuántos campos han quedado en "no consta". Si son cero, desconfía.
+    ver_tambien: [cadena, verificacion, proceso]
+    bloque_origen: 2
+
+  - slug: reconocimiento
+    termino: "Reconocimiento"
+    definicion: >
+      Decirle al cliente que has entendido qué le ha pasado y qué le supone, antes
+      de explicar nada. Ocupa una frase y evita la mitad de los escalados.
+    ejemplo: >
+      "Es la tercera vez este trimestre que le facturamos de más, y entiendo que a
+      estas alturas no se fíe del importe." Después ya vienen los datos.
+    ver_tambien: [claridad, siguiente-paso, tono]
+    bloque_origen: 4
+
+  - slug: regla-de-parada
+    termino: "Regla de parada"
+    definicion: >
+      La condición escrita de antemano que dice cuándo dejas de construir. Sin ella
+      se siguen subiendo escalones por inercia hasta que el mantenimiento cuesta
+      más que la tarea.
+    ejemplo: >
+      No se sube de nivel hasta que el anterior haya funcionado tres veces seguidas
+      sin un solo retoque. Si retocas, esa vez no cuenta y la cuenta empieza otra
+      vez.
+    ver_tambien: [escalera, nivel, mantenimiento]
+    bloque_origen: 5
+
+  - slug: reidentificacion
+    termino: "Reidentificación"
+    definicion: >
+      Volver a saber de quién habla un texto al que le quitaron el nombre, cruzando
+      lo que queda. Es la razón de que anonimizar mal sea peor que no anonimizar:
+      da tranquilidad falsa.
+    ejemplo: >
+      "Cliente de hostelería de Ruiloba, ruta 2, con fuente refrigerada alquilada."
+      En una cartera de 300 clientes eso es una persona concreta y la identifica
+      cualquiera de la oficina.
+    ver_tambien: [anonimizar, dato-personal, rgpd]
+    bloque_origen: 3
+
+  - slug: relacion
+    termino: "Relación"
+    definicion: >
+      El vínculo con la persona que está al otro lado, que a veces es el valor
+      entero de la tarea. Cuando lo que importa es que lo hiciste tú, delegarlo lo
+      destruye aunque el texto salga mejor.
+    ejemplo: >
+      La llamada al cliente de quince años para decirle que os habéis equivocado
+      vosotros. El valor está en que le llamas tú y le dices tu nombre.
+    ver_tambien: [no-delegar, juicio, reconocimiento]
+    bloque_origen: 2
+
+  - slug: resistencia
+    termino: "Resistencia"
+    definicion: >
+      La oposición a un cambio, que casi nunca es técnica. Detrás suele haber miedo
+      a sobrar, a quedar en evidencia o a cargar con un riesgo que no es suyo.
+    ejemplo: >
+      Nieves lleva nueve años haciendo la facturación de una manera. Tu propuesta
+      dice, sin decirlo, que esos nueve años se podían haber hecho de otra forma.
+    ver_tambien: [politica-organizativa, autoridad, propuesta]
+    bloque_origen: 6
+
+  - slug: resolucion-primer-contacto
+    termino: "Resolución en primer contacto"
+    definicion: >
+      El porcentaje de asuntos que se cierran sin que el cliente tenga que volver.
+      Es de las métricas más honestas de atención, con una trampa: se infla sola si
+      el cliente reabre el caso con otro número de ticket.
+    ejemplo: >
+      De los 304 casos de facturación, la mitad vuelven al mes siguiente con la
+      factura nueva. Sobre el papel se habían resuelto todos a la primera.
+    ver_tambien: [contacto-evitable, ces, tiempo-de-ciclo]
+    bloque_origen: 4
+
+  - slug: responsabilidad
+    termino: "Responsabilidad"
+    definicion: >
+      Quién responde si esto sale mal, con nombre y apellidos. Es la pregunta que
+      más rápido decide si una tarea se delega o no se delega.
+    ejemplo: >
+      Si el borrador mete un plazo de devolución que no existe y el cliente lo
+      reclama, no responde la herramienta. Responde la empresa y, en la reunión del
+      lunes, tú.
+    ver_tambien: [no-delegar, riesgo, juicio]
+    bloque_origen: 2
+
+  - slug: responsable-del-tratamiento
+    termino: "Responsable del tratamiento"
+    definicion: >
+      La figura del RGPD que decide para qué se usan unos datos personales y que
+      responde ante la agencia de protección de datos. En tu caso es la empresa, no
+      tú; el marrón práctico te cae igual.
+    ejemplo: >
+      Si pegas el listado de clientes en una herramienta que nadie ha aprobado,
+      quien incumple es Aguas del Norte. Quien lo hizo eres tú, y esa conversación
+      la vas a tener.
+    ver_tambien: [rgpd, dato-personal, riesgo]
+    bloque_origen: 3
+
+  - slug: restriccion
+    termino: "Restricción"
+    definicion: >
+      Los límites del encargo: qué no se puede hacer, qué no se puede decir, qué
+      longitud, qué fuentes se pueden usar. Las restricciones que no escribes son
+      las que se incumplen.
+    ejemplo: >
+      "No ofrezcas compensación económica, no des fechas de entrega concretas y no
+      uses la palabra 'incidencia'." Tres líneas que evitan tres problemas caros.
+    ver_tambien: [encargo, criterio-de-aceptacion, tono]
+    bloque_origen: 3
+
+  - slug: reutilizacion
+    termino: "Reutilización"
+    definicion: >
+      Escribir una vez lo que ibas a explicar veinte veces. Es lo que separa un
+      truco puntual de algo que ahorra tiempo mes tras mes.
+    ejemplo: >
+      Las quince líneas de contexto sobre vuestros clientes de hostelería no se
+      vuelven a teclear: viven en un fichero y se adjuntan cada vez que hacen
+      falta.
+    ver_tambien: [contexto, plantilla, proceso]
+    bloque_origen: 3
+
+  - slug: reversibilidad
+    termino: "Reversibilidad"
+    definicion: >
+      Si lo que has hecho se puede deshacer, y a qué coste. Es el primer eje para
+      decidir cuánto revisar: un borrador interno se corrige, un correo ya enviado
+      no.
+    ejemplo: >
+      Cambiar la categoría de 800 tickets en tu hoja de trabajo se deshace con
+      control+Z. Mandar la circular de subida de tarifas con el porcentaje mal, no.
+    ver_tambien: [riesgo, alcance, verificacion]
+    bloque_origen: 3
+
+  - slug: rgpd
+    termino: "RGPD"
+    definicion: >
+      El reglamento europeo que regula qué se puede hacer con los datos de personas
+      identificables. En una PyME sin departamento jurídico se traduce en una regla
+      de tres líneas y un reflejo: anonimizar antes de pegar.
+    ejemplo: >
+      Los 800 tickets de este curso los puedes trabajar sin ningún problema porque
+      son inventados. Con los de tu empresa, primero quitas nombre, teléfono,
+      correo y dirección.
+    ver_tambien: [dato-personal, anonimizar, responsable-del-tratamiento]
+    bloque_origen: 3
+
+  - slug: riesgo
+    termino: "Riesgo"
+    definicion: >
+      Qué pasa si esto sale mal una de cada veinte veces, medido en consecuencias y
+      no en probabilidad. Es lo que decide cuánto verificas y qué no delegas.
+    ejemplo: >
+      Un borrador interno mal hecho cuesta cinco minutos. Un correo a un cliente
+      con un plazo inventado cuesta una reclamación y una llamada de gerencia.
+    ver_tambien: [tolerancia-al-fallo, verificacion, reversibilidad]
+    bloque_origen: 1
+
+  - slug: rubrica
+    termino: "Rúbrica"
+    definicion: >
+      La tabla que distingue un trabajo insuficiente de uno correcto y de uno bueno.
+      Sirve para corregirte sola, que es el problema central de estudiar sin
+      profesor.
+    ejemplo: >
+      Tres niveles para el informe de causa raíz: no llegó al hallazgo, llegó, o
+      llegó y además encontró algo que no estaba previsto.
+    ver_tambien: [criterio-de-aceptacion, checklist, comparar]
+    bloque_origen: 2
+
+  - slug: seguridad-excesiva
+    termino: "Seguridad excesiva"
+    definicion: >
+      El tono rotundo sin fuente detrás: el "por supuesto" y el "siempre" que no se
+      apoyan en nada. Es un modo de fallo porque desactiva tu revisión justo cuando
+      más falta hace.
+    ejemplo: >
+      "Por supuesto, en estos casos la política estándar del sector es abonar el
+      importe íntegro." No hay ninguna política estándar del sector y nadie ha
+      dicho eso.
+    ver_tambien: [alucinacion, plausibilidad, verificacion]
+    bloque_origen: 3
+
+  - slug: siguiente-paso
+    termino: "Siguiente paso"
+    definicion: >
+      Qué va a pasar ahora, quién lo hace y cuándo, dicho al cliente antes de que lo
+      pregunte. Es la parte de la respuesta que decide si vuelve a llamar.
+    ejemplo: >
+      "Nieves revisa la factura mañana y le llamamos el jueves antes de las 12."
+      Sin esa frase, el jueves a las 9 llama él.
+    ver_tambien: [claridad, contacto-evitable, escalado]
+    bloque_origen: 4
+
+  - slug: sistema
+    termino: "Sistema"
+    definicion: >
+      El conjunto de piezas y reglas que produce un resultado, incluidas las que
+      nadie diseñó. Mirar el sistema es preguntar qué genera esto, en lugar de
+      atender el caso que ha llegado hoy.
+    ejemplo: >
+      Contestar bien a 304 quejas de facturación es atender síntomas. El sistema es
+      un cálculo de descuento que redondea al alza y que mañana va a generar tres
+      quejas más.
+    ver_tambien: [causa-raiz, contacto-evitable, coste-de-oportunidad]
+    bloque_origen: 1
+
+  - slug: taxonomia
+    termino: "Taxonomía"
+    definicion: >
+      El conjunto cerrado de categorías con el que clasificas. Una sana tiene un
+      solo eje, categorías que no se solapan, tamaños comparables y un "otros" que
+      no engorda.
+    ejemplo: >
+      En `tickets.xlsx` hay catorce etiquetas para ocho categorías reales, más un
+      "Otros" del 11%. Clasificar perfectamente con esa lista sigue sin servir de
+      nada.
+    ver_tambien: [clasificar, criterio, causa-raiz]
+    bloque_origen: 2
+
+  - slug: tiempo-de-ciclo
+    termino: "Tiempo de ciclo"
+    definicion: >
+      Lo que tarda un asunto desde que entra hasta que queda cerrado de verdad,
+      contado en tiempo real y no en tiempo trabajado. Incluye las esperas, que es
+      donde se va casi todo.
+    ejemplo: >
+      Una incidencia de facturación se resuelve con 12 minutos de trabajo y tarda
+      nueve días en cerrarse, porque espera al ciclo de facturación del mes
+      siguiente.
+    ver_tambien: [resolucion-primer-contacto, coste-de-contacto, coste-de-coordinacion]
+    bloque_origen: 4
+
+  - slug: tolerancia-al-fallo
+    termino: "Tolerancia al fallo"
+    definicion: >
+      Cuánto daño hace un error aislado en esta tarea concreta. Es la tercera
+      pregunta del filtro y la que separa el borrador interno del correo que sale a
+      un cliente.
+    ejemplo: >
+      Que se cuele un dato mal en tu resumen semanal interno lo ves tú. Que se cuele
+      en el aviso de subida de tarifas lo ven 300 clientes el mismo día.
+    ver_tambien: [riesgo, reversibilidad, alcance]
+    bloque_origen: 1
+
+  - slug: tono
+    termino: "Tono"
+    definicion: >
+      Cómo suena un texto para quien lo recibe: cercanía, formalidad y cuánto se
+      disculpa. Es lo que más rápido delata un texto que no ha escrito nadie de la
+      casa.
+    ejemplo: >
+      A un bar de toda la vida al que se le ha facturado mal se le escribe distinto
+      que a un ayuntamiento. En el primer caso, "estimado cliente" ya es un error.
+    ver_tambien: [claridad, plantilla, contexto]
+    bloque_origen: 2
+
+  - slug: trabajo-invisible
+    termino: "Trabajo invisible"
+    definicion: >
+      Lo que ocupa tu jornada y no aparece en ninguna lista de tareas:
+      interrupciones, reconstruir dónde estabas, coordinar, esperar, absorber el
+      enfado de alguien. No se registra y decide el día.
+    ejemplo: >
+      Tu diario dice "atención telefónica: 2 h". No dice que entre llamada y llamada
+      has buscado tres albaranes, has preguntado a reparto y has vuelto a empezar el
+      informe cuatro veces.
+    ver_tambien: [interrupcion, coste-de-coordinacion, granularidad]
+    bloque_origen: 1
+
+  - slug: transferencia
+    termino: "Transferencia"
+    definicion: >
+      Que un método aprendido en un sitio te sirva en otro que no se le parece. Es
+      la prueba de que has aprendido el método y no el caso.
+    ejemplo: >
+      Descompones la compra semanal de tu casa con las mismas cuatro casillas que
+      una reclamación de un cliente. Si funciona ahí, es que el esquema no dependía
+      del trabajo.
+    ver_tambien: [patron, descomposicion, imaginacion-informada]
+    bloque_origen: 1
+
+  - slug: transformar
+    termino: "Transformar"
+    definicion: >
+      Cambiar algo de formato conservando el contenido. Parece el verbo tonto y es
+      el que más información pierde en silencio.
+    ejemplo: >
+      Un hilo de cuatro correos convertido en un parte de incidencia de cinco
+      líneas, declarando antes qué se puede perder: los saludos sí, el historial de
+      reclamaciones no.
+    ver_tambien: [formato, perdida-de-informacion, verbo]
+    bloque_origen: 2
+
+  - slug: tutor
+    termino: "Tutor"
+    definicion: >
+      El acompañante de este curso, que está para darte tracción y no respuestas. No
+      te da la solución de un ejercicio antes de que lo intentes y no se inventa
+      contenido que el curso no tenga.
+    ejemplo: >
+      Le preguntas dónde está el fallo del sabotaje de nivel 3 y te devuelve una
+      pregunta: "¿de dónde sale el plazo de 14 días que dice ese texto?".
+    ver_tambien: [artefacto, bitacora, diagnostico]
+    bloque_origen: 0
+
+  - slug: variabilidad
+    termino: "Variabilidad"
+    definicion: >
+      Cuánto cambia una tarea de una vez a otra. Se mira en el rango y no en la
+      media, y hay tres tipos que se confunden: cambia la entrada, cambia el
+      criterio o cambia el contexto.
+    ejemplo: >
+      Contestar una reclamación te lleva entre 4 y 45 minutos. Esa horquilla dice
+      mucho más sobre si se puede delegar que la media de 18.
+    ver_tambien: [estabilidad-del-criterio, excepcion, frecuencia]
+    bloque_origen: 1
+
+  - slug: verbo
+    termino: "Verbo"
+    definicion: >
+      Cada una de las seis operaciones básicas que se le pueden encargar a una
+      máquina: clasificar, extraer, transformar, redactar borrador, comparar contra
+      criterio y detectar anomalías. Casi todo el trabajo de oficina es una
+      combinación de ellas.
+    ejemplo: >
+      "Preparar el informe mensual de incidencias" no es una tarea suelta: es
+      extraer, más clasificar, más detectar anomalías, más transformar a un formato
+      de una página.
+    ver_tambien: [patron, cadena, catalogo]
+    bloque_origen: 2
+
+  - slug: verificacion
+    termino: "Verificación"
+    definicion: >
+      Comprobar si lo producido sirve, con un método y no con una lectura por
+      encima. Es la asignatura troncal del curso porque producir es fácil y saber si
+      vale es lo escaso.
+    ejemplo: >
+      Antes de mandar la tabla de incidencias coges tres filas al azar, las
+      contrastas con el correo original y compruebas que las categorías suman 800.
+    ver_tambien: [checklist, cuadre, omision]
+    bloque_origen: 1
+
+  - slug: volumen
+    termino: "Volumen"
+    definicion: >
+      Los minutos al mes que se lleva una tarea, calculados como frecuencia por
+      duración. Es la primera pregunta del filtro y el umbral práctico son unas dos
+      horas al mes.
+    ejemplo: >
+      Una tarea de 3 minutos que haces cuatro veces al día son 240 minutos al mes:
+      entra. Una de 40 minutos que haces una vez al trimestre, no.
+    ver_tambien: [frecuencia, linea-base, coste-de-oportunidad]
+    bloque_origen: 1
+
+  - slug: voz-del-cliente
+    termino: "Voz del cliente"
+    definicion: >
+      Lo que los clientes dicen con sus propias palabras, convertido en algo sobre
+      lo que se pueda decidir. El trabajo no es leerlo: es agrupar, contar y
+      quedarse con lo que cambia una decisión.
+    ejemplo: >
+      200 correos con quejas escritas de mil maneras. Agrupados, el 40% dicen lo
+      mismo con palabras distintas: la factura no cuadra con el albarán.
+    ver_tambien: [extraer, clasificar, insatisfaccion]
+    bloque_origen: 4
