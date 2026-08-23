@@ -19,9 +19,9 @@ profundizar:
 
 Ya tienes el mapa —cuánto pesa cada tarea— y una tarea descompuesta —qué hay dentro—.
 Falta decidir por dónde se empieza, y eso no se decide por intuición ni por lo mucho
-que te fastidie una tarea. Se decide con cuatro preguntas, en este orden, y una escala
-de 1 a 5 para que la respuesta sea la misma el lunes y el jueves. Sigue sin haber
-ninguna herramienta por medio: esto es un filtro de papel.
+que te fastidie una tarea. Cuatro preguntas, en este orden, y una escala de 1 a 5 para
+que la respuesta sea la misma el lunes y el jueves. Sigue sin haber ninguna
+herramienta por medio: esto es un filtro de papel.
 
 ## Las cuatro preguntas
 
@@ -53,10 +53,10 @@ La raya de las dos horas cae entre el 2 y el 3.
 
 ## 2. Explicabilidad — ¿sabrías enseñarla?
 
-La prueba es literal: coge la descomposición de `b1-m4-descomposicion`,
-«Descomponer: entrada, decisiones, salida, criterio», ponte un
-cronómetro y explícala en voz alta como si tuvieras delante a alguien que entró ayer.
-Registrar un pedido: cuatro minutos, y la otra persona lo hace bien a la primera.
+La prueba es literal: coge la descomposición de `b1-m4-descomposicion`, «Descomponer:
+entrada, decisiones, salida, criterio», ponte un cronómetro y explícala en voz alta
+como si tuvieras delante a alguien que entró ayer. Registrar un pedido: cuatro
+minutos, y la otra persona lo hace bien a la primera.
 Decidir el tono de una respuesta a alguien enfadado: no lo consigues, y te oyes decir
 «es que ya lo ves».
 
@@ -89,14 +89,14 @@ gerencia. La misma acción de escribir, con dos riesgos que no se parecen en nad
 | 2 | Sale fuera y se arregla con una llamada incómoda. |
 | 3 | Es interno, pero alguien decide con eso sin revisarlo. |
 | 4 | Es interno y lo revisa otra persona antes de usarse. |
-| 5 | Es un borrador que revisas tú entera antes de que salga de tu pantalla. |
+| 5 | Es un borrador interno que revisas tú de arriba abajo antes de que salga de tu pantalla. |
 
 Dos cosas que la puntuación no recoge y tienes que mirar aparte:
 
 - **Hay trabajo que no se delega aunque puntúe alto en todo lo demás:** decisiones con
-  consecuencias para una persona, cualquier cosa con responsabilidad legal, y la
-  relación con un cliente cuando está mal. Esas no entran en la lista, y no entran
-  aunque salgan 20 sobre 20.
+  consecuencias para una persona, cualquier cosa con responsabilidad legal y la
+  relación con un cliente cuando está mal. Esas no entran en la lista aunque saquen 20
+  sobre 20.
 - **Si para hacer la tarea hay que mover nombres, teléfonos o direcciones de
   clientes**, la tolerancia baja sola: ahí el fallo no es un texto mal escrito, es un
   problema de datos personales. En el bloque 3 se trabaja entero; por ahora, basta con
@@ -158,19 +158,19 @@ Con la misma semana inventada del mapa:
 | Revisión trimestral de tarifas | 15 | 1 | 3 | 2 | 4 | 10 | Volumen | aparcar |
 
 Lee la primera fila despacio. La tarea que más pesa no es por la que se empieza, y no
-porque no valga: es que su criterio no está escrito, el fallo sale fuera y todavía no
-sabes explicarla en diez minutos. Su siguiente paso es documentar, que es exactamente
-lo que hiciste en el nodo anterior. Gana una tarea de cuatro minutos que nadie habría
-mirado. Eso pasa casi siempre.
+porque no valga: su criterio no está escrito, el fallo sale fuera y todavía no sabes
+explicarla en diez minutos. Su siguiente paso es documentar, que es exactamente lo que
+hiciste en el nodo anterior. Gana una tarea de cuatro minutos que nadie habría mirado.
+Eso pasa casi siempre.
 
-Y si en el mapa marcaste esas 24 reclamaciones como «no debería existir», su siguiente
-paso puede ser `eliminar`. Eso no se resuelve puntuando ni automatizando: se resuelve
-con evidencia, que es justo lo que estás construyendo.
+Y si marcaste esas 24 reclamaciones como «no debería existir», su siguiente paso puede
+ser `eliminar`. Eso no se resuelve puntuando: se resuelve con evidencia, que es justo
+lo que estás construyendo.
 
 ## Cuándo esto falla
 
 - **Puntuar de memoria.** Si las cifras no salen del diario y del mapa, esto es una
-  opinión con números encima: cuesta lo mismo y no sirve.
+  opinión con números encima.
 - **Obedecer la suma.** La suma ordena, los frenos deciden. Un 17 con Estabilidad 2 no
   es un 17.
 - **Puntuarte a ti en vez de a la tarea.** «Es que yo me explico bien» no es
@@ -203,10 +203,10 @@ Las cuatro preguntas no son de tu oficina. Puntúan cualquier tarea repetida:
 5. Escribe **una línea de justificación por cada 1 y por cada 5**. Las puntuaciones
    del medio no hace falta justificarlas; los extremos sí, porque son los que mandan.
 
-**Dónde:** abre `plantillas/inventario-de-procesos.md`. Trae exactamente esta escala y
-estas cuatro columnas. Puedes puntuar directamente ahí: en
-`b1-m8-inventario-de-procesos`, «Tu inventario de procesos», vas a terminar ese fichero
-de todas formas.
+**Dónde:** abre `plantillas/inventario-de-procesos.md`. Trae estas mismas cuatro
+columnas y los extremos de la escala, así que puedes puntuar directamente ahí: en
+`b1-m8-inventario-de-procesos`, «Tu inventario de procesos», vas a terminar ese
+fichero de todas formas.
 
 **Entregable:** diez tareas puntuadas, ordenadas, con freno aplicado y siguiente paso.
 

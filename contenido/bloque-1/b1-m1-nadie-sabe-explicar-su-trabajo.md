@@ -93,8 +93,8 @@ tres estimaciones a ciegas, sin mirar nada:
 
 Ciérralo y no lo toques. Lo vas a comparar con los números reales en
 `b1-m3-mapa-de-la-semana`, «Mapa de la semana: frecuencia, duración, variabilidad». No
-es un juego: es tu primera medida de cuánto te puedes
-fiar de tu memoria cuando tengas que defender una cifra delante de alguien.
+es un juego: es tu primera medida de cuánto te puedes fiar de tu memoria el día que
+tengas que defender una cifra delante de alguien.
 
 ## Cuándo esto falla
 

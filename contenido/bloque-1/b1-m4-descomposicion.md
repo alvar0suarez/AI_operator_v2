@@ -17,9 +17,9 @@ conceptos: [descomposicion, criterio, decision, conocimiento-tacito]
 Tres verbos no son un proceso. «Miras el ticket, compruebas la factura y contestas» es
 más o menos lo que dejaste escrito antes de irte de vacaciones en
 `b1-m1-nadie-sabe-explicar-su-trabajo`, «Por qué nadie sabe explicar su propio
-trabajo», y por eso volvieron cinco correos mal. Aquí se
-descompone una tarea hasta el punto en que otra persona podría ejecutarla sin
-preguntarte nada. Trabajamos un ejemplo entero primero y después haces el tuyo.
+trabajo», y por eso volvieron cinco correos mal. Aquí se descompone una tarea hasta
+el punto en que otra persona podría ejecutarla sin preguntarte nada. Primero va un
+ejemplo entero, terminado; después haces el tuyo.
 
 ## Las cuatro casillas
 

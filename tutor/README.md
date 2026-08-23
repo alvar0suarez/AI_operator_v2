@@ -55,6 +55,19 @@ oficial antes de implementar, no se asumen**:
 - <https://docs.claude.com/en/api/overview>
 - <https://docs.claude.com/en/docs_site_map.md>
 
+Lo que hay implementado ahora mismo en `serverless/handler.js`, y de dónde sale:
+
+| Parámetro | Valor | Por qué |
+|---|---|---|
+| `model` | `claude-opus-5` | Consultado en la documentación oficial en agosto de 2026. **Vuelve a consultarlo antes de tocar nada**: este es el parámetro que más caduca de todo el repositorio. |
+| `thinking` | `{type: "adaptive"}` | El modelo decide cuánto razonar. El presupuesto fijo de tokens de razonamiento está retirado en esta familia de modelos. |
+| `output_config.effort` | `medium` | El tutor conversa, no está resolviendo el ejercicio por ella. Da respuestas rápidas y suficientemente pensadas, que es lo que hace falta a las nueve de la noche. |
+| `max_tokens` | 64000 | Con flujo, para que una respuesta larga no se corte por tiempo de espera. |
+| `cache_control` | `ephemeral` sobre el prompt de sistema | El sistema (índice del curso + glosario + nodo) es grande y se repite en cada turno de la conversación. |
+
+> Esta tabla es de **caducidad alta**, igual que un nodo del curso. Si al leerla han
+> pasado más de seis meses, dala por vencida y consulta la documentación.
+
 Configuración en `serverless/.env.example`. El despliegue real usa las variables de
 entorno del proveedor.
 

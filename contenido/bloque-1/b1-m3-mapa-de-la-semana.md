@@ -17,8 +17,8 @@ conceptos: [frecuencia, variabilidad, linea-base, coste-de-oportunidad]
 
 El diario en bruto no dice nada: son cien líneas sueltas. Aquí lo conviertes en tres
 números por tarea y una pregunta incómoda. Es la sesión más aritmética del curso y no
-necesita más que una tabla y quince minutos de sumar. Al final tendrás la primera
-cifra de tu vida laboral que puedes poner encima de una mesa.
+necesita más que una tabla y quince minutos de sumar. Al final tendrás números
+tuyos, medidos, que se pueden poner encima de una mesa.
 
 ## Un mapa terminado, antes de explicar cómo se hace
 
@@ -150,8 +150,9 @@ al lado, que es lo único que se puede defender después. Se recoge en
   aquí», dice «mira por aquí». Quien decide es el filtro, en el nodo siguiente.
 - **Confundir tu estimación con la medida.** Ahora es buen momento para abrir la
   estimación a ciegas que dejaste escrita en `b1-m1-nadie-sabe-explicar-su-trabajo`,
-  «Por qué nadie sabe explicar su propio trabajo», y compararla. Si acertaste, enhorabuena y sigue midiendo igual. Si fallaste por más
-  del 30%, ya sabes cuánto vale tu intuición en minutos.
+  «Por qué nadie sabe explicar su propio trabajo», y compararla. Si acertaste, sigue
+  midiendo igual. Si fallaste por más del 30%, ya sabes lo que vale tu intuición
+  medida en minutos.
 
 ## Las tres instancias
 
