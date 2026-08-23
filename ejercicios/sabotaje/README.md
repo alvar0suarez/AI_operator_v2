@@ -41,12 +41,12 @@ fuente. ¿Está el caso excepcional? ¿Está el cliente que siempre da problemas
 
 | Nivel | Qué se planta | Por qué cuesta |
 |---|---|---|
-| [1](nivel-1/) | Dato numérico que no cuadra con la fuente | Se ve si comparas. Casi nadie compara. |
-| [2](nivel-2/) | Tono inadecuado para el destinatario | Hay que leerlo desde el sitio de quien lo recibe, no desde el tuyo. |
-| [3](nivel-3/) | Dato inventado plausible | No cuadra con nada porque no existe. Y suena perfectamente razonable. |
-| [4](nivel-4/) | Omisión silenciosa | No se ve leyendo. Solo comparando. Es el más caro de los seis. |
-| [5](nivel-5/) | Conclusión correcta con razonamiento erróneo | El resultado es bueno, así que nadie revisa cómo se llegó. La próxima vez no lo será. |
-| [6](nivel-6/) | **Nada. El output es impecable.** | Enseña lo contrario que los otros cinco. |
+| [1](nivel-1/README.md) | Dato numérico que no cuadra con la fuente | Se ve si comparas. Casi nadie compara. |
+| [2](nivel-2/README.md) | Tono inadecuado para el destinatario | Hay que leerlo desde el sitio de quien lo recibe, no desde el tuyo. |
+| [3](nivel-3/README.md) | Dato inventado plausible | No cuadra con nada porque no existe. Y suena perfectamente razonable. |
+| [4](nivel-4/README.md) | Omisión silenciosa | No se ve leyendo. Solo comparando. Es el más caro de los seis. |
+| [5](nivel-5/README.md) | Conclusión correcta con razonamiento erróneo | El resultado es bueno, así que nadie revisa cómo se llegó. La próxima vez no lo será. |
+| [6](nivel-6/README.md) | **Nada. El output es impecable.** | Enseña lo contrario que los otros cinco. |
 
 ## Formato
 

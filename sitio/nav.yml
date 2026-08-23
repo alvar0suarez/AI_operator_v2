@@ -81,6 +81,18 @@ nav:
 - Ejercicios:
   - Rúbricas — cómo se corrige sin profesor: ejercicios/rubricas/README.md
   - Ejercicios de sabotaje: ejercicios/sabotaje/README.md
+  - Nivel 1 — El resumen del reparto del jueves: ejercicios/sabotaje/nivel-1/01-resumen-de-reparto/ejercicio.md
+  - Nivel 1 — Dato numérico que no cuadra con la fuente: ejercicios/sabotaje/nivel-1/README.md
+  - Nivel 2 — La respuesta al Bar La Herradura: ejercicios/sabotaje/nivel-2/01-respuesta-a-un-bar/ejercicio.md
+  - Nivel 2 — Tono inadecuado para el destinatario: ejercicios/sabotaje/nivel-2/README.md
+  - Nivel 3 — El plazo de devolución: ejercicios/sabotaje/nivel-3/01-la-politica-que-no-existe/ejercicio.md
+  - Nivel 3 — Dato inventado plausible: ejercicios/sabotaje/nivel-3/README.md
+  - Nivel 4 — Las instrucciones para el repartidor nuevo: ejercicios/sabotaje/nivel-4/01-instrucciones-al-repartidor/ejercicio.md
+  - Nivel 4 — Omisión silenciosa: ejercicios/sabotaje/nivel-4/README.md
+  - Nivel 5 — «Hay que reforzar el teléfono»: ejercicios/sabotaje/nivel-5/01-reforzar-el-telefono/ejercicio.md
+  - Nivel 5 — Conclusión correcta con razonamiento erróneo: ejercicios/sabotaje/nivel-5/README.md
+  - Nivel 6 — El resumen mensual: ejercicios/sabotaje/nivel-6/01-el-resumen-impecable/ejercicio.md
+  - Nivel 6 — Output impecable: ejercicios/sabotaje/nivel-6/README.md
 - Plantillas:
   - Bitácora: plantillas/bitacora.md
   - Catálogo de patrones: plantillas/catalogo-de-patrones.md
