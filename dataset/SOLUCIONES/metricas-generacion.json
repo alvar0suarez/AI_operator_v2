@@ -1,0 +1,232 @@
+{
+  "semilla": 20250901,
+  "periodo": {
+    "inicio": "2024-09-02",
+    "fin": "2025-02-28",
+    "dias_laborables": 129
+  },
+  "clientes": {
+    "filas": 300,
+    "reales": 288,
+    "duplicados": 12,
+    "hosteleria": 110,
+    "particular": 190,
+    "sin_email": 54,
+    "email_invalido": 7,
+    "tipo_vacio": 10,
+    "cp_numerico": 14,
+    "ruta_vacia": 7,
+    "descuento_vacio": 10,
+    "observaciones_vacias": 204
+  },
+  "pedidos": {
+    "pedidos_totales": 1899,
+    "pedidos_reales": 1837,
+    "pedidos_fantasma": 62,
+    "lineas_totales": 5400,
+    "filas_xlsx": 5400,
+    "devoluciones": 45,
+    "facturado_total": "137545.65",
+    "lineas_con_descuento": 3282,
+    "lineas_sin_descuento": 2118
+  },
+  "v1": {
+    "desviacion_total_reales": "615.51",
+    "desviacion_fantasma": "34.72",
+    "desviacion_maxima_linea": "1.14",
+    "pedidos_afectados": 1139,
+    "lineas_con_descuento": 3282,
+    "lineas_con_descuento_y_desviacion": 3120,
+    "pct_lineas_dto_con_desviacion": 0.9506398537477148,
+    "tickets": 304,
+    "tickets_pct": 0.38,
+    "tickets_con_id_pedido": 261,
+    "tickets_con_id_pedido_pct": 0.8585526315789473,
+    "tickets_facturacion_no_redondeo": 17,
+    "coste_contactos": "3344.00"
+  },
+  "v2": {
+    "pares": 12,
+    "pares_con_descuento_distinto": 5,
+    "ambos_con_pedidos": 11
+  },
+  "v3": {
+    "pedidos_fantasma": 62,
+    "lineas_fantasma": 244,
+    "importe_fantasma": "6970.29",
+    "ventana": [
+      "2024-12-09",
+      "2024-12-13"
+    ],
+    "lineas_por_mes_real": {
+      "2024-09": 868,
+      "2024-10": 902,
+      "2024-11": 856,
+      "2024-12": 944,
+      "2025-01": 790,
+      "2025-02": 796
+    },
+    "lineas_por_mes_registrado": {
+      "2024-09": 868,
+      "2024-10": 902,
+      "2024-11": 856,
+      "2024-12": 1188,
+      "2025-01": 790,
+      "2025-02": 796
+    },
+    "pedidos_por_mes_real": {
+      "2024-09": 304,
+      "2024-10": 309,
+      "2024-11": 305,
+      "2024-12": 347,
+      "2025-01": 294,
+      "2025-02": 278
+    },
+    "pedidos_por_mes_registrado": {
+      "2024-09": 304,
+      "2024-10": 309,
+      "2024-11": 305,
+      "2024-12": 409,
+      "2025-01": 294,
+      "2025-02": 278
+    },
+    "base_lineas_otros_meses": 842.4,
+    "subida_diciembre_real_lineas": 0.1206,
+    "subida_diciembre_registrada_lineas": 0.4103,
+    "subida_diciembre_real_pedidos": 0.1644,
+    "subida_diciembre_registrada_pedidos": 0.3725
+  },
+  "v4": {
+    "clientes": [
+      "CLI-0042",
+      "CLI-0118",
+      "CLI-0233"
+    ],
+    "tickets": 176,
+    "tickets_pct": 0.22,
+    "coste_total": "1936.00",
+    "margen_total": "259.79",
+    "resultado_total": "-1676.21",
+    "facturacion_media_hosteleria": "1045.30",
+    "detalle": [
+      {
+        "id_cliente": "CLI-0042",
+        "nombre": "Cafetería El Cantábrico",
+        "poblacion": "Laredo",
+        "descuento_pct": 12,
+        "pedidos": 44,
+        "lineas": 71,
+        "facturado": "805.32",
+        "margen_bruto": "94.88",
+        "tickets": 62,
+        "coste_contactos": "682.00",
+        "resultado": "-587.12"
+      },
+      {
+        "id_cliente": "CLI-0118",
+        "nombre": "Hotel La Ría",
+        "poblacion": "Santoña",
+        "descuento_pct": 10,
+        "pedidos": 40,
+        "lineas": 56,
+        "facturado": "695.76",
+        "margen_bruto": "91.68",
+        "tickets": 58,
+        "coste_contactos": "638.00",
+        "resultado": "-546.32"
+      },
+      {
+        "id_cliente": "CLI-0233",
+        "nombre": "Mesón Casa Ramón",
+        "poblacion": "Los Corrales de Buelna",
+        "descuento_pct": 12,
+        "pedidos": 38,
+        "lineas": 59,
+        "facturado": "694.72",
+        "margen_bruto": "73.23",
+        "tickets": 56,
+        "coste_contactos": "616.00",
+        "resultado": "-542.77"
+      }
+    ]
+  },
+  "v5": {
+    "tickets": 72,
+    "tickets_pct": 0.09,
+    "todos_hosteleria": true,
+    "coste_contactos": "792.00",
+    "menciones_aviso_previo_en_tickets": 0,
+    "menciones_aviso_previo_en_correos": 0
+  },
+  "tickets": {
+    "filas": 800,
+    "taxonomia_real": {
+      "facturacion-redondeo": 304,
+      "entrega-sin-aviso": 72,
+      "entrega-retraso": 96,
+      "producto-defectuoso": 58,
+      "pedido-erroneo": 74,
+      "cambio-datos": 63,
+      "informacion-producto": 89,
+      "otros": 44
+    },
+    "etiquetas_sucias": {
+      "(vacío)": 34,
+      "Calidad producto": 17,
+      "Consulta": 111,
+      "Datos cliente": 35,
+      "Entrega": 112,
+      "FACTURACION": 17,
+      "Facturación": 66,
+      "Facturas": 47,
+      "Incidencia facturación": 32,
+      "Info": 36,
+      "Otros": 86,
+      "Pedidos": 71,
+      "Producto": 27,
+      "Reparto": 37,
+      "entregas": 36,
+      "facturacion": 36
+    },
+    "etiquetas_distintas": 15,
+    "bucket_facturacion": 198,
+    "bucket_facturacion_pct": 0.2475,
+    "bucket_facturacion_pureza": 0.8434343434343434,
+    "error_de_fiarse_de_categoria": 0.1325,
+    "sin_id_cliente": 32,
+    "con_id_pedido": 384,
+    "con_id_pedido_pct": 0.48,
+    "sin_subcategoria": 635,
+    "sin_agente": 47,
+    "sin_tiempo": 172,
+    "cierre_anterior_a_apertura": 9
+  },
+  "correos": {
+    "total": 200,
+    "patologias": {
+      "asunto-cuerpo-intercambiados": 34,
+      "hilo-roto": 28,
+      "adjunto-fantasma": 22,
+      "dos-incidencias": 15,
+      "firma-ajena": 9,
+      "reenvio-en-cadena": 12
+    },
+    "sin_patologia": 80,
+    "de_clientes_v4": {
+      "CLI-0042": 8,
+      "CLI-0118": 7,
+      "CLI-0233": 7
+    },
+    "por_categoria": {
+      "facturacion-redondeo": 74,
+      "facturacion-otro": 6,
+      "entrega-sin-aviso": 28,
+      "entrega-retraso": 24,
+      "producto-defectuoso": 16,
+      "pedido-erroneo": 18,
+      "cambio-datos": 12,
+      "informacion-producto": 14,
+      "otros": 8
+    }
+  }
+}
