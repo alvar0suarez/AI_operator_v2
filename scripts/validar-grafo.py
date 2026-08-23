@@ -643,17 +643,8 @@ def validar_grafo(nodos, meta, ramas, informe, resumen):
                     informe.error("referencia-rota",
                                   f"`{campo}` apunta a `{referencia}`, que no existe",
                                   nodo=nodo.id, ruta=nodo.ruta, linea=nodo.linea_de(campo))
-        for elemento in (nodo.datos.get("profundizar") or []):
-            if isinstance(elemento, dict) and isinstance(elemento.get("id"), str):
-                if elemento["id"] not in ids:
-                    informe.error("referencia-rota",
-                                  f"`profundizar` apunta a `{elemento['id']}`, que no existe",
-                                  nodo=nodo.id, ruta=nodo.ruta, linea=nodo.linea_de("profundizar"))
-                elif not nodos[elemento["id"]].es_profundizacion:
-                    informe.error("profundizar-a-tronco",
-                                  f"`profundizar` apunta a `{elemento['id']}`, que no es "
-                                  f"tipo profundizacion",
-                                  nodo=nodo.id, ruta=nodo.ruta, linea=nodo.linea_de("profundizar"))
+    # (las referencias de `profundizar` se comprueban en validar_profundizar_derivado:
+    #  solo las declaran los .md y aquí manda el nodo efectivo del registro)
 
     # 3.2 Ciclos: se topologiza el grafo con todas las aristas conocidas.
     aristas = {i: set() for i in ids}
@@ -858,7 +849,22 @@ def validar_profundizar_derivado(ficheros, ramas, nodos, informe):
             if isinstance(elemento, dict) and isinstance(elemento.get("id"), str):
                 declaradas.append(elemento["id"])
 
+        for referencia in sorted(set(declaradas)):
+            if referencia not in nodos:
+                informe.error("referencia-rota",
+                              f"`profundizar` apunta a `{referencia}`, que no existe",
+                              nodo=identificador, ruta=nodo.ruta,
+                              linea=nodo.linea_de("profundizar"))
+            elif not nodos[referencia].es_profundizacion:
+                informe.error("profundizar-a-tronco",
+                              f"`profundizar` apunta a `{referencia}`, que no es "
+                              f"tipo profundizacion",
+                              nodo=identificador, ruta=nodo.ruta,
+                              linea=nodo.linea_de("profundizar"))
+
         for sobrante in sorted(set(declaradas) - set(esperadas)):
+            if sobrante not in nodos:
+                continue  # ya está dicho como referencia rota
             informe.error("profundizar-sobrante",
                           f"`profundizar` lista `{sobrante}`, que no declara "
                           f"`requisitos: [{identificador}]`",
@@ -915,7 +921,7 @@ def validar_conceptos(nodos, glosario, informe, resumen):
                       ruta=str(RUTA_GLOSARIO))
 
 
-def validar_fugas_de_soluciones(nodos, informe):
+def validar_fugas_de_soluciones(fuentes, informe):
     """Nada publicado puede apuntar a dataset/SOLUCIONES/ salvo el campo `solucion`."""
     def apunta(valor):
         if isinstance(valor, str):
@@ -926,7 +932,7 @@ def validar_fugas_de_soluciones(nodos, informe):
             return any(apunta(v) for v in valor.values())
         return False
 
-    for nodo in nodos.values():
+    for nodo in fuentes:
         for campo, valor in nodo.datos.items():
             if campo in CAMPOS_NO_PUBLICADOS:
                 continue
@@ -1016,7 +1022,7 @@ def validar(raiz):
     validar_divergencia(registro, ficheros, informe)
     validar_profundizar_derivado(ficheros, ramas, nodos, informe)
     validar_conceptos(nodos, glosario, informe, resumen)
-    validar_fugas_de_soluciones(nodos, informe)
+    validar_fugas_de_soluciones(list(registro.values()) + list(ficheros.values()), informe)
     validar_rutas_referenciadas(registro, ficheros, raiz, informe)
 
     resumen["errores"] = len(informe.errores)
@@ -1066,6 +1072,9 @@ def rendir_texto(informe, raiz, estricto):
             for hallazgo in grupo:
                 ubicacion = hallazgo.ubicacion
                 etiqueta = f"{hallazgo.nodo}: " if hallazgo.nodo else ""
+                hallazgo = Hallazgo(hallazgo.nivel, hallazgo.codigo,
+                                    " ".join(hallazgo.mensaje.split()),
+                                    hallazgo.nodo, hallazgo.ruta, hallazgo.linea)
                 if ubicacion:
                     lineas.append(f"    {ubicacion}")
                     lineas.append(f"      {etiqueta}{hallazgo.mensaje}")
