@@ -1,0 +1,65 @@
+# Publica el sitio en GitHub Pages en cada push a la rama principal.
+#
+# Esta vía sirve SOLO el sitio estático: GitHub Pages no ejecuta funciones, así que
+# el tutor queda desactivado y el widget lo dice con todas las letras. Para tener
+# también el tutor hay que desplegar en un proveedor con funciones — ver
+# docs-internos/despliegue.md.
+name: Publicar el sitio
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  construir:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+
+      - name: Instalar dependencias
+        run: pip install -r requirements.txt
+
+      - name: Validar el grafo
+        run: python3 scripts/validar-grafo.py
+
+      - name: Comprobar que las verdades escondidas siguen siendo derivables
+        run: python3 scripts/verificar-verdades.py
+
+      - name: Ensamblar y construir el sitio
+        run: |
+          python3 scripts/generar-glosario.py
+          python3 scripts/empaquetar-tutor.py
+          python3 scripts/construir-sitio.py
+          cd sitio && mkdocs build --strict
+
+      - name: Comprobar que no se publica nada de SOLUCIONES/
+        run: python3 scripts/comprobar-build.py
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: sitio/build
+
+  publicar:
+    needs: construir
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.despliegue.outputs.page_url }}
+    steps:
+      - id: despliegue
+        uses: actions/deploy-pages@v4

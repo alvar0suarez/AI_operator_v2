@@ -56,6 +56,37 @@ mejor sabiendo dónde se atascó de verdad"*. Ver `docs-internos/decisiones.md` 
 
 Los bloques 1+2+3 ya son un curso completo por sí solos (§9).
 
+## Cómo llega esto a ella
+
+El entregable **no es este repositorio**: es una dirección web que abre en el móvil, sin
+instalar nada y sin cuenta.
+
+| | Sitio | Tutor |
+|---|---|---|
+| **GitHub Pages** — ya configurado en `.github/workflows/sitio.yml` | sí | no |
+| **Cloudflare Pages** — un solo despliegue sirve las dos cosas | sí | sí |
+
+El tutor necesita ejecutar código en servidor para que la clave de API no esté en el
+navegador (§7.5), y GitHub Pages no ejecuta nada. Todo lo demás —nodos, ejercicios,
+sabotajes, dataset, plantillas y la página **Dónde vas**— funciona igual en los dos.
+
+Para el piloto, GitHub Pages basta: el tutor se puede encender después, y mientras tanto
+el widget dice que no está activo en vez de fingir un error.
+
+Los pasos concretos están en [`docs-internos/despliegue.md`](docs-internos/despliegue.md).
+
+### Lo que ella ve
+
+1. **La portada** le dice qué se lleva y qué el curso no hace.
+2. **La navegación lateral** son los seis bloques en orden, con las ramas de
+   profundización colgando de su nodo.
+3. **Cada nodo** lleva arriba su tipo, su duración y su etiqueta de caducidad, y abajo
+   dos casillas —«ya lo he intentado» y «nodo terminado»— más el tutor.
+4. **Dónde vas** reúne lo que ha marcado, cuál es el siguiente nodo desbloqueado y cómo
+   va su portfolio de artefactos.
+5. **Sus artefactos y su bitácora son ficheros suyos**, en su ordenador. El curso le da
+   la plantilla y la rúbrica; el documento no pasa por ningún servidor.
+
 ## Puesta en marcha
 
 ```bash

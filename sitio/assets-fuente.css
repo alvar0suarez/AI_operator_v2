@@ -157,3 +157,47 @@
 
 .tutor__historial { font-size: 0.7rem; margin-top: 1rem; }
 .tutor__historial summary { cursor: pointer; color: var(--md-default-fg-color--light); }
+
+/* ── Página «Dónde vas» ─────────────────────────────────────────────────────
+   Estado y siguiente paso. Ni barra de progreso, ni porcentaje como nota, ni
+   nada que se parezca a una puntuación (ESPECIFICACION.md §2.7). */
+
+.progreso-bloque { margin-bottom: 0.6rem; }
+.progreso-bloque summary {
+  cursor: pointer;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+.progreso-lista { list-style: none; margin: 0.4rem 0 0.8rem; padding-left: 0.2rem; }
+.progreso-lista li { font-size: 0.75rem; margin-bottom: 0.2rem; }
+
+.progreso-marca {
+  display: inline-block;
+  width: 1.1rem;
+  color: var(--md-default-fg-color--light);
+}
+.progreso-hecho .progreso-marca { color: var(--caduca-bajo); font-weight: 700; }
+.progreso-pendiente { color: var(--md-default-fg-color--light); font-style: italic; padding-left: 1.1rem; }
+
+.progreso-nota { color: var(--md-default-fg-color--light); font-size: 0.68rem; }
+
+.progreso-estado {
+  width: 100%;
+  font-family: var(--md-code-font-family, monospace);
+  font-size: 0.62rem;
+  border: 1px solid var(--md-default-fg-color--lighter);
+  border-radius: 0.2rem;
+  background: transparent;
+  color: var(--md-default-fg-color);
+  padding: 0.4rem;
+}
+.progreso-boton {
+  background: none;
+  border: 1px solid var(--md-default-fg-color--lighter);
+  border-radius: 0.2rem;
+  color: var(--md-default-fg-color);
+  cursor: pointer;
+  font-size: 0.7rem;
+  margin-top: 0.4rem;
+  padding: 0.35rem 0.8rem;
+}

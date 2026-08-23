@@ -1,0 +1,10 @@
+{
+  "name": "cxia",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Curso CX + IA. Este package.json existe para que el proveedor de serverless instale la dependencia del tutor al desplegar; el sitio en sí es estático y no necesita Node.",
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.70.0"
+  }
+}

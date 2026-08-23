@@ -182,9 +182,10 @@ def construir(verbose: bool = True) -> dict:
             continue  # las soluciones no se publican como página propia
         sueltas.append((ej, DESTINO / "ejercicios" / ej.relative_to(RAIZ / "ejercicios")))
     sueltas.append((RAIZ / "sitio" / "assets-fuente.css", DESTINO / "assets" / "curso.css"))
-    tutor_js = RAIZ / "tutor" / "widget" / "tutor.js"
-    if tutor_js.exists():
-        sueltas.append((tutor_js, DESTINO / "assets" / "tutor.js"))
+    for nombre in ("tutor.js", "progreso.js"):
+        origen_js = RAIZ / "tutor" / "widget" / nombre
+        if origen_js.exists():
+            sueltas.append((origen_js, DESTINO / "assets" / nombre))
 
     for origen, destino in sueltas:
         if not origen.exists():
@@ -195,6 +196,7 @@ def construir(verbose: bool = True) -> dict:
         shutil.copy2(origen, destino)
         stats["copiados"] += 1
 
+    escribir_progreso(registro)
     escribir_nav(registro, indice)
 
     if verbose:
@@ -203,9 +205,50 @@ def construir(verbose: bool = True) -> dict:
     return stats
 
 
+def escribir_progreso(registro: dict) -> None:
+    """Genera la página «Dónde vas» y el índice que la alimenta.
+
+    Dos cosas que parecen detalles y no lo son:
+
+    1. El índice se escribe como `assets/indice.js` y se carga desde `extra_javascript`,
+       no como un `<script>` dentro de la página. Con `use_directory_urls` la página vive
+       en `/progreso/index.html`, así que una ruta relativa dentro del cuerpo apuntaría a
+       `/progreso/assets/...` y daría 404.
+    2. Además, la navegación instantánea de Material reemplaza el contenido sin recargar,
+       y un `<script>` incrustado en el cuerpo no se reejecuta al llegar por esa vía.
+       Cargado como recurso global sí, y `progreso.js` se re-monta con `document$`.
+
+    Solo viaja lo que la página necesita para pintar: nunca `brief` ni `solucion`.
+    """
+    campos = ("id", "titulo", "bloque", "tipo", "estado", "duracion_min", "requisitos")
+    indice_js = [
+        {**{c: n.get(c) for c in campos},
+         "bloqueante": bool(n.get("bloqueante")),
+         "tiene_solucion": bool(n.get("solucion"))}
+        for n in registro["nodos"]
+    ]
+
+    (DESTINO / "assets").mkdir(parents=True, exist_ok=True)
+    (DESTINO / "assets" / "indice.js").write_text(
+        "// Fichero generado por scripts/construir-sitio.py. No lo edites a mano.\n"
+        f"window.CXIA_INDICE = {json.dumps(indice_js, ensure_ascii=False, separators=(',', ':'))};\n",
+        encoding="utf-8",
+    )
+
+    (DESTINO / "progreso.md").write_text("""# Dónde vas
+
+Esta página se rellena sola con lo que vas marcando en cada nodo. No la lee nadie más
+que tú, y no sale de este navegador.
+
+<div id="cxia-progreso" markdown="0">
+  <p>Cargando…</p>
+</div>
+""", encoding="utf-8")
+
+
 def escribir_nav(registro: dict, indice: dict) -> None:
     """El nav sale del registro, no de mkdocs.yml, para que no se desincronice."""
-    nav = [{"Empezar aquí": "index.md"}]
+    nav = [{"Empezar aquí": "index.md"}, {"Dónde vas": "progreso.md"}]
     for bloque in sorted(registro["meta"]["bloques"]):
         info = registro["meta"]["bloques"][bloque]
         entradas = []

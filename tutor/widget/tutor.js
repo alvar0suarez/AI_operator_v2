@@ -211,6 +211,15 @@
       });
 
       if (!r.ok || !r.body) {
+        // Si el sitio está publicado en un hosting sin funciones (GitHub Pages, por
+        // ejemplo), aquí no hay endpoint y llega el 404 del propio sitio. Decirlo,
+        // en vez de fingir un fallo pasajero que la haga reintentar sin sentido.
+        if (r.status === 404 || r.status === 405) {
+          respuesta.textContent = 'El tutor no está activo en esta instalación del curso. '
+            + 'Todo lo demás funciona igual: los nodos, los ejercicios y los sabotajes no '
+            + 'lo necesitan.';
+          return;
+        }
         const err = await r.json().catch(() => ({}));
         respuesta.textContent = err.error || 'El tutor no ha podido responder. Vuelve a intentarlo.';
         return;
