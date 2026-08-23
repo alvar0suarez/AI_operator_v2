@@ -67,11 +67,11 @@ interno. Sucio a propósito: fechas en tres formatos, categorías inventadas sob
 marcha, clientes duplicados, adjuntos que se mencionan y no están.
 
 Dos razones, y las dos importan. Riesgo cero: no hay un punto del curso en el que tengas
-que pegar el nombre de un cliente, un teléfono o una factura;
-cuando se te pida algo de tu trabajo, será una descripción con tus palabras. Y existe
-respuesta correcta: como los datos los generamos nosotros, se sabe lo que hay escondido
-dentro, y eso te permite corregirte sin profesor. Con datos reales nadie sabe la
-respuesta y no hay forma de saber si acertaste.
+que pegar el nombre de un cliente, un teléfono o una factura; cuando se te pida algo de
+tu trabajo, será una descripción con tus palabras. Y existe respuesta correcta: como los
+datos los generamos nosotros, se sabe lo que hay escondido dentro, y eso te permite
+corregirte sin profesor. Con datos reales nadie sabe la respuesta y no hay forma de
+saber si acertaste.
 
 > [!WARNING]
 > Si algún ejercicio parece pedirte datos de tu empresa, el ejercicio está mal escrito.
@@ -110,8 +110,8 @@ Es lo que te llevas de este nodo y es contra lo que vas a juzgar el curso.
 
 ## Lo siguiente va a ser árido
 
-Seis bloques, 17 semanas al ritmo nominal, que es flexible. Los bloques 1, 2 y 3
-ya son un curso completo por sí solos: si paras ahí, has terminado algo.
+Seis bloques, 17 semanas al ritmo nominal, que es flexible. Los bloques 1, 2 y 3 ya son
+un curso completo por sí solos: si paras ahí, has terminado algo.
 
 El bloque 1 se llama «Ver el trabajo» y va **sin IA**, a propósito. Dos semanas
 registrando lo que haces en tramos de 15 minutos y descomponiendo tareas a mano. Es el

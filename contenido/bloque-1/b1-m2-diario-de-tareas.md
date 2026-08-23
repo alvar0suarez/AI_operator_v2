@@ -127,10 +127,11 @@ que agruparlos es posible y qué pasa cuando lo haces.
 - **Registras la tarea y no el contexto.** Si tu diario dice «atención telefónica:
   2 h» y no dice que entre llamada y llamada buscaste tres albaranes, el diario
   miente por omisión. Ese trabajo invisible se trabaja entero en
-  `b1-m6-trabajo-visible-invisible`.
+  `b1-m6-trabajo-visible-invisible`, «Trabajo visible y trabajo invisible».
 - **Te fías del diario como si fuera un cronómetro.** No lo es. Los sesgos concretos
-  del autorregistro y qué margen de error es aceptable están en
-  `b1-p1-por-que-fallan-los-diarios`, si te interesa el detalle.
+  del autorregistro y qué margen de error es aceptable están en la rama
+  `b1-p1-por-que-fallan-los-diarios`, «Por qué casi todos los diarios de tiempo
+  mienten», si te interesa el detalle.
 
 ## Las tres instancias
 
@@ -165,7 +166,8 @@ interrupciones.
 
 **Regla de parada:** mientras registras, no analices. Nada de «esto podría hacerlo más
 rápido», nada de reorganizar tu método, nada de cambiar de herramienta. Esta semana
-solo se mira. El análisis es `b1-m3-mapa-de-la-semana` y llega dentro de cinco días.
+solo se mira. El análisis es `b1-m3-mapa-de-la-semana`, «Mapa de la semana:
+frecuencia, duración, variabilidad», y llega dentro de cinco días.
 
 **Tiempo real:** treinta minutos esta sesión, unos cinco minutos por día después.
 

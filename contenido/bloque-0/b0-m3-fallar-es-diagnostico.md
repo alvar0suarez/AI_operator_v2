@@ -105,8 +105,9 @@ Ahora repasa lo escrito y subraya cada punto donde hayas usado un «el de siempr
 subrayados.
 
 Ese número es tu primera medida de especificación implícita, y es un número, no una
-sensación. Guarda el papel: en el bloque 3 harás lo mismo con una tarea de tu trabajo y
-vas a comparar las dos cuentas.
+sensación. Guarda el papel: en `b3-m2-especificacion-implicita` («Todo lo que en tu
+oficina se da por hecho») harás lo mismo con una tarea de tu trabajo, y vas a comparar
+las dos cuentas.
 
 ## Escribe tú la regla
 

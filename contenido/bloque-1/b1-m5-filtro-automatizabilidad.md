@@ -18,10 +18,10 @@ profundizar:
 ---
 
 Ya tienes el mapa —cuánto pesa cada tarea— y una tarea descompuesta —qué hay dentro—.
-Falta decidir por dónde se empieza, y esa decisión no se toma por intuición ni por lo
-mucho que te fastidie una tarea. Se toma con cuatro preguntas, en este orden, y una
-escala de 1 a 5 para que la respuesta sea la misma el lunes y el jueves. Sigue sin
-haber ninguna herramienta de IA por medio: esto es un filtro de papel.
+Falta decidir por dónde se empieza, y eso no se decide por intuición ni por lo mucho
+que te fastidie una tarea. Se decide con cuatro preguntas, en este orden, y una escala
+de 1 a 5 para que la respuesta sea la misma el lunes y el jueves. Sigue sin haber
+ninguna herramienta por medio: esto es un filtro de papel.
 
 ## Las cuatro preguntas
 
@@ -37,10 +37,8 @@ haber ninguna herramienta de IA por medio: esto es un filtro de papel.
 ## 1. Volumen — cuánto pesa de verdad
 
 El número ya lo tienes del mapa: minutos/mes = veces al mes × mediana. El umbral son
-**120 minutos al mes**.
-
-Ejemplo de las dos caras: consultas de estado de pedido, 60 × 4 = 240 min/mes, entra.
-Revisión trimestral de tarifas, 4 veces al año × 45 minutos = 15 min/mes, fuera, por
+**120 minutos al mes**. Consultas de estado de pedido, 60 × 4 = 240 min/mes: entra.
+Revisión trimestral de tarifas, 4 veces al año × 45 min = 15 min/mes: fuera, por
 insoportable que sea.
 
 | Puntuación | Minutos al mes |
@@ -55,13 +53,12 @@ La raya de las dos horas cae entre el 2 y el 3.
 
 ## 2. Explicabilidad — ¿sabrías enseñarla?
 
-La prueba es literal: coge la descomposición que hiciste en `b1-m4-descomposicion`,
-ponte un cronómetro y explícala en voz alta como si tuvieras delante a alguien que
-entró ayer. Diez minutos.
-
+La prueba es literal: coge la descomposición de `b1-m4-descomposicion`,
+«Descomponer: entrada, decisiones, salida, criterio», ponte un
+cronómetro y explícala en voz alta como si tuvieras delante a alguien que entró ayer.
 Registrar un pedido: cuatro minutos, y la otra persona lo hace bien a la primera.
-Decidir el tono de una respuesta a alguien que está enfadado: no lo consigues, y
-además te oyes decir «es que ya lo ves».
+Decidir el tono de una respuesta a alguien enfadado: no lo consigues, y te oyes decir
+«es que ya lo ves».
 
 | Puntuación | Qué significa |
 |---|---|
@@ -79,13 +76,12 @@ además te oyes decir «es que ya lo ves».
 
 ## 3. Tolerancia al fallo — qué pasa si sale mal 1 de cada 20
 
-La pregunta no es «¿fallará?». Falla todo. La pregunta es cuánto cuesta el fallo.
-Y uno de cada veinte es mucho más frecuente de lo que suena: en 60 consultas al mes,
-son tres al mes.
+La pregunta no es «¿fallará?». Falla todo. Es cuánto cuesta el fallo. Y uno de cada
+veinte es más frecuente de lo que suena: en 60 consultas al mes son tres al mes.
 
-Un dato mal en tu resumen interno lo ves tú y cuesta cinco minutos. Un plazo inventado
-en un correo a un cliente cuesta una promesa incumplida, una reclamación y una llamada
-de gerencia. Es la misma acción de escribir, con dos riesgos que no se parecen en nada.
+Un dato mal en tu resumen interno lo ves tú: cinco minutos. Un plazo inventado en un
+correo a un cliente cuesta una promesa incumplida, una reclamación y una llamada de
+gerencia. La misma acción de escribir, con dos riesgos que no se parecen en nada.
 
 | Puntuación | Qué pasa si sale mal |
 |---|---|
@@ -115,14 +111,13 @@ Dos cosas que la puntuación no recoge y tienes que mirar aparte:
 > produciendo, y lo que producen ya no vale. Si dudas entre dos puntuaciones, pon la
 > baja.
 
-La prueba: coge la casilla «criterio» de tu descomposición y hazte dos preguntas.
-¿La habrías escrito igual hace tres meses? ¿Seguirá valiendo el mes que viene?
+La prueba: coge la casilla «criterio» de tu descomposición. ¿La habrías escrito igual
+hace tres meses? ¿Seguirá valiendo el mes que viene?
 
 «Bien hecho» en un alta de cliente son los campos obligatorios rellenos y el CIF
 verificado: eso no cambió el jueves, es un 5. «Bien hecho» al decidir qué reclamación
-merece un detalle comercial depende de cómo vaya el mes, de quién sea el cliente y del
-ánimo con el que esté gerencia: es un 1, y no hay nada malo en ello. Simplemente no se
-delega.
+merece un detalle comercial depende de cómo vaya el mes, del cliente y del ánimo de
+gerencia: es un 1. No tiene nada de malo; simplemente no se delega.
 
 | Puntuación | Qué significa |
 |---|---|
@@ -133,7 +128,8 @@ delega.
 | 5 | Cabe en una frase, la misma el lunes que el jueves, y dentro de tres meses también. |
 
 Si quieres la versión larga —hay tres variabilidades distintas y solo una se
-absorbe—, está en `b1-p2-variabilidad-mata-automatizaciones`.
+absorbe—, está en la rama `b1-p2-variabilidad-mata-automatizaciones`, «La variabilidad
+es la que mata automatizaciones».
 
 ## La suma, y los frenos que la suma no ve
 
@@ -161,29 +157,26 @@ Con la misma semana inventada del mapa:
 | Informe semanal para gerencia | 140 | 3 | 4 | 4 | 3 | 14 | — | probar |
 | Revisión trimestral de tarifas | 15 | 1 | 3 | 2 | 4 | 10 | Volumen | aparcar |
 
-Lee la primera fila despacio. La tarea que más pesa, con diferencia, no es por la que
-se empieza. Y no porque no valga: porque su criterio no está escrito, el fallo sale
-fuera y todavía no sabes explicarla en diez minutos. Su siguiente paso es documentar,
-que es exactamente lo que hiciste en el nodo anterior.
+Lee la primera fila despacio. La tarea que más pesa no es por la que se empieza, y no
+porque no valga: es que su criterio no está escrito, el fallo sale fuera y todavía no
+sabes explicarla en diez minutos. Su siguiente paso es documentar, que es exactamente
+lo que hiciste en el nodo anterior. Gana una tarea de cuatro minutos que nadie habría
+mirado. Eso pasa casi siempre.
 
-Gana una tarea de cuatro minutos que nadie habría mirado. Eso pasa casi siempre.
-
-Y queda la columna de la que no se habla: si en el mapa marcaste esas 24 reclamaciones
-como «no debería existir», su siguiente paso puede ser `eliminar`. Eso no se resuelve
-puntuando ni automatizando: se resuelve con evidencia, y la evidencia es justo lo que
-estás construyendo.
+Y si en el mapa marcaste esas 24 reclamaciones como «no debería existir», su siguiente
+paso puede ser `eliminar`. Eso no se resuelve puntuando ni automatizando: se resuelve
+con evidencia, que es justo lo que estás construyendo.
 
 ## Cuándo esto falla
 
 - **Puntuar de memoria.** Si las cifras no salen del diario y del mapa, esto es una
-  opinión con números encima. Cuesta lo mismo y no sirve.
-- **Obedecer la suma.** La suma ordena. Los frenos deciden. Un 17 con Estabilidad 2 no
+  opinión con números encima: cuesta lo mismo y no sirve.
+- **Obedecer la suma.** La suma ordena, los frenos deciden. Un 17 con Estabilidad 2 no
   es un 17.
 - **Puntuarte a ti en vez de a la tarea.** «Es que yo me explico bien» no es
-  Explicabilidad 5. La pregunta es sobre la tarea, no sobre ti.
-- **Poner Estabilidad alta porque nadie te ha dicho nunca que estuviera mal.** Que no
-  te lo digan no significa que el criterio sea estable. A veces significa que nadie lo
-  mira.
+  Explicabilidad 5.
+- **Poner Estabilidad alta porque nadie te ha dicho nunca que estuviera mal.** A veces
+  eso solo significa que nadie lo mira.
 - **Un total alto en una tarea que no debería existir.** Automatizarla la consolida y
   la vuelve invisible para siempre.
 
@@ -212,13 +205,14 @@ Las cuatro preguntas no son de tu oficina. Puntúan cualquier tarea repetida:
 
 **Dónde:** abre `plantillas/inventario-de-procesos.md`. Trae exactamente esta escala y
 estas cuatro columnas. Puedes puntuar directamente ahí: en
-`b1-m8-inventario-de-procesos` vas a terminar ese fichero de todas formas.
+`b1-m8-inventario-de-procesos`, «Tu inventario de procesos», vas a terminar ese fichero
+de todas formas.
 
 **Entregable:** diez tareas puntuadas, ordenadas, con freno aplicado y siguiente paso.
 
 **Regla de parada:** no montes nada. Este bloque no toca ninguna herramienta, y no es
-un descuido. La primera prueba con IA es `b1-m9-primera-victoria`, es un anticipo
-medido de media hora y no es el método.
+un descuido. La primera prueba con IA es `b1-m9-primera-victoria`, «Anticipo: una
+victoria pequeña, medida»: es un anticipo medido de media hora, no el método.
 
 ## Escribe tú la regla
 

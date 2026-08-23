@@ -35,7 +35,7 @@ existen si las apuntas mientras ocurre. En junio, de memoria, no se reconstruyen
 
 **Tres: sensación de avance sin insignias.** Aquí no hay puntos, ni rachas, ni niveles
 superados, y es deliberado. Lo que hay es un fichero que dentro de dos meses tiene
-treinta entradas escritas por ti, con sus fallos dentro. Eso sí es progreso.
+veinte entradas escritas por ti, con sus fallos dentro. Eso sí es progreso.
 
 ## Los minutos no son opcionales
 
@@ -58,9 +58,9 @@ Lo que toca hacer en este nodo:
 
 1. Copia `plantillas/bitacora.md` a tu carpeta de trabajo como `bitacora.md`. No la
    edites en su sitio.
-2. Pega dentro lo que escribiste en los tres nodos anteriores: tus dos listas de
-   `b0-m1-que-es-este-curso`, tu regla de ritmo de `b0-m2-como-usar-esto` y el número de
-   subrayados de `b0-m3-fallar-es-diagnostico`.
+2. Pega dentro lo que has ido escribiendo en el bloque 0: tus dos listas de qué esperas
+   y qué no, tu regla de ritmo y el número de subrayados que te salió en el papel de las
+   seis líneas.
 3. Escribe la entrada de hoy, con los minutos de reloj que llevas de bloque 0.
 
 Y tres cosas que la plantilla no dice, que son las que más se hacen mal:
@@ -92,8 +92,8 @@ infinitamente más que una impecable abandonada.
 
 La tabla de atascos y la de recuento de minutos vienen en la plantilla. La de atascos se
 usa cuando algo te bloquee más de veinte minutos: se anota y se deja para mañana. La de
-recuento se rellena sola si vas apuntando los minutos, y es media hoja de tu caso de
-negocio del bloque 6.
+recuento se rellena sola si vas apuntando los minutos, y alimenta directamente el caso
+de negocio del bloque 6.
 
 ## Para la bitácora
 

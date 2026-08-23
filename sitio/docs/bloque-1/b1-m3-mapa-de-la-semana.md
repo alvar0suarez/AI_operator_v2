@@ -10,6 +10,7 @@
     - Usar la mediana en lugar de la media y justificar por qué
     - Escribir por qué varía cada tarea, no solo cuánto
     - Marcar al menos una tarea que quizá no debería existir
+
 El diario en bruto no dice nada: son cien líneas sueltas. Aquí lo conviertes en tres
 números por tarea y una pregunta incómoda. Es la sesión más aritmética del curso y no
 necesita más que una tabla y quince minutos de sumar. Al final tendrás la primera
@@ -201,4 +202,4 @@ de medir.
 
 **Siguiente:** [Descomponer: entrada, decisiones, salida, criterio](../bloque-1/b1-m4-descomposicion.md)
 
-<span class="conceptos-nodo">Conceptos: [frecuencia](../../glosario/README.md#frecuencia), [variabilidad](../../glosario/README.md#variabilidad), [linea-base](../../glosario/README.md#linea-base), [coste-de-oportunidad](../../glosario/README.md#coste-de-oportunidad)</span>
+<span class="conceptos-nodo">Conceptos: [frecuencia](../glosario/README.md#frecuencia), [variabilidad](../glosario/README.md#variabilidad), [linea-base](../glosario/README.md#linea-base), [coste-de-oportunidad](../glosario/README.md#coste-de-oportunidad)</span>

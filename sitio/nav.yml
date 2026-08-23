@@ -78,14 +78,16 @@ nav:
   - Cuando el jefe dice que no (y a veces tiene razón): bloque-6/b6-m6-cuando-el-jefe-dice-que-no.md
   - Documentar para que sobreviva sin ti: bloque-6/b6-m7-documentar-para-que-sobreviva.md
   - Tu propuesta de una página: bloque-6/b6-m8-propuesta-de-una-pagina.md
+- Ejercicios:
+  - Rúbricas — cómo se corrige sin profesor: ejercicios/rubricas/README.md
 - Plantillas:
-  - Bitacora: plantillas/bitacora.md
-  - Catalogo de patrones: plantillas/catalogo-de-patrones.md
-  - Contexto trabajo: plantillas/contexto-trabajo.md
-  - Diario de tareas: plantillas/diario-de-tareas.md
-  - Informe causa raiz: plantillas/informe-causa-raiz.md
+  - Bitácora: plantillas/bitacora.md
+  - Catálogo de patrones: plantillas/catalogo-de-patrones.md
+  - Mi contexto de trabajo: plantillas/contexto-trabajo.md
+  - Diario de tareas — 5 días: plantillas/diario-de-tareas.md
+  - Informe de causa raíz — una página: plantillas/informe-causa-raiz.md
   - Inventario de procesos: plantillas/inventario-de-procesos.md
-  - Plantilla de verificacion: plantillas/plantilla-de-verificacion.md
+  - Mi plantilla de verificación: plantillas/plantilla-de-verificacion.md
   - Proceso documentado: plantillas/proceso-documentado.md
-  - Propuesta una pagina: plantillas/propuesta-una-pagina.md
+  - Propuesta — una página: plantillas/propuesta-una-pagina.md
 - Glosario: glosario/README.md

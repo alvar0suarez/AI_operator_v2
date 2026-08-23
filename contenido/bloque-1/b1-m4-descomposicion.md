@@ -16,7 +16,8 @@ conceptos: [descomposicion, criterio, decision, conocimiento-tacito]
 
 Tres verbos no son un proceso. «Miras el ticket, compruebas la factura y contestas» es
 más o menos lo que dejaste escrito antes de irte de vacaciones en
-`b1-m1-nadie-sabe-explicar-su-trabajo`, y por eso volvieron cinco correos mal. Aquí se
+`b1-m1-nadie-sabe-explicar-su-trabajo`, «Por qué nadie sabe explicar su propio
+trabajo», y por eso volvieron cinco correos mal. Aquí se
 descompone una tarea hasta el punto en que otra persona podría ejecutarla sin
 preguntarte nada. Trabajamos un ejemplo entero primero y después haces el tuyo.
 
@@ -154,7 +155,7 @@ Las cuatro casillas no son de atención al cliente. Son de cualquier tarea repet
 |---|---|
 | **Tu sector (CX)** | El ejemplo de arriba. La casilla que faltaba no era el procedimiento: era el criterio. |
 | **Otro trabajo** | En una clínica dental, dar cita a quien llama con dolor. Entrada: una llamada. Decisión: ¿es urgencia? («por cómo lo cuenta»). Salida: cita y aviso al gabinete. Criterio: que no se quede fuera una urgencia real y que no se rompa la agenda por una que no lo era. Dos criterios que tiran en direcciones opuestas, y por eso nadie los ha escrito. |
-| **Tu casa** | La compra semanal. Entrada: lo que falta. Decisiones: qué marca, qué cantidad, qué se sustituye si no hay. Salida: la compra hecha. Criterio: «que llegue al jueves». Ese criterio no está escrito en ningún sitio, y por eso quien va a comprar por primera vez trae seis cosas mal. Esta la vas a descomponer entera en `b1-m7-caso-cruzado-domestico`. |
+| **Tu casa** | La compra semanal. Entrada: lo que falta. Decisiones: qué marca, qué cantidad, qué se sustituye si no hay. Salida: la compra hecha. Criterio: «que llegue al jueves». Ese criterio no está escrito en ningún sitio, y por eso quien va a comprar por primera vez trae seis cosas mal. Esta la vas a descomponer entera en `b1-m7-caso-cruzado-domestico`, «Caso cruzado: la misma lente en tu casa». |
 
 ## Ejercicio
 

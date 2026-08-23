@@ -9,6 +9,7 @@
     - Montar tu carpeta de trabajo antes de la primera sesión
     - Leer la etiqueta de caducidad de un nodo y decidir cuánta memoria le dedicas
     - Usar el tutor sin que te resuelva el ejercicio
+
 Quince minutos de mecánica y no vuelves aquí. Sales con tu carpeta de trabajo creada,
 con tu hueco semanal decidido y sabiendo qué esperar del tutor. Si te saltas esta
 página, lo vas a pagar en el bloque 2 buscando dónde guardaste las cosas.
@@ -52,7 +53,8 @@ Distinguir lo que dura de lo que caduca no es una manía del curso. Lo haces ya,
 partes, y casi siempre sin darte cuenta.
 
 - **En tu mesa.** Saber cómo se construye una taxonomía de incidencias dura. Saber en
-  qué pestaña de vuestro CRM está el campo «tipo» caduca en la próxima actualización.
+  qué pestaña del programa que usáis está el campo «tipo» caduca en la próxima
+  actualización.
 - **En la gestoría de la esquina.** Saber comprobar que un asiento cuadra dura. Saber
   cómo está colocada la sede electrónica este año, no.
 - **En tu casa.** Saber leer un extracto y reconocer un cargo duplicado dura toda la
@@ -126,4 +128,4 @@ hazla observable: «cuando releo un párrafo dos veces», no «cuando me canse»
 
 **Siguiente:** [Fallar es diagnóstico, no fracaso](../bloque-0/b0-m3-fallar-es-diagnostico.md)
 
-<span class="conceptos-nodo">Conceptos: [artefacto](../../glosario/README.md#artefacto), [bitacora](../../glosario/README.md#bitacora), [caducidad](../../glosario/README.md#caducidad), [tutor](../../glosario/README.md#tutor)</span>
+<span class="conceptos-nodo">Conceptos: [artefacto](../glosario/README.md#artefacto), [bitacora](../glosario/README.md#bitacora), [caducidad](../glosario/README.md#caducidad), [tutor](../glosario/README.md#tutor)</span>

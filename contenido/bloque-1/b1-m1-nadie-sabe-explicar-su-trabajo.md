@@ -63,8 +63,8 @@ la demostración. Y no es un fallo tuyo: es la señal de que sabes hacerlo.
 No puedes delegar lo que no sabes describir. Ni a una persona nueva, ni a un
 becario, ni a una máquina. Cuando la delegación sale mal, la lectura habitual es
 «esto no vale» o «no lo hace bien». Casi siempre lo que falló fue el encargo, no el
-que lo recibió. Eso ya lo viste en `b0-m3-fallar-es-diagnostico`, y en este bloque
-empieza a tener consecuencias prácticas.
+que lo recibió. Eso ya lo viste en `b0-m3-fallar-es-diagnostico`, «Fallar es
+diagnóstico, no fracaso»; aquí empieza a tener consecuencias prácticas.
 
 Hay un segundo coste, menos visible y más caro. Mientras la tarea solo vive en tu
 cabeza, el trabajo depende de que tú estés. Eso parece seguridad y es lo contrario:
@@ -92,7 +92,8 @@ tres estimaciones a ciegas, sin mirar nada:
 3. Qué tarea te comió más tiempo de toda la semana.
 
 Ciérralo y no lo toques. Lo vas a comparar con los números reales en
-`b1-m3-mapa-de-la-semana`. No es un juego: es tu primera medida de cuánto te puedes
+`b1-m3-mapa-de-la-semana`, «Mapa de la semana: frecuencia, duración, variabilidad». No
+es un juego: es tu primera medida de cuánto te puedes
 fiar de tu memoria cuando tengas que defender una cifra delante de alguien.
 
 ## Cuándo esto falla

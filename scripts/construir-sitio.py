@@ -59,6 +59,11 @@ def leer_frontmatter(ruta: Path) -> tuple[dict, str]:
     return meta, cuerpo
 
 
+def subir(meta: dict) -> str:
+    """Prefijo relativo hasta sitio/docs/ desde el fichero de este nodo."""
+    return "../../" if meta["tipo"] == "profundizacion" else "../"
+
+
 def cabecera(meta: dict, indice: dict) -> str:
     """La ficha que ve la alumna encima de cada nodo."""
     etiqueta, explicacion = CADUCIDAD[meta["caduca"]]
@@ -82,7 +87,7 @@ def cabecera(meta: dict, indice: dict) -> str:
 
     reqs = [r for r in meta.get("requisitos", []) if r in indice]
     if reqs:
-        enlaces = ", ".join(f"[{indice[r]['titulo']}]({enlace(r, indice)})" for r in reqs)
+        enlaces = ", ".join(f"[{indice[r]['titulo']}]({enlace(r, indice, meta)})" for r in reqs)
         lineas += [f"**Antes de esto:** {enlaces}", ""]
 
     if meta.get("objetivos"):
@@ -101,28 +106,28 @@ def pie(meta: dict, indice: dict) -> str:
                    "Ramas opcionales. No hacen falta para seguir; están por si el tema te ha enganchado.", ""]
         for p in meta["profundizar"]:
             if p["id"] in indice:
-                lineas.append(f"- [{p['titulo']}]({enlace(p['id'], indice)})")
+                lineas.append(f"- [{p['titulo']}]({enlace(p['id'], indice, meta)})")
         lineas.append("")
 
     sigs = [d for d in meta.get("desbloquea", []) if d in indice]
     if sigs:
-        enlaces = " · ".join(f"[{indice[s]['titulo']}]({enlace(s, indice)})" for s in sigs)
+        enlaces = " · ".join(f"[{indice[s]['titulo']}]({enlace(s, indice, meta)})" for s in sigs)
         lineas += [f"**Siguiente:** {enlaces}", ""]
 
     if meta.get("conceptos"):
-        cs = ", ".join(f"[{c}](../../glosario/README.md#{c})" for c in meta["conceptos"])
+        raiz = subir(meta)
+        cs = ", ".join(f"[{c}]({raiz}glosario/README.md#{c})" for c in meta["conceptos"])
         lineas += [f'<span class="conceptos-nodo">Conceptos: {cs}</span>', ""]
 
     return "\n".join(lineas)
 
 
-def enlace(nodo_id: str, indice: dict) -> str:
-    """Ruta relativa entre nodos, desde un fichero de bloque-N/."""
+def enlace(nodo_id: str, indice: dict, origen: dict) -> str:
+    """Ruta relativa de un nodo a otro, contando desde dónde sale el enlace."""
     destino = indice[nodo_id]
-    b = destino["bloque"]
-    if destino["tipo"] == "profundizacion":
-        return f"../bloque-{b}/profundizacion/{nodo_id}.md"
-    return f"../bloque-{b}/{nodo_id}.md"
+    raiz = subir(origen)
+    sub = "profundizacion/" if destino["tipo"] == "profundizacion" else ""
+    return f"{raiz}bloque-{destino['bloque']}/{sub}{nodo_id}.md"
 
 
 def marcador_pendiente(meta: dict) -> str:
@@ -159,7 +164,7 @@ def construir(verbose: bool = True) -> dict:
         if origen.exists():
             meta, cuerpo = leer_frontmatter(origen)
             meta = {**nodo, **meta}
-            destino.write_text(cabecera(meta, indice) + cuerpo + pie(meta, indice), encoding="utf-8")
+            destino.write_text(cabecera(meta, indice) + "\n" + cuerpo + pie(meta, indice), encoding="utf-8")
             stats["escritos"] += 1
         else:
             destino.write_text(marcador_pendiente(nodo), encoding="utf-8")
@@ -216,15 +221,33 @@ def escribir_nav(registro: dict, indice: dict) -> None:
             titulo = info["titulo"] if bloque == 0 else f"{bloque}. {info['titulo']}"
             nav.append({titulo: entradas})
 
+    ejercicios = sorted(p for p in (RAIZ / "ejercicios").rglob("*.md")
+                        if "solucion" not in p.name.lower())
+    if ejercicios:
+        entradas = []
+        for e in ejercicios:
+            rel = e.relative_to(RAIZ / "ejercicios")
+            titulo = titulo_de(e) or rel.parent.name.replace("-", " ").capitalize()
+            entradas.append({titulo: f"ejercicios/{rel.as_posix()}"})
+        nav.append({"Ejercicios": entradas})
+
     plantillas = sorted((RAIZ / "plantillas").glob("*.md"))
     if plantillas:
-        nav.append({"Plantillas": [{p.stem.replace("-", " ").capitalize(): f"plantillas/{p.name}"} for p in plantillas]})
+        nav.append({"Plantillas": [{titulo_de(p) or p.stem: f"plantillas/{p.name}"} for p in plantillas]})
     nav.append({"Glosario": "glosario/README.md"})
 
     (RAIZ / "sitio" / "nav.yml").write_text(
         yaml.safe_dump({"nav": nav}, allow_unicode=True, sort_keys=False, width=120),
         encoding="utf-8",
     )
+
+
+def titulo_de(ruta: Path) -> str | None:
+    """El primer H1 del fichero, que es como se llama la página en la navegación."""
+    for linea in ruta.read_text(encoding="utf-8").splitlines():
+        if linea.startswith("# "):
+            return linea[2:].strip()
+    return None
 
 
 if __name__ == "__main__":

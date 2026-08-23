@@ -57,7 +57,8 @@ Distinguir lo que dura de lo que caduca no es una manía del curso. Lo haces ya,
 partes, y casi siempre sin darte cuenta.
 
 - **En tu mesa.** Saber cómo se construye una taxonomía de incidencias dura. Saber en
-  qué pestaña de vuestro CRM está el campo «tipo» caduca en la próxima actualización.
+  qué pestaña del programa que usáis está el campo «tipo» caduca en la próxima
+  actualización.
 - **En la gestoría de la esquina.** Saber comprobar que un asiento cuadra dura. Saber
   cómo está colocada la sede electrónica este año, no.
 - **En tu casa.** Saber leer un extracto y reconocer un cargo duplicado dura toda la
