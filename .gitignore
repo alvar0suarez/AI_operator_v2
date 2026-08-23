@@ -8,6 +8,9 @@ venv/
 
 # Build del sitio. Se regenera; no se versiona.
 sitio/build/
+# sitio/docs/ lo ensambla scripts/construir-sitio.py a partir de contenido/.
+# Versionarlo duplicaría cada nodo y se desincronizaría al primer cambio.
+sitio/docs/
 site/
 .cache/
 
