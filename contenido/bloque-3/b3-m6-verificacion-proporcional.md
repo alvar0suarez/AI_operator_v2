@@ -49,8 +49,7 @@ ahora desde el otro lado. Uno de cada veinte no es raro: en 60 tareas al mes son
 mes.
 
 Cuatro respuestas, de menos a más: lo arreglo yo; hay que llamar a alguien; perdemos un
-cliente o cuesta dinero; hay datos personales o un plazo legal. La última ya no es solo
-tuya.
+cliente o cuesta dinero; hay datos personales o un plazo legal por medio.
 
 **Los tres ejes no se promedian.** Manda el más alto. Algo irreversible que llega a una
 sola persona sigue siendo irreversible.
@@ -81,12 +80,12 @@ Casos de tu mesa: la misma persona y el mismo martes, en tres niveles distintos.
 | Nota con una propuesta para gerencia | Sí | Quien decide con ella | Pierdes credibilidad | **Muestra** del texto, **línea a línea** de las cifras |
 
 Falta una fila a propósito: reconocer por escrito un error de facturación. Ésa no es
-cuestión de nivel, es de las de `b2-m9-que-no-es-ninguno`.
+cuestión de nivel de verificación, es de las de `b2-m9-que-no-es-ninguno`.
 
 ## Verificar de más es un error, no una virtud
 
-Con números. Pasar 40 correos al mes a una tabla: a mano son 3 minutos por correo,
-**120 min/mes**.
+Con números. Pasar 40 correos al mes a una tabla, a mano: 3 min por correo, **120
+min/mes**.
 
 | Cómo lo verificas | Cuentas | Total | Ahorro |
 |---|---|---|---|
@@ -108,8 +107,8 @@ cómo verificarla: es si merece un montaje, o si lo que toca mirar es por qué e
 
 ## Cuándo se sube y cuándo se baja
 
-- **Se sube en el acto.** En cuanto la muestra falla una vez, el lote entero pasa a
-  línea a línea. Sin «habrá sido mala suerte».
+- **Se sube en el acto.** Si la muestra falla una vez, el lote entero pasa a línea a
+  línea. Sin «habrá sido mala suerte».
 - **Se baja solo con pruebas: tres lotes seguidos sin un fallo.** Con dos, no.
 - **Hay un suelo que no se baja nunca:** lo irreversible, lo que lleva dinero, lo que
   lleva datos personales y lo que tiene un plazo legal detrás.
@@ -136,8 +135,8 @@ cómo verificarla: es si merece un montaje, o si lo que toca mirar es por qué e
 - **Verificar contra el resultado y no contra la fuente.** Releer tres veces un texto no
   es verificarlo: sin abrir el origen solo compruebas que se lee bien, que es justo lo
   que hace peligroso un texto malo.
-- **Muestra que no es muestra.** Siempre las cinco primeras filas, siempre los casos que
-  entiendes.
+- **Muestra que no es muestra.** Siempre las cinco primeras filas, siempre los casos
+  fáciles.
 - **Creer que subir de nivel lo cubre todo.** El nivel dice cuánto miras, no qué miras.
   Lo que falta no aparece mirando más rato: aparece comparando con la fuente.
 

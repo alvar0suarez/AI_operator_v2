@@ -18,9 +18,9 @@ profundizar:
     titulo: "Anonimizar de verdad, en dos minutos"
 ---
 
-Primero la regla, que es lo que necesitas mañana a las nueve. La razón viene después, y
-viene corta. Este nodo no te va a convertir en experta en protección de datos: te va a
-dejar un reflejo de tres segundos y una pregunta escrita para llevarle a quien decide.
+Primero la regla, que es lo que necesitas mañana a las nueve; la razón viene después y
+viene corta. Esto no te convierte en experta en protección de datos: te deja un reflejo
+de tres segundos y una pregunta escrita para quien decide.
 
 ## La regla, en tres líneas
 
@@ -33,16 +33,15 @@ dejar un reflejo de tres segundos y una pregunta escrita para llevarle a quien d
    fallo del anonimizado: es la respuesta.
 
 Con esas tres líneas estás por encima de lo que se hace en casi cualquier oficina
-pequeña, y no has necesitado saber qué artículo lo dice.
+pequeña, y sin saber qué artículo lo dice.
 
 ## Por qué esto es un marrón real, y de quién
 
 Quien responde ante la autoridad es **la empresa**, no tú: es la responsable del
-tratamiento, la que decidió qué datos guarda, para qué y dónde. Tú no firmas nada de eso.
-
-Y aun así te cae a ti, por tres motivos poco jurídicos: la que pegó el texto fuiste tú,
-la conversación con gerencia es contigo, y en una empresa de seis personas no hay ningún
-departamento entre tu teclado y el problema.
+tratamiento, la que decidió qué datos guarda, para qué y dónde. Tú no firmas nada de eso,
+y aun así te cae a ti: la que pegó el texto fuiste tú, la conversación con gerencia es
+contigo, y en una empresa de seis personas no hay ningún departamento entre tu teclado y
+el problema.
 
 El marco prevé multas de hasta 20 millones de euros o el 4 % de la facturación anual.
 Ese número no es el tuyo y no sirve para pensar. Lo tuyo es esto: un cliente que reclama
@@ -88,9 +87,8 @@ Lo que haces, en este orden:
 4. **Mientras no haya respuesta, no montas nada que dependa de pegar datos personales.**
    El día que llegue la norma te lo tumban y habrás tirado el trabajo.
 
-Los pasos 2 y 3 cuestan veinte minutos, dejan constancia de que preguntaste y te colocan
-como la persona que se lo tomó en serio. Es el tipo de gesto que en el bloque 6 se
-convierte en tener voz.
+Los pasos 2 y 3 cuestan veinte minutos y dejan constancia de que preguntaste. Es el tipo
+de gesto que en el bloque 6 se convierte en tener voz.
 
 ## Anonimizar antes de pegar
 
@@ -114,9 +112,9 @@ en dos minutos».
 
 ## Las tres instancias
 
-- **En tu mesa.** El correo de reclamación que ibas a pegar entero lleva la firma con
-  teléfono, la dirección de reparto y el número de factura. Ninguno de los tres hace
-  falta para redactar la respuesta. Los tres bastan para identificar al cliente.
+- **En tu mesa.** El correo de reclamación que ibas a pegar entero lleva firma con
+  teléfono, dirección de reparto y número de factura. Ninguno de los tres hace falta para
+  redactar la respuesta, y cualquiera de ellos identifica al cliente.
 - **En otro oficio: la clínica dental.** Los datos de salud tienen protección reforzada,
   así que «el paciente de la endodoncia del martes» no es un caso anónimo, es una
   persona. En una gestoría pasa igual con nóminas, DNI y salarios.
@@ -131,9 +129,8 @@ en dos minutos».
   descubierto que esa tarea no se hace ahí.
 - **Creer que un identificador interno es anónimo.** `CLI-0042` es un nombre para
   cualquiera que tenga el maestro de clientes abierto.
-- **Guardar el mapa de equivalencias junto al texto.** Si pegas la tabla de qué cliente
-  es CLIENTE_A, no has anonimizado nada, has añadido un paso.
-- **Anonimizar el texto y adjuntar el fichero original.** Pasa más de lo que parece.
+- **Guardar el mapa de equivalencias junto al texto**, o anonimizar el texto y adjuntar
+  el fichero original. Las dos pasan más de lo que parece.
 - **Fiarte de lo que promete un proveedor.** Puede ser cierto hoy y cambiar mañana, y en
   ningún caso traslada la responsabilidad de tu empresa por haber leído una página web.
 - **El extremo contrario: no tocar nada.** Cómodo y también un error: con el texto
@@ -143,17 +140,14 @@ en dos minutos».
 
 Va a cambiar todo esto: las obligaciones concretas, los criterios de la autoridad, qué
 proveedor sirve para qué y lo que prometen los productos. Cuando pase, este nodo se tira
-y se escribe otro sin tocar el resto del curso.
-
-No va a cambiar el reflejo: **mirar un texto y quitar lo que lleva a una persona antes de
-pegarlo en ningún sitio.** Eso vale igual dentro de diez años y con herramientas que hoy
-no existen. Quédate con el reflejo, no con los detalles.
+y se escribe otro sin tocar nada más del curso. Lo que no cambia es el reflejo: **mirar
+un texto y quitar lo que lleva a una persona antes de pegarlo.** Quédate con el reflejo,
+no con los detalles.
 
 ## Ejercicio
 
-Quince minutos. Material: `dataset/ficheros/correos/`, que son correos inventados de
-una empresa que no existe. **Con correos de tu empresa esto no se hace nunca**, ni
-siquiera de prueba.
+Quince minutos. Material: `dataset/ficheros/correos/`, correos inventados de una empresa
+que no existe. **Con correos de tu empresa esto no se hace nunca**, ni de prueba.
 
 1. Coge **tres correos** cualquiera de la carpeta.
 2. Anonimiza cada uno en dos minutos con los tres movimientos, y apunta debajo qué has
