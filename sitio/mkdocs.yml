@@ -1,0 +1,78 @@
+# Sitio del curso "CX + IA".
+#
+# El `nav` NO se escribe aquí: lo genera scripts/construir-sitio.py en nav.yml a
+# partir del registro de nodos, para que no se desincronice al añadir un nodo.
+# INHERIT lo trae y esta configuración se aplica encima.
+INHERIT: nav.yml
+
+site_name: CX + IA
+site_description: Ver el trabajo como procesos, decidir qué delegar, verificar lo que sale y rediseñar cómo se trabaja.
+site_url: ""
+docs_dir: docs
+site_dir: build
+use_directory_urls: true
+
+theme:
+  name: material
+  language: es
+  font: false          # sin llamadas a Google Fonts: el sitio funciona sin red
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.top
+    - navigation.footer
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: teal
+      accent: teal
+      toggle:
+        icon: material/weather-night
+        name: Modo oscuro
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: teal
+      accent: teal
+      toggle:
+        icon: material/weather-sunny
+        name: Modo claro
+
+extra_css:
+  - assets/curso.css
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - footnotes
+  - toc:
+      permalink: true
+      toc_depth: 3
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.highlight
+  - pymdownx.caret
+  - pymdownx.mark
+
+plugins:
+  - search:
+      lang: es
+
+# ESPECIFICACION.md §2.7: sin gamificación. Y sin analítica de terceros: el curso
+# no necesita saber cuánto tarda, y ella no necesita que la midan sin pedirlo.
+extra:
+  generator: false
+
+validation:
+  nav:
+    omitted_files: warn
+  links:
+    absolute_links: warn
+    unrecognized_links: warn

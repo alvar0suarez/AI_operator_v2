@@ -1,0 +1,15 @@
+# Anonimizar de verdad, en dos minutos
+
+!!! note "Todavía sin escribir, y es a propósito"
+
+    Este nodo está previsto y tiene su sitio en el curso, pero aún no tiene
+    contenido. La especificación del programa es explícita: los bloques 1 a 3
+    se escriben, se publican y **se pilotan** antes de escribir el 4, porque el
+    bloque 4 se diseña mucho mejor sabiendo dónde te atascaste de verdad.
+
+    Lo que se vaya viendo en el piloto es lo que va a escribir esto.
+
+**Lo que va a cubrir:** Procedimiento repetible: sustituir identificadores directos por etiquetas estables (CLIENTE_01), eliminar cuasi-identificadores que reidentifican por cruce (dirección exacta, matrícula, importe único), y conservar solo lo que la tarea necesita. El caso que engaña: un texto sin ningún nombre que identifica a una persona porque solo hay un bar en ese pueblo con terraza y dos empleados.
+
+
+*Duración prevista: 20 min.*

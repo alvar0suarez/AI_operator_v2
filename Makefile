@@ -23,11 +23,13 @@ validar:  ## Valida el grafo de nodos: ciclos, referencias, alcanzabilidad
 glosario:  ## Regenera el glosario navegable desde glosario.yml
 	$(PY) scripts/generar-glosario.py
 
-sitio:  ## Levanta el sitio en local con recarga automática
-	mkdocs serve -f sitio/mkdocs.yml
+sitio:  ## Ensambla y levanta el sitio en local con recarga automática
+	$(PY) scripts/construir-sitio.py
+	cd sitio && mkdocs serve
 
 sitio-build:  ## Construye el sitio estático y comprueba que SOLUCIONES/ no entra
-	mkdocs build -f sitio/mkdocs.yml --strict
+	$(PY) scripts/construir-sitio.py
+	cd sitio && mkdocs build --strict
 	@$(PY) scripts/comprobar-build.py
 
 todo: validar verificar glosario sitio-build  ## Todas las comprobaciones

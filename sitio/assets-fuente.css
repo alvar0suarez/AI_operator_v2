@@ -1,0 +1,55 @@
+/* Estilos del curso CX + IA.
+   Lo justo para que la ficha de nodo y la etiqueta de caducidad se lean bien en
+   móvil, que es donde se va a leer esto (ESPECIFICACION.md §8). Nada decorativo. */
+
+:root {
+  --caduca-bajo: #2e7d32;
+  --caduca-medio: #b26a00;
+  --caduca-alto: #b3261e;
+}
+[data-md-color-scheme="slate"] {
+  --caduca-bajo: #7cc47f;
+  --caduca-medio: #e0a34d;
+  --caduca-alto: #f2857c;
+}
+
+/* Ficha de cabecera: tipo · duración · caducidad */
+.ficha-nodo {
+  display: block;
+  margin: -0.4rem 0 1.2rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--md-default-fg-color--light);
+}
+
+.caduca {
+  font-weight: 700;
+  border-bottom: 2px dotted currentColor;
+  cursor: help;
+}
+.caduca-bajo  { color: var(--caduca-bajo); }
+.caduca-medio { color: var(--caduca-medio); }
+.caduca-alto  { color: var(--caduca-alto); }
+
+/* Conceptos al pie del nodo */
+.conceptos-nodo {
+  display: block;
+  margin-top: 1.5rem;
+  font-size: 0.7rem;
+  color: var(--md-default-fg-color--light);
+}
+.conceptos-nodo a { color: inherit; text-decoration: underline dotted; }
+
+/* Las tablas del curso son de trabajo, no de adorno: que quepan y se lean. */
+.md-typeset table:not([class]) { font-size: 0.72rem; }
+.md-typeset table:not([class]) th { white-space: nowrap; }
+
+/* En móvil, que una tabla ancha haga scroll ella sola y no la página entera. */
+.md-typeset__table { overflow-x: auto; }
+
+/* Ramas de profundización en la navegación lateral: se distinguen del tronco. */
+.md-nav__link[href*="/profundizacion/"] {
+  font-size: 0.72rem;
+  opacity: 0.85;
+}

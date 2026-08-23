@@ -1,0 +1,91 @@
+nav:
+- Empezar aquí: index.md
+- Antes de empezar:
+  - Qué es este curso y qué no es: bloque-0/b0-m1-que-es-este-curso.md
+  - Cómo se usa este repositorio: bloque-0/b0-m2-como-usar-esto.md
+  - Fallar es diagnóstico, no fracaso: bloque-0/b0-m3-fallar-es-diagnostico.md
+  - Abre tu bitácora: bloque-0/b0-m4-tu-bitacora.md
+- 1. Ver el trabajo:
+  - Por qué nadie sabe explicar su propio trabajo: bloque-1/b1-m1-nadie-sabe-explicar-su-trabajo.md
+  - 'El diario de tareas: cinco días, quince minutos': bloque-1/b1-m2-diario-de-tareas.md
+  - ↳ Por qué casi todos los diarios de tiempo mienten: bloque-1/profundizacion/b1-p1-por-que-fallan-los-diarios.md
+  - 'Mapa de la semana: frecuencia, duración, variabilidad': bloque-1/b1-m3-mapa-de-la-semana.md
+  - 'Descomponer: entrada, decisiones, salida, criterio': bloque-1/b1-m4-descomposicion.md
+  - 'El filtro de automatizabilidad: cuatro preguntas': bloque-1/b1-m5-filtro-automatizabilidad.md
+  - ↳ La variabilidad es la que mata automatizaciones: bloque-1/profundizacion/b1-p2-variabilidad-mata-automatizaciones.md
+  - Trabajo visible y trabajo invisible: bloque-1/b1-m6-trabajo-visible-invisible.md
+  - ↳ Lo que cuesta volver a donde estabas: bloque-1/profundizacion/b1-p3-coste-de-cambio-de-contexto.md
+  - 'Caso cruzado: la misma lente en tu casa': bloque-1/b1-m7-caso-cruzado-domestico.md
+  - Tu inventario de procesos: bloque-1/b1-m8-inventario-de-procesos.md
+  - 'Anticipo: una victoria pequeña, medida': bloque-1/b1-m9-primera-victoria.md
+- 2. Los seis verbos:
+  - El mapa de lo posible: bloque-2/b2-m1-mapa-de-lo-posible.md
+  - 'Verbo 1: clasificar': bloque-2/b2-m2-clasificar.md
+  - ↳ Clasificar no es buscar: bloque-2/profundizacion/b2-p1-clasificar-vs-buscar.md
+  - 'Verbo 2: extraer': bloque-2/b2-m3-extraer.md
+  - ↳ Dónde se rompe la extracción: bloque-2/profundizacion/b2-p2-limites-de-la-extraccion.md
+  - 'Verbo 3: transformar': bloque-2/b2-m4-transformar.md
+  - 'Verbo 4: redactar borrador': bloque-2/b2-m5-redactar-borrador.md
+  - ↳ Por qué el valor está en el borrador cero: bloque-2/profundizacion/b2-p3-el-borrador-cero.md
+  - 'Verbo 5: comparar contra criterio': bloque-2/b2-m6-comparar-contra-criterio.md
+  - 'Verbo 6: detectar anomalías': bloque-2/b2-m7-detectar-anomalias.md
+  - ↳ Una anomalía no es un error: bloque-2/profundizacion/b2-p4-anomalia-no-es-error.md
+  - 'Verbos compuestos: encadenar sin perder el hilo': bloque-2/b2-m8-verbos-compuestos.md
+  - Lo que no es ninguno de los seis: bloque-2/b2-m9-que-no-es-ninguno.md
+  - Tu catálogo de patrones: bloque-2/b2-m10-catalogo-de-patrones.md
+  - '↳ Apéndice desechable: cómo está el panorama ahora mismo': bloque-2/profundizacion/b2-p5-herramientas-hoy.md
+- 3. Especificar y verificar:
+  - Anatomía de un encargo: bloque-3/b3-m1-anatomia-encargo.md
+  - ↳ Escribir un criterio de aceptación que sirva: bloque-3/profundizacion/b3-p3-criterio-de-aceptacion.md
+  - Todo lo que en tu oficina se da por hecho: bloque-3/b3-m2-especificacion-implicita.md
+  - 'Ficheros de contexto: glosario, tono, plantillas, casuística': bloque-3/b3-m3-ficheros-de-contexto.md
+  - Ejercicios de sabotaje: bloque-3/b3-m4-sabotaje.md
+  - ↳ Por qué los modelos inventan datos: bloque-3/profundizacion/b3-p1-por-que-alucinan.md
+  - ↳ Técnicas de verificación numérica rápida: bloque-3/profundizacion/b3-p2-verificacion-numerica.md
+  - Los cinco modos de fallo típicos: bloque-3/b3-m5-modos-de-fallo.md
+  - Verificación proporcional al riesgo: bloque-3/b3-m6-verificacion-proporcional.md
+  - ↳ Verificar de más también es un error: bloque-3/profundizacion/b3-p5-coste-de-verificar-de-mas.md
+  - 'Datos y RGPD: qué no se pega jamás': bloque-3/b3-m7-datos-y-rgpd.md
+  - ↳ Anonimizar de verdad, en dos minutos: bloque-3/profundizacion/b3-p4-anonimizar-en-la-practica.md
+  - Tu plantilla de verificación: bloque-3/b3-m8-plantilla-de-verificacion.md
+  - Tu primer fichero de contexto de trabajo: bloque-3/b3-m9-contexto-trabajo.md
+- 4. CX como disciplina:
+  - Taxonomías de incidencia: bloque-4/b4-m1-taxonomias.md
+  - Análisis de causa raíz: bloque-4/b4-m2-causa-raiz.md
+  - Contacto evitable: bloque-4/b4-m3-contacto-evitable.md
+  - El coste real de un contacto: bloque-4/b4-m4-coste-de-un-contacto.md
+  - Métricas que dicen algo: bloque-4/b4-m5-metricas.md
+  - Responder bajo carga emocional: bloque-4/b4-m6-respuesta-bajo-carga-emocional.md
+  - Escalado y excepciones: bloque-4/b4-m7-escalado-y-excepciones.md
+  - Del síntoma al sistema: bloque-4/b4-m8-del-sintoma-al-sistema.md
+  - 'Voz del cliente: de texto libre a decisión': bloque-4/b4-m9-voz-del-cliente.md
+  - Análisis completo de los 800 tickets: bloque-4/b4-m10-analisis-completo.md
+  - Tu informe de causa raíz: bloque-4/b4-m11-informe-causa-raiz.md
+- 5. Construir:
+  - La escalera de implementación y la regla de parada: bloque-5/b5-m1-la-escalera.md
+  - Del encargo al proceso documentado: bloque-5/b5-m2-del-encargo-al-proceso.md
+  - Construir tu fichero de contexto de trabajo: bloque-5/b5-m3-contexto-de-trabajo.md
+  - Encadenar pasos y poner los controles humanos: bloque-5/b5-m4-encadenar-y-controles.md
+  - Qué se rompe con el tiempo y cómo enterarte: bloque-5/b5-m5-mantenimiento.md
+  - Cuándo desmontar una automatización: bloque-5/b5-m6-cuando-desmontar.md
+  - Tus procesos, funcionando y medidos: bloque-5/b5-m7-procesos-medidos.md
+- 6. Mover la organización:
+  - Nadie te ha pedido que rediseñes nada: bloque-6/b6-m1-nadie-te-lo-ha-pedido.md
+  - 'Ganarse el derecho: evidencia, piloto, propuesta': bloque-6/b6-m2-ganarse-el-derecho.md
+  - El caso de negocio en una página: bloque-6/b6-m3-caso-de-negocio.md
+  - Enseñar una mejora sin que parezca que sobra alguien: bloque-6/b6-m4-ensenar-sin-amenazar.md
+  - El miedo del compañero: bloque-6/b6-m5-el-miedo-del-companero.md
+  - Cuando el jefe dice que no (y a veces tiene razón): bloque-6/b6-m6-cuando-el-jefe-dice-que-no.md
+  - Documentar para que sobreviva sin ti: bloque-6/b6-m7-documentar-para-que-sobreviva.md
+  - Tu propuesta de una página: bloque-6/b6-m8-propuesta-de-una-pagina.md
+- Plantillas:
+  - Bitacora: plantillas/bitacora.md
+  - Catalogo de patrones: plantillas/catalogo-de-patrones.md
+  - Contexto trabajo: plantillas/contexto-trabajo.md
+  - Diario de tareas: plantillas/diario-de-tareas.md
+  - Informe causa raiz: plantillas/informe-causa-raiz.md
+  - Inventario de procesos: plantillas/inventario-de-procesos.md
+  - Plantilla de verificacion: plantillas/plantilla-de-verificacion.md
+  - Proceso documentado: plantillas/proceso-documentado.md
+  - Propuesta una pagina: plantillas/propuesta-una-pagina.md
+- Glosario: glosario/README.md
