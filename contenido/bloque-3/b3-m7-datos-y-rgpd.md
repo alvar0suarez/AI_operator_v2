@@ -127,8 +127,8 @@ en dos minutos».
 
 - **Anonimizar tanto que la tarea pierde el sentido.** No has anonimizado mal: has
   descubierto que esa tarea no se hace ahí.
-- **Creer que un identificador interno es anónimo.** `CLI-0042` es un nombre para
-  cualquiera que tenga el maestro de clientes abierto.
+- **Creer que un identificador interno es anónimo.** Un `id_cliente` es un nombre para
+  cualquiera que tenga abierto el maestro de clientes.
 - **Guardar el mapa de equivalencias junto al texto**, o anonimizar el texto y adjuntar
   el fichero original. Las dos pasan más de lo que parece.
 - **Fiarte de lo que promete un proveedor.** Puede ser cierto hoy y cambiar mañana, y en

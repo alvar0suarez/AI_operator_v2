@@ -117,10 +117,10 @@ meses, o que describe un caso que ya no existe, sobra.
 
 ## Cuándo esto falla
 
-- **Contexto viejo.** Es el fallo que no avisa. `dataset/ficheros/procedimientos.docx`
-  habla de tres rutas y en el maestro de clientes hay cuatro; la portada explica por qué, y
-  es de 2019. Un contexto desactualizado no produce error: produce respuestas correctas
-  según una realidad que ya no existe.
+- **Contexto viejo.** Es el fallo que no avisa. El manual que abriste en
+  `b2-m6-comparar-contra-criterio` habla de tres rutas y en el maestro de clientes hay
+  cuatro; la portada explica por qué, y es de 2019. Un contexto desactualizado no produce
+  error: produce respuestas correctas según una realidad que ya no existe.
 - **Contexto oficial en vez de contexto real.** Si escribes lo que pone el procedimiento y
   no lo que hacéis, tendrás un fichero impecable e inútil. Y si se parecen poco, eso es un
   hallazgo: se anota aparte.
@@ -149,22 +149,22 @@ completas hasta que la persona llega y pregunta cuatro cosas en dos horas.
 en tu oficina se da por hecho», y la plantilla `plantillas/contexto-trabajo.md` abierta al
 lado.
 
-**1. Reparte (10 min).** Cada línea que escribiste ayer va a una de las cuatro piezas:
+**1. Reparte (8 min).** Cada línea que escribiste ayer va a una de las cuatro piezas:
 palabra → glosario, cómo se dice → tono, cómo se hace normalmente → plantilla, caso raro →
 casuística. Si una línea no encaja en ninguna, apártala: casi siempre es una decisión que
 todavía no ha tomado nadie, y eso se anota, no se inventa.
 
-**2. Glosario (10 min).** Cinco palabras, con las dos columnas: qué significa aquí y qué no
+**2. Glosario (8 min).** Cinco palabras, con las dos columnas: qué significa aquí y qué no
 significa. Ojo con las que llevas tanto tiempo usando que ya no te parecen palabras.
 
-**3. Tono (10 min).** Una sola pareja: un texto tuyo que aceptarías y uno que rechazarías,
+**3. Tono (8 min).** Una sola pareja: un texto tuyo que aceptarías y uno que rechazarías,
 y debajo **la diferencia en una frase**. La frase es el ejercicio; los dos ejemplos son la
 excusa.
 
-**4. Plantilla (8 min).** Una, la que más uses, con los huecos marcados y sus dos líneas:
+**4. Plantilla (6 min).** Una, la que más uses, con los huecos marcados y sus dos líneas:
 cuándo se usa y cuándo no.
 
-**5. Casuística (8 min).** Tres filas, con quién decide y desde cuándo. Salen de las
+**5. Casuística (6 min).** Tres filas, con quién decide y desde cuándo. Salen de las
 preguntas del intermediario que empezaban por «¿y si…?».
 
 **6. Abre el mantenimiento (2 min).** La tabla de tres columnas con la fecha de hoy y una
@@ -173,7 +173,7 @@ línea vacía. No es adorno: la próxima vez que algo salga mal, ya sabes dónde
 **Entregable:** `contexto-borrador.md` con las cuatro piezas al mínimo indicado y la tabla
 de mantenimiento abierta. Anonimizado, sin excepción.
 
-**Regla de parada:** cincuenta minutos y se cierra, esté como esté. Este fichero no se
+**Regla de parada:** cuarenta minutos y se cierra, esté como esté. Este fichero no se
 termina hoy, y no está diseñado para terminarse: está diseñado para crecer una línea cada
 vez que algo salga mal.
 

@@ -52,8 +52,8 @@ disculpas donde tocaba una. El daño es real y no genera reclamación. Nadie pro
 tono: se va sin decir nada.
 
 **Señal barata:** léelo desde el sitio de quien lo recibe, no desde el tuyo. Y dos
-recuentos de tres segundos: ¿cuántas veces se pide perdón? Más de una vez, sobra.
-¿Empieza por su nombre o por una fórmula?
+comprobaciones de tres segundos: ¿cuántas veces se pide perdón? Más de una, sobra. ¿Empieza
+por su nombre o por una fórmula?
 
 **Qué lo previene:** la pareja de ejemplos de tono de tu fichero de contexto, con la
 diferencia escrita en una frase. Un adjetivo no previene nada.
@@ -61,12 +61,12 @@ diferencia escrita en una frase. Un adjetivo no previene nada.
 ### 3. Generalización falsa
 
 Una conclusión razonable apoyada en menos casos de los que necesitaría. De doce correos
-sale «los clientes prefieren el WhatsApp», y los doce venían de la misma carpeta porque los
-elegiste tú de ahí. No es mentira: es que no se sostiene con eso.
+sale «los clientes prefieren el WhatsApp»; los doce los elegiste tú de la misma carpeta y
+salían de tres clientes. No es mentira: es que no se sostiene con eso.
 
 **Señal barata:** por cada frase que empiece por «los clientes», «la mayoría» o «siempre»,
-exige dos números: **cuántos casos** y **de cuántos distintos**. Doce correos de dos
-clientes no son doce casos, son dos.
+exige dos números: **cuántos casos** y **de cuántos distintos**. Doce correos de tres
+clientes no son doce casos: son tres.
 
 **Qué lo previene:** pedir en el formato que cada afirmación lleve detrás su recuento.
 Cuando el número tiene que ir escrito al lado, las generalizaciones se caen solas.

@@ -38,7 +38,7 @@ Falta la pieza que antes no hacía falta escribir: el **objetivo**. Cuando la ta
 haces tú, ya sabes para qué. Y la prueba de calidad es la de entonces: **un tercero podría
 ejecutarlo sin preguntarte nada**.
 
-## El encargo malo, reescrito cinco veces
+## El encargo malo, pieza a pieza
 
 Un bar escribe porque el reparto del jueves no ha llegado. Tú sabes que se averió el
 camión de esa ruta y que su pedido sale el lunes a primera hora.
@@ -55,7 +55,7 @@ nadie, la compensación no la ha autorizado nadie, «estimado cliente» a un bar
 es un error de tono, y no dice si él tiene que hacer algo.
 
 **Versión 1: el objetivo.** «Que sepa qué día recibe el pedido y no tenga que volver a
-escribir para preguntarlo.» El texto empieza ya por la fecha en vez de por las disculpas.
+escribir para preguntarlo.» El texto ya empieza por la fecha en vez de por las disculpas.
 Pero la fecha sigue inventada, porque sigues sin darla. **El objetivo ordena el texto; no
 lo hace cierto.**
 
@@ -79,7 +79,8 @@ qué tiene que hacer él; si no tiene que hacer nada, decirlo.»
 > Sale el lunes 17 a primera hora, con el reparto de siempre: lo tienes por la mañana.
 > No tienes que hacer nada ni volver a pedirlo. Si al mediodía no ha llegado, llámame.
 
-Cuatro piezas, ciento veinte palabras, y ya se puede mandar. Parece terminado. No lo está.
+Cuatro piezas, ciento veinte palabras, y ya se puede mandar. Parece terminado. No lo está:
+queda la quinta.
 
 ## La pieza que falta siempre
 

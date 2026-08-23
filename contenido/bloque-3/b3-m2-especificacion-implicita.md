@@ -118,21 +118,21 @@ persona, dile una sola cosa: que su trabajo de hoy es preguntar todo lo que no s
 cuantas más preguntas haga, mejor sale el ejercicio. Si es el modelo, dale el encargo
 **solo**: sin ficheros, sin explicaciones, sin «ah, y ten en cuenta que…».
 
-**2. Que lo ejecute (15 min).** Tú, callada. Cada vez que pregunte, apunta la pregunta
+**2. Que lo ejecute (12 min).** Tú, callada. Cada vez que pregunte, apunta la pregunta
 **literal** y sigue. Contestar, sí; explicar de más, no. Si te oyes decir «claro, es que
 aquí…», eso es una línea de contexto: apúntala también.
 
-**3. Compara (10 min).** Pon su resultado al lado de lo que habrías hecho tú. Marca cada
+**3. Compara (8 min).** Pon su resultado al lado de lo que habrías hecho tú. Marca cada
 diferencia. Por cada una, decide: ¿es un error suyo, o es algo que yo no escribí?
 
-**4. Convierte (10 min).** Cada pregunta y cada diferencia se convierte en una línea, y
+**4. Convierte (8 min).** Cada pregunta y cada diferencia se convierte en una línea, y
 cada línea se clasifica en una de estas cuatro columnas: **palabra** (significa algo
 especial aquí), **tono** (cómo se dice), **cómo se hace normalmente**, **caso raro**. No
 son cuatro columnas cualquiera: son las cuatro secciones del fichero que montas en el nodo
 siguiente.
 
 **5. Cuenta (3 min).** Tres números: preguntas recibidas, diferencias encontradas y líneas
-que has escrito. Y al lado, el número de subrayados de tu papel de `b0-m3`.
+que has escrito. Y al lado, el número de subrayados de tu papel de `b0-m3-fallar-es-diagnostico`.
 
 **Entregable:** `preguntas-<tarea>.md` con la lista literal de preguntas, la columna que
 le toca a cada una, la línea que has escrito, y los tres números.
