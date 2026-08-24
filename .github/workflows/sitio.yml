@@ -6,16 +6,21 @@
 # docs-internos/despliegue.md.
 name: Publicar el sitio
 
+# PUBLICACIÓN AUTOMÁTICA DESACTIVADA A PROPÓSITO — ver docs-internos/FUGA-BLOQUE-4.md
+#
+# El sitio construido filtra las respuestas del ejercicio central del bloque 4: el
+# glosario las usa como ejemplos y las páginas de los nodos pendientes publican el
+# campo `brief`, que nombra qué verdad escondida le toca a cada uno. Mientras eso no
+# esté arreglado, publicar el sitio destruye el examen del curso.
+#
+# Para volver a activarlo: arreglar las 14 filtraciones, comprobar que
+# scripts/comprobar-build.py falla si vuelven, y restaurar el bloque `push` de abajo.
 on:
-  push:
-    # GitHub Actions no permite referirse a «la rama por defecto» de forma
-    # simbólica en un disparador de push, así que hay que nombrarla. Si renombras
-    # la rama principal, cámbiala también aquí o el sitio dejará de publicarse en
-    # silencio.
-    branches:
-      - main
-      - claude/revisar-especificacion-ukp7rd
   workflow_dispatch:
+  # push:
+  #   branches:
+  #     - main
+  #     - claude/revisar-especificacion-ukp7rd
 
 permissions:
   contents: read
