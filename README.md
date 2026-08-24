@@ -61,10 +61,10 @@ Los bloques 1+2+3 ya son un curso completo por sí solos (§9).
 El entregable **no es este repositorio**: es una dirección web que abre en el móvil, sin
 instalar nada y sin cuenta.
 
-| | Sitio | Tutor |
-|---|---|---|
-| **GitHub Pages** — ya configurado en `.github/workflows/sitio.yml` | sí | no |
-| **Cloudflare Pages** — un solo despliegue sirve las dos cosas | sí | sí |
+| | Sitio | Tutor | Con el repo privado |
+|---|---|---|---|
+| **Cloudflare Pages** — recomendado | sí | sí | gratis |
+| **GitHub Pages** — ya configurado en `.github/workflows/sitio.yml` | sí | no | requiere plan de pago o hacer público el repo |
 
 El tutor necesita ejecutar código en servidor para que la clave de API no esté en el
 navegador (§7.5), y GitHub Pages no ejecuta nada. Todo lo demás —nodos, ejercicios,

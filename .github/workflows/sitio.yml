@@ -8,7 +8,13 @@ name: Publicar el sitio
 
 on:
   push:
-    branches: [main]
+    # GitHub Actions no permite referirse a «la rama por defecto» de forma
+    # simbólica en un disparador de push, así que hay que nombrarla. Si renombras
+    # la rama principal, cámbiala también aquí o el sitio dejará de publicarse en
+    # silencio.
+    branches:
+      - main
+      - claude/revisar-especificacion-ukp7rd
   workflow_dispatch:
 
 permissions:

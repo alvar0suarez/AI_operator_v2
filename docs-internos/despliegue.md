@@ -3,37 +3,49 @@
 El repositorio no es el entregable. El entregable es **una dirección web** que ella abre
 en el móvil o en el portátil, sin instalar nada, sin cuenta y sin contraseña.
 
-Hay dos caminos. La diferencia entre ellos es **una sola cosa**: si el tutor funciona.
+Hay dos caminos. Cuál te conviene depende de dos hechos del repositorio, no de gustos:
 
-| | Sitio | Tutor | Cuenta que hace falta |
-|---|---|---|---|
-| **GitHub Pages** | sí | **no** | ninguna, ya tienes el repo |
-| **Cloudflare Pages** | sí | **sí** | una gratuita de Cloudflare |
+**El repositorio es privado**, y **su rama por defecto es `claude/revisar-especificacion-ukp7rd`**,
+no `main`. Las dos cosas condicionan el despliegue.
 
-Los nodos, los ejercicios, los sabotajes, el dataset, las plantillas y la página de
-progreso funcionan igual en los dos. El tutor necesita ejecutar código en servidor —para
-que la clave de API no esté en el navegador (§7.5)— y GitHub Pages no ejecuta nada.
+| | Sitio | Tutor | Repo privado | Coste |
+|---|---|---|---|---|
+| **Cloudflare Pages** | sí | **sí** | sí, sin problema | gratis |
+| **GitHub Pages** | sí | no | **requiere plan de pago** (Pro/Team) | gratis solo si el repo es público |
 
-> **Para el piloto, GitHub Pages basta.** El tutor es la fase 4 y se puede encender
-> después. Si sale sin tutor, el widget lo dice con todas las letras en vez de fingir un
-> error.
+**Recomendación: Cloudflare Pages.** Con el repositorio privado es el único de los dos que
+funciona en gratis, y además trae el tutor, que en GitHub Pages no puede funcionar: Pages
+sirve ficheros, no ejecuta código, y la clave de API no puede estar en el navegador (§7.5).
 
----
+Si prefieres GitHub Pages tienes dos formas de desbloquearlo, y conviene saber qué implica
+cada una:
+
+- **Hacer público el repositorio.** Gratis e inmediato, pero entonces `dataset/SOLUCIONES/`
+  queda legible por cualquiera. Los datos son sintéticos y no hay riesgo de privacidad, pero
+  las cinco verdades escondidas —que son el examen del bloque 4— dejan de estar escondidas
+  para quien sepa mirar el repositorio. Ella recibiría una URL, no el repo, así que en la
+  práctica no las va a ver; decídelo tú.
+- **Subir de plan.** GitHub Pro habilita Pages en repositorios privados.
+
+> Los nodos, los ejercicios, los sabotajes, el dataset, las plantillas y la página de
+> progreso funcionan igual en los dos caminos. La única diferencia es el tutor.
 
 ## Camino A — GitHub Pages (sitio solo)
 
-Ya está todo escrito en `.github/workflows/sitio.yml`. Solo hay que encenderlo:
+**Antes:** el repositorio tiene que ser público, o tener plan de pago. Si no, la opción de
+Pages aparece desactivada y no hay forma de saltársela.
 
-1. En GitHub: **Settings → Pages → Source: GitHub Actions**.
-2. Fusiona esta rama en la principal (o cambia la rama del workflow).
+1. En GitHub, `Settings` → `Pages` (columna izquierda, en «Code and automation»).
+2. En **Source**, elige **GitHub Actions**. No elijas «Deploy from a branch»: el workflow
+   ya construye el sitio y esa opción publicaría el repositorio en crudo.
+3. Ve a la pestaña `Actions` → «Publicar el sitio» → **Run workflow**, para lanzarlo la
+   primera vez sin esperar a un push.
 
-En cada push se valida el grafo, se comprueba que las cinco verdades escondidas siguen
-siendo derivables, se construye el sitio en modo estricto y se comprueba que
-`SOLUCIONES/` no se ha colado. Si algo de eso falla, **no publica**.
+El workflow dispara con push a `main` y a `claude/revisar-especificacion-ukp7rd`, que es la
+rama por defecto actual. **Si renombras la rama principal, cámbialo también en
+`.github/workflows/sitio.yml`** o el sitio dejará de publicarse sin avisar.
 
-La dirección queda en `https://<usuario>.github.io/<repositorio>/`.
-
----
+La dirección queda en `https://alvar0suarez.github.io/AI_operator_v2/`.
 
 ## Camino B — Cloudflare Pages (sitio + tutor)
 
