@@ -21,6 +21,9 @@ from pathlib import Path
 
 import yaml
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import centinelas  # noqa: E402
+
 RAIZ = Path(__file__).resolve().parent.parent
 REGISTRO = RAIZ / "docs-internos" / "registro-de-nodos.yml"
 CONTENIDO = RAIZ / "contenido"
@@ -29,6 +32,7 @@ SALIDA = RAIZ / "tutor" / "serverless" / "curso.json"
 
 # Si alguna de estas cadenas aparece en el paquete, el empaquetado falla.
 # Es una comprobación de último recurso: la garantía real es no leer esos ficheros.
+# Van por procedencia; las respuestas escritas a mano las caza `centinelas.py`.
 CENTINELAS = ["dataset/SOLUCIONES", "verdades-escondidas", "taxonomia-real",
               "pedidos-fantasma", "cuentas-v4", "mapa-duplicados"]
 
@@ -120,6 +124,18 @@ def main() -> int:
     if fallos:
         print(f"ABORTADO: el paquete del tutor contiene {fallos}. "
               "Algo está filtrando soluciones al contexto del tutor.", file=sys.stderr)
+        return 1
+
+    # El tutor da tracción, no respuestas (§7). Si las respuestas están en su
+    # contexto, tarde o temprano las suelta: la única defensa barata es que no
+    # viajen dentro.
+    filtraciones = centinelas.buscar(serializado, "curso.json")
+    if filtraciones:
+        print("ABORTADO: el paquete del tutor lleva dentro las verdades escondidas:",
+              file=sys.stderr)
+        for hallazgo in filtraciones:
+            print(f"  - [{hallazgo.centinela.verdad}/{hallazgo.centinela.codigo}] "
+                  f"{hallazgo.centinela.delata}: …{hallazgo.fragmento}…", file=sys.stderr)
         return 1
 
     SALIDA.parent.mkdir(parents=True, exist_ok=True)

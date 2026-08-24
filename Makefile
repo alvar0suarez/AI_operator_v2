@@ -2,7 +2,7 @@
 .DEFAULT_GOAL := ayuda
 PY := python3
 
-.PHONY: ayuda instalar dataset verificar validar glosario tutor sitio sitio-build todo limpiar
+.PHONY: ayuda instalar dataset verificar validar centinelas glosario tutor sitio sitio-build todo limpiar
 
 ayuda:  ## Muestra esta ayuda
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) \
@@ -20,6 +20,9 @@ verificar:  ## Comprueba que las 5 verdades escondidas siguen siendo derivables
 validar:  ## Valida el grafo de nodos: ciclos, referencias, alcanzabilidad
 	$(PY) scripts/validar-grafo.py
 
+centinelas:  ## Comprueba que las 5 verdades escondidas no están escritas en ningún sitio
+	$(PY) scripts/centinelas.py
+
 glosario:  ## Regenera el glosario navegable desde glosario.yml
 	$(PY) scripts/generar-glosario.py
 
@@ -36,7 +39,9 @@ tutor:  ## Reempaqueta el contexto del tutor y pasa sus pruebas
 	$(PY) scripts/empaquetar-tutor.py
 	cd tutor/serverless && node --test "pruebas/*.test.mjs"
 
-todo: validar verificar glosario tutor sitio-build  ## Todas las comprobaciones
+# `centinelas` va la última a propósito: barre también sitio/build, y así lo
+# hace sobre el build recién hecho por `sitio-build`, no sobre el de ayer.
+todo: validar verificar glosario tutor sitio-build centinelas  ## Todas las comprobaciones
 
 limpiar:  ## Borra artefactos de build
 	rm -rf sitio/build .cache

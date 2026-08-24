@@ -11,7 +11,9 @@
 ## Título
 
 Una frase que diga el hallazgo, no el tema. **"Análisis de tickets del semestre" no
-es un título; "El 38% de las incidencias vienen de un solo fallo de facturación" sí.**
+es un título; "El 40% de los presupuestos salen sin la cláusula de validez" sí.**
+El ejemplo es de una gestoría a propósito: lo que tiene que copiar es la forma
+—hallazgo y magnitud en una línea—, no el contenido.
 
 >
 

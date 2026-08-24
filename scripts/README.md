@@ -12,13 +12,21 @@ Este índice crece con el directorio: cada script nuevo se documenta aquí.
 | `validar-grafo.py` | Valida el grafo de nodos y el frontmatter contra el esquema | hay errores |
 | `verificar-glosario.py` | Valida el contrato del glosario contra el registro de nodos | hay errores |
 | `generar-glosario.py` | Regenera `contenido/glosario/README.md` desde `glosario.yml` | falla la generación |
+| `generar-dataset.py` | Genera el gemelo sintético entero, con semilla fija | falla una invariante |
+| `verificar-verdades.py` | Reconstruye las 5 verdades escondidas sin leer `SOLUCIONES/` | alguna deja de ser derivable |
+| `centinelas.py` | Busca las 5 verdades escritas a mano en lo que ella puede leer | aparece alguna |
+| `construir-sitio.py` | Ensambla `sitio/docs/` desde el contenido y el registro | se intenta publicar una ruta prohibida |
+| `comprobar-build.py` | Revisa el sitio ya construido: procedencia y contenido | hay filtración |
+| `empaquetar-tutor.py` | Construye `tutor/serverless/curso.json`, lo único que ve el tutor | el paquete lleva soluciones |
 
-Orden razonable antes de dar por bueno un cambio de contenido:
+Orden razonable antes de dar por bueno un cambio de contenido —o `make todo`, que
+los encadena:
 
 ```bash
 python3 scripts/validar-grafo.py
 python3 scripts/verificar-glosario.py
 python3 scripts/generar-glosario.py     # solo si has tocado el glosario
+python3 scripts/centinelas.py
 ```
 
 ---
@@ -92,6 +100,11 @@ usa ningún nodo salen como aviso.
 referenciar rutas de `dataset/SOLUCIONES/`. Solo el campo `solucion` puede, porque
 no se sirve al tutor ni se publica (`ESPECIFICACION.md` §7.2 y §8).
 
+**Contrato del `brief`:** es **error** que `construir-sitio.py` vuelva a leer ese
+campo —se mira su AST, para que nombrarlo en un comentario no cuente— y es **aviso**
+la lista de briefs que nombran una verdad escondida, que es lo que se filtraría el
+día que alguien lo publique. Se publicó durante semanas: `FUGA-BLOQUE-4.md`.
+
 ### Decisiones que conviene conocer
 
 - **La reciprocidad se exige en la dirección que fija el esquema**: si A declara
@@ -111,12 +124,12 @@ no se sirve al tutor ni se publica (`ESPECIFICACION.md` §7.2 y §8).
   declararlo si entregan plantilla (el diario del bloque 1 es `ejercicio` y la
   entrega).
 
-### Estado actual (fase 0)
+### Estado actual
 
-Con el registro completo y sin ningún `.md` escrito, la ejecución da 45 errores
-(los nodos `escrito` de los bloques 0–3 que aún no tienen fichero) y 26 avisos
-(los nodos `pendiente-piloto` de los bloques 4–6). El grafo en sí está limpio:
-sin ciclos, sin referencias rotas y 71/71 nodos alcanzables desde
+Con los bloques 0–3 escritos: **0 errores y 27 avisos**. De los avisos, 26 son los
+nodos `pendiente-piloto` de los bloques 4–6 (que no tienen `.md` a propósito) y uno
+es la lista de briefs que nombran una verdad escondida. El grafo está limpio: sin
+ciclos, sin referencias rotas y 71/71 nodos alcanzables desde
 `b0-m1-que-es-este-curso`.
 
 ---
@@ -150,8 +163,44 @@ El `.md` es artefacto generado: se edita `glosario.yml`, nunca el README.
 
 ---
 
-## Pendiente
+## `centinelas.py`
 
-`generar-dataset.py` — el generador del gemelo sintético con semilla fija
-(`ESPECIFICACION.md` §4 y §8, fase 1). Todavía no existe; cuando se escriba, se
-documenta aquí.
+Las cinco verdades escondidas escritas como patrones de contenido, para que no
+aparezcan en nada que ella pueda leer antes de intentar el ejercicio.
+
+```bash
+python3 scripts/centinelas.py            # barre las fuentes y el build
+python3 scripts/centinelas.py RUTA...    # barre lo que se le diga
+python3 scripts/centinelas.py --sin-autoprueba
+```
+
+Es también la biblioteca que usan `comprobar-build.py` (sobre el sitio construido) y
+`empaquetar-tutor.py` (sobre el contexto del tutor). Código de salida: `0` si no hay
+hallazgos, `1` si los hay, `2` si algún centinela no reconoce su propia verdad.
+
+**Por qué existe.** `comprobar-build.py` comprobaba procedencia —que nada saliera de
+`dataset/SOLUCIONES/`— y pasaba en verde mientras el sitio publicaba las respuestas,
+escritas a mano en el glosario, en el `brief` de los nodos pendientes y en cuatro
+sitios más. La historia entera está en `docs-internos/FUGA-BLOQUE-4.md`; la decisión
+de diseño, en `decisiones.md` D12.
+
+**Cómo funciona.** Cada centinela es un patrón más, opcionalmente, uno o dos
+contextos que tienen que aparecer cerca. Así «12» sólo salta si va con «duplicados»,
+y un porcentaje sólo salta si además hay cerca un conjunto («tickets», «correos») y
+un tema («factura», «aviso»). Los patrones se aplican sobre texto normalizado —sin
+tildes, en minúsculas, sin el énfasis de markdown y con los espacios colapsados— para
+que un `**bold**` en medio de una frase no los esquive.
+
+**Autoprueba.** Antes de barrer nada, los centinelas se ejecutan contra
+`dataset/SOLUCIONES/verdades-escondidas.md`. Si alguno no reconoce ahí su propia
+verdad, el proceso falla: un centinela mudo da por limpio lo que no ha mirado. Los
+pocos que protegen respuestas de ejercicios anteriores al bloque 4, y que por tanto
+no salen en esa clave, se marcan con `en_la_clave=False`.
+
+**Dónde está la raya.** La suciedad del dataset se anuncia; la respuesta no. «Hay
+clientes duplicados» es un aviso que ella necesita. Cuántos, cuáles, cómo se
+encuentran y qué cuestan es el ejercicio.
+
+> El fichero nombra las verdades escondidas. Vive en `scripts/`, que no se publica ni
+> viaja al tutor. Si algún día se publicara `scripts/`, esto sería una filtración por
+> sí solo.

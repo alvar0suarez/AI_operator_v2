@@ -131,6 +131,15 @@ def enlace(nodo_id: str, indice: dict, origen: dict) -> str:
 
 
 def marcador_pendiente(meta: dict) -> str:
+    """La página de un nodo que todavía no está escrito.
+
+    Dice su título, su duración y que se escribe después del piloto. **Nada más.**
+    Aquí se imprimía además `brief`, y no podía: `docs-internos/registro-de-nodos.yml`
+    dice de ese campo, literalmente, «es el encargo para quien lo escribe, no texto
+    para la alumna; no se publica». Cuatro briefs del bloque 4 nombran la verdad
+    escondida que le toca al nodo, y se publicaron durante semanas
+    (`docs-internos/FUGA-BLOQUE-4.md`).
+    """
     return "\n".join([
         f"# {meta['titulo']}", "",
         '!!! note "Todavía sin escribir, y es a propósito"', "",
@@ -139,7 +148,6 @@ def marcador_pendiente(meta: dict) -> str:
         "    se escriben, se publican y **se pilotan** antes de escribir el 4, porque el",
         "    bloque 4 se diseña mucho mejor sabiendo dónde te atascaste de verdad.", "",
         "    Lo que se vaya viendo en el piloto es lo que va a escribir esto.", "",
-        f"**Lo que va a cubrir:** {meta.get('brief', '—')}", "",
         f"*Duración prevista: {meta['duracion_min']} min.*", "",
     ])
 

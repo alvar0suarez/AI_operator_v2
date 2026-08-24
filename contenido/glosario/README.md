@@ -229,7 +229,7 @@ Cuánto va a durar lo que estás aprendiendo en un nodo, declarado en tres nivel
 
 Una página que dice qué pasa hoy, cuánto cuesta, qué propones y qué se ahorra, con los números a la vista. No es una presentación: es un argumento que cualquiera puede comprobar.
 
-**Ejemplo.** "304 de los 800 tickets del semestre salen de un fallo de redondeo. A 11 € por contacto son 3.344 €. Corregir el cálculo es media mañana de trabajo del informático."
+**Ejemplo.** Hoy las devoluciones se apuntan como pedidos en negativo y alguien las cuadra a mano en cada cierre: dos horas de Nieves todos los meses. Propuesta: una casilla de "devolución" en el albarán. Coste: una tarde del informático. Ahorro: esas dos horas, todos los meses.
 
 **Ver también:** [Evidencia](#evidencia), [Coste de un contacto](#coste-de-contacto), [Propuesta](#propuesta)
 
@@ -281,7 +281,7 @@ Tu colección de los seis verbos con ejemplos sacados de tu propio trabajo. Sirv
 
 El fallo de fondo que produce muchos síntomas distintos. Se reconoce por una prueba: si lo arreglas, desaparece un montón de trabajo de golpe.
 
-**Ejemplo.** 304 tickets de Aguas del Norte hablan de facturas que no cuadran. La causa raíz no son 304 clientes quisquillosos: es un redondeo al alza del precio unitario en los pedidos con descuento.
+**Ejemplo.** Las garrafas de la ruta 3 llegan rotas un día sí y otro no. La causa raíz no es el repartidor: es que en esa furgoneta se cargan encima de las cajas y se aplastan en la primera curva. Cambias el orden de carga y desaparecen todas esas quejas de golpe.
 
 **Ver también:** [Sistema](#sistema), [Contacto evitable](#contacto-evitable), [Anomalía](#anomalia)
 
@@ -350,7 +350,7 @@ Que el cliente entienda a la primera qué ha pasado y qué va a pasar ahora. Se 
 
 Asignar a cada elemento de un conjunto una categoría de una lista cerrada. Todos reciben una, y solo una.
 
-**Ejemplo.** Repartir los 800 tickets entre las ocho categorías reales de incidencia. Es distinto de buscar: buscar te trae los de facturación y deja el resto del montón sin tocar.
+**Ejemplo.** Repartir los 800 tickets entre una lista cerrada de categorías de incidencia. Es distinto de buscar: buscar te trae los de facturación y deja el resto del montón sin tocar.
 
 **Ver también:** [Taxonomía](#taxonomia), [Verbo](#verbo), [Criterio](#criterio)
 
@@ -403,7 +403,7 @@ Lo que sabes hacer y no sabes explicar. Cuanto mejor haces una tarea, más autom
 
 Un contacto que no debería haber existido porque algo falló antes: una factura mal calculada, un aviso que no se dio, una información que no estaba donde tocaba. Es el concepto más rentable del sector porque cada uno que eliminas no vuelve.
 
-**Ejemplo.** Los 72 tickets de "vinisteis y estaba cerrado" de Aguas del Norte. El procedimiento PR-07 obliga a avisar la víspera y nadie avisa: ninguna de esas 72 llamadas tenía que haberse producido.
+**Ejemplo.** El cliente llama para preguntar si habéis recibido su cambio de cuenta bancaria. Llama porque nadie le contestó cuando lo mandó. Con un acuse de recibo, esa llamada no existe.
 
 **Ver también:** [Causa raíz](#causa-raiz), [Coste de un contacto](#coste-de-contacto), [Sistema](#sistema)
 
@@ -473,7 +473,7 @@ El tiempo que se va en ponerse de acuerdo: preguntar, esperar respuesta, avisar,
 
 Lo que cuesta un cliente descontento y no aparece en ninguna factura: compra menos, se va, y lo cuenta. Es la parte del coste de contacto que todo el mundo omite porque es la difícil de estimar.
 
-**Ejemplo.** El bar que se cansó de reclamar la misma factura tres meses seguidos no puso ninguna hoja de reclamaciones. Redujo el pedido semanal a la mitad y no dijo nada.
+**Ejemplo.** El bar al que le llegaron las garrafas rotas tres semanas seguidas no puso ninguna hoja de reclamaciones. Redujo el pedido semanal a la mitad y no dijo nada.
 
 **Ver también:** [Coste de un contacto](#coste-de-contacto), [Contacto evitable](#contacto-evitable), [Voz del cliente](#voz-del-cliente)
 
@@ -489,7 +489,7 @@ Lo que cuesta un cliente descontento y no aparece en ninguna factura: compra men
 
 Lo que dejas de hacer por hacer otra cosa. Aplicado aquí: automatizar una tarea que no debería existir es peor que no automatizarla, porque la deja instalada para siempre.
 
-**Ejemplo.** Puedes bajar de 20 a 6 minutos el tiempo de contestar a las quejas de facturación. O puedes arreglar el redondeo y quedarte sin las quejas.
+**Ejemplo.** Puedes bajar de veinte a seis minutos el tiempo de tramitar un cambio de dirección. O puedes poner un formulario para que lo cambie el cliente y quedarte sin la tarea.
 
 **Ver también:** [Contacto evitable](#contacto-evitable), [Causa raíz](#causa-raiz), [Coste de verificar](#coste-de-verificar)
 
@@ -510,7 +510,7 @@ Lo que dejas de hacer por hacer otra cosa. Aplicado aquí: automatizar una tarea
 
 Lo que le cuesta a la empresa cada interacción de atención: el tiempo de quien la atiende, la parte proporcional de estructura y lo que se pierde por el cliente descontento. Sin este número no hay conversación de negocio posible.
 
-**Ejemplo.** En Aguas del Norte sale a 11 € por contacto. Los 176 tickets de tres clientes de hostelería suman 1.936 € en seis meses, más de lo que esos tres dejan de margen bruto.
+**Ejemplo.** Una llamada de ocho minutos no cuesta ocho minutos: cuesta el rato de Marta, el correo que escribe después, la parte de teléfono y de local que toca, y lo que compra de menos un cliente que cuelga enfadado. El número te lo tienes que calcular tú, y hasta que no lo tengas no hay conversación de negocio posible.
 
 **Ver también:** [Contacto evitable](#contacto-evitable), [Coste de la insatisfacción](#insatisfaccion), [Caso de negocio](#caso-de-negocio)
 
@@ -822,7 +822,7 @@ Si "bien hecho" significa lo mismo el lunes y el jueves. Es la cuarta pregunta d
 
 Un dato comprobable sobre lo que pasa de verdad, medido por ti. Es lo que te da derecho a proponer un cambio cuando nadie te ha pedido opinión.
 
-**Ejemplo.** No "creo que perdemos tiempo con las facturas", sino "en seis meses hemos atendido 304 incidencias del mismo origen; aquí está el listado y aquí el cálculo".
+**Ejemplo.** No "creo que perdemos tiempo con los albaranes", sino "he cronometrado veinte cierres: cuatro minutos de media, y en seis de los veinte hubo que llamar al repartidor. Aquí está la hoja".
 
 **Ver también:** [Caso de negocio](#caso-de-negocio), [Piloto](#piloto), [Línea base](#linea-base)
 
@@ -1115,7 +1115,7 @@ Cada escalón de la escalera, del 1 (conversación suelta) al 5 (funciona sin ti
 
 La descripción explícita de lo que es habitual en un conjunto. Se escribe antes de buscar rarezas, o cada cosa que te llame la atención parecerá un hallazgo.
 
-**Ejemplo.** "Un pedido normal en Aguas del Norte va de 30 a 400 €, con cantidades positivas y en día laborable." Con eso escrito, las 45 líneas negativas saltan solas.
+**Ejemplo.** "Un pedido normal en Aguas del Norte va de 30 a 400 €, con cantidades positivas y en día laborable." Con eso escrito, las líneas en negativo saltan solas.
 
 **Ver también:** [Anomalía](#anomalia), [Patrón](#patron), [Criterio](#criterio)
 
@@ -1132,7 +1132,7 @@ La descripción explícita de lo que es habitual en un conjunto. Se escribe ante
 
 La pregunta de si recomendarías la empresa del 0 al 10, resumida en un único número. A solas es casi inútil: se mueve por cosas que no controlas, tarda meses en reaccionar y no te dice qué arreglar.
 
-**Ejemplo.** El NPS de Aguas del Norte baja cuatro puntos en enero. Eso no te dice nada. Los 304 tickets de facturación sí te dicen qué hacer el lunes por la mañana.
+**Ejemplo.** El NPS de Aguas del Norte baja cuatro puntos en enero. Eso no te dice nada: puede ser el frío, puede ser que este mes contestara otra gente. La lista de por qué llamaron los clientes en enero sí te dice qué hacer el lunes por la mañana.
 
 **Ver también:** [CES (esfuerzo del cliente)](#ces), [Resolución en primer contacto](#resolucion-primer-contacto), [Voz del cliente](#voz-del-cliente)
 
@@ -1164,7 +1164,7 @@ Qué quieres conseguir con el encargo, dicho en una frase y sin ambigüedad. Es 
 
 Lo que falta en un resultado y no se ve leyéndolo, porque un texto al que le falta algo se sigue leyendo bien. Solo aparece comparando con la fuente.
 
-**Ejemplo.** El resumen de los procedimientos de entrega recoge ocho de los nueve y se salta el PR-07, el del aviso previo. Justo el que explica el 9% de vuestros tickets.
+**Ejemplo.** Le pides el resumen de los diez correos del día y te devuelve nueve asuntos, bien escritos. El que falta es el del cliente que avisa de que se va. Leyendo el resumen no se nota: un texto al que le falta algo se lee igual de bien.
 
 **Ver también:** [Verificación](#verificacion), [Cuadre](#cuadre), [Alucinación](#alucinacion)
 
@@ -1317,7 +1317,7 @@ Una secuencia de pasos escrita, con sus entradas, sus controles y su criterio de
 
 Lo que le llevas a quien decide: una página con el problema, la evidencia, lo que propones y qué hace falta. No es pedir permiso para tener razón, es ponerle fácil la decisión a otra persona.
 
-**Ejemplo.** Una hoja con el fallo de redondeo, los 304 tickets, el coste de seis meses, las tres semanas de piloto y lo único que pides: media mañana del informático.
+**Ejemplo.** Una hoja con el problema —cada cierre se cuadran las devoluciones a mano—, lo que has medido, las tres semanas de prueba y lo único que pides: una casilla nueva en el albarán.
 
 **Ver también:** [Caso de negocio](#caso-de-negocio), [Evidencia](#evidencia), [Piloto](#piloto)
 
@@ -1450,7 +1450,7 @@ La oposición a un cambio, que casi nunca es técnica. Detrás suele haber miedo
 
 El porcentaje de asuntos que se cierran sin que el cliente tenga que volver. Es de las métricas más honestas de atención, con una trampa: se infla sola si el cliente reabre el caso con otro número de ticket.
 
-**Ejemplo.** De los 304 casos de facturación, la mitad vuelven al mes siguiente con la factura nueva. Sobre el papel se habían resuelto todos a la primera.
+**Ejemplo.** El cliente llama porque le falta media caja. Se le apunta, se cierra el ticket, y a la semana vuelve a llamar porque nadie se la ha llevado. Son dos tickets y sobre el papel los dos se resolvieron a la primera.
 
 **Ver también:** [Contacto evitable](#contacto-evitable), [CES (esfuerzo del cliente)](#ces), [Tiempo de ciclo](#tiempo-de-ciclo)
 
@@ -1643,7 +1643,7 @@ Qué va a pasar ahora, quién lo hace y cuándo, dicho al cliente antes de que l
 
 El conjunto de piezas y reglas que produce un resultado, incluidas las que nadie diseñó. Mirar el sistema es preguntar qué genera esto, en lugar de atender el caso que ha llegado hoy.
 
-**Ejemplo.** Contestar bien a 304 quejas de facturación es atender síntomas. El sistema es un cálculo de descuento que redondea al alza y que mañana va a generar tres quejas más.
+**Ejemplo.** Contestar bien al cliente al que le falta media caja es atender el caso de hoy. El sistema es que nadie cuenta las cajas al cargar, y mañana va a faltar media caja en otro sitio.
 
 **Ver también:** [Causa raíz](#causa-raiz), [Contacto evitable](#contacto-evitable), [Coste de oportunidad](#coste-de-oportunidad)
 
@@ -1662,7 +1662,7 @@ El conjunto de piezas y reglas que produce un resultado, incluidas las que nadie
 
 El conjunto cerrado de categorías con el que clasificas. Una sana tiene un solo eje, categorías que no se solapan, tamaños comparables y un "otros" que no engorda.
 
-**Ejemplo.** En `tickets.xlsx` hay catorce etiquetas para ocho categorías reales, más un "Otros" del 11%. Clasificar perfectamente con esa lista sigue sin servir de nada.
+**Ejemplo.** En `tickets.xlsx` conviven etiquetas escritas de muchas maneras para decir lo mismo, y un "Otros" que engorda. Clasificar perfectamente con esa lista sigue sin servir de nada.
 
 **Ver también:** [Clasificar](#clasificar), [Criterio](#criterio), [Causa raíz](#causa-raiz)
 
@@ -1886,7 +1886,7 @@ Los minutos al mes que se lleva una tarea, calculados como frecuencia por duraci
 
 Lo que los clientes dicen con sus propias palabras, convertido en algo sobre lo que se pueda decidir. El trabajo no es leerlo: es agrupar, contar y quedarse con lo que cambia una decisión.
 
-**Ejemplo.** 200 correos con quejas escritas de mil maneras. Agrupados, el 40% dicen lo mismo con palabras distintas: la factura no cuadra con el albarán.
+**Ejemplo.** Doscientos correos, cada uno con sus palabras. "Sigo esperando", "no ha llegado" y "el reparto viene tardísimo" son el mismo grupo. Hasta que no los juntas y los cuentas, se leen de uno en uno y no deciden nada.
 
 **Ver también:** [Extraer](#extraer), [Clasificar](#clasificar), [Coste de la insatisfacción](#insatisfaccion)
 

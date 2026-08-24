@@ -33,7 +33,7 @@ querías quitarte.
 | Criterio vago | Lo mismo, comprobable |
 |---|---|
 | Que quede profesional | Máximo 120 palabras. Empieza reconociendo el problema. Termina con una acción y una fecha. Sin exclamaciones |
-| Que esté bien clasificado | Cada caso en una de estas ocho categorías. Nada en «Otros» sin una frase que diga por qué |
+| Que esté bien clasificado | Cada caso en una categoría de la lista, y la lista escrita antes de empezar. Nada en «Otros» sin una frase que diga por qué |
 | Que el resumen sea completo | Ninguna cifra que no esté en el fichero de origen. Aparecen los tres casos de importe más alto |
 | Que sea claro | Alguien que no conoce el caso sabe decir qué tiene que hacer y cuándo, tras leerlo una vez |
 

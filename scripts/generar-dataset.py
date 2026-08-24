@@ -2952,7 +2952,7 @@ Los ficheros cubren seis meses: del 2 de septiembre de 2024 al 28 de febrero de
 Esto no es un descuido. Los ficheros vienen **deliberadamente sucios**, con la
 misma clase de porquería que tiene cualquier Excel que lleve años en una PyME:
 
-- categorías escritas de catorce formas distintas para decir ocho cosas,
+- categorías escritas de mil maneras para decir bastantes menos cosas,
 - fechas en tres formatos mezclados en la misma columna,
 - teléfonos en cuatro formatos,
 - acentos mal codificados (`JosÃ©` en vez de `José`),

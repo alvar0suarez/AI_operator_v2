@@ -75,6 +75,12 @@ el widget dice que no está activo en vez de fingir un error.
 
 Los pasos concretos están en [`docs-internos/despliegue.md`](docs-internos/despliegue.md).
 
+**La publicación automática sigue apagada.** El disparador `push` de
+`.github/workflows/sitio.yml` está comentado desde que se encontró que el sitio publicaba
+las respuestas del bloque 4. La fuga está arreglada y el workflow ya falla si vuelve
+([`docs-internos/FUGA-BLOQUE-4.md`](docs-internos/FUGA-BLOQUE-4.md)); lo que queda es
+decidir publicar, porque el repositorio es privado y el sitio sería público.
+
 ### Lo que ella ve
 
 1. **La portada** le dice qué se lleva y qué el curso no hace.
@@ -95,8 +101,9 @@ pip install -r requirements.txt
 make dataset     # genera el gemelo sintético (semilla fija, reproducible)
 make verificar   # comprueba que las 5 verdades escondidas siguen siendo derivables
 make validar     # valida el grafo de nodos: ciclos, referencias, alcanzabilidad
+make centinelas  # comprueba que esas 5 verdades no están escritas en ningún sitio
 make sitio       # levanta el sitio en local
-make todo        # las cuatro cosas
+make todo        # todas las comprobaciones
 ```
 
 El tutor necesita además una clave de API en la función serverless. Ver

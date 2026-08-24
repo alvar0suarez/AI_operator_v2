@@ -30,8 +30,8 @@ Los datos pueden estar todos bien y el texto ser inservible igualmente.
 
 - Es cierto: se ha pasado por allí el 4, el 12 y el 19, siempre en el primer tramo de
   ruta (7:00–9:00). El bar abre a las 11:00.
-- El manual tiene un procedimiento de aviso previo el día anterior (PR-07). **No se
-  está aplicando con nadie.**
+- El manual tiene un procedimiento de aviso previo el día anterior (PR-07). **A este
+  cliente no se le está avisando.**
 - El próximo reparto de esa ruta es el jueves. No hay reparto extraordinario disponible.
 - Se le puede cambiar a la franja de tarde de la ruta 2, que pasa por Torrelavega
   sobre las 12:30.

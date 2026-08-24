@@ -6,15 +6,15 @@
 # docs-internos/despliegue.md.
 name: Publicar el sitio
 
-# PUBLICACIÓN AUTOMÁTICA DESACTIVADA A PROPÓSITO — ver docs-internos/FUGA-BLOQUE-4.md
+# PUBLICACIÓN AUTOMÁTICA TODAVÍA DESACTIVADA — ver docs-internos/FUGA-BLOQUE-4.md
 #
-# El sitio construido filtra las respuestas del ejercicio central del bloque 4: el
-# glosario las usa como ejemplos y las páginas de los nodos pendientes publican el
-# campo `brief`, que nombra qué verdad escondida le toca a cada uno. Mientras eso no
-# esté arreglado, publicar el sitio destruye el examen del curso.
+# La fuga que la desactivó está arreglada: el sitio ya no publica ninguna de las cinco
+# verdades escondidas, y el paso «Comprobar que las respuestas no están a la vista» de
+# abajo hace fallar el workflow si vuelven. Lo que queda no es técnico: activar esto
+# publica el sitio, y el repositorio es privado pero el sitio sería público. Esa
+# decisión es del dueño del repositorio.
 #
-# Para volver a activarlo: arreglar las 14 filtraciones, comprobar que
-# scripts/comprobar-build.py falla si vuelven, y restaurar el bloque `push` de abajo.
+# Para activarlo: descomentar el bloque `push`. Nada más.
 on:
   workflow_dispatch:
   # push:
@@ -60,6 +60,9 @@ jobs:
 
       - name: Comprobar que no se publica nada de SOLUCIONES/
         run: python3 scripts/comprobar-build.py
+
+      - name: Comprobar que las respuestas no están a la vista
+        run: python3 scripts/centinelas.py
 
       - uses: actions/upload-pages-artifact@v3
         with:

@@ -43,13 +43,23 @@ vida personal) y su sección **"Cuándo esto falla"**. Todo módulo cierra con
 ## Antes de dar nada por terminado
 
 ```bash
+make todo        # las cinco de abajo, en orden
+```
+
+```bash
 make validar     # grafo: ciclos, referencias rotas, alcanzabilidad, reciprocidad
 make verificar   # las 5 verdades escondidas siguen siendo derivables del dataset
 make sitio-build # el sitio construye y SOLUCIONES/ no está dentro
+make centinelas  # y las 5 verdades no están escritas a mano en ningún sitio
 ```
 
 Si `validar` o `verificar` fallan, no está terminado. `verificar` fallando significa
 que el ejercicio central del bloque 4 ha dejado de tener solución.
+
+`centinelas` fallando significa lo contrario y es igual de grave: la solución está
+publicada. Pasó (`docs-internos/FUGA-BLOQUE-4.md`), y pasó con las comprobaciones en
+verde, porque miraban de dónde venía cada fichero y no qué decía. **Que algo no salga
+de `SOLUCIONES/` no quiere decir que no sea la respuesta.**
 
 ## Bloques 4–6
 

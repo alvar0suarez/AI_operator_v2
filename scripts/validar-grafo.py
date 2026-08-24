@@ -44,6 +44,9 @@ except ImportError:  # pragma: no cover
     sys.stderr.write("Falta PyYAML: pip install PyYAML\n")
     raise SystemExit(2)
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import centinelas  # noqa: E402
+
 
 # ─────────────────────────────── Constantes del contrato ──────────────────────
 # Fuente: docs-internos/esquema-frontmatter.md
@@ -981,6 +984,62 @@ def validar_rutas_referenciadas(registro, ficheros, raiz, informe):
                                   linea=fuente.linea_de(campo))
 
 
+PATRON_VERDAD = re.compile(r"verdad(?:es)? escondida|\bV[1-5]\b", re.IGNORECASE)
+
+RUTA_ENSAMBLADOR = Path("scripts/construir-sitio.py")
+
+
+def campos_leidos_por(ruta):
+    """Nombres de campo que un script lee de verdad, sin contar los que solo
+    aparecen en comentarios o docstrings."""
+    import ast
+    try:
+        arbol = ast.parse(ruta.read_text(encoding="utf-8"))
+    except (OSError, SyntaxError):
+        return set()
+    docs = set()
+    for nodo in ast.walk(arbol):
+        if isinstance(nodo, ast.Expr) and isinstance(nodo.value, ast.Constant):
+            docs.add(id(nodo.value))
+    return {n.value for n in ast.walk(arbol)
+            if isinstance(n, ast.Constant) and isinstance(n.value, str)
+            and id(n) not in docs}
+
+
+def validar_contrato_del_brief(raiz, registro, informe):
+    """`brief` es el encargo para quien escribe el nodo, no texto para la alumna.
+
+    Lo dice la cabecera de registro-de-nodos.yml y lo incumplió nuestro propio
+    ensamblador durante semanas: publicaba el brief en la página de cada nodo
+    pendiente, y cuatro briefs del bloque 4 nombran su verdad escondida
+    (docs-internos/FUGA-BLOQUE-4.md). Aquí se comprueban las dos mitades del
+    contrato: que nadie publique el campo, y quién lo tiene cargado.
+    """
+    ensamblador = raiz / RUTA_ENSAMBLADOR
+    if ensamblador.exists() and "brief" in campos_leidos_por(ensamblador):
+        informe.error("brief-publicado",
+                      "el ensamblador del sitio vuelve a leer `brief`, y ese campo "
+                      "no se publica: es el encargo interno, y algunos nombran la "
+                      "verdad escondida del nodo",
+                      ruta=str(RUTA_ENSAMBLADOR))
+
+    cargados = []
+    for identificador, nodo in sorted(registro.items()):
+        brief = nodo.datos.get("brief")
+        if not isinstance(brief, str):
+            continue
+        if PATRON_VERDAD.search(brief) or centinelas.buscar(brief):
+            cargados.append(identificador)
+
+    if cargados:
+        informe.aviso("brief-nombra-verdad",
+                      f"{len(cargados)} briefs nombran una verdad escondida "
+                      f"({', '.join(cargados)}). No es un fallo mientras el campo "
+                      f"no se publique; es la lista de lo que se filtra el día que "
+                      f"alguien lo publique",
+                      ruta=str(RUTA_REGISTRO))
+
+
 # ─────────────────────────────── Orquestación ─────────────────────────────────
 
 def validar(raiz):
@@ -1024,6 +1083,7 @@ def validar(raiz):
     validar_conceptos(nodos, glosario, informe, resumen)
     validar_fugas_de_soluciones(list(registro.values()) + list(ficheros.values()), informe)
     validar_rutas_referenciadas(registro, ficheros, raiz, informe)
+    validar_contrato_del_brief(raiz, registro, informe)
 
     resumen["errores"] = len(informe.errores)
     resumen["avisos"] = len(informe.avisos)

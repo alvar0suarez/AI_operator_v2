@@ -120,10 +120,43 @@ se ha hecho, por dos razones:
    verdad escritos.
 2. **El registro ya es la fuente de verdad.** `scripts/construir-sitio.py` genera la
    página de un nodo `pendiente-piloto` a partir de su entrada del registro: título,
-   duración prevista, lo que va a cubrir, y **por qué todavía no está escrito**. Es una
-   página útil para la alumna, no un hueco.
+   duración prevista y **por qué todavía no está escrito**. Es una página útil para la
+   alumna, no un hueco.
+
+   Durante un tiempo esa página imprimía además el `brief`, que es el encargo interno
+   y en cuatro casos nombra la verdad escondida del nodo. Ya no: ver D12 y
+   `FUGA-BLOQUE-4.md`. Un campo que el contrato declara no publicable no se publica
+   «porque queda bien en la página».
 
 Consecuencia en las herramientas: `validar-grafo.py` trata "nodo `escrito` sin fichero"
 como **error** y "nodo `pendiente-piloto` sin fichero" como **aviso**. Escribir uno de
 esos nodos consiste en crear su `.md` y cambiar su `estado` en el registro; el
 validador empieza a exigirlo automáticamente.
+
+### D12 — Las comprobaciones de fuga van por contenido, no por procedencia
+
+Durante semanas el sitio publicó las respuestas del ejercicio central del bloque 4
+con `scripts/comprobar-build.py` en verde. El comprobador miraba de dónde venía cada
+fichero —que nada saliera de `dataset/SOLUCIONES/`— y tenía razón: no salía. Lo que
+no miraba es qué decían los ficheros, y las respuestas estaban escritas a mano en el
+glosario, en el `brief` de los nodos pendientes, en un sabotaje y en tres sitios más
+(`FUGA-BLOQUE-4.md`).
+
+De ahí `scripts/centinelas.py`: las cinco verdades escritas como patrones, y las tres
+comprobaciones que sirven algo aplicándolos —el build, el paquete del tutor y el
+barrido de las fuentes—. Tres decisiones de diseño que no son obvias:
+
+1. **Por franja, no por cifra clavada.** «El 40 % de los correos hablan de facturas»
+   es V1 igual de bien que «el 38,00 %». Un centinela que sólo busque la cifra exacta
+   protege del copiar y pegar, que es el caso que menos pasa.
+2. **Conjuntivos.** Un porcentaje sólo delata si cerca hay además un conjunto y un
+   tema. Sin eso el bloque 2 no podría enseñar que un «Otros» por encima del 10 % es
+   señal de taxonomía mala, porque esa regla y el dato real se escriben igual.
+3. **Con autoprueba.** Los centinelas se ejecutan contra la clave de corrección antes
+   de barrer nada, y si alguno no reconoce ahí su propia verdad, el proceso falla. Un
+   centinela mudo es peor que no tenerlo: da por limpio lo que no ha mirado.
+
+La raya que aplican está escrita en la cabecera del módulo y en `FUGA-BLOQUE-4.md`:
+**la suciedad se anuncia, la respuesta no**. Decir «hay clientes duplicados» es un
+aviso que ella necesita; decir cuántos, cuáles o cómo se encuentran es el ejercicio.
+
